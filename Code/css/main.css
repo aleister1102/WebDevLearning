@@ -1,0 +1,8 @@
+.box{
+    border: 1px solid #000;
+    width: 1000px;
+    height: 500px;
+    background: url(../img/zero-two.jpg) no-repeat center;
+    background-color: aquamarine;
+    background-size: 1000px 1000px;
+}
