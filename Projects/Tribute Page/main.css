@@ -1,7 +1,7 @@
 body{
     margin: 50px;
-    background: url(galaxy.jpg) no-repeat center;
-    background-size: 100%;
+    background: url(galaxy.jpg) no-repeat  center;
+    background-size: auto;
 }
 #picture{
     width: 500px;
