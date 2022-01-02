@@ -331,6 +331,13 @@ console.log(str.replace("Wubu", "Wjbu")); // 'Wjbu neva die'
 console.log(str.replace("ie", "rink")); // 'Wubu neva drink'
 ```
 
+Có thể sử dụng với Regular Expression (sẽ học sau)
+```js
+let str = "Love is love, does not matter if you are LGBT, White, Black, Red Hair, Blonde or Handicapped"
+
+console.log(str.replace(/love/gi, 'LOVE'))
+```
+
 9. `charAt(index)`
 
 Truyền vào chỉ số index và trả về ký tự của chuỗi nằm ở vị trí index đó.
@@ -412,6 +419,21 @@ Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy
 17. `repeat(times)`
 
 Lặp lại chuỗi nào đó `times` lần.
+
+18. `match(regex)`
+
+Dùng để lấy ra một danh sách các chuỗi con dựa vào regex cho trước
+```js
+let str = 'Bao nhiêu lâu thì bán được được một tỉ gói mè?'
+
+console.log(str.match(/được/)) ; 
+/*[
+  'được',
+  index: 22,
+  input: 'Bao nhiêu lâu thì bán được một tỉ gói mè?',
+  groups: undefined
+]*/
+```
 
 # Checking Data Types and Casting
 
