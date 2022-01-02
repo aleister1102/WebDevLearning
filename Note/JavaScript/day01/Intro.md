@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="../main.css">
+<link rel="stylesheet" href="../main.css">
 
 # Dev Tool
 
@@ -85,11 +85,11 @@ Cũng dùng tag `<script></script>` nhưng dùng thêm thuộc tính `src` để
 > Có thể dùng từ khóa `typeof` để kiểm tra kiểu dữ liệu, chẳng hạn như:
 
 ```js
-console.log(typeof 5); //true
-console.log(typeof 6.5); //number
-console.log(typeof true); //boolean
-console.log(typeof null); //object
-console.log(typeof undefined); //undefined
+console.log(typeof 5); // true
+console.log(typeof 6.5); // number
+console.log(typeof true); // boolean
+console.log(typeof null); // object
+console.log(typeof undefined); // undefined
 ```
 
 # Variables
