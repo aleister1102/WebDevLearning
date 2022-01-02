@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../main.css">
+<link rel='stylesheet' href='../main.css'>
 
 # Data Type
 
@@ -32,12 +32,12 @@ console.log(a); // hello world!
 Thoạt nhìn, ta tưởng rằng giá trị của biến `a` đã được thay đổi theo lối suy nghĩ dựa trên ngôn ngữ C. Tuy nhiên, điều mà đoạn code trên thực sự thực hiện là:
 
 1. Trích xuất dữ liệu của biến `a`.
-2. Thay đổi dữ liệu đó thành `"hello world!"`.
+2. Thay đổi dữ liệu đó thành `'hello world!'`.
 3. Cho dữ liệu này vào một vùng nhớ mới.
 4. Biến `a` trỏ đến vùng nhớ mới đó.
-5. Vùng nhớ cũ chứa `"hello"` sẽ được dọn rác.
+5. Vùng nhớ cũ chứa `'hello'` sẽ được dọn rác.
 
-Như vậy, bản thân giá trị `"hello"` là không thay đổi được, mỗi lần ta dùng phép gán (reassign) là ta đã làm cho biến có một vùng nhớ mới có địa chỉ hoàn toàn khác. Hay nói cách khác, ta đã dùng một phương thức (toán tử gán bằng) tác động vào a và làm thay đổi giá trị của nó.
+Như vậy, bản thân giá trị `'hello'` là không thay đổi được, mỗi lần ta dùng phép gán (reassign) là ta đã làm cho biến có một vùng nhớ mới có địa chỉ hoàn toàn khác. Hay nói cách khác, ta đã dùng một phương thức (toán tử gán bằng) tác động vào a và làm thay đổi giá trị của nó.
 
 JS là một ngôn ngữ OOP, chương trình của nó được xây dựng dựa trên các Object và mọi thứ của JS đều là Object. Các kiểu dữ liệu Primitive trong JS cũng là các Object, nhưng chúng thuộc loại Object đặc biệt gọi là Immutable Object (đối tượng bất biến).
 
@@ -198,7 +198,7 @@ Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 - `\t`: Tab, means 8 spaces
 - `\\`: Back slash
 - `\'`: Single quote (')
-- `\"`: Double quote (")
+- `\'`: Double quote (')
 
 ## Template String
 
@@ -244,3 +244,209 @@ let b = 3;
 
 console.log(`${a} is greater than ${b}: ${a > b}`);
 ```
+
+## String Methods
+
+Do mọi thứ của JS đều là Object, nên đối với kiểu dữ liệu chuỗi, chúng ta có một số phương thức sau đây để thao tác:
+
+1. `length`
+
+```js
+let str = "onii-chan";
+
+console.log(str.length); // 9
+```
+
+2. Accessing (`[index]`)
+
+```js
+let str = "baka";
+
+console.log(str[0]); // b
+console.log(str[1]); // a
+console.log(str[2]); // k
+```
+
+3. `substr(start,length)` (Deprecated)
+
+```js
+let str = "Lê Minh Qbu";
+
+console.log(str.substr(0, 7)); // Lê Minh
+console.log(str.substr(8, 3)); // Qbu
+```
+
+4. `substring(start,end)`
+   Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
+
+```js
+let str = "Lê Minh Nghiện";
+
+console.log(str.substring(0, 6)); // Lê Min
+console.log(str.substring(0, 7)); // Lê Minh
+```
+
+5. `split(delimiter)`
+
+Tách chuỗi dựa vào delimiter cho trước.
+
+```js
+let str = "Tân không có đá, ta không có đấng";
+console.log(str.split(",")); // Array: ['Tân không có đá',' ta không có đấng']
+console.log(str.split(" ")); // Array: ['Tân', 'không', 'có', đá,', 'ta', 'không', 'có', 'đấng']
+```
+
+6. `trim(delimiter)`
+
+Xóa bỏ delimeter ở trước và sau chuỗi nếu có.
+
+```js
+let str = "  Hảo hán đại trượng phu  ";
+
+console.log(str.trim(" ")); // 'Hảo hán đại trượng phu'
+console.log(str.trim()); // still remove spaces: 'Hảo hán đại trượng phu'
+```
+
+7. `includes(substring)`
+
+Kiểm tra chuỗi con có tồn tại trong chuỗi chính.
+
+```js
+let str = "Đầu đội trời chân đạp đất";
+
+console.log(str.includes("đội")); // true
+console.log(str.includes("Đội")); // false - case sensitive
+console.log(str.includes("ầu")); // true
+console.log(str.includes("Ầu")); // fasle
+```
+
+8. `replace(new string)`
+
+Thay thế một chuỗi hoặc chuỗi con thành một chuỗi khác
+
+```js
+let str = "Wubu neva die";
+
+console.log(str.replace("Wubu", "Wjbu")); // 'Wjbu neva die'
+console.log(str.replace("ie", "rink")); // 'Wubu neva drink'
+```
+
+9. `charAt(index)`
+
+Truyền vào chỉ số index và trả về ký tự của chuỗi nằm ở vị trí index đó.
+
+```js
+let str = "Ảo ma canada lazada shizuka khóc nhòe đi mascara";
+
+console.log(str.charAt(0)); // Ả
+console.log(str.charAt(4)); // a
+```
+
+10. `charCodeAt(index)`
+
+Truyền vào chỉ số index và trả về mã ASCII của ký tự ở vị trí index đó.
+
+```js
+let str =
+  "Cờ bạc người không chơi là người thắng, người chơi không bao giờ thắng";
+
+console.log(str.charCodeAt(33)); // 't' - ASCII: 116
+console.log(str.charCodeAt(38)); // ',' - ASCII: 44
+```
+
+11. `indexOf(substring)`
+
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu không tìm thấy thì trả về -1.
+
+```js
+let str = "Narutobaco Sasuketamin Sharingan nhiễm mỡ";
+
+console.log(str.indexOf("Narutobaco")); // 0
+console.log(str.indexOf("nhiễm mỡ")); // 33
+```
+
+12. `lastIndexOf(substring)`
+
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
+
+```js
+let str = "Chúng ta của hiện tại, đã không còn là chúng ta của hôm qua";
+
+console.log(str.lastIndexOf("ta")); // 45
+console.log(str.lastIndexOf("của")); // 48
+```
+
+13. `concat(substrings)`
+
+Nối nhiều chuỗi lại với nhau
+
+```js
+let s1 = "Năm";
+let s2 = "Mới";
+let s3 = "Vui";
+let s4 = "Vẻ";
+
+console.log(s1.concat(s2, s3, s4)); // 'Nămmớivuivẻ'
+```
+
+14. `startsWith(substring)`
+
+Truyền vào một chuỗi con, kiểm tra chuỗi chính có bắt đầu bằng chuỗi con hay không. Nếu có trả về `true`, nếu không trả về `false`.
+
+```js
+let str = "Yêu nhau lắm cắn nhau đau";
+
+console.log(str.startsWith("Đau")); // false
+console.log(str.startsWith("yêu")); // false
+console.log(str.startsWith("Yêu")); // true
+```
+
+15. `endsWith(substring)`
+
+Tương tự `startWith`, trả về `true` nếu chuỗi kết thúc là chuỗi con truyền vào.
+
+16. `search(substring)`
+
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy.
+
+17. `repeat(times)`
+
+Lặp lại chuỗi nào đó `times` lần.
+
+# Checking Data Types and Casting
+
+## Checking Data Types
+
+Để kiểm tra kiểu dữ liệu ta sử dụng phương thức `typeof` trước tên object, số, chuỗi,...
+
+## Casting
+
+**String to Int**
+
+- `parseInt(string)`
+- `Number(string)`
+- Sử dụng dấu `+` trước chuỗi
+
+```js
+let num = "11";
+
+console.log(parseInt(num)); // 11
+console.log(Number(num)); // 11
+console.log(+num); // 11
+```
+
+**String to Float**
+
+Tương tự, cũng dùng các phương thức trên nhưng có một số thay đổi.
+
+```js
+let num = '1.1'
+
+console.log(parseFloat(num)) // 1.1
+console.log(Number(num)) // 1.1
+console.log(+num) // 1.1 
+```
+
+**Float to Int**
+
+Sử dụng `parseInt()` cho số chấm động.

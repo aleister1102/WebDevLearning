@@ -82,7 +82,7 @@ Cũng dùng tag `<script></script>` nhưng dùng thêm thuộc tính `src` để
 4. Undefined: nếu khai báo biến mà không gán giá trị, nó sẽ có giá trị `undefined`. Tương tự, hàm không trả về gì thì nó sẽ trả về `undefined`.
 5. Null: là một giá trị rỗng.
 
-> Có thể dùng từ khóa `typeof` để kiểm tra kiểu dữ liệu, chẳng hạn như:
+> Có thể dùng phương thức `typeof` để kiểm tra kiểu dữ liệu, chẳng hạn như:
 
 ```js
 console.log(typeof 5); // true
