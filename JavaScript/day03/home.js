@@ -77,3 +77,40 @@ console.log(now.getTime())
 
 // console.log(`Slope: ${(y2 - y1)/(x2 - x1)}`)
 
+//2.10
+lastName.length < 7  ? console.log('my name is short') : console.log('my name is long')
+
+// 2.11
+console.log('Your first name, ', lastName.length > firstName.split(' ')[0].length ? 'longer': 'shorter', 'than your family name')
+
+// 2.12
+let myAge = 19
+let yourAge = 250
+console.log('I am ', yourAge > myAge ? `${yourAge - myAge}` : `${myAge - yourAge}`, 'years older than you')
+
+// 2.13
+// let userAge = +prompt('Enter year of birth: ')
+// let msg = `You are ${userAge}. ${userAge >= 18 ? `You are old enough to drive` : `You will be allowed to drive after ${18 - userAge} years`}`
+// confirm(msg)
+
+// 2.14
+// let userAge = +prompt('Enter your age')
+// let userYear = new Date().setFullYear(userAge)
+// let msg = `You have lived ${userYear*365*24*60*60} seconds`
+// confirm(msg)
+
+// 2.15 && Exercise 3
+
+let time = new Date()
+let month = time.getMonth() + 1 < 10 ? `0${time.getMonth() + 1}` : `${time.getMonth() + 1}`
+let date = time.getDate() + 1 < 10 ? `0${time.getDate() + 1}` : `${time.getDate() + 1}`
+let hours = time.getHours() + 1 < 10 ? `0${time.getHours() + 1}` : `${time.getHours() + 1}`
+let minutes = time.getMinutes() + 1 < 10 ? `0${time.getMinutes() + 1}` : `${time.getMinutes() + 1}`
+
+let timeString1 = `${time.getFullYear()}-${month}-${date} ${hours}:${minutes}`
+let timeString2 = `${date}-${month}-${time.getFullYear()} ${hours}:${minutes}`
+let timeString3 = `${date}/${month}/${time.getFullYear()} ${hours}:${minutes}`
+
+console.log(timeString1)
+console.log(timeString2)
+console.log(timeString3)
