@@ -21,8 +21,51 @@ for (let i = 0; i < itCompanies.length; i++) {
 
 // Exercise 2
 
-import { countries as _countries } from './countries.js'
-import { webTechs as _webTechs } from './webTechs.js'
-console.log(_countries)
-console.log(_webTechs)
+// 2.2
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+text = text.replace(/[.,]/g,'')
+let words = text.split(' ')
+console.log(words)
+console.log(words.length)
+
+// 2.3
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.unshift('Meat')
+if(shoppingCart.includes('Milk') === false)
+    shoppingCart.push('Milk')
+let pos = shoppingCart.indexOf('Honey')
+shoppingCart.splice(pos,1)
+shoppingCart.splice(2,1,'Green tea')
+console.log(shoppingCart)
+
+// Exercise 3
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+let len = ages.length
+
+ages.sort()
+console.log(`max: ${ages[len - 1]}`)
+console.log(`min: ${ages[0]}`)
+
+if(len % 2 === 0)
+{
+    let middleOne = ages[Math.floor((len - 1)/2)]
+    let middleTwo = ages[Math.ceil((len - 1)/2)]
+    console.log('middle items: ',middleOne,middleTwo)
+}
+else
+{
+    let middle = ages[(len - 1)/2]
+    console.log('middle item: ',middle)
+}
+
+let sum = 0
+for(let i = 0; i < len; i++)
+{
+    sum += ages[i];
+}
+console.log(sum/len)
+console.log(`range = ${ages[len - 1] - ages[0]}`)
+
+
 

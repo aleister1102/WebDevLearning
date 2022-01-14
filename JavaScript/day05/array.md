@@ -4,7 +4,7 @@
 
 ## Create Arrays
 
-Thông thường ta dùng `const` để khai báo biến, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.
+> Thông thường ta dùng `const` để khai báo biến, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.
 
 **Sử dụng contructor**
 
