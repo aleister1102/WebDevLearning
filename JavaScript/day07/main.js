@@ -78,9 +78,136 @@ function solveQuadEquation(a, b, c) {
 
 console.log(solveQuadEquation(1, -1, -2))
 
-//2.3
-function showDateTime()
-{
+//2.4
+function showDateTime() {
     const now = new Date()
-    console.log(now.getDate())
+    const year = now.getFullYear()
+    const month = now.getMonth() + 1
+    const date = now.getDate()
+
+    const hours = now.getHours()
+    const minutes = now.getMinutes()
+
+    let str = `${date}/${month}/${year} ${hours}:${minutes}`
+    console.log(str)
 }
+
+//2.5
+function swapValues(a, b) {
+    let temp = a
+    a = b
+    b = temp
+}
+
+//2.6
+function reverseArray() {
+    const reversed = []
+    for (let i = arguments.length - 1; i >= 0; i--) {
+        const element = arguments[i];
+        reversed.push(element)
+    }
+    return reversed
+}
+
+console.log(reverseArray(1, 2, 2, 34, 5))
+
+//2.7
+function capitalizeArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        array[i] = array[i].toUpperCase()
+    }
+    return array
+}
+
+console.log(capitalizeArray(['1231', 'asdasdas', 'asdasdas', 'asdadkasgduw', 'asdad']))
+
+//2.14
+function sum() {
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+        const element = arguments[i];
+        sum += element
+    }
+    return sum
+}
+
+console.log(sum(1, 2, 3))
+
+//2.15
+function randomUserIp(n) {
+    let str = ""
+    for (let i = 0; i < n; i++) {
+
+        let randomCharCode = 97 + Math.floor(Math.random() * 62)
+        if (randomCharCode >= 133)
+            randomCharCode -= 68
+        else if (randomCharCode >= 123)
+            randomCharCode -= 75
+
+        let randomChar = String.fromCharCode(randomCharCode)
+        str += randomChar
+    }
+    return str
+}
+
+console.log(randomUserIp(10))
+
+//2.16
+function randomMacAddress() {
+    let MAC = ""
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 2; j++) {
+            let randomCharCode = 48 + Math.floor(Math.random() * 16)
+            if (randomCharCode >= 58)
+                randomCharCode += 7
+            let randomChar = String.fromCharCode(randomCharCode)
+            MAC += randomChar
+        }
+        MAC += ":"
+    }
+
+    return MAC.substring(0, MAC.length - 1)
+}
+
+console.log(randomMacAddress())
+
+//2.17
+function randomHexaNumberGenerator() {
+    let hexa = ""
+    for (let i = 0; i < 6; i++) {
+        let randomCharCode = 48 + Math.floor(Math.random() * 16)
+        if (randomCharCode >= 58)
+            randomCharCode += 39
+        let randomChar = String.fromCharCode(randomCharCode)
+        hexa += randomChar
+    }
+    return "#" + hexa
+}
+
+console.log(randomHexaNumberGenerator())
+
+//Exercise 3
+//3.1
+function userIdGeneratedByUser() {
+    let str = ""
+    // let a = +prompt('How many characters?')
+    // let b = +prompt('How many id?')
+    // for (let i = 0; i < b; i++) {
+    // str += randomUserIp(a) + "\n"
+    // }
+    console.log(str)
+}
+userIdGeneratedByUser()
+//3.2
+
+function rgbColorGenerator() {
+
+    let str = "rgb("
+    for (let i = 0; i < 3; i++) {
+        let randomNumber = Math.floor(Math.random() * 256)
+        str += `${randomNumber},`
+    }
+    str = str.substring(0,str.length - 1) + ")"
+    console.log(str)
+}
+rgbColorGenerator()
