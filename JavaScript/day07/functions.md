@@ -30,12 +30,13 @@ function functionName(param) {
 ```
 
 **Điểm mạnh**
+
 - Có global scope.
 - Có thể gọi Declaration function trước khai báo hàm
 
 ## Anonymous Function
 
-Hàm vô danh là hàm được khai báo mà không có tên.
+**Anonymous Function** (Hàm vô danh() là hàm được khai báo mà không có tên.
 
 ```js
 const anonymousFunc = function () {
@@ -49,11 +50,7 @@ Giá trị trả về của hàm được lưu trong biến `anonymousFunc`.
 
 ## Expression Function
 
-Cho câu lệnh `let c = 5 + 6`. Ta tạo được một biểu thức `c = 5 + 6`. Đầu tiên máy sẽ tính giá trị của `5 + 6 = 11`, sau đó nó sẽ gán cho biến `c`. Quá trình đó là:
-
-`expression -> evaluate -> assign`
-
-Tương tự như vậy, Expression function là hàm có chứa biểu thức, giá trị trả về của hàm sẽ được gán cho một biến nào đó.
+**Expression function** (Hàm biểu thức) là hàm có chứa biểu thức, giá trị trả về của hàm sẽ được gán cho một biến nào đó.
 
 ```js
 const square = function (n) {
@@ -63,16 +60,17 @@ const square = function (n) {
 console.log(expressionFunc(11)); // 121
 ```
 
-
 **Điểm mạnh**
 
-- Tiện lợi khi không có nhu cầu tái sử dụng. Có thể dùng như là đối số của hàm. 
+- Tiện lợi khi không có nhu cầu tái sử dụng. Có thể dùng như là đối số của hàm.
 
 **Điểm yếu**
+
 - Không thể gọi Expression function trước khai báo hàm.
+
 ## Self Invoking Function
 
-Các hàm tự thực thi là các hàm vô danh, được tự động thực thi ngay khi chúng được khai báo mà không cần chờ gọi hàm.
+**Self Invoking Function** (Các hàm tự thực thi) có bản chất là các hàm vô danh, được tự động thực thi ngay khi chúng được khai báo mà không cần chờ gọi hàm.
 
 ```js
 (function (n) {
@@ -88,15 +86,16 @@ let square = (function (n) {
 })(4);
 
 console.log(square); // 16
-
 ```
+
 **Điểm mạnh**
+
 - Tính đóng gói, các object trong hàm không thể bị truy cập từ bên ngoài.
 - Function factories (OOP).
 
 ## Arrow Function
 
-Arrow function là cách viết khác của Declaration function. Giữa chúng không có quá nhiều điểm khác biệt.
+**Arrow Function** (Hàm mũi tên) là cách viết khác của Declaration function. Giữa chúng không có quá nhiều điểm khác biệt.
 
 Arrow function sử dụng dấu mũi tên `=>` thay vì keyword `function` để khai báo hàm.
 
@@ -116,7 +115,7 @@ const double = (n) => {
 console.log(double(3)); // 6
 ```
 
-Nếu khối lệnh trong hàm chỉ có một dòng, có thể viết là
+Nếu khối lệnh trong hàm chỉ có một dòng return, có thể viết là
 
 ```js
 const double = (n) => n * 2;
@@ -175,7 +174,7 @@ console.log(sumAllNums(10, 20, 13, 40, 10)); // 93
 console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40)); // 173
 ```
 
-> Hàm mũi tên (Arrow Function) không cung cấp mảng đối số. Thay vào đó ta sử dụng toán tử `...` trước tên một tham số bất kỳ. Sẽ được ghi chú kỹ hơn sau.
+> Hàm mũi tên (Arrow Function) không cung cấp mảng đối số. Thay vào đó ta sử dụng toán tử `...` trước tên một tham số bất kỳ.
 
 Bất cứ thứ gì ta truyền vào hàm đều được truy cập dưới dạng mảng.
 

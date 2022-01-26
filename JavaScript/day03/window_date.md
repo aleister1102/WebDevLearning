@@ -50,12 +50,12 @@ console.log(now); // 2022-01-02T13:59:23.050Z
   Trả về giờ (0 - 23), phút (0- 59), giây và milli giây
 - `getTime()` Trả về số milli giây kể từ lúc 1/1/1970.
 
-Có hai cách:
-
 ```js
 const now = new Date();
 console.log(now.getTime()); // 1641131963050
 ```
+
+Có một cách khác cũng cho kết quả tương tự:
 
 ```js
 const allSeconds = Date.now();
