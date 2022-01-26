@@ -6,16 +6,18 @@ Có ba loại scope trong Javascript, là **Window**, **Global** và **Local**. 
 
 ## Window scope
 
-Đây là cách một biến có window scope được khai báo và khởi tạo. Window scope là phạm vi hoạt động của biến trong cửa sổ trình duyệt. Nó vượt ra ngoài một file, trong ghi global scope chỉ có giá trị trong một file.
+Đây là cách một biến có window scope được khai báo và khởi tạo.
 
 ```js
 a = 7; //Window scope
 b = 8; // Window Scope
 ```
 
+Window scope là phạm vi hoạt động của biến trong cửa sổ trình duyệt. Nó vượt ra ngoài một file, trong ghi global scope chỉ có giá trị trong một file.
+
 ## Global scope
 
-Khai báo biến bằng `var` sẽ có **global scope** hoặc **function scope**. Nếu biến var được khai báo không ngoài hàm hoặc đối tượng thì nó mang global scope. Còn khai báo trong hàm thì nó chỉ có phạm vi trong hàm đó, hay function scope.
+Khai báo biến bằng `var` sẽ có **global scope** hoặc **function scope**. Nếu biến var được khai báo bên ngoài hàm hoặc đối tượng thì nó mang global scope. Còn khai báo trong hàm thì nó chỉ có phạm vi trong hàm đó, hay function scope.
 
 ```js
 function f() {
@@ -34,7 +36,7 @@ Khai báo bằng `let` và `const` mang tính chất **block scope** (hay **loca
 
 # Object
 
-Mọi thứ có thể là đối tượng, và đối tượng có nhiều thuộc tính mang giá trị. Các thuộc tính không được bảo toàn thứ tự.
+Mọi thứ có thể là đối tượng, và đối tượng có nhiều thuộc tính hoặc phương thức. Các thuộc tính không được bảo toàn thứ tự.
 
 ## Creating
 
@@ -73,7 +75,7 @@ const person = {
 };
 ```
 
-Thuộc tính có thể là chuỗi, số, mảng, boolean, thậm chí là một cặp key - value như map hoặc dictionary. `this` là một từ khóa dùng để chỉ chính bản thân object.
+Thuộc tính có thể là chuỗi, số, mảng, boolean, thậm chí là một cặp key - value như map hoặc dictionary. `this` là một từ khóa dùng để chỉ chính bản thân object (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
 
 Để truy cập vào các thuộc tính của object, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
 
@@ -96,7 +98,7 @@ Phương thức không thể là arrow function vì keyword `this` sẽ trỏ đ
 
 > Object là một mutable data type, do đó ta có thể thay đổi giá trị của các thuộc tính bằng reassign.
 
-Ngoài ra, ta có thể khai báo một thuộc tính chưa có trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được thêm vào hàm.
+Ngoài ra, ta có thể khai báo một thuộc tính hoặc phương thức chưa có trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được thêm vào hàm.
 
 ```js
 const person = {
@@ -136,7 +138,7 @@ const person = {
 };
 ```
 
-Có thể dùng các method của đối tượng "Object" dựng sẵn:
+Tồn tại các method của đối tượng `Object` dựng sẵn:
 
 - `Object.assign`, sao chép đối tượng mà không thay đổi đối tượng gốc
 
