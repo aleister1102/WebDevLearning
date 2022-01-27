@@ -87,7 +87,7 @@ Hàm `callback` sẽ được gọi sau khoảng thời gian delay 1s.
 
 Ngoài các phương thức đã nêu ở bài mảng, JS còn cung cấp một số phương thức dựng sẵn thuộc lớp đối tượng Array để thao tác với các hàm callback.
 
-## For Each
+## forEach
 
 **Chức năng**: thực thi hàm callback cho mỗi phần tử có trong mảng. Nói cách khác, các phần tử của mảng sẽ đóng vai trò như tham số truyền vào hàm callback.
 
@@ -135,7 +135,7 @@ console.log(sum); // => 21
 
 Mỗi phần tử trong mảng sẽ là đối số của tham số `element`.
 
-## Map
+## map
 
 **Chức năng**: lặp qua các phần tử trong mảng và thay đổi giá trị của chúng.
 
@@ -151,7 +151,7 @@ const namesToUpperCase = names.map((name) => name.toUpperCase());
 console.log(namesToUpperCase); // => ['ASABENEH', 'MATHIAS', 'ELIAS', 'BROOK']
 ```
 
-## Filter
+## filter
 
 **Chức năng**: lọc ra các phần tử thỏa một điều kiện nào đó.
 
@@ -170,7 +170,7 @@ const countriesContainingLand = countries.filter((country) =>
 console.log(countriesContainingLand); // => ['Finland', 'Ireland']
 ```
 
-## Reduce
+## reduce
 
 **Chức năng**: dùng để thực thi một hàm callback lên các phần tử của mảng (từ trái sang phải) với một biến tích lũy để thu về một giá trị duy nhất.
 
@@ -196,7 +196,7 @@ const res = data.reduce((total, currentValue) => {
 console.log(res); // => 75
 ```
 
-## Every
+## every
 
 **Chức năng**: Kiểm tra xem TẤT CẢ phần tử có giống nhau về một khía cạnh nào đó.
 
@@ -215,7 +215,7 @@ function checkAge(age) {
 console.log(ages.every(checkAge)); // => false
 ```
 
-## Find
+## find
 
 **Chức năng**: Trả về GIÁ TRỊ của phần tử thỏa mãn điều kiện nào đó.
 
@@ -234,7 +234,7 @@ console.log(age); // => 18
 
 Ngoài ra còn có phương thức `findIndex` tương tự, nhưng thay vì trả về giá trị thì nó sẽ trả về CHỈ SỐ index.
 
-## Some
+## some
 
 **Chức năng**: Tương tự phương thức `every`, nó sẽ lặp qua các phần tử và kiểm tra xem có thỏa điều kiện nào đó hay không. Tuy nhiên, chỉ cần một phần tử thỏa thì nó sẽ trả về `true`. Còn `every` buộc TẤT CẢ các phần tử phải thỏa mới return về `true`.
 
@@ -254,7 +254,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(isBiggerThan10); // => true
 ```
 
-## Sort
+## sort
 
 **Chức năng**: Sắp xếp các phần tử trong mảng với thứ tự tăng dần hoặc giảm dần theo bảng mã Ascii (phương thức này tự động chuyển dữ liệu về chuỗi) hoặc theo quy tắc trong callback. Do đó mà `sort` hoạt động tốt đối với mảng các chuỗi hơn là mảng các số.
 
