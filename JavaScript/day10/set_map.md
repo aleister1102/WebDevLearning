@@ -1,3 +1,5 @@
+<link rel='stylesheet' href='../main.css'>
+
 # Set
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).

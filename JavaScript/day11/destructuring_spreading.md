@@ -1,3 +1,5 @@
+<link rel='stylesheet' href='../main.css'>
+
 # Destructuring
 
 Destructuring là một cú pháp cho phép "giải nén" array hoặc object để gán cho các biến riêng biệt.
