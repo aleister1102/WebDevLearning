@@ -284,3 +284,7 @@ const matches = txt.match(pattern);
 console.log(matches);
 // => ["6", "2019"]
 ```
+
+## Summarize
+
+<img src = "regex.png">
