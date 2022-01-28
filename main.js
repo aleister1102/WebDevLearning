@@ -1,10 +1,18 @@
-console.log("%c30 Days Of JavaScript", "color:green"); // log output is green
-console.log(
-  "%c30 Days%c %cOf%c %cJavaScript%c",
-  "color:green",
-  "",
-  "color:red",
-  "",
-  "color:yellow",
-  ""
-); // log output green red and yellow text
+class Person {
+    constructor(firstName, lastName, age, country, city) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.country = country;
+      this.city = city;
+      this.score = 0;
+      this.skills = [];
+    }
+    static favoriteSkill() {
+      const skills = ["HTML", "CSS", "JS", "React", "Python", "Node"];
+      const index = Math.floor(Math.random() * skills.length);
+      return skills[index];
+    }
+  }
+  
+  console.log(Person.favoriteSkill());
