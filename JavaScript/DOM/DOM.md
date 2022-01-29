@@ -138,3 +138,110 @@ Nếu id có thể đặt cho tên biến, thì không cần sử dụng ngoặc
 console.log(document.forms.formOne);
 // => form#formOne
 ```
+
+## Element Methods
+
+Các giá trị trả về của phương thức `getElementById` và `querySelector` là các đối tượng thuộc lớp đối tượng element. Do đó mà ta có thể gọi tiếp các phương thức trên để lấy ra các element bên trong chúng.
+
+Chẳng hạn có đoạn code HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul id="hello">
+      <li>Hello World</li>
+      <li>Hello Human</li>
+    </ul>
+
+    <ul id="goodbye">
+      <li>Goodbye World</li>
+      <li>Goodbye Human</li>
+    </ul>
+  </body>
+
+  <script src="../main.js"></script>
+</html>
+```
+
+Ta lấy ra thẻ ul có id là `"hello"`:
+
+```js
+const listHello = document.getElementById("hello");
+console.log(listHello);
+// => ul#hello
+```
+
+Do bản thân `listHello` là một đối tượng, ta có thể gọi tiếp năm loại phương thức trên để lấy các element bên trong nó:
+
+```js
+const worldHello = listHello.querySelector("li:first-child");
+console.log(worldHello);
+// => li
+console.log(worldHello.textContent);
+// => Hello World
+```
+
+> Chú ý là các phương thức lấy bằng class, tag, selectorAll hay HTML selection không trả về một đối tượng mà trả về danh sách nhiều đối tượng.
+
+# DOM Attributes
+
+Giả sử có đoạn code HTML:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 id="heading" class="heading">This is a heading</h1>
+  </body>
+
+  <script src="../main.js"></script>
+</html>
+```
+
+Để có thể truy cập và chỉnh sửa các attributes của element, trước tiên ta cần lấy được element.
+
+```js
+const headingElement = document.querySelector("#heading");
+```
+
+Ta đã biết `headingElement` là một đối tượng, và các attributes là các thuộc tính của đối tượng này.
+
+## Set Attributes
+
+Để có thể chỉnh sửa/thêm các attributes (chẳng hạn `title`) thì chúng ta làm đơn giản như khi chỉnh sửa/thêm thuộc tính của một đối tượng:
+
+```js
+headingElement.title = "Heading";
+```
+
+Cách này là sử dụng `setter` của đối tượng `headingElement`.
+
+Lưu ý là thuộc tính mà ta muốn chỉnh sửa/thêm phải hợp lệ đối với element mà ta đang thao tác.
+
+Do là một đối tượng, ta cũng có thể sử dụng phương thức sẵn có với cú pháp `setAttribute("attributeName","stringValue")`. Ví dụ:
+
+```js
+headingElement.setAttribute("title", "Heading");
+```
+
+Cách này có thể set attribute cho các element mà không quan tâm tính hợp lệ.
+
+## Get Attribute
+
+Tương tự set attribute, ta cũng có thể lấy ra attribute từ đối tượng element dùng phương thức `getAttribute(attributeName)`. Ví dụ:
+
+```js
+console.log(headingElement.getAttribute("class"));
+// => heading (value of class attribute)
+```
+
+Có thể lấy cả những attribute do JS thêm vào.
