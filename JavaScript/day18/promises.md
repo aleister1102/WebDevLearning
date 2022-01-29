@@ -12,33 +12,56 @@ Hai phương thức `setTimeout` và `setInteval` là các phương thức bất
 
 Lấy ví dụ phương thức `fetch` dùng để gọi API lấy dữ liệu, tùy tốc độ mạng và nhiều yếu tố mà phương thức này sẽ tốn lượng thời gian khác nhau.
 
-## Callback function
+## Callback Function
 
-Callback chính là câu trả lời cho vấn đề trên. Chẳng hạn ta muốn viết đoạn code bên dưới sao cho số 2 in trước số 1:
-
-```js
-console.log(1);
-console.log(2);
-```
-
-Điều này đối với sync là không thể. Tuy nhiên ta có thể sử dụng `setTimeout`:
+Callback chính là câu trả lời cho vấn đề trên. Xét đoạn code dưới đây:
 
 ```js
-setTimeout(function () {
-  console.log(1);
-}, 1000);
-console.log(2);
+function httpGetAsync(theUrl, callback) {
+  var xmlHttp = XMLHttpRequest();
+  xmlHttp.onreadystatechange = function () {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp);
+  };
+  xmlHttp.open("GET", theUrl, true);
+  xmlHttp.send(null);
+}
+
+httpGetAsync("https//picsum.photo/200/300", function (data) {
+  console.log(data);
+});
 ```
 
-Lúc này, hàm callback trong `setTimeout` sẽ được thực thi ngay sau tác vụ delay 1000ms giây hoàn thành. Một cách kỹ thuật hơn, callback đảm bảo hàm sẽ không được thực thi trước khi tác vụ nào đó hoàn thành. Nhưng lại được thực thi ngay lập tức sau khi tác vụ đó hoàn thành.
+Đây là đoạn code mô phỏng việc gọi API picsum để lấy về hình ảnh. Khi có được dữ liệu thì ta sẽ log ra console. Tuy nhiên, việc log ra console phải chờ cho tác vụ lấy dữ liệu từ API hoàn thành. Do đó mà việc lấy API và việc log ra console là hai việc bất đồng bộ (nếu không dùng callback).
+
+Khi dùng callback, chúng ta đảm bảo rằng `console.log(data)` chỉ được thực thi khi nào lấy được dữ liệu, mặc dù thời gian chờ đợi có thể biến động như đã nói ở trên.
+
+Một cách kỹ thuật hơn, callback đảm bảo hàm sẽ không được thực thi trước khi tác vụ nào đó hoàn thành. Nhưng lại được thực thi ngay lập tức sau khi tác vụ đó hoàn thành.
 
 ## Callback Hell
 
 > Đến lúc này, vấn đề tiếp theo nảy sinh là các Callback Hell, nghĩa là có quá nhiều callback lồng vào nhau.
 
+Giả sử ta cần lấy liên tiếp ba hình ảnh từ API, điều này sẽ gây ra callback hell.
+
+```js
+httpGetAsync("https//picsum.photo/200/300", function (data) {
+  console.log(data);
+  httpGetAsync("https//picsum.photo/200/300", function (data) {
+    console.log(data);
+    httpGetAsync("https//picsum.photo/200/300", function (data) {
+      console.log(data);
+    });
+  });
+});
+```
+
+Hoặc một ví dụ đau đớn hơn:
+
 <img src = "promise1.png">
 
-Lý do dẫn đến Callback Hell là khi cần viết các đoạn code mà có các tác vụ phụ thuộc lẫn nhau. Tức là phải chờ đến khi tác vụ a xong thì tác vụ b mới được thực thi và thực thi ngay sau đó. Tương tự phải chờ kết quả trả về của tác vụ b thì tác vụ c mới được thực thi (phụ thuộc lẫn nhau).
+Lý do dẫn đến Callback Hell là khi ta buộc phải viết các đoạn code mà có các tác vụ phụ thuộc lẫn nhau.
+
+Tác vụ b trong hình trên phải chờ đến khi tác vụ a hoàn thành thì mới được thực thi và thực thi ngay sau đó. Tương tự phải chờ kết quả trả về của tác vụ b thì tác vụ c mới được thực thi (phụ thuộc lẫn nhau).
 
 # Promise
 
@@ -58,7 +81,7 @@ Một Promise sẽ ở một trong ba trạng thái:
 
 Các bước khởi tạo:
 
-1. Khởi tạo đối tượng dùng Promise Constructor thuộc lớp đối tượng Promise.
+1. Khởi tạo đối tượng dùng Promise constructor thuộc lớp đối tượng Promise.
 2. Tạo **Executor**, executor là tham số của constructor.
 3. Executor có hai tham số cũng đều là hàm callback:
 
@@ -100,7 +123,7 @@ Và nếu một trong hai `resolve` hoặc `reject` được thực thi thì ph�
 
 ## Returning Values
 
-Các giá trị của executor có thể trả ra cho hai phương thức các phương thức của đối tượng Promise. Giá trị trả về sẽ truyền vào làm tham số của resolve hoặc reject.
+Hai hàm callback `resolve` và `reject` có thể trả về giá trị. Giá trị trả về sẽ truyền vào làm tham số của resolve hoặc reject.
 
 ```js
 const promise = new Promise(function (resolve, reject) {
@@ -215,3 +238,93 @@ promise
 ```
 
 Xét trường hợp khác, giả sử trong các lời gọi phương thức `then`, promise bị rơi vào trạng thái rejected. Lúc này thì nó sẽ nhảy thẳng xuống `catch` và bỏ qua các lời gọi `then` liền kề.
+
+# Promise Class Methods
+
+Các phương thức static (gọi từ lớp đối tượng `Promise`) bao gồm:
+
+`Promise.resolve`, `Promise.reject`, `Promise.all`
+
+Giả sử chúng ta muốn sử dụng một promise mà luôn chắc rằng state của nó là fulfilled hoặc rejected. Ta có thể sử dụng hai phương thức đầu:
+
+```js
+const fulfilled = Promise.resolve(returnValue);
+const rejected = Promise.reject(returnValue);
+```
+
+Xét trường hợp nếu chúng ta muốn thực hiện nhiều task, và các đó không phụ thuộc lẫn nhau theo thứ tự. Do đó ta cần chạy chúng song song, tuy nhiên vẫn cần sử dụng kết quả trả về để làm việc gì khác.
+
+Lúc này phương thức `Promise.all` sẽ được sử dụng. Chẳng hạn ta có hai promise không phụ thuộc nhau dưới đây, và ta cần hợp nhất hai mảng trả về lại khi nhận được kết quả.
+
+```js
+const promise1 = new Promise(function (resolve) {
+  setTimeout(function (resolve) {
+    resolve([1]);
+  }, 2000);
+});
+
+const promise2 = new Promise(function (resolve) {
+  setTimeout(function (resolve) {
+    resolve([2, 3]);
+  }, 5000);
+});
+```
+
+Hai promise này nếu chạy tuần tự sẽ tốn 7s. Do đó ta sẽ chia ra nhiều luồng công việc để chúng có thể làm việc song song và chỉ tốn 5s.
+
+Sử dụng phương thức `Promise.all`, đối số truyền vào là mảng các promise không quan tâm thứ tự. Giá trị trả về là một promise, do đó có thể sử dụng phương thức `then`.
+
+```js
+Promise.all([promise1, promise2]).then(function (result) {
+  console.log(result);
+  // => [Array(1), Array(2)]
+  let a = result[0];
+  let b = result[1];
+
+  console.log(a.concat(b));
+  // => [1, 2, 3]
+});
+```
+
+Chú ý rằng, các promise đối số đều phải chạy xong thì phương thức `then` mới được gọi thực thi. Và do có nhiều giá trị trả về, đối số mà result nhận được là mảng các giá trị trả về phụ thuộc vào thứ tự promise truyền vào.
+
+Ngoài ra, nếu như có một trong số các promise reject, `Promise.all` sẽ gọi thực hiện phương thức `catch`. Cụ thể hơn, tất cả các promise khác có thành công hay không thì cũng rơi vào `catch`.
+
+# Async & Await
+
+Bản chất của Async và Await là promise, nhưng nó làm đoạn code khi đọc trông như đồng bộ dù là bất đồng bộ. Đồng thời, nó làm đoạn code trông tao nhã hơn và dễ hiểu hơn.
+
+```js
+async function square(n) {
+  return n * n;
+}
+
+square(2);
+// => Promise {<fulfilled>: 4}
+//      [[Prototype]]: Promise
+//      [[PromiseState]]: "fulfilled"
+//      [[PromiseResult]]: 4
+```
+
+Từ khóa `async` đứng trước một function ngụ ý rằng function đó sẽ trả về một promise. Trong đoạn code trên, hàm sẽ trả về một promise thay vì trả về giá trị.
+
+Để truy cập **giá trị trả về của promise**, ta sử dụng từ khóa `await`. Xét ví dụ lấy API dùng hàm `fetch`, hàm này trả về một promise:
+
+```js
+const url = "https//someAPI/";
+const fetchData = async () => {
+  try {
+    const response = await fetch(url);
+    const countries = await response.json();
+    console.log(countries);
+  } catch (err) {
+    console.error(err);
+  }
+};
+console.log("===== async and await");
+fetchData();
+```
+
+Hai từ khóa `async` và `await` luôn đi cùng với nhau, một trong hai không thể sống nếu thiếu thằng khác. Đồng thời `await` phải nằm bên trong khối code của một hàm `async`.
+
+Chúng ta sử dụng `try` và `catch` tương tự như cách mà `then` và `catch` hoạt động. Khi mà operation gây ra lỗi thì sẽ nhảy xuống khối lệnh của `catch`.
