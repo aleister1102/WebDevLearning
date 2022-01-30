@@ -1,0 +1,20 @@
+{
+  "pokemons": [
+    {
+      "pokedex ": "25",
+      "name ": "Pikachu",
+      "type": "electric",
+      "id": 25
+    },
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "grass"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "type": "fire"
+    }
+  ]
+}
