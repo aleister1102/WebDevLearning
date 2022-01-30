@@ -1,2 +1,3 @@
-const boxElement = document.querySelector("#box");
-console.log([boxElement]);
+document.onkeyup = function (e) {
+    console.log(e.code);
+}
