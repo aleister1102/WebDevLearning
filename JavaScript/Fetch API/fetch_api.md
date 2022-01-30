@@ -18,4 +18,6 @@ fetch(
 
 Sau khi có đối tượng trả về thì dùng phương thức `then` để trích xuất ra dữ liệu JSON thông qua phương thức `json()` gọi từ đối tượng `response`.
 
-Phương thức `json()` cũng trả về một promise, và vì thế ta gọi phương thức `then` thứ hai để lấy giá trị trả về của promise này.
+Phương thức `json()` cũng trả về một promise, và vì thế ta gọi phương thức `then` thứ hai để lấy giá trị trả về của promise này (là JS object).
+
+# JSON Server
