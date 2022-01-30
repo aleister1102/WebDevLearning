@@ -33,11 +33,16 @@ function createPokemon(newPoke, callback) {
   var options = {
     method: "POST",
     body: JSON.stringify(newPoke),
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+    },
   };
+  console.log(options);
   // Receive new object after creating.
   fetch(pokemonApi, options)
     .then(function (response) {
-      response.json();
+      return response.json();
     })
     .then(function (json) {
       console.log(json);
@@ -53,6 +58,7 @@ function handleCreate() {
       name: nameInputBlock,
       type: typeInputBlock,
     };
+    console.log(newPoke);
     createPokemon(newPoke);
   };
 }

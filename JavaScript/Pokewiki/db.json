@@ -21,15 +21,14 @@
       "type": "dragon_poison"
     },
     {
+      "id": 28,
       "name": "Cosmog",
-      "type": "psychic",
-      "id": 28
+      "type": "psychic"
     },
     {
-      "id": 29
-    },
-    {
-      "id": 30
+      "id": 29,
+      "name": "111",
+      "type": "111"
     }
   ]
 }
