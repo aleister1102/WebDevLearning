@@ -30,8 +30,28 @@ function renderPokemons(json) {
   });
   pokemonListBlock.innerHTML = htmls.join("");
 }
+
+function renderNewPokemon(json) {
+  var pokeItemList = document.querySelector("#pokemons-list");
+
+  // Create element with attribute
+  var pokeItem = document.createElement("li");
+  var pokeAttribute = document.createAttribute("id");
+  pokeAttribute.value = `pokedex-${json.id}`;
+  pokeItem.setAttributeNode(pokeAttribute);
+
+  // Add information
+  pokeItem.innerHTML = `<h4>${json.id}</h4>
+      <h4>${json.name}</h4>
+      <h4>${json.type}</h4>
+      <button onclick = "deletePokemon(${json.id})">Delete</button>`;
+
+  // Append to the list
+  pokeItemList.appendChild(pokeItem);
+}
+
 // Using API with POST
-function createPokemon(newPoke) {
+function createPokemon(newPoke, callback) {
   var options = {
     method: "POST",
     body: JSON.stringify(newPoke),
@@ -45,15 +65,7 @@ function createPokemon(newPoke) {
     .then(function (response) {
       return response.json();
     })
-    .then(function (json) {
-      var pokeItemList = document.querySelector("#pokemons-list");
-      pokeItemList.innerHTML = `<li id = "pokedex-${newPoke.id}">
-        <h4>${newPoke.id}</h4>
-        <h4>${newPoke.name}</h4>
-        <h4>${newPoke.type}</h4>
-        <button onclick = "deletePokemon(${newPoke.id})">Delete</button>
-      </li>`;
-    })
+    .then(callback)
     .catch(function (error) {
       console.error(error);
     });
@@ -71,13 +83,13 @@ function handleCreate() {
         name: nameInputBlock,
         type: typeInputBlock,
       };
-      console.log(newPoke);
-      createPokemon(newPoke);
+      // Add pokemon to DB and HTML
+      createPokemon(newPoke, renderNewPokemon);
     }
   };
 }
 
-function updatePokemon(updatePoke) {
+function updatePokemon(updatePoke, callback) {
   var options = {
     method: "PUT",
     body: JSON.stringify(updatePoke),
@@ -90,19 +102,7 @@ function updatePokemon(updatePoke) {
     .then(function (response) {
       return response.json();
     })
-    .then(function () {
-      var pokeItemList = document.querySelector("#pokemons-list");
-      var pokeItem = document.querySelector(`#pokedex-${updatePoke.id}`);
-      if (pokeItem) {
-        pokeItem.remove();
-        pokeItemList.innerHTML = `<li id = "pokedex-${updatePoke.id}">
-        <h4>${updatePoke.id}</h4>
-        <h4>${updatePoke.name}</h4>
-        <h4>${updatePoke.type}</h4>
-        <button onclick = "deletePokemon(${updatePoke.id})">Delete</button>
-      </li>`;
-      }
-    })
+    .then(callback)
     .catch(function (error) {
       console.log("Error: ", error);
     });
@@ -123,8 +123,14 @@ function handleUpdate() {
         type: typeInputBlock,
         id: idInputBlock,
       };
-      console.log(updatePoke);
-      updatePokemon(updatePoke);
+
+      // Remove old pokemon from HTML
+      var pokeItem = document.querySelector(`#pokedex-${idInputBlock}`);
+      if (pokeItem) {
+        pokeItem.remove();
+      }
+      // Add new pokemon to DB and HTML
+      updatePokemon(updatePoke, renderNewPokemon);
     }
   };
 }
@@ -142,7 +148,8 @@ function deletePokemon(pokeId) {
       return response.json();
     })
     .then(function () {
-      var pokeItem = document.querySelector(`#poke-${pokeId}`);
+      var pokeItem = document.querySelector(`#pokedex-${pokeId}`);
+      console.log(pokeItem);
       if (pokeItem) {
         pokeItem.remove();
       }
