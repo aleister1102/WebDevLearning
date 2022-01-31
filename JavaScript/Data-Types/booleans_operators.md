@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Booleans - Operators</h1></center>
+    <center><h1 class="bigtitle">Booleans and Operators</h1></center>
 </div>
 
 - [Booleans](#booleans)
