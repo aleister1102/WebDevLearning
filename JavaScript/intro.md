@@ -4,6 +4,16 @@
     <center><h1 class="bigtitle">Introduction</h1></center>
 </div>
 
+- [Dev Tool](#dev-tool)
+- [Console Log](#console-log)
+- [Comment](#comment)
+- [Adding JS to Web page](#adding-js-to-web-page)
+  - [Inline](#inline)
+  - [Internal](#internal)
+  - [External](#external)
+- [Data types](#data-types)
+- [Variables](#variables)
+
 # Dev Tool
 
 **Phím tắt mở Dev Tool**: `ctrl + shift + I`
