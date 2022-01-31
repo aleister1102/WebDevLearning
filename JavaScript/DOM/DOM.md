@@ -86,7 +86,7 @@ console.log(elementsClass);
 Cũng theo cách tương tự, để lấy element theo tên tag thì sử dụng phương thức `document.getElementsByTagName("tagName")`:
 
 ```js
-const elementsTag = document.getElementsByClassName("h1");
+const elementsTag = document.getElementsByTagName("h1");
 console.log(elementsTag);
 // => HTMLCollection(5) [h1.heading, h1.heading, h1.heading, h1.heading, h1.heading] (Array of Objects)
 ```
