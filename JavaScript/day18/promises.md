@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Promises</h1></center>
+</div>
+
 # Synchronous & Asynchronous
 
 **Synchronous** (đồng bộ) là các câu lệnh viết trước thì thực thi trước, viết sau thì thực thi sau. Nói cách khác, sẽ chỉ có một luồng thực thi các đoạn code từ trên xuống dưới.
@@ -312,7 +316,7 @@ Từ khóa `async` đứng trước một function ngụ ý rằng function đó
 
 ```js
 const url = "https//someAPI/";
-const fetchData = async () => {
+const fetchData = async function () {
   try {
     const response = await fetch(url);
     const countries = await response.json();

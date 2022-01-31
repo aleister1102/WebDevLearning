@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Classes</h1></center>
+</div>
+
 # Classes
 
 Ta đã biết cách tạo một Object đơn thuần mà không cần tạo lớp đối tượng như C++. Một Object như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện duy nhất.

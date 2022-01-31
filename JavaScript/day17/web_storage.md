@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Web Storage</h1></center>
+</div>
+
 # Web Storage
 
 **Web Storage** (Lưu trữ web) là một tính năng mới của HTML5 nhằm hỗ trợ cookie trong việc lưu dữ liệu.

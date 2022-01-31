@@ -1,6 +1,10 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Set
+<div class="title">
+    <center><h1 class="bigtitle">Sets and Maps</h1></center>
+</div>
+
+# Sets
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).
 
@@ -114,7 +118,9 @@ console.log(union); // => [1,2,3,4,5,6]
 Có thể dùng phương thức `has` để tìm giao của hai sets. Tức là lọc ra các phần tử của a có tồn tại trong b.
 
 ```js
-const intersection = a.filter((num) => b.has(num));
+const intersection = a.filter(function (num) {
+  return b.has(num);
+});
 console.log(intersection); // => [3,4,5]
 ```
 
@@ -123,11 +129,13 @@ console.log(intersection); // => [3,4,5]
 Tìm phần bù của A và B (A / B), ta sử dụng phương thức `has` để loại bỏ những phần tử thuộc cả A và B.
 
 ```js
-const complement = a.filter((num) => !b.has(num)); // if exists in b => filter out
+const complement = a.filter(function (num) {
+  return !b.has(num);
+}); // if exists in b => filter out
 console.log(complement);
 ```
 
-# Map
+# Maps
 
 Map là một tập hợp của nhiều bộ phần tử. Mỗi bộ là một cặp key - value.
 

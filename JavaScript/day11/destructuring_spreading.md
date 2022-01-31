@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Destructuring and Spreading</h1></center>
+</div>
+
 # Destructuring
 
 Destructuring là một cú pháp cho phép "giải nén" array hoặc object để gán cho các biến riêng biệt.
@@ -147,7 +151,7 @@ const rect = {
   width: 20,
   height: 10,
 };
-const calculatePerimeter = (rectangle) => {
+const calculatePerimeter = function (rectangle) {
   return 2 * (rectangle.width + rectangle.height);
 };
 
@@ -157,7 +161,7 @@ console.log(calculatePerimeter(rect)); // => 60
 Dùng Destructuring:
 
 ```js
-const calculatePerimeter = ({ width, height }) => {
+const calculatePerimeter = function ({ width, height }) {
   return 2 * (width + height);
 };
 
@@ -261,7 +265,7 @@ Trong lúc copy, cũng có thể chỉnh sửa dữ liệu (chuyển title thàn
 Ở bài functions đã đề cập đến việc hàm có số lượng tham số không biết trước. Ở đó ta sử dụng toán tử `...` kèm thên một mảng tham số bất kỳ:
 
 ```js
-const sumAllNums = (...args) => {
+const sumAllNums = function (...args) {
   console.log(args);
 };
 

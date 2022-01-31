@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">JSON</h1></center>
+</div>
+
 # JSON
 
 JSON viết tắt cho **JavaScript Object Notation**.
@@ -124,7 +128,7 @@ const usersText = `{
   ]
   }`;
 
-const usersObj = JSON.parse(usersText, (key, value) => {
+const usersObj = JSON.parse(usersText, function (key, value) {
   let newValue =
     typeof value == "string" && key != "email" ? value.toUpperCase() : value;
   return newValue;

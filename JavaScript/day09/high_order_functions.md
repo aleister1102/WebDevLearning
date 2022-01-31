@@ -1,15 +1,19 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Higher Order Functions
+<div class="title">
+    <center><h1 class="bigtitle">High Order Functions</h1></center>
+</div>
+
+# High Order Functions
 
 Những hàm bậc cao là các hàm mà có tham số là một hàm khác, hoặc giá trị trả về là một hàm. Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.
 
 ## Callback
 
 ```js
-const callback = (n) => {
-  return n ** 2; // => n^2
-};
+function callback(n) {
+  return n ** 2;
+}
 
 function cube(callback, n) {
   return callback(n) * n;
@@ -21,30 +25,30 @@ console.log(cube(3)); // => 27
 ## Returning Function
 
 ```js
-const higherOrder = (n) => {
-  const doSomething = (m) => {
-    const doWhatEver = (t) => {
+function higherOrder(n) {
+  function doSomething(m) {
+    function doWhatEver(t) {
       return 2 * n + 3 * m + t;
-    };
+    }
     return doWhatEver;
-  };
+  }
   return doSomething;
-};
+}
 ```
 
 Kết hợp với callback:
 
 ```js
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 5];
 
-const sumArray = (arr) => {
+function sumArray(arr) {
   let sum = 0;
-  const callback = function (element) {
+  function callback(element) {
     sum += element;
-  };
+  }
   arr.forEach(callback);
   return sum;
-};
+}
 console.log(sumArray(numbers)); // => 15
 ```
 
@@ -53,15 +57,15 @@ Phương thức `forEach` gọi thực hiện hàm `callback` cho mỗi phần t
 Đoạn code trên có thể viết gọn lại như sau:
 
 ```js
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 5];
 
-const sumArray = (arr) => {
+function sumArray(arr) {
   let sum = 0;
   arr.forEach(function (element) {
     sum += element;
   });
   return sum;
-};
+}
 console.log(sumArray(numbers)); // => 15
 ```
 
@@ -147,7 +151,9 @@ Mỗi phần tử trong mảng sẽ là đối số của tham số `element`.
 
 ```js
 const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
-const namesToUpperCase = names.map((name) => name.toUpperCase());
+const namesToUpperCase = names.map(function (name) {
+  return name.toUpperCase();
+});
 console.log(namesToUpperCase); // => ['ASABENEH', 'MATHIAS', 'ELIAS', 'BROOK']
 ```
 
@@ -164,9 +170,9 @@ console.log(namesToUpperCase); // => ['ASABENEH', 'MATHIAS', 'ELIAS', 'BROOK']
 ```js
 //Filter countries containing land
 const countries = ["Albania", "Ethiopia", "Finland", "Germany", "Ireland"];
-const countriesContainingLand = countries.filter((country) =>
-  country.includes("land")
-);
+const countriesContainingLand = countries.filter(function (country) {
+  return country.includes("land");
+});
 console.log(countriesContainingLand); // => ['Finland', 'Ireland']
 ```
 
@@ -189,7 +195,7 @@ Nếu tham số `initialValue` không được sử dụng, giá trị mặc đ�
 ```js
 const data = [5, 10, 15, 20, 25];
 
-const res = data.reduce((total, currentValue) => {
+const res = data.reduce(function (total, currentValue) {
   return total + currentValue;
 });
 
@@ -227,7 +233,9 @@ console.log(ages.every(checkAge)); // => false
 
 ```js
 const ages = [24, 22, 25, 32, 35, 18];
-const age = ages.find((age) => age < 20);
+const age = ages.find(function (age) {
+  return age < 20;
+});
 
 console.log(age); // => 18
 ```
@@ -283,7 +291,7 @@ fruits.sort(); // => Apple, Banana, Mango, Orange
 
 ```js
 console.log(
-  score.sort((firstEl, secondEl) => {
+  score.sort(function (firstEl, secondEl) {
     if (secondEl > firstEl) {
       return 1;
     } else {

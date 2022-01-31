@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Errors Handling</h1></center>
+</div>
+
 # Error Handling
 
 JS là một ngôn ngữ lỏng lẻo, đôi khi chúng ta nhận được những lỗi biên dịch khi cố truy cập giá trị của biến undefined hoặc gọi hàm undefined,...

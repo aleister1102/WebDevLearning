@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Booleans - Operators</h1></center>
+</div>
+
 # Booleans
 
 ## Truthy values

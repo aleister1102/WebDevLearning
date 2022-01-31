@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Console Objects</h1></center>
+</div>
+
 # Console Object Methods
 
 Đối tượng console cung cấp nhiều phương thức, một trong số đó rất nổi tiếng là `console.log`.

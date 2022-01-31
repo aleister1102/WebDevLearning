@@ -1,5 +1,9 @@
 <link rel='stylesheet' href='../main.css'>
 
+<div class="title">
+    <center><h1 class="bigtitle">Loops</h1></center>
+</div>
+
 # Loops
 
 Vòng lặp `for`, `while` và `do while` trong JS tương tự C/C++.

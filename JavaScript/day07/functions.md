@@ -1,6 +1,8 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Functions
+<div class="title">
+    <center><h1 class="bigtitle">Functions</h1></center>
+</div>
 
 Hàm trong JS bắt đầu bởi từ khóa `function`, theo sau đó là tên hàm và dấu `()` chứa các tham số nếu có. Cũng có thể dùng tham số mặc định với hằng số.
 
@@ -19,7 +21,7 @@ Một hàm có thể có nhiều cách khai báo:
 - Anonymous function
 - Arrow function
 
-## Declaration Function
+# Declaration Function
 
 Đây là cách khai báo đơn giản, tương tự C/C++.
 
@@ -34,7 +36,7 @@ function functionName(param) {
 - Có global scope.
 - Có thể gọi Declaration function trước khai báo hàm
 
-## Anonymous Function
+# Anonymous Function
 
 **Anonymous Function** (Hàm vô danh() là hàm được khai báo mà không có tên.
 
@@ -48,7 +50,7 @@ console.log(anonymousFunc()); // 1
 
 Giá trị trả về của hàm được lưu trong biến `anonymousFunc`.
 
-## Expression Function
+# Expression Function
 
 **Expression function** (Hàm biểu thức) là hàm có chứa biểu thức, giá trị trả về của hàm sẽ được gán cho một biến nào đó.
 
@@ -68,7 +70,7 @@ console.log(expressionFunc(11)); // 121
 
 - Không thể gọi Expression function trước khai báo hàm.
 
-## Self Invoking Function
+# Self Invoking Function
 
 **Self Invoking Function** (Các hàm tự thực thi) có bản chất là các hàm vô danh, được tự động thực thi ngay khi chúng được khai báo mà không cần chờ gọi hàm.
 
@@ -122,7 +124,7 @@ const double = (n) => n * 2;
 console.log(double(8)); // 16
 ```
 
-## Function with default parametes
+# Function with default parametes
 
 Đôi khi ta gọi hàm mà ta muốn nó có một giá trị mặc định nào đó. Nếu chúng ta không truyền vào đối số thì hàm sẽ lấy giá trị đó để xử lý.
 
