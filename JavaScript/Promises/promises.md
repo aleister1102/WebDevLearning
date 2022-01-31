@@ -4,6 +4,18 @@
     <center><h1 class="bigtitle">Promises</h1></center>
 </div>
 
+- [Synchronous & Asynchronous](#synchronous--asynchronous)
+  - [Callback Function](#callback-function)
+  - [Callback Hell](#callback-hell)
+- [Promise](#promise)
+  - [Promise States](#promise-states)
+  - [Creating Promise](#creating-promise)
+  - [Promise Object Methods](#promise-object-methods)
+  - [Returning Values](#returning-values)
+- [Promise Chain](#promise-chain)
+- [Promise Class Methods](#promise-class-methods)
+- [Async & Await](#async--await)
+
 # Synchronous & Asynchronous
 
 **Synchronous** (đồng bộ) là các câu lệnh viết trước thì thực thi trước, viết sau thì thực thi sau. Nói cách khác, sẽ chỉ có một luồng thực thi các đoạn code từ trên xuống dưới.

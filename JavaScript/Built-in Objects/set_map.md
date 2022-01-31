@@ -4,6 +4,22 @@
     <center><h1 class="bigtitle">Sets and Maps</h1></center>
 </div>
 
+- [Sets](#sets)
+  - [Creating a Set](#creating-a-set)
+  - [Adding Element to Set](#adding-element-to-set)
+  - [Deleting Element from Set](#deleting-element-from-set)
+  - [Checking Element in Set](#checking-element-in-set)
+  - [Clearing the Set](#clearing-the-set)
+  - [Application](#application)
+  - [Union of Sets](#union-of-sets)
+  - [Intersection of Sets](#intersection-of-sets)
+  - [Difference of Sets](#difference-of-sets)
+- [Maps](#maps)
+  - [Creating a Map](#creating-a-map)
+  - [Adding Element to Map](#adding-element-to-map)
+  - [Getting Value from Map](#getting-value-from-map)
+  - [Checking Key in Map](#checking-key-in-map)
+
 # Sets
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).

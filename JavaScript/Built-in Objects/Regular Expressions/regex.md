@@ -4,6 +4,30 @@
     <center><h1 class="bigtitle">Regular Expressions</h1></center>
 </div>
 
+- [Regular Expressions](#regular-expressions)
+  - [RegExp parameters](#regexp-parameters)
+    - [Pattern](#pattern)
+    - [Flag](#flag)
+  - [Creating RegExp using Constructor](#creating-regexp-using-constructor)
+  - [Creating RegExp without using Constructor](#creating-regexp-without-using-constructor)
+- [RegExp Methods](#regexp-methods)
+  - [test](#test)
+  - [match](#match)
+  - [search](#search)
+  - [replace](#replace)
+- [RegExp Meta Characters](#regexp-meta-characters)
+  - [Square Bracket](#square-bracket)
+  - [Escape Characters (`\`)](#escape-characters-)
+  - [Quantifiers Characters](#quantifiers-characters)
+    - [One or more times (`+`)](#one-or-more-times-)
+    - [Zero or more times (`*`)](#zero-or-more-times-)
+    - [Zero or one times (`?`)](#zero-or-one-times-)
+  - [Period (`.`)](#period-)
+  - [Cart](#cart)
+    - [Start with](#start-with)
+    - [Negation](#negation)
+  - [Summarize](#summarize)
+
 # Regular Expressions
 
 **Regular Expressions** (biểu thức chính quy) là một ngôn ngữ lập trình nhỏ để so khớp các khuôn mẫu (pattern) với dữ liệu.

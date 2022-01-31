@@ -4,6 +4,10 @@
     <center><h1 class="bigtitle">Fetching API</h1></center>
 </div>
 
+- [Fetch API](#fetch-api)
+- [JSON Server](#json-server)
+- [CRUD & Postman](#crud--postman)
+
 # Fetch API
 
 Phương thức `fetch` có đối số là một URL của API. Phương thức này trả về một đối tượng thuộc class `Response` giống `Promise`.

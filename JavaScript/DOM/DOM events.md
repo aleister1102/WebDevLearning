@@ -4,6 +4,16 @@
     <center><h1 class="bigtitle">DOM Events</h1></center>
 </div>
 
+- [DOM Events](#dom-events)
+  - [Attribute Events](#attribute-events)
+  - [Assigning Events Using Element Node](#assigning-events-using-element-node)
+  - [onchange](#onchange)
+  - [onkeyup/onkeydown/onkeypress](#onkeyuponkeydownonkeypress)
+- [Events Methods](#events-methods)
+  - [preventDefault](#preventdefault)
+  - [stopPropagation](#stoppropagation)
+- [Event Listeners](#event-listeners)
+
 # DOM Events
 
 Khi người dùng tương tác với trang web bằng cách click chuột, tăng giảm kích thước cửa sổ, hover hay là cuộn chuột, đều xảy ra các sự kiện. Tên của các sự kiện này tham khảo ở [đây](https://www.w3schools.com/jsref/dom_obj_event.asp).

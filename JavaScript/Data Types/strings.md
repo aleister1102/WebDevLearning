@@ -4,6 +4,32 @@
     <center><h1 class="bigtitle">Strings</h1></center>
 </div>
 
+- [String Concatenating](#string-concatenating)
+- [Long Literal Strings](#long-literal-strings)
+- [Escape Sequences](#escape-sequences)
+- [Template String](#template-string)
+- [String Methods](#string-methods)
+  - [`length`](#length)
+  - [`[index]`](#index)
+  - [`substring(start,end)`](#substringstartend)
+  - [`split(delimiter)`](#splitdelimiter)
+  - [`trim(delimiter)`](#trimdelimiter)
+  - [`includes(substring)`](#includessubstring)
+  - [`replace(old string, new string)`](#replaceold-string-new-string)
+  - [`charAt(index)`](#charatindex)
+  - [`charCodeAt(index)`](#charcodeatindex)
+  - [`indexOf(substring)`](#indexofsubstring)
+  - [`lastIndexOf(substring)`](#lastindexofsubstring)
+  - [`concat(substrings)`](#concatsubstrings)
+  - [`startsWith(substring)`](#startswithsubstring)
+  - [`endsWith(substring)`](#endswithsubstring)
+  - [`search(substring)`](#searchsubstring)
+  - [`repeat(times)`](#repeattimes)
+  - [`match(regex)`](#matchregex)
+- [Checking Data Types and Casting](#checking-data-types-and-casting)
+  - [Checking Data Types](#checking-data-types)
+  - [Casting](#casting)
+
 # String Concatenating
 
 Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.

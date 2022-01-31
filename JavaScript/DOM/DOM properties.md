@@ -4,6 +4,10 @@
     <center><h1 class="bigtitle">DOM Properties</h1></center>
 </div>
 
+- [DOM Node Properties](#dom-node-properties)
+- [DOM CSS](#dom-css)
+- [classList Property](#classlist-property)
+
 # DOM Node Properties
 
 Ba loại node/đối tượng element, attribute và text đều có thuộc tính `nodeType`. Giá trị của `nodeType` đối với element node là 1, attribute note là 2 và text note là 3.

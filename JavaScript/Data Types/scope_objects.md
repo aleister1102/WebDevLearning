@@ -4,6 +4,22 @@
     <center><h1 class="bigtitle">Scopes and Objects</h1></center>
 </div>
 
+- [Scope](#scope)
+  - [Window scope](#window-scope)
+  - [Global scope](#global-scope)
+  - [Local scope](#local-scope)
+- [Object](#object)
+  - [Creating](#creating)
+  - [Accessing](#accessing)
+  - [Method](#method)
+  - [Modifying](#modifying)
+  - [Built-in Object](#built-in-object)
+    - [`Object.assign`, sao chép đối tượng mà không thay đổi đối tượng gốc](#objectassign-sao-chép-đối-tượng-mà-không-thay-đổi-đối-tượng-gốc)
+    - [`Object.keys`, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.](#objectkeys-lấy-mọi-tên-thuộc-tính-hoặc-khóa-có-trong-đối-tượng)
+    - [`Object.values`, lấy giá trị của đối tượng và cho vào mảng.](#objectvalues-lấy-giá-trị-của-đối-tượng-và-cho-vào-mảng)
+    - [`Object.entries`, lấy các cặp key - value và cho vào mảng.](#objectentries-lấy-các-cặp-key---value-và-cho-vào-mảng)
+    - [`hasOwnProperty(key)`, kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.](#hasownpropertykey-kiểm-tra-thuộc-tính-key-có-tồn-tại-trong-đối-tượng-hay-không)
+
 # Scope
 
 Có ba loại scope trong Javascript, là **Window**, **Global** và **Local**. Tương tự như C/C++ ở lập trình hàm. Ta thường không sử dụng các biến toàn cục mà đóng gói tất cả vào các khối lệnh và sử dụng biến cục bộ.

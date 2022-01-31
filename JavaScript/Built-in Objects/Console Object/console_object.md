@@ -3,6 +3,7 @@
 <div class="title">
     <center><h1 class="bigtitle">Console Objects</h1></center>
 </div>
+
 - [Console Object Methods](#console-object-methods)
   - [console.log()](#consolelog)
   - [console.warn()](#consolewarn)

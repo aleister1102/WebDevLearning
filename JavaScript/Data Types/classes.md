@@ -4,6 +4,19 @@
     <center><h1 class="bigtitle">Classes</h1></center>
 </div>
 
+- [Classes](#classes)
+  - [Defining A Class](#defining-a-class)
+  - [Class Instantiation](#class-instantiation)
+  - [Class Constructor](#class-constructor)
+  - [Default Constructor](#default-constructor)
+  - [Class Methods](#class-methods)
+- [Getter and Setter](#getter-and-setter)
+  - [getter](#getter)
+  - [setter](#setter)
+- [Static Method](#static-method)
+- [Inheritance](#inheritance)
+- [Overriding Methods](#overriding-methods)
+
 # Classes
 
 Ta đã biết cách tạo một Object đơn thuần mà không cần tạo lớp đối tượng như C++. Một Object như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện duy nhất.

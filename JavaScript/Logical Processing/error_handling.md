@@ -4,6 +4,15 @@
     <center><h1 class="bigtitle">Errors Handling</h1></center>
 </div>
 
+- [Error Handling](#error-handling)
+  - [Try - Catch - Finally](#try---catch---finally)
+  - [Parameter err](#parameter-err)
+  - [throw](#throw)
+- [Error Types](#error-types)
+  - [ReferenceError](#referenceerror)
+  - [SyntaxError](#syntaxerror)
+  - [TypeError](#typeerror)
+
 # Error Handling
 
 JS là một ngôn ngữ lỏng lẻo, đôi khi chúng ta nhận được những lỗi biên dịch khi cố truy cập giá trị của biến undefined hoặc gọi hàm undefined,...

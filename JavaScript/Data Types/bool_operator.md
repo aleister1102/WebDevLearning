@@ -4,6 +4,16 @@
     <center><h1 class="bigtitle">Booleans - Operators</h1></center>
 </div>
 
+- [Booleans](#booleans)
+  - [Truthy values](#truthy-values)
+  - [Falsy values](#falsy-values)
+- [Operators](#operators)
+  - [Assignment and Arithmetic](#assignment-and-arithmetic)
+  - [Comparision](#comparision)
+  - [Logical](#logical)
+  - [Increment and Decrement](#increment-and-decrement)
+  - [Ternary Operators](#ternary-operators)
+
 # Booleans
 
 ## Truthy values

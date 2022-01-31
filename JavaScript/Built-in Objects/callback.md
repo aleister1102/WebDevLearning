@@ -4,6 +4,20 @@
     <center><h1 class="bigtitle">Callback</h1></center>
 </div>
 
+- [High Order Functions](#high-order-functions)
+  - [Callback](#callback)
+  - [Returning Function](#returning-function)
+  - [Setting time](#setting-time)
+- [Functional Programming](#functional-programming)
+  - [forEach](#foreach)
+  - [map](#map)
+  - [filter](#filter)
+  - [reduce](#reduce)
+  - [every](#every)
+  - [find](#find)
+  - [some](#some)
+  - [sort](#sort)
+
 # High Order Functions
 
 Những hàm bậc cao là các hàm mà có tham số là một hàm khác, hoặc giá trị trả về là một hàm. Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.

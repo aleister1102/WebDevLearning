@@ -4,6 +4,22 @@
     <center><h1 class="bigtitle">DOM</h1></center>
 </div>
 
+- [Definition](#definition)
+- [Document Object](#document-object)
+- [DOM Element](#dom-element)
+  - [Get DOM Element](#get-dom-element)
+    - [By Id](#by-id)
+    - [By Class Name](#by-class-name)
+    - [By Tag Name](#by-tag-name)
+    - [By CSS Selector](#by-css-selector)
+    - [By HTML Selection](#by-html-selection)
+    - [Element Methods](#element-methods)
+  - [Set DOM Element](#set-dom-element)
+- [DOM Attribute](#dom-attribute)
+  - [Set Attribute](#set-attribute)
+  - [Get Attribute](#get-attribute)
+- [DOM Text](#dom-text)
+
 # Definition
 
 **DOM** là viết tắt của Document Object Model, là một tiêu chuẩn của W3C đưa ra. DOM biểu diễn văn bản HTML thành dạng cấu trúc cây. Cách biểu diễn này nhằm giúp trình duyệt hiển thị nội dung trang Web cho người dùng.

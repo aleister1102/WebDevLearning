@@ -4,6 +4,12 @@
     <center><h1 class="bigtitle">Web Storage</h1></center>
 </div>
 
+- [Web Storage](#web-storage)
+- [HTML Web Storage Objects](#html-web-storage-objects)
+  - [setItem](#setitem)
+  - [getItem](#getitem)
+  - [clear](#clear)
+
 # Web Storage
 
 **Web Storage** (Lưu trữ web) là một tính năng mới của HTML5 nhằm hỗ trợ cookie trong việc lưu dữ liệu.

@@ -4,6 +4,11 @@
     <center><h1 class="bigtitle">Window & Date Objects</h1></center>
 </div>
 
+- [Window Methods](#window-methods)
+- [Date Object](#date-object)
+  - [Create Time Object](#create-time-object)
+  - [Date Methods](#date-methods)
+
 # Window Methods
 
 Để pop up thông báo trên trang web. Chỉ nên sử dụng khi test.

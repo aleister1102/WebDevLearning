@@ -4,6 +4,29 @@
     <center><h1 class="bigtitle">Arrays</h1></center>
 </div>
 
+- [Create Arrays](#create-arrays)
+- [With values](#with-values)
+- [Accessing and Modifying](#accessing-and-modifying)
+- [Array Methods](#array-methods)
+  - [Contructor `Array()`](#contructor-array)
+  - [`Array(num).fill(init_value)`](#arraynumfillinit_value)
+  - [`concat.(otherArr)`](#concatotherarr)
+  - [`length`](#length)
+  - [`indexOf(value)`](#indexofvalue)
+  - [`lastIndexOf(value)`](#lastindexofvalue)
+  - [`includes(value)`](#includesvalue)
+  - [`isArray(object)`](#isarrayobject)
+  - [`toString()`](#tostring)
+  - [`join(delimeter)`](#joindelimeter)
+  - [`slice(start, end)`](#slicestart-end)
+  - [`splice(start, nums, items)`](#splicestart-nums-items)
+  - [`push(items)`](#pushitems)
+  - [`pop()`: Xóa phần tử cuối mảng.](#pop-xóa-phần-tử-cuối-mảng)
+  - [`shift()`: Xóa phần tử đầu mảng.](#shift-xóa-phần-tử-đầu-mảng)
+  - [`unshift(items)`: Thêm phần tử đầu mảng.](#unshiftitems-thêm-phần-tử-đầu-mảng)
+  - [`reverse()`: Đảo ngược mảng.](#reverse-đảo-ngược-mảng)
+  - [`sort()`: Sắp xếp mảng.](#sort-sắp-xếp-mảng)
+
 # Create Arrays
 
 > Thông thường ta dùng `const` để khai báo biến, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.

@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Numbers</h1></center>
 </div>
 
+- [Math Objects](#math-objects)
+- [Random Numbers](#random-numbers)
+
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
 # Math Objects

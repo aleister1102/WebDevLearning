@@ -4,6 +4,14 @@
     <center><h1 class="bigtitle">Functions</h1></center>
 </div>
 
+- [Declaration Function](#declaration-function)
+- [Anonymous Function](#anonymous-function)
+- [Expression Function](#expression-function)
+- [Self Invoking Function](#self-invoking-function)
+  - [Arrow Function](#arrow-function)
+- [Function with default parametes](#function-with-default-parametes)
+  - [Unlimited number of parameters](#unlimited-number-of-parameters)
+
 Hàm trong JS bắt đầu bởi từ khóa `function`, theo sau đó là tên hàm và dấu `()` chứa các tham số nếu có. Cũng có thể dùng tham số mặc định với hằng số.
 
 ```js

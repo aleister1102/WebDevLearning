@@ -4,6 +4,12 @@
     <center><h1 class="bigtitle">JSON</h1></center>
 </div>
 
+- [JSON](#json)
+  - [Converting JSON to JS Objects](#converting-json-to-js-objects)
+  - [Using a reviver function with JSON.parse()](#using-a-reviver-function-with-jsonparse)
+  - [Converting Object to JSON](#converting-object-to-json)
+  - [Using a Filter Array with JSON.stringify](#using-a-filter-array-with-jsonstringify)
+
 # JSON
 
 JSON viết tắt cho **JavaScript Object Notation**.

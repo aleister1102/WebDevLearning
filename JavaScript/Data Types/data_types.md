@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Primitive and Non-Primitive Data Types</h1></center>
 </div>
 
+- [Primitive Data Types](#primitive-data-types)
+- [Non - Primitive Data Types](#non---primitive-data-types)
+
 # Primitive Data Types
 
 Các kiểu dữ liệu nguyên thủy bao gồm:

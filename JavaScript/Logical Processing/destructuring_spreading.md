@@ -4,6 +4,18 @@
     <center><h1 class="bigtitle">Destructuring and Spreading</h1></center>
 </div>
 
+- [Destructuring](#destructuring)
+  - [Destructuring Arrays](#destructuring-arrays)
+  - [Destructuring Array during iteration](#destructuring-array-during-iteration)
+  - [Destructuring Objects](#destructuring-objects)
+  - [Object Parameter with Destructuring](#object-parameter-with-destructuring)
+  - [Destructuring Object during iteration](#destructuring-object-during-iteration)
+- [Spreading](#spreading)
+  - [Get the rest elements of array](#get-the-rest-elements-of-array)
+  - [Copy array](#copy-array)
+  - [Copy object](#copy-object)
+  - [Spreading with arrow function](#spreading-with-arrow-function)
+
 # Destructuring
 
 Destructuring là một cú pháp cho phép "giải nén" array hoặc object để gán cho các biến riêng biệt.
