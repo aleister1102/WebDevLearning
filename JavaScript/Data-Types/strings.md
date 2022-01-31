@@ -9,23 +9,23 @@
 - [Escape Sequences](#escape-sequences)
 - [Template String](#template-string)
 - [String Methods](#string-methods)
-  - [`length`](#length)
-  - [`[index]`](#index)
-  - [`substring(start,end)`](#substringstartend)
-  - [`split(delimiter)`](#splitdelimiter)
-  - [`trim(delimiter)`](#trimdelimiter)
-  - [`includes(substring)`](#includessubstring)
-  - [`replace(old string, new string)`](#replaceold-string-new-string)
-  - [`charAt(index)`](#charatindex)
-  - [`charCodeAt(index)`](#charcodeatindex)
-  - [`indexOf(substring)`](#indexofsubstring)
-  - [`lastIndexOf(substring)`](#lastindexofsubstring)
-  - [`concat(substrings)`](#concatsubstrings)
-  - [`startsWith(substring)`](#startswithsubstring)
-  - [`endsWith(substring)`](#endswithsubstring)
-  - [`search(substring)`](#searchsubstring)
-  - [`repeat(times)`](#repeattimes)
-  - [`match(regex)`](#matchregex)
+  - [length](#length)
+  - [[index]](#index)
+  - [substring(start,end)](#substringstartend)
+  - [split(delimiter)](#splitdelimiter)
+  - [trim(delimiter)](#trimdelimiter)
+  - [includes(substring)](#includessubstring)
+  - [replace(old string, new string)](#replaceold-string-new-string)
+  - [charAt(index)](#charatindex)
+  - [charCodeAt(index)](#charcodeatindex)
+  - [indexOf(substring)](#indexofsubstring)
+  - [lastIndexOf(substring)](#lastindexofsubstring)
+  - [concat(substrings)](#concatsubstrings)
+  - [startsWith(substring)](#startswithsubstring)
+  - [endsWith(substring)](#endswithsubstring)
+  - [search(substring)](#searchsubstring)
+  - [repeat(times)](#repeattimes)
+  - [match(regex)](#matchregex)
 - [Checking Data Types and Casting](#checking-data-types-and-casting)
   - [Checking Data Types](#checking-data-types)
   - [Casting](#casting)
@@ -118,7 +118,7 @@ console.log(`${a} is greater than ${b}: ${a > b}`);
 
 Do mọi thứ của JS đều là Object, nên đối với kiểu dữ liệu chuỗi, chúng ta có một số phương thức sau đây để thao tác:
 
-## `length`
+## length
 
 ```js
 let str = "onii-chan";
@@ -126,7 +126,7 @@ let str = "onii-chan";
 console.log(str.length); // 9
 ```
 
-## `[index]`
+## [index]
 
 ```js
 let str = "baka";
@@ -136,7 +136,7 @@ console.log(str[1]); // a
 console.log(str[2]); // k
 ```
 
-## `substring(start,end)`
+## substring(start,end)
 
 Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
 
@@ -147,7 +147,7 @@ console.log(str.substring(0, 6)); // Lê Min
 console.log(str.substring(0, 7)); // Lê Minh
 ```
 
-## `split(delimiter)`
+## split(delimiter)
 
 Tách chuỗi dựa vào delimiter cho trước.
 
@@ -157,7 +157,7 @@ console.log(str.split(",")); // Array: ['Tân không có đá',' ta không có �
 console.log(str.split(" ")); // Array: ['Tân', 'không', 'có', đá,', 'ta', 'không', 'có', 'đấng']
 ```
 
-## `trim(delimiter)`
+## trim(delimiter)
 
 Xóa bỏ delimeter ở trước và sau chuỗi nếu có.
 
@@ -168,7 +168,7 @@ console.log(str.trim(" ")); // 'Hảo hán đại trượng phu'
 console.log(str.trim()); // still remove spaces: 'Hảo hán đại trượng phu'
 ```
 
-## `includes(substring)`
+## includes(substring)
 
 Kiểm tra chuỗi con có tồn tại trong chuỗi chính.
 
@@ -181,7 +181,7 @@ console.log(str.includes("ầu")); // true
 console.log(str.includes("Ầu")); // fasle
 ```
 
-## `replace(old string, new string)`
+## replace(old string, new string)
 
 Thay thế một chuỗi hoặc chuỗi con thành một chuỗi khác
 
@@ -201,7 +201,7 @@ let str =
 console.log(str.replace(/love/gi, "LOVE"));
 ```
 
-## `charAt(index)`
+## charAt(index)
 
 Truyền vào chỉ số index và trả về ký tự của chuỗi nằm ở vị trí index đó.
 
@@ -212,7 +212,7 @@ console.log(str.charAt(0)); // Ả
 console.log(str.charAt(4)); // a
 ```
 
-## `charCodeAt(index)`
+## charCodeAt(index)
 
 Truyền vào chỉ số index và trả về mã ASCII của ký tự ở vị trí index đó.
 
@@ -224,7 +224,7 @@ console.log(str.charCodeAt(33)); // 't' - ASCII: 116
 console.log(str.charCodeAt(38)); // ',' - ASCII: 44
 ```
 
-## `indexOf(substring)`
+## indexOf(substring)
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu không tìm thấy thì trả về -1.
 
@@ -235,7 +235,7 @@ console.log(str.indexOf("Narutobaco")); // 0
 console.log(str.indexOf("nhiễm mỡ")); // 33
 ```
 
-## `lastIndexOf(substring)`
+## lastIndexOf(substring)
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
 
@@ -246,7 +246,7 @@ console.log(str.lastIndexOf("ta")); // 45
 console.log(str.lastIndexOf("của")); // 48
 ```
 
-## `concat(substrings)`
+## concat(substrings)
 
 Nối nhiều chuỗi lại với nhau
 
@@ -259,7 +259,7 @@ let s4 = "Vẻ";
 console.log(s1.concat(s2, s3, s4)); // 'Nămmớivuivẻ'
 ```
 
-## `startsWith(substring)`
+## startsWith(substring)
 
 Truyền vào một chuỗi con, kiểm tra chuỗi chính có bắt đầu bằng chuỗi con hay không. Nếu có trả về `true`, nếu không trả về `false`.
 
@@ -271,19 +271,19 @@ console.log(str.startsWith("yêu")); // false
 console.log(str.startsWith("Yêu")); // true
 ```
 
-## `endsWith(substring)`
+## endsWith(substring)
 
 Tương tự `startWith`, trả về `true` nếu chuỗi kết thúc là chuỗi con truyền vào.
 
-## `search(substring)`
+## search(substring)
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy.
 
-## `repeat(times)`
+## repeat(times)
 
 Lặp lại chuỗi nào đó `times` lần.
 
-## `match(regex)`
+## match(regex)
 
 Dùng để tìm kiếm chuỗi con dựa vào regex cho trước
 

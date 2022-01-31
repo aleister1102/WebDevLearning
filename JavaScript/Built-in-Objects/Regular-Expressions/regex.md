@@ -17,12 +17,12 @@
   - [replace](#replace)
 - [RegExp Meta Characters](#regexp-meta-characters)
   - [Square Bracket](#square-bracket)
-  - [Escape Characters (`\`)](#escape-characters-)
+  - [Escape Characters (\)](#escape-characters-)
   - [Quantifiers Characters](#quantifiers-characters)
-    - [One or more times (`+`)](#one-or-more-times-)
-    - [Zero or more times (`*`)](#zero-or-more-times-)
-    - [Zero or one times (`?`)](#zero-or-one-times-)
-  - [Period (`.`)](#period-)
+    - [One or more times (+)](#one-or-more-times-)
+    - [Zero or more times (\*)](#zero-or-more-times-)
+    - [Zero or one times (?)](#zero-or-one-times-)
+  - [Period (.)](#period-)
   - [Cart](#cart)
     - [Start with](#start-with)
     - [Negation](#negation)
@@ -188,7 +188,7 @@ console.log(matches);
 // => ["Apple", "banana", "apple", "banana", "Banana"]
 ```
 
-## Escape Characters (`\`)
+## Escape Characters (\)
 
 `\d`: một chữ số (digit).\
 `\D`: một ký tự không phải số (non-digit).\
@@ -217,7 +217,7 @@ Các ký tự số lượng này quy định số lượng pattern cần so kh�
 `*`: 0 hoặc hơn, viết ngắn gọn của {0,}.\
 `?`: 0 hoặc 1, viết ngắn gọn cho {0,1}.
 
-### One or more times (`+`)
+### One or more times (+)
 
 Pattern có thể xảy ra một lần hoặc nhiều hơn.
 
@@ -231,7 +231,7 @@ console.log(matches);
 // => ["12", "2020"]
 ```
 
-### Zero or more times (`*`)
+### Zero or more times (\*)
 
 Pattern có thể không xảy ra lần nào hoặc xảy ra nhiều lần.
 
@@ -248,7 +248,7 @@ console.log(matches);
 // => ['and banana are fruits']
 ```
 
-### Zero or one times (`?`)
+### Zero or one times (?)
 
 Chỉ xuất hiện 0 hoặc 1 lần.
 
@@ -265,7 +265,7 @@ console.log(matches);
 // => ["e-mail", "email", "Email", "E-mail"]
 ```
 
-## Period (`.`)
+## Period (.)
 
 So khớp với bất kỳ ký tự đơn nào ngoại trừ `\`.
 

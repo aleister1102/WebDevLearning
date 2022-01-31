@@ -8,24 +8,24 @@
 - [With values](#with-values)
 - [Accessing and Modifying](#accessing-and-modifying)
 - [Array Methods](#array-methods)
-  - [Contructor `Array()`](#contructor-array)
-  - [`Array(num).fill(init_value)`](#arraynumfillinit_value)
-  - [`concat.(otherArr)`](#concatotherarr)
-  - [`length`](#length)
-  - [`indexOf(value)`](#indexofvalue)
-  - [`lastIndexOf(value)`](#lastindexofvalue)
-  - [`includes(value)`](#includesvalue)
-  - [`isArray(object)`](#isarrayobject)
-  - [`toString()`](#tostring)
-  - [`join(delimeter)`](#joindelimeter)
-  - [`slice(start, end)`](#slicestart-end)
-  - [`splice(start, nums, items)`](#splicestart-nums-items)
-  - [`push(items)`](#pushitems)
-  - [`pop()`: Xóa phần tử cuối mảng.](#pop-xóa-phần-tử-cuối-mảng)
-  - [`shift()`: Xóa phần tử đầu mảng.](#shift-xóa-phần-tử-đầu-mảng)
-  - [`unshift(items)`: Thêm phần tử đầu mảng.](#unshiftitems-thêm-phần-tử-đầu-mảng)
-  - [`reverse()`: Đảo ngược mảng.](#reverse-đảo-ngược-mảng)
-  - [`sort()`: Sắp xếp mảng.](#sort-sắp-xếp-mảng)
+  - [Contructor: Array()](#contructor-array)
+  - [Array(num).fill(init_value)](#arraynumfillinit_value)
+  - [concat.(otherArr)](#concatotherarr)
+  - [length](#length)
+  - [indexOf(value)](#indexofvalue)
+  - [lastIndexOf(value)](#lastindexofvalue)
+  - [includes(value)](#includesvalue)
+  - [isArray(object)](#isarrayobject)
+  - [toString()](#tostring)
+  - [join(delimeter)](#joindelimeter)
+  - [slice(start, end)](#slicestart-end)
+  - [splice(start, nums, items)](#splicestart-nums-items)
+  - [push(items)](#pushitems)
+  - [pop()](#pop)
+  - [shift()](#shift)
+  - [unshift(items)](#unshiftitems)
+  - [reverse()](#reverse)
+  - [sort()](#sort)
 
 # Create Arrays
 
@@ -88,11 +88,11 @@ Tương tự C/C++
 
 # Array Methods
 
-## Contructor `Array()`
+## Contructor: Array()
 
 Dùng để khởi tạo một mảng rỗng trong JS.
 
-## `Array(num).fill(init_value)`
+## Array(num).fill(init_value)
 
 Khởi tạo một mảng mới với `num` phần tử đều có giá trị `init_value`.
 
@@ -104,7 +104,7 @@ const arr = Array(6).fill(null);
 console.log(arr); // [null,null,null,null,null,null]
 ```
 
-## `concat.(otherArr)`
+## concat.(otherArr)
 
 Nối mảng gọi method với mảng `otherArr` khác. Trả về một mảng mới **(các method không làm thay đổi giá trị của thuộc tính trong object)**.
 
@@ -115,7 +115,7 @@ const birthday = day_month.concat(year);
 console.log(birthday); // [11, 2, 2002]
 ```
 
-## `length`
+## length
 
 Lấy độ dài của mảng
 
@@ -124,7 +124,7 @@ const arr = Array(7).fill("Wjbu");
 console.log(arr.length); // 7
 ```
 
-## `indexOf(value)`
+## indexOf(value)
 
 Lấy index của phần tử có giá trị `value` trong mảng. Nếu không tìm thấy thì trả về 1.
 
@@ -136,7 +136,7 @@ console.log(arr.indexOf(11)); // -1
 
 > Có thể áp dụng để kiểm tra một phần tử có tồn tại trong mảng hay không.
 
-## `lastIndexOf(value)`
+## lastIndexOf(value)
 
 Lấy index của phần tử cuối cùng có giá trị `value` trong mảng.
 
@@ -145,15 +145,15 @@ const arr = ["Zen", "Ino", "Tan", "Zen", "Nezuko"];
 console.log(arr.lastIndexOf("Zen")); // 3
 ```
 
-## `includes(value)`
+## includes(value)
 
 Kiểm tra giá trị `value` có tồn tại trong mảng hay không. Nếu có trả về `true`, không trả về `false`.
 
-## `isArray(object)`
+## isArray(object)
 
 Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
 
-## `toString()`
+## toString()
 
 Chuyển mảng gọi method về kiểu chuỗi, các phần tử ngăn cách nhau bởi dấu phẩy.
 
@@ -162,7 +162,7 @@ const arr = [1, 2, 3, 4, 5];
 console.log(arr.toString()); // '1,2,3,4,5'
 ```
 
-## `join(delimeter)`
+## join(delimeter)
 
 Gắn các phần tử trong mảng thành một chuỗi ngăn cách nhau bởi `delimeter`. Mặc định là dấu phẩy.
 
@@ -173,7 +173,7 @@ console.log(arr.join("")); // 'Sài GònHồ Chí MinhHòn Ngọc Viễn Đông'
 console.log(arr.join(", ")); // 'Sài Gòn, Hồ Chí Minh, Hòn Ngọc Viễn Đông'
 ```
 
-## `slice(start, end)`
+## slice(start, end)
 
 Cắt ra một mảng con từ mảng gọi method và trả về mảng con đó. Cắt từ vị trí bắt đầu `start` đến `end - 1` (không lấy tại vị trí end)
 
@@ -186,7 +186,7 @@ console.log(arr.slice(1, 6)); // [2,3,4,5]
 console.log(arr.slice(0, 3)); // [1,2,3]
 ```
 
-## `splice(start, nums, items)`
+## splice(start, nums, items)
 
 Xóa `nums` phần tử trong mảng bắt đầu từ vị trí `start` và thay thế bằng các phần tử `items`. Method `splice` trả về phần tử bị xóa, còn mảng chính sẽ bị thay đổi.
 
@@ -200,7 +200,7 @@ console.log(arr.splice(0, 2, 9, 10)); // Start at 0, remove 2 items and add 3,4 
 console.log(arr); // [9,10,3,4,5,6,7,8]
 ```
 
-## `push(items)`
+## push(items)
 
 Thêm phần tử vào cuối mảng.
 
@@ -210,12 +210,22 @@ arr.push(7, 8);
 console.log(arr); // [1,2,3,4,5,6,7,8]
 ```
 
-## `pop()`: Xóa phần tử cuối mảng.
+## pop()
 
-## `shift()`: Xóa phần tử đầu mảng.
+Xóa phần tử cuối mảng.
 
-## `unshift(items)`: Thêm phần tử đầu mảng.
+## shift()
 
-## `reverse()`: Đảo ngược mảng.
+Xóa phần tử đầu mảng.
 
-## `sort()`: Sắp xếp mảng.
+## unshift(items)
+
+Thêm phần tử đầu mảng.
+
+## reverse()
+
+Đảo ngược mảng.
+
+## sort()
+
+Sắp xếp mảng.
