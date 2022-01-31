@@ -1,3 +1,5 @@
+<link rel='stylesheet' href='main.css'>
+
 Thư mục lưu giữ các kiến thức về JavaScript 🟨 học từ 2022.
 
 # Table of Contents

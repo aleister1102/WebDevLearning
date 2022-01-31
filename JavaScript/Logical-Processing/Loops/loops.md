@@ -33,7 +33,7 @@ for (let i = 1; i <= 7; i++) {
 ```
 
 Kết quả:
-<img src = "pic (1).png">
+<img src = "loops1.png">
 Nhận thấy rằng các dấu `#` liên tục được gom lại thành một dấu duy nhất xuất hiện 28 lần (số 28 phía trước).
 
 Vì vậy ta dùng biến chuỗi để tạo tam giác:
@@ -51,4 +51,4 @@ console.log(str);
 ```
 
 Kết quả:
-<img src = "pic (2).png">
+<img src = "loops2.png">
