@@ -3,6 +3,21 @@
 <div class="title">
     <center><h1 class="bigtitle">Console Objects</h1></center>
 </div>
+- [Console Object Methods](#console-object-methods)
+  - [console.log()](#consolelog)
+  - [console.warn()](#consolewarn)
+  - [console.error()](#consoleerror)
+  - [console.table()](#consoletable)
+    - [Array](#array)
+    - [Object](#object)
+    - [Multidimensional Array](#multidimensional-array)
+    - [Array of Objects](#array-of-objects)
+  - [console.time()](#consoletime)
+  - [console.info()](#consoleinfo)
+  - [console.assert()](#consoleassert)
+  - [console.group()](#consolegroup)
+  - [console.count()](#consolecount)
+  - [console.clear()](#consoleclear)
 
 # Console Object Methods
 
