@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">High Order Functions</h1></center>
+    <center><h1 class="bigtitle">Callback</h1></center>
 </div>
 
 # High Order Functions

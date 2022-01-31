@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Data Types</h1></center>
+    <center><h1 class="bigtitle">Primitive and Non-Primitive Data Types</h1></center>
 </div>
 
 # Primitive Data Types
