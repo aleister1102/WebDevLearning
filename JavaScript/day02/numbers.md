@@ -1,10 +1,12 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Numbers
+<div class="title">
+    <center><h1 class="bigtitle">Numbers</h1></center>
+</div>
 
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
-## Math Objects
+# Math Objects
 
 Trong JS có lớp đối tượng `Math` hỗ trợ nhiều phương thức để thao tác với kiểu dữ liệu số.
 
@@ -62,7 +64,7 @@ Math.cos(0);
 Math.cos(60);
 ```
 
-## Random Numbers
+# Random Numbers
 
 ```js
 let randomNum = Math.random(); // generates 0 to 0.999

@@ -1,12 +1,14 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Strings
+<div class="title">
+    <center><h1 class="bigtitle">Strings</h1></center>
+</div>
 
-## String Concatenating
+# String Concatenating
 
 Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.
 
-## Long Literal Strings
+# Long Literal Strings
 
 Một chuỗi có thể là một dòng, nhiều dòng hoặc đoạn văn bản. Để viết giá trị chuỗi trên nhiều dòng, ta sử dụng dấu `\` ở cuối mỗi dòng thể hiện rằng phía sau vẫn còn nội dung của chuỗi.
 
@@ -29,7 +31,7 @@ Làm gần được 3 năm mà nhà xe nó đã mua đủ cả. Nghĩ mà thèm.
 console.log(paragraph);
 ```
 
-## Escape Sequences
+# Escape Sequences
 
 Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 
@@ -37,9 +39,9 @@ Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 - `\t`: Tab, means 8 spaces
 - `\\`: Back slash
 - `\'`: Single quote (')
-- `\'`: Double quote (')
+- `\"`: Double quote (")
 
-## Template String
+# Template String
 
 Khái niệm Template String hiểu đơn giản là ta thay thế các ký tự trong chuỗi thành một biến nào đó có thể chỉnh sửa. Có các ví dụ sau đây:
 
@@ -86,11 +88,11 @@ let b = 3;
 console.log(`${a} is greater than ${b}: ${a > b}`);
 ```
 
-## String Methods
+# String Methods
 
 Do mọi thứ của JS đều là Object, nên đối với kiểu dữ liệu chuỗi, chúng ta có một số phương thức sau đây để thao tác:
 
-1. `length`
+## `length`
 
 ```js
 let str = "onii-chan";
@@ -98,7 +100,7 @@ let str = "onii-chan";
 console.log(str.length); // 9
 ```
 
-2. Accessing (`[index]`)
+## `[index]`
 
 ```js
 let str = "baka";
@@ -108,8 +110,9 @@ console.log(str[1]); // a
 console.log(str[2]); // k
 ```
 
-3. `substring(start,end)`
-   Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
+## `substring(start,end)`
+
+Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
 
 ```js
 let str = "Lê Minh Nghiện";
@@ -118,7 +121,7 @@ console.log(str.substring(0, 6)); // Lê Min
 console.log(str.substring(0, 7)); // Lê Minh
 ```
 
-4. `split(delimiter)`
+## `split(delimiter)`
 
 Tách chuỗi dựa vào delimiter cho trước.
 
@@ -128,7 +131,7 @@ console.log(str.split(",")); // Array: ['Tân không có đá',' ta không có �
 console.log(str.split(" ")); // Array: ['Tân', 'không', 'có', đá,', 'ta', 'không', 'có', 'đấng']
 ```
 
-5. `trim(delimiter)`
+## `trim(delimiter)`
 
 Xóa bỏ delimeter ở trước và sau chuỗi nếu có.
 
@@ -139,7 +142,7 @@ console.log(str.trim(" ")); // 'Hảo hán đại trượng phu'
 console.log(str.trim()); // still remove spaces: 'Hảo hán đại trượng phu'
 ```
 
-6. `includes(substring)`
+## `includes(substring)`
 
 Kiểm tra chuỗi con có tồn tại trong chuỗi chính.
 
@@ -152,7 +155,7 @@ console.log(str.includes("ầu")); // true
 console.log(str.includes("Ầu")); // fasle
 ```
 
-7. `replace(old string, new string)`
+## `replace(old string, new string)`
 
 Thay thế một chuỗi hoặc chuỗi con thành một chuỗi khác
 
@@ -172,7 +175,7 @@ let str =
 console.log(str.replace(/love/gi, "LOVE"));
 ```
 
-8. `charAt(index)`
+## `charAt(index)`
 
 Truyền vào chỉ số index và trả về ký tự của chuỗi nằm ở vị trí index đó.
 
@@ -183,7 +186,7 @@ console.log(str.charAt(0)); // Ả
 console.log(str.charAt(4)); // a
 ```
 
-9. `charCodeAt(index)`
+## `charCodeAt(index)`
 
 Truyền vào chỉ số index và trả về mã ASCII của ký tự ở vị trí index đó.
 
@@ -195,7 +198,7 @@ console.log(str.charCodeAt(33)); // 't' - ASCII: 116
 console.log(str.charCodeAt(38)); // ',' - ASCII: 44
 ```
 
-10. `indexOf(substring)`
+## `indexOf(substring)`
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu không tìm thấy thì trả về -1.
 
@@ -206,7 +209,7 @@ console.log(str.indexOf("Narutobaco")); // 0
 console.log(str.indexOf("nhiễm mỡ")); // 33
 ```
 
-11. `lastIndexOf(substring)`
+## `lastIndexOf(substring)`
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
 
@@ -217,7 +220,7 @@ console.log(str.lastIndexOf("ta")); // 45
 console.log(str.lastIndexOf("của")); // 48
 ```
 
-12. `concat(substrings)`
+## `concat(substrings)`
 
 Nối nhiều chuỗi lại với nhau
 
@@ -230,7 +233,7 @@ let s4 = "Vẻ";
 console.log(s1.concat(s2, s3, s4)); // 'Nămmớivuivẻ'
 ```
 
-13. `startsWith(substring)`
+## `startsWith(substring)`
 
 Truyền vào một chuỗi con, kiểm tra chuỗi chính có bắt đầu bằng chuỗi con hay không. Nếu có trả về `true`, nếu không trả về `false`.
 
@@ -242,19 +245,19 @@ console.log(str.startsWith("yêu")); // false
 console.log(str.startsWith("Yêu")); // true
 ```
 
-14. `endsWith(substring)`
+## `endsWith(substring)`
 
 Tương tự `startWith`, trả về `true` nếu chuỗi kết thúc là chuỗi con truyền vào.
 
-15. `search(substring)`
+## `search(substring)`
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy.
 
-16. `repeat(times)`
+## `repeat(times)`
 
 Lặp lại chuỗi nào đó `times` lần.
 
-17. `match(regex)`
+## `match(regex)`
 
 Dùng để tìm kiếm chuỗi con dựa vào regex cho trước
 

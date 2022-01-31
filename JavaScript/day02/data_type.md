@@ -1,8 +1,10 @@
 <link rel='stylesheet' href='../main.css'>
 
-# Data Type
+<div class="title">
+    <center><h1 class="bigtitle">Data Types</h1></center>
+</div>
 
-## Primitive Data Types
+# Primitive Data Types
 
 Các kiểu dữ liệu nguyên thủy bao gồm:
 Number, String, Boolean, Null, Undefined.
@@ -54,7 +56,7 @@ let c = 5;
 console.log(b == c); // false
 ```
 
-## Non - Primitive Data Types
+# Non - Primitive Data Types
 
 Các kiểu dữ liệu không nguyên thủy bao gồm: Objects, Functions và Array.
 
