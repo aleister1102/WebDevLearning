@@ -46,4 +46,4 @@ Thư mục lưu giữ các kiến thức về JavaScript 🟨 học từ 2022.
 
 # Convention
 
-<img src ="convention1.png">
+![](convention1.png)
