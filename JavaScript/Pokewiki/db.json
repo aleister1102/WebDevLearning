@@ -1,19 +1,14 @@
 {
   "pokemons": [
     {
-      "id": 25,
       "name": "Pikachu",
-      "type": "electric"
+      "type": "electric",
+      "id": 25
     },
     {
-      "id": 1,
-      "name": "Bulbasaur",
-      "type": "grass"
-    },
-    {
-      "id": 4,
       "name": "Charmander",
-      "type": "fire"
+      "type": "fire",
+      "id": 4
     },
     {
       "id": 26,
@@ -26,9 +21,9 @@
       "type": "psychic"
     },
     {
-      "id": 29,
-      "name": "111",
-      "type": "111"
+      "name": "Quân",
+      "type": "human ",
+      "id": 29
     }
   ]
 }
