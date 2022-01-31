@@ -1,0 +1,24 @@
+{
+  "pokemons": [
+    {
+      "name": "Pikachu",
+      "type": "electric",
+      "id": 25
+    },
+    {
+      "name": "Charmander",
+      "type": "fire",
+      "id": 4
+    },
+    {
+      "id": 26,
+      "name": "Eternatus",
+      "type": "dragon_poison"
+    },
+    {
+      "name": "Cosmog",
+      "type": "psychic",
+      "id": 27
+    }
+  ]
+}
