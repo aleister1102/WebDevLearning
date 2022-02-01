@@ -136,7 +136,7 @@ console.log(str[1]); // a
 console.log(str[2]); // k
 ```
 
-## substring(start,end)
+## substring(start, end)
 
 Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
 
@@ -145,6 +145,18 @@ let str = "Lê Minh Nghiện";
 
 console.log(str.substring(0, 6)); // Lê Min
 console.log(str.substring(0, 7)); // Lê Minh
+```
+
+## slice(start, end)
+
+Giống `substring` nhưng có thể không có tham số thứ hai, nếu không truyền vào tham số thứ hai thì sẽ lấy ra chuỗi từ vị trí bắt đầu đến vị trí kết thúc.
+
+Cũng có thể cắt ngược từ phải sang trái, với index cuối cùng là 0, và giảm dần thành các số âm
+
+```js
+let str = "Lê Minh Nghiện"
+
+console.log(str.slice(-3, -1)); // hiệ
 ```
 
 ## split(delimiter)
@@ -279,7 +291,7 @@ Tương tự `startWith`, trả về `true` nếu chuỗi kết thúc là chuỗ
 
 ## search(substring)
 
-Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy.
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy. Phương thức `search` tương tự như `indexOf` nhưng không có tham số vị trí bắt đầu và còn hỗ trợ thêm tìm kiếm theo biểu thức chính quy (Regular Expression).
 
 ## repeat(times)
 
