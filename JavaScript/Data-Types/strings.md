@@ -235,6 +235,8 @@ console.log(str.indexOf("Narutobaco")); // 0
 console.log(str.indexOf("nhiễm mỡ")); // 33
 ```
 
+Phương thức này còn tham số thứ hai là vị trí bắt đầu tìm kiếm.
+
 ## lastIndexOf(substring)
 
 Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
