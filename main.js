@@ -1,15 +1,10 @@
-function run(x, y) {
-    var arr = [];
-    function recur(x,y,arr){
-        if(x + 1==y){
-            return;
-        }
-        else {
-            y-=1;
-            arr.unshift(y);
-            recur(x,y,arr);
-        }
+function findEqualValues(array1, array2) {
+    var result = array1.filter(function (element) {
+        return array2.has(element);
+    })
+    if (result == undefined) {
+        return [];
     }
-    return arr
+    return result;
 }
-
+console.log(findEqualValues([1, 2, 3], [2, 3]));
