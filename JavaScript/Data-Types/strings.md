@@ -11,7 +11,8 @@
 - [String Methods](#string-methods)
   - [length](#length)
   - [[index]](#index)
-  - [substring(start,end)](#substringstartend)
+  - [substring(start, end)](#substringstart-end)
+  - [slice(start, end)](#slicestart-end)
   - [split(delimiter)](#splitdelimiter)
   - [trim(delimiter)](#trimdelimiter)
   - [includes(substring)](#includessubstring)
@@ -154,7 +155,7 @@ Giống `substring` nhưng có thể không có tham số thứ hai, nếu khôn
 Cũng có thể cắt ngược từ phải sang trái, với index cuối cùng là 0, và giảm dần thành các số âm
 
 ```js
-let str = "Lê Minh Nghiện"
+let str = "Lê Minh Nghiện";
 
 console.log(str.slice(-3, -1)); // hiệ
 ```
