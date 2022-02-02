@@ -4,12 +4,13 @@
     <center><h1 class="bigtitle">Numbers</h1></center>
 </div>
 
-- [Math Objects](#math-objects)
+- [Math Object](#math-object)
 - [Random Numbers](#random-numbers)
+- [Number Object](#number-object)
 
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
-# Math Objects
+# Math Object
 
 Trong JS có lớp đối tượng `Math` hỗ trợ nhiều phương thức để thao tác với kiểu dữ liệu số.
 
@@ -78,3 +79,17 @@ console.log(numBtnZeroAndTen); // this gives: min 0 and max 10.99
 let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen);
 console.log(randomNumRoundToFloor); // this gives between 0 and 10
 ```
+
+# Number Object
+
+Lớp đối tượng `Number` trong JS cung cấp các phương thức:
+
+Các phương thức này gọi từ lớp đối tượng.\
+`Number.isFinite()` Xác định xem giá trị đã cho có phải là số hữu hạn hay không. Trả về boolean.\
+`Number.isInteger()` Xác định xem giá trị đã cho có phải là số nguyên hay không. Trả về boolean.\
+`Number.parseFloat()` Chuyển đổi chuỗi đã cho thành một số dấu phẩy động.\
+`Number.parseInt()` Chuyển đổi chuỗi đã cho thành một số nguyên.\
+
+Hai phương thức dưới gọi từ đối tượng.\
+`Number.prototype.toFixed()` Chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân. Tham số truyền vào là số thập phân cần giữ.\
+`Number.prototype.toString()` Chuyển đổi và trả về số đã cho dưới dạng chuỗi.

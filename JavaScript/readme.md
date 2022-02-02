@@ -44,8 +44,9 @@ JavaScript Knowledges studied since 2022 🔨 .
 | 01      | [DOM Properties](DOM/DOM_properties.md) |
 | 01      |     [DOM Events](DOM/DOM_events.md)     |
 
-# Convention
+# Conventions
 
+## Convention 1 (from Asabeneh)
 - We used camelCase for variables and functions.
 - All variable names start with a letter.
 - We chose to use const for constants, arrays, objects and functions. In stead of double quote, we chose to use single quote or backtick. Single quote is becoming trendy.
