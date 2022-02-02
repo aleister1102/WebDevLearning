@@ -88,7 +88,7 @@ Các phương thức này gọi từ lớp đối tượng.\
 `Number.isFinite()` Xác định xem giá trị đã cho có phải là số hữu hạn hay không. Trả về boolean.\
 `Number.isInteger()` Xác định xem giá trị đã cho có phải là số nguyên hay không. Trả về boolean.\
 `Number.parseFloat()` Chuyển đổi chuỗi đã cho thành một số dấu phẩy động.\
-`Number.parseInt()` Chuyển đổi chuỗi đã cho thành một số nguyên.\
+`Number.parseInt()` Chuyển đổi chuỗi đã cho thành một số nguyên.
 
 Hai phương thức dưới gọi từ đối tượng.\
 `Number.prototype.toFixed()` Chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân. Tham số truyền vào là số thập phân cần giữ.\
