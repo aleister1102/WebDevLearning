@@ -34,7 +34,7 @@ Tham khảo thêm về các giá trị Truthy ở [đây](https://developer.mozi
 - undefined
 - NaN
 - the boolean false
-- '', "", ``, empty string
+- ' ', " ", ` `, empty string
 
 Các dữ liệu và đối tượng ở trên được xem là `false`.
 
