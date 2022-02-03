@@ -18,27 +18,32 @@
 
 ## Truthy values
 
-- Các số âm và dương ngoại trừ số 0
-- Các chuỗi ngoại trừ chuỗi rỗng `""`
-- Giá trị boolean `true`
+Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `true` thì ta gọi giá trị đó là `Truthy`.
+
+- Các số âm và dương ngoại trừ số 0.
+- Các chuỗi ngoại trừ chuỗi rỗng `""`, ` `` ` hoặc `''`
+- Giá trị boolean `true`.
 
 Các dữ liệu và đối tượng ở trên được xem là `true`.
 
-Tham khảo thêm về các giá trị Truthy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+Tham khảo thêm về các giá trị Truthy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
+
+> Toán tử `!!` được sử dụng hai lần để chuyển kiểu dữ liệu bất kỳ về boolean.
 
 ## Falsy values
 
+Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `false` thì ta gọi giá trị đó là `Falsy`.
+
 - 0
-- 0n
+- '', "", ``, (empty string)
 - null
 - undefined
 - NaN
-- the boolean false
-- ' ', " ", ` `, empty string
+- false
 
 Các dữ liệu và đối tượng ở trên được xem là `false`.
 
-Tham khảo thêm về các giá trị Falsy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+Tham khảo thêm về các giá trị Falsy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Falsy).
 
 # Operators
 

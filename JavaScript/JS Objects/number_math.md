@@ -1,14 +1,28 @@
 <link rel='stylesheet' href='../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Numbers</h1></center>
+    <center><h1 class="bigtitle">Number and Math Objects</h1></center>
 </div>
 
-- [Math Object](#math-object)
-- [Random Numbers](#random-numbers)
 - [Number Object](#number-object)
+- [Math Object](#math-object)
+  - [Random Numbers](#random-numbers)
 
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
+
+# Number Object
+
+Lớp đối tượng `Number` trong JS cung cấp các phương thức:
+
+Các phương thức này gọi từ lớp đối tượng:\
+`Number.isFinite()` Xác định xem giá trị đã cho có phải là số **hữu hạn** hay không. Trả về boolean.\
+`Number.isInteger()` Xác định xem giá trị đã cho có phải là **số nguyên** hay không. Trả về boolean.\
+`Number.parseFloat()` Chuyển đổi **chuỗi** đã cho thành một **số dấu phẩy động**.\
+`Number.parseInt()` Chuyển đổi **chuỗi** đã cho thành một **số nguyên**.
+
+Hai phương thức dưới gọi từ đối tượng:\
+`Number.prototype.toFixed()` Chuyển đổi **số thập phân** thành **chuỗi**. Tham số truyền vào là số sau dấu phẩy cần giữ.\
+`Number.prototype.toString()` Chuyển đổi **số** thành **chuỗi**.
 
 # Math Object
 
@@ -68,7 +82,7 @@ Math.cos(0);
 Math.cos(60);
 ```
 
-# Random Numbers
+## Random Numbers
 
 ```js
 let randomNum = Math.random(); // generates 0 to 0.999
@@ -79,17 +93,3 @@ console.log(numBtnZeroAndTen); // this gives: min 0 and max 10.99
 let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen);
 console.log(randomNumRoundToFloor); // this gives between 0 and 10
 ```
-
-# Number Object
-
-Lớp đối tượng `Number` trong JS cung cấp các phương thức:
-
-Các phương thức này gọi từ lớp đối tượng.\
-`Number.isFinite()` Xác định xem giá trị đã cho có phải là số hữu hạn hay không. Trả về boolean.\
-`Number.isInteger()` Xác định xem giá trị đã cho có phải là số nguyên hay không. Trả về boolean.\
-`Number.parseFloat()` Chuyển đổi chuỗi đã cho thành một số dấu phẩy động.\
-`Number.parseInt()` Chuyển đổi chuỗi đã cho thành một số nguyên.
-
-Hai phương thức dưới gọi từ đối tượng.\
-`Number.prototype.toFixed()` Chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân. Tham số truyền vào là số thập phân cần giữ.\
-`Number.prototype.toString()` Chuyển đổi và trả về số đã cho dưới dạng chuỗi.

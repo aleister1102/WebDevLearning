@@ -9,23 +9,22 @@
 - [Escape Sequences](#escape-sequences)
 - [Template String](#template-string)
 - [String Methods](#string-methods)
-  - [length](#length)
-  - [[index]](#index)
+  - [charAt(index)](#charatindex)
+  - [charCodeAt(index)](#charcodeatindex)
+  - [concat(substrings)](#concatsubstrings)
+  - [indexOf(substring)](#indexofsubstring)
+  - [lastIndexOf(substring)](#lastindexofsubstring)
+  - [replace(old string, new string)](#replaceold-string-new-string)
+  - [search(substring)](#searchsubstring)
   - [substring(start, end)](#substringstart-end)
   - [slice(start, end)](#slicestart-end)
   - [split(delimiter)](#splitdelimiter)
-  - [trim(delimiter)](#trimdelimiter)
+  - [toLowerCase() && toUpperCase()](#tolowercase--touppercase)
   - [includes(substring)](#includessubstring)
-  - [replace(old string, new string)](#replaceold-string-new-string)
-  - [charAt(index)](#charatindex)
-  - [charCodeAt(index)](#charcodeatindex)
-  - [indexOf(substring)](#indexofsubstring)
-  - [lastIndexOf(substring)](#lastindexofsubstring)
-  - [concat(substrings)](#concatsubstrings)
   - [startsWith(substring)](#startswithsubstring)
   - [endsWith(substring)](#endswithsubstring)
-  - [search(substring)](#searchsubstring)
   - [repeat(times)](#repeattimes)
+  - [trim(delimiter)](#trimdelimiter)
   - [match(regex)](#matchregex)
 - [Checking Data Types and Casting](#checking-data-types-and-casting)
   - [Checking Data Types](#checking-data-types)
@@ -115,104 +114,12 @@ let b = 3;
 console.log(`${a} is greater than ${b}: ${a > b}`);
 ```
 
+> Sử dụng toán tử `[]` để truy cập ký tự trong chuỗi
+> Sử dụng thuộc tính `length` để lấy ra độ dài chuỗi.
+
 # String Methods
 
 Do mọi thứ của JS đều là Object, nên đối với kiểu dữ liệu chuỗi, chúng ta có một số phương thức sau đây để thao tác:
-
-## length
-
-```js
-let str = "onii-chan";
-
-console.log(str.length); // 9
-```
-
-## [index]
-
-```js
-let str = "baka";
-
-console.log(str[0]); // b
-console.log(str[1]); // a
-console.log(str[2]); // k
-```
-
-## substring(start, end)
-
-Giống với substr nhưng tham số thứ hai là index kết thúc, và nó không lấy chữ cái ở index cuối cùng
-
-```js
-let str = "Lê Minh Nghiện";
-
-console.log(str.substring(0, 6)); // Lê Min
-console.log(str.substring(0, 7)); // Lê Minh
-```
-
-## slice(start, end)
-
-Giống `substring` nhưng có thể không có tham số thứ hai, nếu không truyền vào tham số thứ hai thì sẽ lấy ra chuỗi từ vị trí bắt đầu đến vị trí kết thúc.
-
-Cũng có thể cắt ngược từ phải sang trái, với index cuối cùng là 0, và giảm dần thành các số âm
-
-```js
-let str = "Lê Minh Nghiện";
-
-console.log(str.slice(-3, -1)); // hiệ
-```
-
-## split(delimiter)
-
-Tách chuỗi dựa vào delimiter cho trước.
-
-```js
-let str = "Tân không có đá, ta không có đấng";
-console.log(str.split(",")); // Array: ['Tân không có đá',' ta không có đấng']
-console.log(str.split(" ")); // Array: ['Tân', 'không', 'có', đá,', 'ta', 'không', 'có', 'đấng']
-```
-
-## trim(delimiter)
-
-Xóa bỏ delimeter ở trước và sau chuỗi nếu có.
-
-```js
-let str = "  Hảo hán đại trượng phu  ";
-
-console.log(str.trim(" ")); // 'Hảo hán đại trượng phu'
-console.log(str.trim()); // still remove spaces: 'Hảo hán đại trượng phu'
-```
-
-## includes(substring)
-
-Kiểm tra chuỗi con có tồn tại trong chuỗi chính.
-
-```js
-let str = "Đầu đội trời chân đạp đất";
-
-console.log(str.includes("đội")); // true
-console.log(str.includes("Đội")); // false - case sensitive
-console.log(str.includes("ầu")); // true
-console.log(str.includes("Ầu")); // fasle
-```
-
-## replace(old string, new string)
-
-Thay thế một chuỗi hoặc chuỗi con thành một chuỗi khác
-
-```js
-let str = "Wubu neva die";
-
-console.log(str.replace("Wubu", "Wjbu")); // 'Wjbu neva die'
-console.log(str.replace("ie", "rink")); // 'Wubu neva drink'
-```
-
-Có thể sử dụng với Regular Expression (sẽ học sau)
-
-```js
-let str =
-  "Love is love, does not matter if you are LGBT, White, Black, Red Hair, Blonde or Handicapped";
-
-console.log(str.replace(/love/gi, "LOVE"));
-```
 
 ## charAt(index)
 
@@ -237,9 +144,22 @@ console.log(str.charCodeAt(33)); // 't' - ASCII: 116
 console.log(str.charCodeAt(38)); // ',' - ASCII: 44
 ```
 
+## concat(substrings)
+
+Nối nhiều chuỗi lại với nhau.
+
+```js
+let s1 = "Năm";
+let s2 = "Mới";
+let s3 = "Vui";
+let s4 = "Vẻ";
+
+console.log(s1.concat(s2, s3, s4)); // 'Nămmớivuivẻ'
+```
+
 ## indexOf(substring)
 
-Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu không tìm thấy thì trả về -1.
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu của chuỗi con đó. Nếu không tìm thấy thì trả về -1.
 
 ```js
 let str = "Narutobaco Sasuketamin Sharingan nhiễm mỡ";
@@ -252,7 +172,7 @@ Phương thức này còn tham số thứ hai là vị trí bắt đầu tìm ki
 
 ## lastIndexOf(substring)
 
-Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí bắt đầu của chuỗi con đó. Nếu có nhiều chuỗi con được tìm thấy thì ưu tiên trả về vị trí của chuỗi con cuối cùng. Nếu không tìm thấy thì trả về -1.
 
 ```js
 let str = "Chúng ta của hiện tại, đã không còn là chúng ta của hôm qua";
@@ -261,17 +181,78 @@ console.log(str.lastIndexOf("ta")); // 45
 console.log(str.lastIndexOf("của")); // 48
 ```
 
-## concat(substrings)
+## replace(old string, new string)
 
-Nối nhiều chuỗi lại với nhau
+Thay thế một chuỗi hoặc chuỗi con thành một chuỗi khác.
 
 ```js
-let s1 = "Năm";
-let s2 = "Mới";
-let s3 = "Vui";
-let s4 = "Vẻ";
+let str = "Wubu neva die";
 
-console.log(s1.concat(s2, s3, s4)); // 'Nămmớivuivẻ'
+console.log(str.replace("Wubu", "Wjbu")); // 'Wjbu neva die'
+console.log(str.replace("ie", "rink")); // 'Wubu neva drink'
+```
+
+Có thể sử dụng với Regular Expression (sẽ học sau)
+
+```js
+let str =
+  "Love is love, does not matter if you are LGBT, White, Black, Red Hair, Blonde or Handicapped";
+
+console.log(str.replace(/love/gi, "LOVE"));
+```
+
+## search(substring)
+
+Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy. Phương thức `search` tương tự như `indexOf` nhưng không có tham số vị trí bắt đầu và còn hỗ trợ thêm tìm kiếm theo biểu thức chính quy (Regular Expression).
+
+## substring(start, end)
+
+Cắt lấy chuỗi con với tham số đầu tiên là vị trí bắt đầu và tham số thứ hai là index kết thúc. Chú ý rằng phương thức này không lấy ký tự ở index cuối cùng.
+
+```js
+let str = "Lê Minh Nghiện";
+
+console.log(str.substring(0, 6)); // Lê Min
+console.log(str.substring(0, 7)); // Lê Minh
+```
+
+## slice(start, end)
+
+Giống `substring` nhưng có thể không có tham số thứ hai, nếu không truyền vào tham số thứ hai thì sẽ lấy ra chuỗi từ vị trí bắt đầu đến vị trí kết thúc.
+
+Cũng có thể cắt ngược từ phải sang trái, với index cuối cùng là 0, và giảm dần thành các số âm -1, -2, ...
+
+```js
+let str = "Lê Minh Nghiện";
+
+console.log(str.slice(-3, -1)); // hiệ
+```
+
+## split(delimiter)
+
+Tách chuỗi dựa vào delimiter cho trước.
+
+```js
+let str = "Tân không có đá, ta không có đấng";
+console.log(str.split(",")); // Array: ['Tân không có đá',' ta không có đấng']
+console.log(str.split(" ")); // Array: ['Tân', 'không', 'có', đá,', 'ta', 'không', 'có', 'đấng']
+```
+
+## toLowerCase() && toUpperCase()
+
+Dùng để chuyển chuỗi thành in thường hoặc in hoa.
+
+## includes(substring)
+
+Kiểm tra chuỗi con có tồn tại trong chuỗi chính.
+
+```js
+let str = "Đầu đội trời chân đạp đất";
+
+console.log(str.includes("đội")); // true
+console.log(str.includes("Đội")); // false - case sensitive
+console.log(str.includes("ầu")); // true
+console.log(str.includes("Ầu")); // fasle
 ```
 
 ## startsWith(substring)
@@ -290,17 +271,24 @@ console.log(str.startsWith("Yêu")); // true
 
 Tương tự `startWith`, trả về `true` nếu chuỗi kết thúc là chuỗi con truyền vào.
 
-## search(substring)
-
-Truyền vào một chuỗi con và tìm trong chuỗi chính, nếu tìm thấy thì trả về vị trí index của chuỗi con đầu tiên được tìm thấy. Phương thức `search` tương tự như `indexOf` nhưng không có tham số vị trí bắt đầu và còn hỗ trợ thêm tìm kiếm theo biểu thức chính quy (Regular Expression).
-
 ## repeat(times)
 
 Lặp lại chuỗi nào đó `times` lần.
 
+## trim(delimiter)
+
+Xóa bỏ delimeter ở trước và sau chuỗi nếu có.
+
+```js
+let str = "  Hảo hán đại trượng phu  ";
+
+console.log(str.trim(" ")); // 'Hảo hán đại trượng phu'
+console.log(str.trim()); // still remove spaces: 'Hảo hán đại trượng phu'
+```
+
 ## match(regex)
 
-Dùng để tìm kiếm chuỗi con dựa vào regex cho trước
+Dùng để tìm kiếm chuỗi con dựa vào regex cho trước.
 
 ```js
 let str = "Bao nhiêu lâu thì bán được được một tỉ gói mè?";

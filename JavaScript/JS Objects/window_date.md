@@ -4,16 +4,23 @@
     <center><h1 class="bigtitle">Window & Date Objects</h1></center>
 </div>
 
-- [Window Methods](#window-methods)
+- [Window Object](#window-object)
+  - [alert](#alert)
+  - [prompt](#prompt)
+  - [confirm](#confirm)
 - [Date Object](#date-object)
   - [Create Time Object](#create-time-object)
   - [Date Methods](#date-methods)
 
-# Window Methods
+# Window Object
+
+## alert
 
 Để pop up thông báo trên trang web. Chỉ nên sử dụng khi test.
 
 - `alert(message)`
+
+## prompt
 
 Hiển thị một cái hộp lời nhắc có chỗ để nhập input. Input sẽ được lưu dưới dạng một biến nào đó
 
@@ -23,6 +30,8 @@ Hiển thị một cái hộp lời nhắc có chỗ để nhập input. Input s
 let msg = prompt("Điền năm hạ giới", "Điền vô đây");
 console.log(msg);
 ```
+
+## confirm
 
 Hiển thị một hộp thoại xác nhận gồm tin nhắn kèm hai lựa chọn **OK** và **Cancel**.
 

@@ -5,27 +5,31 @@
 </div>
 
 - [Create Arrays](#create-arrays)
-- [With values](#with-values)
-- [Accessing and Modifying](#accessing-and-modifying)
+  - [With values](#with-values)
 - [Array Methods](#array-methods)
-  - [Contructor: Array()](#contructor-array)
-  - [Array(num).fill(init_value)](#arraynumfillinit_value)
-  - [concat.(otherArr)](#concatotherarr)
-  - [length](#length)
+  - [Array(num).fill(initialValue)](#arraynumfillinitialvalue)
+  - [Array.isArray(object)](#arrayisarrayobject)
+  - [push(items)](#pushitems)
+  - [pop()](#pop)
+  - [unshift(items)](#unshiftitems)
+  - [shift()](#shift)
   - [indexOf(value)](#indexofvalue)
-  - [lastIndexOf(value)](#lastindexofvalue)
   - [includes(value)](#includesvalue)
-  - [isArray(object)](#isarrayobject)
+  - [concat.(otherArr)](#concatotherarr)
   - [toString()](#tostring)
   - [join(delimeter)](#joindelimeter)
   - [slice(start, end)](#slicestart-end)
   - [splice(start, nums, items)](#splicestart-nums-items)
-  - [push(items)](#pushitems)
-  - [pop()](#pop)
-  - [shift()](#shift)
-  - [unshift(items)](#unshiftitems)
   - [reverse()](#reverse)
-  - [sort()](#sort)
+- [Array Methods Using Callback Functions](#array-methods-using-callback-functions)
+  - [forEach](#foreach)
+  - [map](#map)
+  - [reduce](#reduce)
+  - [find](#find)
+  - [filter](#filter)
+  - [every](#every)
+  - [some](#some)
+  - [sort](#sort)
 
 # Create Arrays
 
@@ -34,14 +38,14 @@
 **Sử dụng contructor**
 
 ```js
-const arr = Array();
+const arr = new Array();
 console.log(arr); // []
 ```
 
 Hoặc
 
 ```js
-let arr = Array();
+let arr = new Array();
 console.log(arr); // []
 ```
 
@@ -52,11 +56,11 @@ const arr = [];
 console.log(arr); // []
 ```
 
-# With values
+## With values
 
 Khởi tạo mảng như list của Python, không cần cung cấp số lượng phần tử cho trước.
 
-Có thể dùng method `length` để kiểm tra số lượng phần tử của mảng.
+Có thể gọi thuộc tính `length` để kiểm tra số lượng phần tử của mảng.
 
 ```js
 const nums = [3.14, 2.7, 11, 02, 2002, 19.9, 171.2];
@@ -82,19 +86,13 @@ const arr = [
 
 > Ngoài ra ta cũng có thể tạo ra một mảng bằng cách dùng method `split` đã học ở bài string.
 
-# Accessing and Modifying
-
-Tương tự C/C++
+Truy cập và chỉnh sửa giá trị phần tử trong mảng tương tự như C/C++ (thông qua toán tử `[]`).
 
 # Array Methods
 
-## Contructor: Array()
+## Array(num).fill(initialValue)
 
-Dùng để khởi tạo một mảng rỗng trong JS.
-
-## Array(num).fill(init_value)
-
-Khởi tạo một mảng mới với `num` phần tử đều có giá trị `init_value`.
+Khởi tạo một mảng mới với `num` phần tử đều có giá trị `initialValue`.
 
 ```js
 const arr = Array(5).fill(0);
@@ -104,29 +102,35 @@ const arr = Array(6).fill(null);
 console.log(arr); // [null,null,null,null,null,null]
 ```
 
-## concat.(otherArr)
+## Array.isArray(object)
 
-Nối mảng gọi method với mảng `otherArr` khác. Trả về một mảng mới **(các method không làm thay đổi giá trị của thuộc tính trong object)**.
+Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
 
-```js
-const day_month = [11, 02];
-const year = [2002];
-const birthday = day_month.concat(year);
-console.log(birthday); // [11, 2, 2002]
-```
+## push(items)
 
-## length
-
-Lấy độ dài của mảng
+Thêm phần tử vào cuối mảng.
 
 ```js
-const arr = Array(7).fill("Wjbu");
-console.log(arr.length); // 7
+const arr = [1, 2, 3, 4, 5, 6];
+arr.push(7, 8);
+console.log(arr); // [1,2,3,4,5,6,7,8]
 ```
+
+## pop()
+
+Xóa phần tử cuối mảng.
+
+## unshift(items)
+
+Thêm phần tử đầu mảng.
+
+## shift()
+
+Xóa phần tử đầu mảng.
 
 ## indexOf(value)
 
-Lấy index của phần tử có giá trị `value` trong mảng. Nếu không tìm thấy thì trả về 1.
+Lấy index của phần tử có giá trị `value` trong mảng. Nếu không tìm thấy thì trả về `-1`.
 
 ```js
 const arr = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
@@ -136,22 +140,20 @@ console.log(arr.indexOf(11)); // -1
 
 > Có thể áp dụng để kiểm tra một phần tử có tồn tại trong mảng hay không.
 
-## lastIndexOf(value)
-
-Lấy index của phần tử cuối cùng có giá trị `value` trong mảng.
-
-```js
-const arr = ["Zen", "Ino", "Tan", "Zen", "Nezuko"];
-console.log(arr.lastIndexOf("Zen")); // 3
-```
-
 ## includes(value)
 
 Kiểm tra giá trị `value` có tồn tại trong mảng hay không. Nếu có trả về `true`, không trả về `false`.
 
-## isArray(object)
+## concat.(otherArr)
 
-Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
+Dùng để nối mảng, trả về một mảng mới (không làm thay đổi mảng gốc).
+
+```js
+const day_month = [11, 02];
+const year = [2002];
+const birthday = day_month.concat(year);
+console.log(birthday); // [11, 2, 2002]
+```
 
 ## toString()
 
@@ -175,7 +177,7 @@ console.log(arr.join(", ")); // 'Sài Gòn, Hồ Chí Minh, Hòn Ngọc Viễn �
 
 ## slice(start, end)
 
-Cắt ra một mảng con từ mảng gọi method và trả về mảng con đó. Cắt từ vị trí bắt đầu `start` đến `end - 1` (không lấy tại vị trí end)
+Cắt ra một mảng con từ mảng gọi method và trả về mảng con đó. Cắt từ vị trí bắt đầu `start` đến `end - 1` (không lấy tại vị trí end).
 
 ```js
 const arr = [1, 2, 3, 4, 5];
@@ -188,7 +190,7 @@ console.log(arr.slice(0, 3)); // [1,2,3]
 
 ## splice(start, nums, items)
 
-Xóa `nums` phần tử trong mảng bắt đầu từ vị trí `start` và thay thế bằng các phần tử `items`. Method `splice` trả về phần tử bị xóa, còn mảng chính sẽ bị thay đổi.
+Xóa `nums` phần tử trong mảng bắt đầu từ vị trí `start` và thay thế bằng các phần tử `items`. Method `splice` trả về phần tử bị xóa, còn **mảng chính sẽ bị thay đổi**.
 
 ```js
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -200,43 +202,19 @@ console.log(arr.splice(0, 2, 9, 10)); // Start at 0, remove 2 items and add 3,4 
 console.log(arr); // [9,10,3,4,5,6,7,8]
 ```
 
-## push(items)
-
-Thêm phần tử vào cuối mảng.
-
-```js
-const arr = [1, 2, 3, 4, 5, 6];
-arr.push(7, 8);
-console.log(arr); // [1,2,3,4,5,6,7,8]
-```
-
-## pop()
-
-Xóa phần tử cuối mảng.
-
-## shift()
-
-Xóa phần tử đầu mảng.
-
-## unshift(items)
-
-Thêm phần tử đầu mảng.
-
 ## reverse()
 
 Đảo ngược mảng.
 
-## sort()
-
-Sắp xếp mảng.
-
-# Functional Programming
+# Array Methods Using Callback Functions
 
 Ngoài các phương thức đã nêu ở bài mảng, JS còn cung cấp một số phương thức dựng sẵn thuộc lớp đối tượng Array để thao tác với các hàm callback.
 
 ## forEach
 
-**Chức năng**: thực thi hàm callback cho mỗi phần tử có trong mảng. Nói cách khác, các phần tử của mảng sẽ đóng vai trò như tham số truyền vào hàm callback.
+**Chức năng**: thực thi hàm callback cho mỗi phần tử có trong mảng.
+
+Dùng khi cần thực thi một hàm bất kỳ cho mỗi phần tử trong mảng.
 
 **Cú pháp**: `forEach(callback, thisValue)`
 
@@ -286,6 +264,8 @@ Mỗi phần tử trong mảng sẽ là đối số của tham số `element`.
 
 **Chức năng**: lặp qua các phần tử trong mảng và thay đổi giá trị của chúng.
 
+Dùng khi cần thay đổi giá trị mảng gốc.
+
 **Cú pháp**: `map(callback, thisValue)`. Tham số tương tự `forEach`.
 
 **Lưu ý**: `map` làm thay đổi giá trị của mảng ban đầu.
@@ -300,28 +280,11 @@ const namesToUpperCase = names.map(function (name) {
 console.log(namesToUpperCase); // => ['ASABENEH', 'MATHIAS', 'ELIAS', 'BROOK']
 ```
 
-## filter
-
-**Chức năng**: lọc ra các phần tử thỏa một điều kiện nào đó.
-
-**Cú pháp**: `filter(callback, thisValue)`. Tham số tương tự `forEach`.
-
-**Trả về**: mảng chứa các phần tử thỏa mãn điều kiện của callback đã được lọc ra.
-
-**Ví dụ**: lọc ra các quốc gia có chữ "land" trong tên.
-
-```js
-//Filter countries containing land
-const countries = ["Albania", "Ethiopia", "Finland", "Germany", "Ireland"];
-const countriesContainingLand = countries.filter(function (country) {
-  return country.includes("land");
-});
-console.log(countriesContainingLand); // => ['Finland', 'Ireland']
-```
-
 ## reduce
 
 **Chức năng**: dùng để thực thi một hàm callback lên các phần tử của mảng (từ trái sang phải) với một biến tích lũy để thu về một giá trị duy nhất.
+
+Dùng để tính tích lũy cho một biến nào đó.
 
 **Cú pháp**: `reduce(callback, initialValue)`.
 
@@ -345,6 +308,50 @@ const res = data.reduce(function (sum, currentValue) {
 console.log(res); // => 75
 ```
 
+## find
+
+**Chức năng**: Tìm kiếm phần tử thỏa mãn điều kiện nào đó.
+
+Dùng khi chỉ tìm một phần tử.
+
+**Cú pháp**: `find(callback, thisValue)`. Tham số tương tự `forEach`.
+
+**Trả về**: giá trị của phần tử thỏa mãn điều kiện của hàm callback.
+
+**Ví dụ**:
+
+```js
+const ages = [24, 22, 25, 32, 35, 18];
+const age = ages.find(function (age) {
+  return age < 20;
+});
+
+console.log(age); // => 18
+```
+
+Ngoài ra còn có phương thức `findIndex` tương tự, nhưng thay vì trả về giá trị thì nó sẽ trả về CHỈ SỐ index.
+
+## filter
+
+**Chức năng**: lọc ra các phần tử thỏa một điều kiện nào đó.
+
+Dùng khi cần tìm kiếm nhiều phần tử.
+
+**Cú pháp**: `filter(callback, thisValue)`. Tham số tương tự `forEach`.
+
+**Trả về**: mảng chứa các phần tử thỏa mãn điều kiện của callback đã được lọc ra.
+
+**Ví dụ**: lọc ra các quốc gia có chữ "land" trong tên.
+
+```js
+//Filter countries containing land
+const countries = ["Albania", "Ethiopia", "Finland", "Germany", "Ireland"];
+const countriesContainingLand = countries.filter(function (country) {
+  return country.includes("land");
+});
+console.log(countriesContainingLand); // => ['Finland', 'Ireland']
+```
+
 ## every
 
 **Chức năng**: Kiểm tra xem TẤT CẢ phần tử có giống nhau về một khía cạnh nào đó.
@@ -364,30 +371,11 @@ function checkAge(age) {
 console.log(ages.every(checkAge)); // => false
 ```
 
-## find
-
-**Chức năng**: Trả về GIÁ TRỊ của phần tử thỏa mãn điều kiện nào đó.
-
-**Cú pháp**: `find(callback, thisValue)`. Tham số tương tự `forEach`.
-
-**Trả về**: giá trị của phần tử thỏa mãn điều kiện của hàm callback.
-
-**Ví dụ**:
-
-```js
-const ages = [24, 22, 25, 32, 35, 18];
-const age = ages.find(function (age) {
-  return age < 20;
-});
-
-console.log(age); // => 18
-```
-
-Ngoài ra còn có phương thức `findIndex` tương tự, nhưng thay vì trả về giá trị thì nó sẽ trả về CHỈ SỐ index.
-
 ## some
 
-**Chức năng**: Tương tự phương thức `every`, nó sẽ lặp qua các phần tử và kiểm tra xem có thỏa điều kiện nào đó hay không. Tuy nhiên, chỉ cần một phần tử thỏa thì nó sẽ trả về `true`. Còn `every` buộc TẤT CẢ các phần tử phải thỏa mới return về `true`.
+**Chức năng**: Tương tự phương thức `every`, nó sẽ lặp qua các phần tử và kiểm tra xem có thỏa điều kiện nào đó hay không.
+
+Tuy nhiên, chỉ cần một phần tử thỏa thì nó sẽ trả về `true`. Còn `every` buộc TẤT CẢ các phần tử phải thỏa mới return về `true`.
 
 **Cú pháp**: `some(callback, thisValue)`. Tham số tương tự `forEach`.
 
@@ -433,6 +421,7 @@ fruits.sort(); // => Apple, Banana, Mango, Orange
 **Sắp xếp số sử dụng callback**:
 
 ```js
+const score = [700, 8, 3, 10, 9];
 console.log(
   score.sort(function (firstEl, secondEl) {
     if (secondEl > firstEl) {
@@ -446,6 +435,14 @@ console.log(
 // => [3, 8, 9, 10, 700]
 ```
 
+Nếu sắp xếp số, hàm callback có thể là:
+
+```js
+function compareNumbers(firstEl, secondEl) {
+  return firstEl - secondEl;
+}
+```
+
 Nếu không sử dụng callback thì kết quả sắp xếp có thể bị sai.
 
-Tương tự cũng có thể xây dựng callback để so sánh các key trong object để truyền vào phương thức `sort`.
+Tương tự cũng có thể xây dựng callback nhằm so sánh các key trong object để truyền vào phương thức `sort`.
