@@ -338,8 +338,8 @@ Nếu tham số `initialValue` không được sử dụng, giá trị mặc đ�
 ```js
 const data = [5, 10, 15, 20, 25];
 
-const res = data.reduce(function (total, currentValue) {
-  return total + currentValue;
+const res = data.reduce(function (sum, currentValue) {
+  return sum + currentValue;
 });
 
 console.log(res); // => 75

@@ -1,10 +1,9 @@
-function findEqualValues(array1, array2) {
-    var result = array1.filter(function (element) {
-        return array2.has(element);
-    })
-    if (result == undefined) {
-        return [];
+function run(input) {
+    var type = typeof(input)
+    if(type == "string" || type == "array"){
+        return input.includes('F8');
     }
-    return result;
+    return false
 }
-console.log(findEqualValues([1, 2, 3], [2, 3]));
+console.log(typeof ([1,2,3]))
+console.log(run(['F8', 'Học lập trình']));
