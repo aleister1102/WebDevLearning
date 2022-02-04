@@ -1,58 +1,22 @@
-<link rel='stylesheet' href='../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Scopes and Objects</h1></center>
 </div>
 
-- [Scope](#scope)
-  - [Window scope](#window-scope)
-  - [Global scope](#global-scope)
-  - [Local scope](#local-scope)
 - [Object](#object)
   - [Creating](#creating)
   - [Accessing](#accessing)
-  - [Method](#method)
+  - [Methods](#methods)
   - [Modifying](#modifying)
-  - [Built-in Object](#built-in-object)
-    - [`Object.assign`, sao chép đối tượng mà không thay đổi đối tượng gốc](#objectassign-sao-chép-đối-tượng-mà-không-thay-đổi-đối-tượng-gốc)
-    - [`Object.keys`, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.](#objectkeys-lấy-mọi-tên-thuộc-tính-hoặc-khóa-có-trong-đối-tượng)
-    - [`Object.values`, lấy giá trị của đối tượng và cho vào mảng.](#objectvalues-lấy-giá-trị-của-đối-tượng-và-cho-vào-mảng)
-    - [`Object.entries`, lấy các cặp key - value và cho vào mảng.](#objectentries-lấy-các-cặp-key---value-và-cho-vào-mảng)
-    - [`hasOwnProperty(key)`, kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.](#hasownpropertykey-kiểm-tra-thuộc-tính-key-có-tồn-tại-trong-đối-tượng-hay-không)
-
-# Scope
-
-Có ba loại scope trong Javascript, là **Window**, **Global** và **Local**. Tương tự như C/C++ ở lập trình hàm. Ta thường không sử dụng các biến toàn cục mà đóng gói tất cả vào các khối lệnh và sử dụng biến cục bộ.
-
-## Window scope
-
-Đây là cách một biến có window scope được khai báo và khởi tạo.
-
-```js
-a = 7; //Window scope
-b = 8; // Window Scope
-```
-
-Window scope là phạm vi hoạt động của biến trong cửa sổ trình duyệt. Nó vượt ra ngoài một file, trong ghi global scope chỉ có giá trị trong một file.
-
-## Global scope
-
-Khai báo biến bằng `var` sẽ có **global scope** hoặc **function scope**. Nếu biến var được khai báo bên ngoài hàm hoặc đối tượng thì nó mang global scope. Còn khai báo trong hàm thì nó chỉ có phạm vi trong hàm đó, hay function scope.
-
-```js
-function f() {
-  var a = 9;
-  console.log(a); // 9
-}
-console.log(a); // a is not defined
-```
-
-## Local scope
-
-Khai báo bằng `let` và `const` mang tính chất **block scope** (hay **local scope**), tức là chúng có phạm vi hoạt động trong một khối lệnh nào đó. Khối lệnh có thể là hàm, vòng lặp hoặc câu lệnh điều kiện.
-
-`let` dùng để khai báo những tên biến mà chúng ta muốn **reassign**, tức gán lại cho chúng dùng các toán tử gán, chẳng hạn như `=`, `+=`, `-=`, ...
-`const` dùng để khai báo những tên biến không thể gán lại, chẳng hạn như một mảng hoặc hàm.
+- [Built-in Object Methods](#built-in-object-methods)
+    - [Object.assign, sao chép đối tượng mà không thay đổi đối tượng gốc](#objectassign-sao-chép-đối-tượng-mà-không-thay-đổi-đối-tượng-gốc)
+    - [Object.keys, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.](#objectkeys-lấy-mọi-tên-thuộc-tính-hoặc-khóa-có-trong-đối-tượng)
+    - [Object.values, lấy giá trị của đối tượng và cho vào mảng.](#objectvalues-lấy-giá-trị-của-đối-tượng-và-cho-vào-mảng)
+    - [Object.entries, lấy các cặp key - value và cho vào mảng.](#objectentries-lấy-các-cặp-key---value-và-cho-vào-mảng)
+    - [hasOwnProperty(key), kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.](#hasownpropertykey-kiểm-tra-thuộc-tính-key-có-tồn-tại-trong-đối-tượng-hay-không)
+- [Object Constructor](#object-constructor)
+- [Object Prototype](#object-prototype)
 
 # Object
 
@@ -104,7 +68,7 @@ console.log(person.firstName); // "Quân"
 console.log(person["firstName"]); // "Quân
 ```
 
-## Method
+## Methods
 
 Phương thức trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
 
@@ -135,7 +99,7 @@ console.log(person.getAge()); // 20
 console.log(person.hair); // curly
 ```
 
-## Built-in Object
+# Built-in Object Methods
 
 Cho đối tượng dưới đây
 
@@ -160,14 +124,14 @@ const person = {
 
 Tồn tại các method của đối tượng `Object` dựng sẵn:
 
-### `Object.assign`, sao chép đối tượng mà không thay đổi đối tượng gốc
+### Object.assign, sao chép đối tượng mà không thay đổi đối tượng gốc
 
 ```js
 const copyPerson = Object.assign({}, person);
 //{firstName: 'Quân', age: 250, country: 'Viet Nam', city: 'HCM', skills: Array(3), …}
 ```
 
-### `Object.keys`, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
+### Object.keys, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
 
 ```js
 const keys = Object.keys(copyPerson);
@@ -176,8 +140,52 @@ const address = Object.address(copyPerson.address);
 // ['street', 'ward', 'city']
 ```
 
-### `Object.values`, lấy giá trị của đối tượng và cho vào mảng.
+### Object.values, lấy giá trị của đối tượng và cho vào mảng.
 
-### `Object.entries`, lấy các cặp key - value và cho vào mảng.
+### Object.entries, lấy các cặp key - value và cho vào mảng.
 
-### `hasOwnProperty(key)`, kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.
+### hasOwnProperty(key), kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.
+
+# Object Constructor
+
+Do tính chất trùng tên của lớp đối tượng và constructor, ta có thể triển khai một constructor và đặt tên là lớp đối tượng bất kỳ.
+
+```js
+function Pokemon(name, type, pokedex) {
+  this.name = name;
+  this.type = type;
+  this.pokedex = pokedex;
+  this.getName = function () {
+    return `${name}`;
+  };
+}
+```
+
+Với `this` là đối tượng được tạo ra bằng constructor. Sử dụng tương tự constructor thông thường.
+
+```js
+const pikachu = new Pokemon("pikachu", "electric", 25);
+console.log(pikachu.getName()); // => "pikachu"
+```
+
+Phương thức `constructor` gọi từ đối tượng sẽ trả về constructor của lớp đối tượng:
+
+```js
+console.log(pikachu.constructor);
+```
+
+<img src ="objects1.png">
+
+# Object Prototype
+
+Để thêm một thuộc tính hoặc phương thức vào LỚP ĐỐI TƯỢNG thì ta sử dụng thêm từ khóa `prototype`.
+
+```js
+Pokemon.prototype.catchRate = 10;
+// (defaultValue)
+Pokemon.prototype.getType() = function{
+  return this.type;
+}
+```
+
+Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
