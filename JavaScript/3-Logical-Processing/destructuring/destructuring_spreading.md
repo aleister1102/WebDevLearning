@@ -15,6 +15,7 @@
   - [Copy array](#copy-array)
   - [Copy object](#copy-object)
   - [Rest operator with arrow function](#rest-operator-with-arrow-function)
+- [Tagged template literals](#tagged-template-literals)
 
 # Destructuring
 
@@ -350,3 +351,34 @@ sumAllNums(1, 2, 3, 4, 5);
 ```
 
 Việc dùng toán tử `...` làm tham số như vậy gọi là rest operator. Toán tử này sẽ gom nhóm danh sách đối số truyền vào (1,2,3,4,5) thành một mảng (args).
+
+# Tagged template literals
+
+Xét đoạn code sau:
+
+```js
+function hightlight(...rest) {
+  console.log(rest);
+}
+var book = "sách";
+var brain = "trí não";
+hightlight`Đọc ${book} rất tốt cho ${brain}!`;
+```
+
+Đoạn code trên gọi hàm hightlight nhưng không dùng toán tử call `()` mà lại dùng dấu backtick ` `` ` để chứa một template string làm đối số.
+
+Rest operator dùng để gom nhóm các đối số nhận vào thành một mảng. Đối số nhận vào lúc này có dạng:
+
+<img src = "destruc1.png">
+
+Nói cách khác, các ký tự/chuỗi không phải là biến trong template string thì sẽ nằm trong một mảng, là phần tử đầu tiên trong mảng các đối số. Các biến template string sẽ là các phần tử còn lại.
+
+Đoạn code trên tương đương:
+
+```js
+function hightlight([...strings], ...rest) {
+  console.log(rest);
+}
+```
+
+Với `...strings` là sử dụng spread operator và `...rest` là sử dụng rest operator.
