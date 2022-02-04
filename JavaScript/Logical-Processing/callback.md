@@ -4,25 +4,13 @@
     <center><h1 class="bigtitle">Callback</h1></center>
 </div>
 
-- [High Order Functions](#high-order-functions)
-  - [Callback](#callback)
-  - [Returning Function](#returning-function)
+- [Callback](#callback)
   - [Setting time](#setting-time)
-- [Functional Programming](#functional-programming)
-  - [forEach](#foreach)
-  - [map](#map)
-  - [filter](#filter)
-  - [reduce](#reduce)
-  - [every](#every)
-  - [find](#find)
-  - [some](#some)
-  - [sort](#sort)
+- [Returning Function](#returning-function)
 
-# High Order Functions
+# Callback
 
-Những hàm bậc cao là các hàm mà có tham số là một hàm khác, hoặc giá trị trả về là một hàm. Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.
-
-## Callback
+Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.
 
 ```js
 function callback(n) {
@@ -36,21 +24,7 @@ function cube(callback, n) {
 console.log(cube(3)); // => 27
 ```
 
-## Returning Function
-
-```js
-function higherOrder(n) {
-  function doSomething(m) {
-    function doWhatEver(t) {
-      return 2 * n + 3 * m + t;
-    }
-    return doWhatEver;
-  }
-  return doSomething;
-}
-```
-
-Kết hợp với callback:
+Ví dụ khác:
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -66,7 +40,7 @@ function sumArray(arr) {
 console.log(sumArray(numbers)); // => 15
 ```
 
-Phương thức `forEach` gọi thực hiện hàm `callback` cho mỗi phần tử có trong mảng (sẽ được nói sau).
+Phương thức `forEach` gọi thực hiện hàm `callback` cho mỗi phần tử có trong mảng.
 
 Đoạn code trên có thể viết gọn lại như sau:
 
@@ -101,3 +75,18 @@ setTimeout(callback, 1000);
 
 Hàm `callback` sẽ được gọi sau khoảng thời gian delay 1s.
 
+# Returning Function
+
+Giá trị trả về của hàm cũng có thể là một hàm khác.
+
+```js
+function higherOrder(n) {
+  function doSomething(m) {
+    function doWhatEver(t) {
+      return 2 * n + 3 * m + t;
+    }
+    return doWhatEver;
+  }
+  return doSomething;
+}
+```

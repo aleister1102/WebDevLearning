@@ -11,16 +11,25 @@
 
 Vòng lặp `for`, `while` và `do while` trong JS tương tự C/C++.
 
-Ngoài ra, vòng lặp `for each` trong C++ (để lặp qua các phần tử trong mảng nếu ta không quan tâm đến index) ở bên JS sẽ là vòng lặp `for of`.
+Ngoài ra còn vòng lặp `for in` và `for of`.
 
-Để lặp qua các cặp key - value của object, ta sử dụng vòng lặp `for in`.
+`for in` lặp qua các **key** của đối tượng có thể lặp (object, array).\
+`for of` lặp qua các **value** của đối tượng có thể lặp.
 
 ```js
-const array = [1, 2, 3, 4, 5];
-for (const num of array) {
-  console.log(num);
+let arr = ["el1", "el2", "el3"];
+
+// elKey are the property keys
+for (let key in arr) {
+  console.log(key);
 }
-// 1,2,3,4,5
+// => 0, 1, 2
+
+// elValue are the property values
+for (let value of arr) {
+  console.log(value);
+}
+// => el1, el2, el3
 ```
 
 ## Problems
