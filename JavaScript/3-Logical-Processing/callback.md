@@ -6,7 +6,7 @@
 
 - [Callback](#callback)
   - [Setting time](#setting-time)
-- [Returning Function](#returning-function)
+- [Returning function](#returning-function)
 
 # Callback
 
@@ -75,7 +75,7 @@ setTimeout(callback, 1000);
 
 Hàm `callback` sẽ được gọi sau khoảng thời gian delay 1s.
 
-# Returning Function
+# Returning function
 
 Giá trị trả về của hàm cũng có thể là một hàm khác.
 

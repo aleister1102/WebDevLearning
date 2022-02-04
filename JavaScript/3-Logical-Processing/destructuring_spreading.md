@@ -5,22 +5,22 @@
 </div>
 
 - [Destructuring](#destructuring)
-  - [Destructuring Arrays](#destructuring-arrays)
-  - [Destructuring Array during iteration](#destructuring-array-during-iteration)
-  - [Destructuring Objects](#destructuring-objects)
-  - [Object Parameter with Destructuring](#object-parameter-with-destructuring)
-  - [Destructuring Object during iteration](#destructuring-object-during-iteration)
-- [Spreading](#spreading)
+  - [Destructuring arrays](#destructuring-arrays)
+  - [Destructuring array during iteration](#destructuring-array-during-iteration)
+  - [Destructuring objects](#destructuring-objects)
+  - [Object parameter with destructuring](#object-parameter-with-destructuring)
+  - [Destructuring object during iteration](#destructuring-object-during-iteration)
+- [Spread and Rest Operators](#spread-and-rest-operators)
   - [Get the rest elements of array](#get-the-rest-elements-of-array)
   - [Copy array](#copy-array)
   - [Copy object](#copy-object)
-  - [Spreading with arrow function](#spreading-with-arrow-function)
+  - [Rest operator with arrow function](#rest-operator-with-arrow-function)
 
 # Destructuring
 
 Destructuring là một cú pháp cho phép "phân rã" array hoặc object để gán cho các biến riêng biệt.
 
-## Destructuring Arrays
+## Destructuring arrays
 
 Chẳng hạn ta gán bộ ba biến bằng các phần tử có trong mảng:
 
@@ -74,19 +74,19 @@ console.log(e, pi, bodyTemp, boilingTemp);
 // => 2.72, 3.14, 37, 100
 ```
 
-**Lưu ý**: chúng ta không thể gán hết tất cả các phần tử trong mảng cho biến. Chỉ có thể gán vài phần tử đầu, các phần tử còn lại dùng toán tử lan truyền (spreading) (`...`)
+**Lưu ý**: chúng ta không thể gán hết tất cả các phần tử trong mảng cho biến. Chỉ có thể gán vài phần tử đầu, các phần tử còn lại có thể dùng toán tử lan truyền (spreading) (`...`)
 
 ```js
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let [num1, num2, num3, ...rest] = nums;
+let [num1, num2, num3, ...others] = nums;
 
 console.log(num1, num2, num3);
 // => 1, 2, 3
-console.log(rest);
+console.log(others);
 // => [4, 5, 6, 7, 8, 9, 10]
 ```
 
-## Destructuring Array during iteration
+## Destructuring array during iteration
 
 Có thể sử dụng Destructuring trong vòng lặp:
 
@@ -102,7 +102,7 @@ for (const [country, city] of countries) {
 }
 ```
 
-## Destructuring Objects
+## Destructuring objects
 
 Khi dùng Destructuring cho đối tượng, các biến cần được gán nên **có tên đúng chính xác** với key hoặc thuộc tính có trong đối tượng:
 
@@ -150,7 +150,28 @@ console.log(width, height, area, perimeter);
 
 Chỉ khi đối tượng không có giá trị thì giá trị mặc định mới được dùng.
 
-## Object Parameter with Destructuring
+Nếu trong object có một object khác, ta sử dụng như sau:
+
+```js
+const person = {
+  name: "Quân",
+  age: 20,
+  skills: {
+    fe: "ReactJS",
+    be: "NodeJS",
+  },
+};
+
+var {
+  name,
+  age,
+  skills: { fe, be },
+} = person;
+console.log(fe); // => "ReactJS"
+console.log(be); // => "NodeJS"
+```
+
+## Object parameter with destructuring
 
 Do tính chất có thể gán được của các value có trong object, mà ta có thể sử dụng các object như là tham số.
 
@@ -180,7 +201,7 @@ const calculatePerimeter = function ({ width, height }) {
 console.log(calculatePerimeter(rect)); // => 60
 ```
 
-## Destructuring Object during iteration
+## Destructuring object during iteration
 
 Cũng có thể trích xuất trong vòng lặp:
 
@@ -212,18 +233,28 @@ for (const { task, time, completed } of todoList) {
 //    Assess Test Result 4/1/2020 1:00 false
 ```
 
-# Spreading
+# Spread and Rest Operators
+
+Toán tử spread và rest đều giống nhau về cú pháp (có `...` ở đầu), tuy nhiên chức năng của chúng lại khác nhau.
+
+**Toán tử spread** dùng để phân rã các phần tử của array hoặc thuộc tính của object thành một danh sách các giá trị.
+
+Thường dùng toán tử spread trong việc destructuring một array hoặc object.
+
+**Toán tử rest** dùng để gom nhóm danh sách các giá trị (phân biệt nhau bởi dấu phẩy) thành một mảng.
+
+Thường dùng toán tử rest làm tham số của hàm (nhằm gom nhóm nhiều đối số lại thành một mảng duy nhất).
 
 ## Get the rest elements of array
 
-Như ở trên đã đề cập, ta dùng toán tử lan tràn (spreading) `...` để lấy các phần tử còn lại của mảng dưới dạng một mảng khác.
+Ta dùng spread operator để lấy các phần tử còn lại của mảng dưới dạng một mảng khác.
 
 ```js
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let [num1, num2, num3, ...rest] = nums;
+let [num1, num2, num3, ...others] = nums;
 
 console.log(num1, num2, num3);
-console.log(rest);
+console.log(others);
 
 // => 1, 2, 3
 // => 4, 5, 6, 7, 8, 9, 10
@@ -231,7 +262,7 @@ console.log(rest);
 
 ## Copy array
 
-Hoặc có thể dùng để sao chép một mảng:
+Hoặc có thể dùng để sao chép một mảng.
 
 ```js
 const evens = [0, 2, 4, 6, 8, 10];
@@ -255,7 +286,7 @@ console.log(wholeNumbers);
 
 ## Copy object
 
-Tương tự, cũng có thể sao chép object bằng spreading operator:
+Tương tự, cũng có thể sao chép object bằng spread operator:
 
 ```js
 const user = {
@@ -272,28 +303,25 @@ console.log(copiedUser);
 
 Trong lúc copy, cũng có thể chỉnh sửa dữ liệu (chuyển title thành "Student").
 
-Nếu trong object có một object khác, ta sử dụng như sau:
+Sao chép hai objects vào một object:
 
 ```js
 const person = {
   name: "Quân",
   age: 20,
-  skills: {
-    fe: "ReactJS",
-    be: "NodeJS",
-  },
+  school: "HCMUS",
 };
-
-var {
-  name,
-  age,
-  skills: { fe, be },
-} = person;
-console.log(fe); // => "ReactJS"
-console.log(be); // => "NodeJS"
+const skills = {
+  fe: "ReactJS",
+  be: "NodeJS",
+};
+const dev = {
+  ...person,
+  ...skills,
+};
 ```
 
-Một trick để xóa đi một key trong object là sử dụng toán tử spreading `...`. Chẳng hạn ta cần xóa key status:
+Một trick để xóa đi một key trong object là sử dụng spread operator. Chẳng hạn ta cần xóa key status:
 
 ```js
 const person = {
@@ -308,7 +336,7 @@ console.log(newObject);
 // => {name: 'Quân', age: 20, school: 'HCMUS', year: 2}
 ```
 
-## Spreading with arrow function
+## Rest operator with arrow function
 
 Ở bài functions đã đề cập đến việc hàm có số lượng tham số không biết trước. Ở đó ta sử dụng toán tử `...` kèm thên một mảng tham số bất kỳ:
 
@@ -320,3 +348,5 @@ const sumAllNums = function (...args) {
 sumAllNums(1, 2, 3, 4, 5);
 // => 1, 2, 3, 4, 5
 ```
+
+Việc dùng toán tử `...` làm tham số như vậy gọi là rest operator. Toán tử này sẽ gom nhóm danh sách đối số truyền vào (1,2,3,4,5) thành một mảng (args).
