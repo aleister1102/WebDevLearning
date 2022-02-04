@@ -59,6 +59,15 @@ let c = 5;
 console.log(b == c); // false
 ```
 
+> Khi ta thay đổi giá trị một biến có kiểu dữ liệu nguyên thủy sẽ không làm thay đổi biến khác
+
+```js
+let a = 9;
+let b = a;
+b = 10;
+console.log(a, b); // => 9, 10
+```
+
 # Non - Primitive Data Types
 
 Các kiểu dữ liệu không nguyên thủy bao gồm: Objects, Functions và Array.
@@ -90,4 +99,16 @@ let nums = [1, 2, 3];
 let numbers = nums;
 
 console.log(nums == numbers); // true
+```
+
+> Khi thay đổi dữ liệu của một biến tham chiếu, giá trị tại vùng nhớ mà biến đó tham chiếu đến sẽ thay đổi. Dẫn đến các biến khác trỏ vào vùng nhớ đó cũng có sự thay đổi giá trị.
+
+```js
+let obj1 = {
+  name: "Quân",
+};
+let obj2 = obj1;
+obj2.name = "Kedo";
+console.log(obj1); // => {name: "Quân"}
+console.log(obj2); // => {name: "Kedo"}
 ```

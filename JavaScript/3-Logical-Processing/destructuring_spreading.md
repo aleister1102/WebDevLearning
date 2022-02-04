@@ -18,7 +18,7 @@
 
 # Destructuring
 
-Destructuring là một cú pháp cho phép "giải nén" array hoặc object để gán cho các biến riêng biệt.
+Destructuring là một cú pháp cho phép "phân rã" array hoặc object để gán cho các biến riêng biệt.
 
 ## Destructuring Arrays
 
@@ -104,7 +104,7 @@ for (const [country, city] of countries) {
 
 ## Destructuring Objects
 
-Khi dùng Destructuring cho đối tượng, các biến cần được gán nên có tên đúng chính xác với key hoặc thuộc tính có trong đối tượng:
+Khi dùng Destructuring cho đối tượng, các biến cần được gán nên **có tên đúng chính xác** với key hoặc thuộc tính có trong đối tượng:
 
 ```js
 const rectangle = {
@@ -121,7 +121,7 @@ console.log(width, height, area, perimeter);
 
 Nếu key không tồn tại trong đối tượng thì biến được gán sẽ có giá trị `undefined`.
 
-Có thể đổi tên trong lúc dùng Destructuring:
+Có thể **đổi tên** trong lúc dùng Destructuring:
 
 ```js
 const rectangle = {
@@ -271,6 +271,42 @@ console.log(copiedUser);
 ```
 
 Trong lúc copy, cũng có thể chỉnh sửa dữ liệu (chuyển title thành "Student").
+
+Nếu trong object có một object khác, ta sử dụng như sau:
+
+```js
+const person = {
+  name: "Quân",
+  age: 20,
+  skills: {
+    fe: "ReactJS",
+    be: "NodeJS",
+  },
+};
+
+var {
+  name,
+  age,
+  skills: { fe, be },
+} = person;
+console.log(fe); // => "ReactJS"
+console.log(be); // => "NodeJS"
+```
+
+Một trick để xóa đi một key trong object là sử dụng toán tử spreading `...`. Chẳng hạn ta cần xóa key status:
+
+```js
+const person = {
+  name: "Quân",
+  age: 20,
+  school: "HCMUS",
+  year: 2,
+  status: "single",
+};
+var { status, ...newObject } = person;
+console.log(newObject);
+// => {name: 'Quân', age: 20, school: 'HCMUS', year: 2}
+```
 
 ## Spreading with arrow function
 

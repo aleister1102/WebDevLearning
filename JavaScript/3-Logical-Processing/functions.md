@@ -132,6 +132,12 @@ const double = (n) => n * 2;
 console.log(double(8)); // 16
 ```
 
+Để return về object thì gói trong dấu ngoặc đơn `()`:
+
+```js
+const sum = (a, b) => ({ a: a, b: b });
+```
+
 # Function with default parametes
 
 Đôi khi ta gọi hàm mà ta muốn nó có một giá trị mặc định nào đó. Nếu chúng ta không truyền vào đối số thì hàm sẽ lấy giá trị đó để xử lý.

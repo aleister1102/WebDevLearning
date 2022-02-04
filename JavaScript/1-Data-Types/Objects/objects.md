@@ -6,7 +6,6 @@
 
 - [Object](#object)
   - [Creating](#creating)
-  - [Accessing](#accessing)
   - [Methods](#methods)
   - [Modifying](#modifying)
 - [Built-in Object Methods](#built-in-object-methods)
@@ -29,8 +28,6 @@ Mọi thứ có thể là đối tượng, và đối tượng có nhiều thu�
 ```js
 const person = {};
 ```
-
-## Accessing
 
 Thuộc tính trong object xem như một biến, và ta không cần dùng `var`, `let` hay `const` để khai báo chúng. Giá trị của một thuộc tính theo sau dấu `:`.
 
@@ -68,6 +65,50 @@ console.log(person.firstName); // "Quân"
 console.log(person["firstName"]); // "Quân
 ```
 
+ES6 hỗ trợ cách tạo object khác, ví dụ ta cần tạo một object theo cách bên dưới:
+
+```js
+var name = "Quân";
+var age = 20;
+const person = {
+  name: name,
+  age: age,
+};
+```
+
+Nếu key - value trùng tên, có thể viết:
+
+```js
+var name = "Quân";
+var age = 20;
+const person = {
+  name,
+  age,
+};
+```
+
+Thậm chí, **key của object có thể là giá trị của biến**:
+
+```js
+var fieldName = "name";
+var fieldAge = "age";
+const person = {
+  [fieldName]: "Quân",
+  [fieldAge]: 20,
+};
+```
+
+Đoạn code trên tương đương với:
+
+```js
+var fieldName = "name";
+var fieldAge = "age";
+const person = {
+  name: "Quân",
+  age: 20,
+};
+```
+
 ## Methods
 
 Phương thức trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
@@ -77,6 +118,19 @@ console.log(person.getFullName()); // "Quân Lê Minh"
 ```
 
 Phương thức không thể là arrow function vì keyword `this` sẽ trỏ đến cửa sổ bên trong arrow function thay vì trỏ vào bản thân object.
+
+Ngoài ra, có một cách khác ngắn gọn để khai báo phương thức trong object, ví dụ:
+
+```js
+const person = {
+  name: "Quân",
+  age: 20,
+  getName() {
+    return this.name;
+  },
+};
+console.log(person.getName());
+```
 
 ## Modifying
 
@@ -175,6 +229,8 @@ console.log(pikachu.constructor);
 ```
 
 <img src ="objects1.png">
+
+> Do không có `this` nên arrow function không được dùng làm constructor.
 
 # Object Prototype
 
