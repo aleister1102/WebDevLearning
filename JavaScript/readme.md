@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='main.css'>
 
-JavaScript Knowledges studied since 2022 🔨 .
+JavaScript knowledges studied since 2022 🔨 .
 
 # Table of Contents
 
