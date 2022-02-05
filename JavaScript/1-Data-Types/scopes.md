@@ -33,6 +33,20 @@ function f() {
 console.log(a); // a is not defined
 ```
 
+Từ khóa `var` hỗ trợ **hoisting**, JS engine khi thông dịch sẽ đưa các câu lệnh khai báo lên trên đầu.
+
+```js
+a = 10;
+var a;
+```
+
+Đoạn code trên tương đương với:
+
+```js
+var a;
+a = 10;
+```
+
 # Local Scope
 
 Khai báo bằng `let` và `const` mang tính chất **block scope** (hay **local scope**), tức là chúng có phạm vi hoạt động trong một khối lệnh nào đó. Khối lệnh có thể là hàm, vòng lặp hoặc câu lệnh điều kiện.

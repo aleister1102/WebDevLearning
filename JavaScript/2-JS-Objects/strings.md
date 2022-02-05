@@ -34,6 +34,14 @@
 
 Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.
 
+**Lưu ý**:
+
+`var a = '10' + 5; // => '105'` (string)\
+`var b = 5 + '10'; // => '510''` (string)\
+`var c = 10 - '5'; // => 5` (number)\
+`var d = '5' - 10; // => -5` (number)\
+Như vậy, toán tử `+` sẽ ép kiểu số thành chuỗi và nối chuỗi, toán tử `-` sẽ ép kiểu chuỗi thành số và thực hiện phép tính trừ.
+
 # Long Literal Strings
 
 Một chuỗi có thể là một dòng, nhiều dòng hoặc đoạn văn bản. Để viết giá trị chuỗi trên nhiều dòng, ta sử dụng dấu `\` ở cuối mỗi dòng thể hiện rằng phía sau vẫn còn nội dung của chuỗi.

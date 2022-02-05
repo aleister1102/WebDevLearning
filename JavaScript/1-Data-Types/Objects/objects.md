@@ -6,14 +6,15 @@
 
 - [Object](#object)
   - [Creating](#creating)
+  - [Deleting](#deleting)
   - [Methods](#methods)
   - [Modifying](#modifying)
 - [Built-in Object Methods](#built-in-object-methods)
-  - [Object.assign](#objectassign)
-  - [Object.keys](#objectkeys)
-  - [Object.values](#objectvalues)
-  - [Object.entries](#objectentries)
-  - [hasOwnProperty(key)](#hasownpropertykey)
+    - [Object.assign](#objectassign)
+    - [Object.keys](#objectkeys)
+    - [Object.values](#objectvalues)
+    - [Object.entries](#objectentries)
+    - [hasOwnProperty(key)](#hasownpropertykey)
 - [Object Constructor](#object-constructor)
 - [Object Prototype](#object-prototype)
 
@@ -56,7 +57,21 @@ const person = {
 };
 ```
 
-Thuộc tính có thể là chuỗi, số, mảng, boolean, thậm chí là một cặp key - value như map hoặc dictionary. `this` là một từ khóa dùng để chỉ chính bản thân object (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức). Hai thuộc tính trùng key thì sẽ giá trị sẽ bị ghi đè (cái sau đè lên cái trước).
+Kiểu dữ liệu của thuộc tính có thể là chuỗi, số, mảng, boolean, object, thậm chí là một cặp key - value như map hoặc dictionary.
+
+Tên thuộc tính có thể có dấu `-` nếu là dạng chuỗi.
+
+```js
+const obj = {
+  "full-name": "Lê Minh Quân",
+  "first-name": "Lê Minh",
+  "last-name": "Quân",
+};
+```
+
+`this` là một từ khóa dùng để chỉ chính bản thân object (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
+
+Hai thuộc tính trùng key thì sẽ giá trị sẽ bị ghi đè (cái sau đè lên cái trước).
 
 Để truy cập vào các thuộc tính của object, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
 
@@ -108,6 +123,10 @@ const person = {
   age: 20,
 };
 ```
+
+## Deleting
+
+Để xóa thuộc tính hoặc phương thức của object, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
 
 ## Methods
 
