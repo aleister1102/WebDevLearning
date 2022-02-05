@@ -13,15 +13,25 @@
 - [CSS pseudo elements](#css-pseudo-elements)
 - [CSS variables](#css-variables)
 - [CSS functions](#css-functions)
-  - [rgb()](#rgb)
-  - [calc()](#calc)
-  - [attr()](#attr)
+  - [rgb(a,b,c)](#rgbabc)
+  - [rgba(a,b,c,alpha)](#rgbaabcalpha)
+  - [linear-gradient(direction, startColor, endColor)](#linear-gradientdirection-startcolor-endcolor)
+  - [calc(expression)](#calcexpression)
+  - [attr(attributeName)](#attrattributename)
 
 # What is CSS?
 
 CSS là viết tắt của **Cascading Style Sheet**, là các tập tin định kiểu theo tầng. Chúng kiểm soát cách thể hiện HTML trên trang web.
 
 CSS chỉ đơn giản là **tập hợp các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
+
+Một quy luật bao gồm một property (thuộc tính) kèm theo một giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
+
+```css
+selector {
+  property: value1 value2;
+}
+```
 
 # CSS in HTML
 
@@ -226,11 +236,31 @@ h1 {
 
 # CSS functions
 
-## rgb()
+## rgb(a,b,c)
 
-Hàm `rgb()` giống `rgba()` nhưng không có tham số alpha. Tuy nhiên nó không có độ trong suốt và không nhìn xuyên qua được giống `rgba()`.
+Giá trị trả về là một giá trị màu sắc. Với tham số là bộ ba số a,b,c có giá trị từ 0 đến 255.
 
-## calc()
+```html
+<p style="color:rgba(255,0,0);">Parameter</p>
+```
+
+**Kết quả**:
+
+<p style="color:rgba(255,255,0)">Parameter</p>
+
+## rgba(a,b,c,alpha)
+
+Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
+
+## linear-gradient(direction, startColor, endColor)
+
+Hàm này dùng để tạo ra một mã màu có dạng gradient.
+
+<img src="css1.png">
+
+Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.
+
+## calc(expression)
 
 Hàm `calc()` dùng để tính toán. Chẳng hạn:
 
@@ -240,7 +270,7 @@ h1{
 }
 ```
 
-## attr()
+## attr(attributeName)
 
 Hàm `attr()` dùng để lấy giá trị của attribute trong một element, thường sử dụng kèm với pseudo class:
 

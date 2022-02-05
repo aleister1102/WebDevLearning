@@ -4,6 +4,14 @@
     <center><h1 class="bigtitle">CSS Selectors</h1></center>
 </div>
 
+- [Id and class](#id-and-class)
+  - [Id](#id)
+  - [Class](#class)
+- [Useful selectors](#useful-selectors)
+- [Priority](#priority)
+- [Conflicts & Cascade](#conflicts--cascade)
+- [Inheritance](#inheritance)
+
 CSS Selector là cách mà chúng ta dùng để chọn ra các element nhằm format style cho chúng.
 
 # Id and class
@@ -163,7 +171,7 @@ div {
 }
 ```
 
-Kết quả:
+**Kết quả**:
 
 <div style ="color:red">
     This is a box
