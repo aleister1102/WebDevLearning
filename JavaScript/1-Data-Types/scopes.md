@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Scopes and Objects</h1></center>
+    <center><h1 class="bigtitle">Scopes</h1></center>
 </div>
 
 - [Window Scope](#window-scope)

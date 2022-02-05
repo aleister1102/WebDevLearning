@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Fetching API</h1></center>
+    <center><h1 class="bigtitle">Fetch API</h1></center>
 </div>
 
 - [Fetch API](#fetch-api)
