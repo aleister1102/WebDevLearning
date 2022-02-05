@@ -4,6 +4,20 @@
     <center><h1 class="bigtitle">CSS Box Model</h1></center>
 </div>
 
+- [Box Model](#box-model)
+  - [Content](#content)
+  - [Padding](#padding)
+  - [Border](#border)
+  - [Margin](#margin)
+  - [Vertical margin collapse](#vertical-margin-collapse)
+- [Block element](#block-element)
+  - [display: block](#display-block)
+  - [display: inline-block](#display-inline-block)
+- [Box-sizing](#box-sizing)
+- [Rounded corners](#rounded-corners)
+  - [Border-radius](#border-radius)
+  - [Making circle](#making-circle)
+
 # Box Model
 
 Box Model là cách mà một element thể hiện chính nó trên trang web theo không gian. Một Box Model điển hình sẽ có dạng như thế này.
@@ -63,7 +77,7 @@ Còn nếu để ba giá trị, cạnh còn lại trong cặp sẽ tự động 
 
 ## Border
 
-Border chính là viền của một Box nào đó, nó _thuộc_ element. Khác với padding ở chỗ, border còn cần thêm một vài thông tin trong phần khai báo của chúng thì nó mới xác định rõ.
+Border chính là viền của một box nào đó, nó _thuộc_ element. Khác với padding ở chỗ, border còn cần thêm một vài thông tin trong phần khai báo của chúng thì nó mới xác định rõ.
 
 Ví dụ như ta muốn viền của là đường liền nét, độ dày 1px và có màu đen. Code CSS sẽ là:
 
@@ -157,3 +171,81 @@ a {
 ```
 
 Cách này cũng có thể áp dụng cho block element.
+
+# Box-sizing
+
+Cho đoạn code:
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  color: #000;
+  padding: 16px;
+  border: 2px solid #fff;
+}
+```
+
+Nếu ta muốn kích thước của content + padding + border là **100x100**, ta cần chỉnh sửa `width` và `height` theo kiểu gán cứng (width = 100 - 2\*16 - 2\*2 = 64 = height).
+
+Để có thể tự động căn chỉnh kích thước content sao cho content + padding + border = 100px, ta sử dụng thuộc tính `box-sizing` với giá trị `border-box`.
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  color: #000;
+  padding: 16px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+```
+
+Nếu muốn quay trở lại ban đầu thì set `box-sizing: content-box`.
+
+# Rounded corners
+
+## Border-radius
+
+Để bo tròn góc của một box, ta sử dụng property `border-radius` và có value là một số nào đó kèm theo đơn vị. Giá trị của số càng lớn thì góc của box càng bo tròn. Chẳng hạn như:
+
+```css
+.box {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 80px;
+  height: 50px;
+}
+```
+
+Cũng có thể bo tròn từng góc:
+
+```css
+.box {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 40px 20px 10px 5px;
+  width: 80px;
+  height: 50px;
+}
+```
+
+## Making circle
+
+Để tạo ra một hình tròn, ta set giá trị của `width` và `height` như nhau, sau đó cho `border-radius` bằng nửa giá trị của `width` và `height`. Lưu ý là ta cần xóa đi các khai báo cho margin và padding.
+
+```css
+.box {
+  background-color: #000;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+}
+```
+
+**Kết quả**:
+
+<img src="box3.png">
