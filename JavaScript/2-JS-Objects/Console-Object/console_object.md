@@ -4,27 +4,24 @@
     <center><h1 class="bigtitle">Console Objects</h1></center>
 </div>
 
-- [Console Object Methods](#console-object-methods)
-  - [console.log()](#consolelog)
-  - [console.warn()](#consolewarn)
-  - [console.error()](#consoleerror)
-  - [console.table()](#consoletable)
-    - [Array](#array)
-    - [Object](#object)
-    - [Multidimensional Array](#multidimensional-array)
-    - [Array of Objects](#array-of-objects)
-  - [console.time()](#consoletime)
-  - [console.info()](#consoleinfo)
-  - [console.assert()](#consoleassert)
-  - [console.group()](#consolegroup)
-  - [console.count()](#consolecount)
-  - [console.clear()](#consoleclear)
-
-# Console Object Methods
+- [console.log()](#consolelog)
+- [console.warn()](#consolewarn)
+- [console.error()](#consoleerror)
+- [console.table()](#consoletable)
+  - [Array](#array)
+  - [Object](#object)
+  - [Multidimensional Array](#multidimensional-array)
+  - [Array of Objects](#array-of-objects)
+- [console.time()](#consoletime)
+- [console.info()](#consoleinfo)
+- [console.assert()](#consoleassert)
+- [console.group()](#consolegroup)
+- [console.count()](#consolecount)
+- [console.clear()](#consoleclear)
 
 Đối tượng console cung cấp nhiều phương thức, một trong số đó rất nổi tiếng là `console.log`.
 
-## console.log()
+# console.log()
 
 Có thể format chuỗi đầu ra tương tự như C:
 
@@ -51,7 +48,7 @@ console.log(
 Kết quả:
 <img src = "log.png">
 
-## console.warn()
+# console.warn()
 
 Dùng để cảnh báo, thường cảnh báo khi phiên bản của package đã cũ hoặc các đoạn code nhập vào không clean.
 
@@ -67,15 +64,15 @@ Các cảnh báo có dạng:
 
 <img src ="warning.png">
 
-## console.error()
+# console.error()
 
 Để thông báo lỗi.
 
-## console.table()
+# console.table()
 
 Dùng để xuất dữ liệu dưới dạng bảng. Đối số truyền vào cần phải là một mảng hoặc đối tượng. Ngoài ra còn một đối số optional là số lượng cột.
 
-### Array
+## Array
 
 ```js
 const names = ["Asabeneh", "Brook", "David", "John"];
@@ -86,7 +83,7 @@ Kết quả:
 
 <img src ="table1.png">
 
-### Object
+## Object
 
 ```js
 const user = {
@@ -103,7 +100,7 @@ Kết quả:
 
 <img src ="table2.png">
 
-### Multidimensional Array
+## Multidimensional Array
 
 ```js
 const countries = [
@@ -118,7 +115,7 @@ Kết quả:
 
 <img src ="table3.png">
 
-### Array of Objects
+## Array of Objects
 
 ```js
 const users = [
@@ -159,7 +156,7 @@ Kết quả:
 
 Như vậy, các key/index sẽ làm title cho hàng và cột.
 
-## console.time()
+# console.time()
 
 Dùng để tính thời gian thực thi của một thao tác bất kỳ. Truyền vào tên của timer, chẳng hạn `timer`. Khi gọi phương thức và truyền vào tên của timer đó `console.timeEnd(timer)` thì browser sẽ xuất ra thời gian thực thi có đơn vị là milliseconds.
 
@@ -179,11 +176,11 @@ console.timeEnd("Regular for loop");
 // =>  Regular for loop: 0.13818359375 ms
 ```
 
-## console.info()
+# console.info()
 
 Xuất ra thông tin trên console của browser.
 
-## console.assert()
+# console.assert()
 
 Phương thức `assert` xuất ra một thông báo lỗi cho console nếu biểu thức xác nhận truyền vào là sai. Nếu biểu thức là đúng, sẽ không có gì xảy ra.
 
@@ -196,7 +193,7 @@ console.assert(3 > 4, "3 is not greater than 4");
 // => Assertion failed: 3 is not greater than 4
 ```
 
-## console.group()
+# console.group()
 
 Phương thức này giúp nhóm các dòng hiển thị console của phương thức `console.log()` lại thành một cụm. Cụ thể hơn, nó giúp đặt tiêu đề trước các dòng `console.log()`.
 
@@ -271,7 +268,7 @@ console.groupEnd();
 //      {name: 'Asabeneh', title: 'Programmer', country: 'Finland', city: 'Helsinki', age: 250}
 ```
 
-## console.count()
+# console.count()
 
 In ra số lần gọi thực hiện phương thức này.
 
@@ -287,6 +284,6 @@ func();
 // => Function has been called: 3
 ```
 
-## console.clear()
+# console.clear()
 
 Dùng để dọn sạch console của browser, tương tự như lệnh `clear` của powershell.

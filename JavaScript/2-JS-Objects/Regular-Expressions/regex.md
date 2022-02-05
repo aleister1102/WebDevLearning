@@ -5,7 +5,7 @@
 </div>
 
 - [Regular Expressions](#regular-expressions)
-  - [RegExp parameters](#regexp-parameters)
+  - [RegExp Parameters](#regexp-parameters)
     - [Pattern](#pattern)
     - [Flag](#flag)
   - [Creating RegExp using Constructor](#creating-regexp-using-constructor)
@@ -34,7 +34,7 @@
 
 RegExp thường được khởi tạo trong JS bằng Regular Expressions Constructor hoặc thông qua hai dấu `/` kèm một cái cờ (flag) nào đó. Các flag có thể là `g, i, m, s, u, y`.
 
-## RegExp parameters
+## RegExp Parameters
 
 Một biểu thức thức chính quy nhận vào hai tham số. Hai tham số đó là pattern cần tìm kiếm và optional flag.
 

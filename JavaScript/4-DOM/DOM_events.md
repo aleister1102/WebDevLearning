@@ -6,7 +6,7 @@
 
 - [DOM Events](#dom-events)
   - [Attribute Events](#attribute-events)
-  - [Assigning Events Using Element Node](#assigning-events-using-element-node)
+  - [Assigning Events using Element Node](#assigning-events-using-element-node)
   - [onchange](#onchange)
   - [onkeyup/onkeydown/onkeypress](#onkeyuponkeydownonkeypress)
 - [Events Methods](#events-methods)
@@ -108,7 +108,7 @@ Kết quả:
 
 <img src = "dom5.png">
 
-## Assigning Events Using Element Node
+## Assigning Events using Element Node
 
 Cách thứ hai sử dụng JS, chúng ta lấy ra đối tượng cần bắt sự kiện và gọi thuộc tính của sự kiện đó. Chẳng hạn ta gọi ra `onclick` và gán bằng một hàm.
 

@@ -9,7 +9,7 @@
   - [prompt](#prompt)
   - [confirm](#confirm)
 - [Date Object](#date-object)
-  - [Create Time Object](#create-time-object)
+  - [Creating](#creating)
   - [Date Methods](#date-methods)
 
 # Window Object
@@ -44,7 +44,7 @@ console.log(agree);
 
 # Date Object
 
-## Create Time Object
+## Creating
 
 Để tạo ra một đối tượng kiểu ngày tháng, ta dùng từ khóa `new` như sau:
 

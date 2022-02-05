@@ -5,8 +5,8 @@
 </div>
 
 - [Booleans](#booleans)
-  - [Truthy values](#truthy-values)
-  - [Falsy values](#falsy-values)
+  - [Truthy Values](#truthy-values)
+  - [Falsy Values](#falsy-values)
 - [Operators](#operators)
   - [Assignment and Arithmetic](#assignment-and-arithmetic)
   - [Comparision](#comparision)
@@ -16,7 +16,7 @@
 
 # Booleans
 
-## Truthy values
+## Truthy Values
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `true` thì ta gọi giá trị đó là `Truthy`.
 
@@ -30,7 +30,7 @@ Tham khảo thêm về các giá trị Truthy ở [đây](https://developer.mozi
 
 > Toán tử `!!` được sử dụng hai lần để chuyển kiểu dữ liệu bất kỳ về boolean.
 
-## Falsy values
+## Falsy Values
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `false` thì ta gọi giá trị đó là `Falsy`.
 

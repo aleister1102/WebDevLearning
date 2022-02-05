@@ -7,7 +7,7 @@
 - [Dev Tool](#dev-tool)
 - [Console Log](#console-log)
 - [Comment](#comment)
-- [Adding JS to Web page](#adding-js-to-web-page)
+- [Adding JS to Web Page](#adding-js-to-web-page)
   - [Inline](#inline)
   - [Internal](#internal)
   - [External](#external)
@@ -36,7 +36,7 @@ console.log("Hello World", 1 + 1, " = 3?");
 
 Comment trong JS tương tự như C/C+.
 
-# Adding JS to Web page
+# Adding JS to Web Page
 
 ## Inline
 

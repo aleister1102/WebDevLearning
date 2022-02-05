@@ -75,7 +75,7 @@ setTimeout(callback, 1000);
 
 Hàm `callback` sẽ được gọi sau khoảng thời gian delay 1s.
 
-# Returning function
+# Returning Function
 
 Giá trị trả về của hàm cũng có thể là một hàm khác.
 

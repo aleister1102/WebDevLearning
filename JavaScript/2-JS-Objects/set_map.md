@@ -5,26 +5,26 @@
 </div>
 
 - [Sets](#sets)
-  - [Creating a Set](#creating-a-set)
-  - [Adding Element to Set](#adding-element-to-set)
-  - [Deleting Element from Set](#deleting-element-from-set)
-  - [Checking Element in Set](#checking-element-in-set)
-  - [Clearing the Set](#clearing-the-set)
+  - [Creating](#creating)
+  - [Adding](#adding)
+  - [Deleting](#deleting)
+  - [Checking](#checking)
+  - [Clearing](#clearing)
   - [Application](#application)
   - [Union of Sets](#union-of-sets)
   - [Intersection of Sets](#intersection-of-sets)
   - [Difference of Sets](#difference-of-sets)
 - [Maps](#maps)
-  - [Creating a Map](#creating-a-map)
-  - [Adding Element to Map](#adding-element-to-map)
-  - [Getting Value from Map](#getting-value-from-map)
-  - [Checking Key in Map](#checking-key-in-map)
+  - [Creating](#creating-1)
+  - [Adding](#adding-1)
+  - [Getting](#getting)
+  - [Checking](#checking-1)
 
 # Sets
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).
 
-## Creating a Set
+## Creating
 
 **Tạo set rỗng**:
 
@@ -61,7 +61,7 @@ for (const language of setOfLanguages) {
 // => English, Finnish, French, Spanish
 ```
 
-## Adding Element to Set
+## Adding
 
 Dùng phương thức `add`:
 
@@ -75,7 +75,7 @@ console.log(setOfCompanies);
 // => Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
 ```
 
-## Deleting Element from Set
+## Deleting
 
 Dùng phương thức `delete`:
 
@@ -84,7 +84,7 @@ console.log(companies.delete("Google"));
 console.log(companies.size); // => 4 elements left in the set
 ```
 
-## Checking Element in Set
+## Checking
 
 Dùng phương thức `has`:
 
@@ -93,7 +93,7 @@ console.log(companies.has("Apple")); // => false
 console.log(companies.has("Facebook")); // => true
 ```
 
-## Clearing the Set
+## Clearing
 
 Dùng phương thức `clear`:
 
@@ -155,7 +155,7 @@ console.log(complement);
 
 Map là một tập hợp của nhiều bộ phần tử. Mỗi bộ là một cặp key - value.
 
-## Creating a Map
+## Creating
 
 **Tạo map từ array**:
 
@@ -170,7 +170,7 @@ const map = new Map(countries);
 console.log(map); // => Map(3) {Finland => Helsinki, Sweden => Stockholm, Norway => Oslo}
 ```
 
-## Adding Element to Map
+## Adding
 
 Dùng phương thức `set` và truyền vào cặp key - value:
 
@@ -181,7 +181,7 @@ countriesMap.set("Norway", "Oslo");
 console.log(map); // => Map(3) {Finland => Helsinki, Sweden => Stockholm, Norway => Oslo}
 ```
 
-## Getting Value from Map
+## Getting
 
 Dùng phương thức `get` và truyền vào key:
 
@@ -190,7 +190,7 @@ console.log(countriesMap.get("Finland"));
 // => Helsinki
 ```
 
-## Checking Key in Map
+## Checking
 
 Kiểm tra một key có tồn tại trong map, sử dụng phương thức `has` và truyền vào key cần kiểm tra. Phương thức sẽ trả về `true` hoặc `false`.
 

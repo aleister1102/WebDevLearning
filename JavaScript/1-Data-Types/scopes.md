@@ -4,16 +4,13 @@
     <center><h1 class="bigtitle">Scopes and Objects</h1></center>
 </div>
 
-- [Scope](#scope)
-  - [Window scope](#window-scope)
-  - [Global scope](#global-scope)
-  - [Local scope](#local-scope)
-
-# Scope
+- [Window Scope](#window-scope)
+- [Global Scope](#global-scope)
+- [Local Scope](#local-scope)
 
 Có ba loại scope trong Javascript, là **Window**, **Global** và **Local**. Tương tự như C/C++ ở lập trình hàm. Ta thường không sử dụng các biến toàn cục mà đóng gói tất cả vào các khối lệnh và sử dụng biến cục bộ.
 
-## Window scope
+# Window Scope
 
 Đây là cách một biến có window scope được khai báo và khởi tạo.
 
@@ -24,7 +21,7 @@ b = 8; // Window Scope
 
 Window scope là phạm vi hoạt động của biến trong cửa sổ trình duyệt. Nó vượt ra ngoài một file, trong ghi global scope chỉ có giá trị trong một file.
 
-## Global scope
+# Global Scope
 
 Khai báo biến bằng `var` sẽ có **global scope** hoặc **function scope**. Nếu biến var được khai báo bên ngoài hàm hoặc đối tượng thì nó mang global scope. Còn khai báo trong hàm thì nó chỉ có phạm vi trong hàm đó, hay function scope.
 
@@ -36,7 +33,7 @@ function f() {
 console.log(a); // a is not defined
 ```
 
-## Local scope
+# Local Scope
 
 Khai báo bằng `let` và `const` mang tính chất **block scope** (hay **local scope**), tức là chúng có phạm vi hoạt động trong một khối lệnh nào đó. Khối lệnh có thể là hàm, vòng lặp hoặc câu lệnh điều kiện.
 

@@ -9,11 +9,11 @@
   - [Methods](#methods)
   - [Modifying](#modifying)
 - [Built-in Object Methods](#built-in-object-methods)
-    - [Object.assign, sao chép đối tượng mà không thay đổi đối tượng gốc](#objectassign-sao-chép-đối-tượng-mà-không-thay-đổi-đối-tượng-gốc)
-    - [Object.keys, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.](#objectkeys-lấy-mọi-tên-thuộc-tính-hoặc-khóa-có-trong-đối-tượng)
-    - [Object.values, lấy giá trị của đối tượng và cho vào mảng.](#objectvalues-lấy-giá-trị-của-đối-tượng-và-cho-vào-mảng)
-    - [Object.entries, lấy các cặp key - value và cho vào mảng.](#objectentries-lấy-các-cặp-key---value-và-cho-vào-mảng)
-    - [hasOwnProperty(key), kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.](#hasownpropertykey-kiểm-tra-thuộc-tính-key-có-tồn-tại-trong-đối-tượng-hay-không)
+  - [Object.assign](#objectassign)
+  - [Object.keys](#objectkeys)
+  - [Object.values](#objectvalues)
+  - [Object.entries](#objectentries)
+  - [hasOwnProperty(key)](#hasownpropertykey)
 - [Object Constructor](#object-constructor)
 - [Object Prototype](#object-prototype)
 
@@ -178,14 +178,18 @@ const person = {
 
 Tồn tại các method của đối tượng `Object` dựng sẵn:
 
-### Object.assign, sao chép đối tượng mà không thay đổi đối tượng gốc
+### Object.assign
+
+Sao chép đối tượng mà không thay đổi đối tượng gốc
 
 ```js
 const copyPerson = Object.assign({}, person);
 //{firstName: 'Quân', age: 250, country: 'Viet Nam', city: 'HCM', skills: Array(3), …}
 ```
 
-### Object.keys, lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
+### Object.keys
+
+Lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
 
 ```js
 const keys = Object.keys(copyPerson);
@@ -194,11 +198,17 @@ const address = Object.address(copyPerson.address);
 // ['street', 'ward', 'city']
 ```
 
-### Object.values, lấy giá trị của đối tượng và cho vào mảng.
+### Object.values
 
-### Object.entries, lấy các cặp key - value và cho vào mảng.
+Lấy giá trị của đối tượng và cho vào mảng.
 
-### hasOwnProperty(key), kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.
+### Object.entries
+
+Lấy các cặp key - value và cho vào mảng.
+
+### hasOwnProperty(key)
+
+Kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.
 
 # Object Constructor
 

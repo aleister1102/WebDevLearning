@@ -4,13 +4,10 @@
     <center><h1 class="bigtitle">JSON</h1></center>
 </div>
 
-- [JSON](#json)
-  - [Converting JSON to JS Objects](#converting-json-to-js-objects)
-  - [Using a reviver function with JSON.parse()](#using-a-reviver-function-with-jsonparse)
-  - [Converting Object to JSON](#converting-object-to-json)
-  - [Using a Filter Array with JSON.stringify](#using-a-filter-array-with-jsonstringify)
-
-# JSON
+- [JSON to JS Objects](#json-to-js-objects)
+- [Reviver Function with JSON.parse()](#reviver-function-with-jsonparse)
+- [Object to JSON](#object-to-json)
+- [Filter Array with JSON.stringify](#filter-array-with-jsonstringify)
 
 JSON viết tắt cho **JavaScript Object Notation**.
 
@@ -56,7 +53,7 @@ Trong object này có một thuộc tính là `"user"`. Chú ý rằng key của
 
 Thuộc tính này có giá trị là một mảng các object. Các object con này cũng bắt buộc có key nằm trong dấu ngoặc nhọn.
 
-## Converting JSON to JS Objects
+# JSON to JS Objects
 
 Dữ liệu JSON thông thường được fetch về thông qua HTTP và lưu dưới dạng chuỗi (ngoại trừ file JSON).
 
@@ -99,7 +96,7 @@ console.log(usersObj);
 // => {users: Array(3)}
 ```
 
-## Using a reviver function with JSON.parse()
+# Reviver Function with JSON.parse()
 
 Trong số các tham số của `parse` có một tham số gọi là `reviver`. Tham số này là một hàm callback, thường dùng để format dữ liệu.
 
@@ -143,7 +140,7 @@ console.log(usersObj.users[0]);
 // => {firstName: 'ASABENEH', lastName: 'YETAYEH', age: 250, email: 'asab@asb.com'}
 ```
 
-## Converting Object to JSON
+# Object to JSON
 
 Để chuyển ngược lại từ một object thành chuỗi JSON, ta sử dụng phương thức `stringify`. Cú pháp như sau:
 
@@ -159,7 +156,7 @@ Giải thích tham số:
 - `replacer`: là hàm callback dùng để format dữ liệu. Hoặc có thể là mảng các chuỗi hay số để selecting/filtering dữ liệu trong quá trình chuyển đổi thành chuỗi. Nếu để `null` hoặc `undefined` thì mọi thuộc tính đều cho vào chuỗi JSON.
 - `space`: là đối tượng chuỗi hoặc số để thể hiện khoảng trắng thụt đầu dòng của chuỗi sau khi chuyển đổi. Nếu là chuỗi thì chuỗi đó được sử dụng như khoảng trắng.
 
-## Using a Filter Array with JSON.stringify
+# Filter Array with JSON.stringify
 
 Thử sử dụng một mảng để lọc dữ liệu và truyền vào phương thức `stringify`:
 

@@ -5,9 +5,9 @@
 </div>
 
 - [Modules](#modules)
-  - [Import with destructuring](#import-with-destructuring)
-  - [Export from other module](#export-from-other-module)
-- [Module cheatsheet](#module-cheatsheet)
+  - [Import with Destructuring](#import-with-destructuring)
+  - [Export from other Module](#export-from-other-module)
+- [Module Cheatsheet](#module-cheatsheet)
 
 # Modules
 
@@ -51,7 +51,7 @@ Khi log import này ra console, ta sẽ được đoạn code của hàm `sum`:
 
 > Lưu ý là một module (một file JS) chỉ có duy nhất một default export. Dù vậy, một export có thể bao gồm nhiều biến hoặc hàm, được đóng gói trong dấu ngoặc kép như một object.
 
-## Import with destructuring
+## Import with Destructuring
 
 Giả sử ta export nhiều biến từ file **app.js**:
 
@@ -76,7 +76,7 @@ Bằng cách này, ta có thể lấy tất cả các export cho vào `math`. Bi
 
 <img src="modules3.png">
 
-## Export from other module
+## Export from other Module
 
 Ta đã export hàm `sum` từ file **app.js**. Giờ ta có thêm một file khác là **index.js** nằm cùng cấp với file **app.js** trong một thư mục:
 
@@ -113,6 +113,6 @@ Code ở **main.js** trở thành:
 import { sum2 } from "./js/index.js";
 ```
 
-# Module cheatsheet
+# Module Cheatsheet
 
 <img src="modules4.png">

@@ -5,7 +5,7 @@
 </div>
 
 - [Loops](#loops)
-  - [Problems](#problems)
+- [Problem](#problem)
 
 # Loops
 
@@ -32,7 +32,7 @@ for (let value of arr) {
 // => el1, el2, el3
 ```
 
-## Problems
+# Problem
 
 Có đoạn code cho bài toán xuất tam giác ký tự như sau:
 

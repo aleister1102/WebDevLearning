@@ -9,8 +9,8 @@
 - [Expression Function](#expression-function)
 - [Self Invoking Function](#self-invoking-function)
   - [Arrow Function](#arrow-function)
-- [Function with default parametes](#function-with-default-parametes)
-  - [Unlimited number of parameters](#unlimited-number-of-parameters)
+- [Function with Default Parametes](#function-with-default-parametes)
+  - [Unlimited Number of Parameters](#unlimited-number-of-parameters)
 
 Hàm trong JS bắt đầu bởi từ khóa `function`, theo sau đó là tên hàm và dấu `()` chứa các tham số nếu có. Cũng có thể dùng tham số mặc định với hằng số.
 
@@ -138,7 +138,7 @@ console.log(double(8)); // 16
 const sum = (a, b) => ({ a: a, b: b });
 ```
 
-# Function with default parametes
+# Function with Default Parametes
 
 Đôi khi ta gọi hàm mà ta muốn nó có một giá trị mặc định nào đó. Nếu chúng ta không truyền vào đối số thì hàm sẽ lấy giá trị đó để xử lý.
 
@@ -168,7 +168,7 @@ console.log(moodOfDay()); // Today's mood is happy
 console.log(moodOfDay("sad")); // Today's mood is sad
 ```
 
-## Unlimited number of parameters
+## Unlimited Number of Parameters
 
 Hàm có thể không có số lượng tham số cố định. Để xây dựng những hàm này, ta có hai cách là sử dụng Declaration function và Arrow function.
 

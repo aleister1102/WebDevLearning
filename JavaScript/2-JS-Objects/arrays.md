@@ -21,7 +21,7 @@
   - [slice(start, end)](#slicestart-end)
   - [splice(start, nums, items)](#splicestart-nums-items)
   - [reverse()](#reverse)
-- [Array Methods Using Callback Functions](#array-methods-using-callback-functions)
+- [Array Methods using Callback Functions](#array-methods-using-callback-functions)
   - [forEach](#foreach)
   - [map](#map)
   - [reduce](#reduce)
@@ -206,7 +206,7 @@ console.log(arr); // [9,10,3,4,5,6,7,8]
 
 Đảo ngược mảng.
 
-# Array Methods Using Callback Functions
+# Array Methods using Callback Functions
 
 Ngoài các phương thức đã nêu ở bài mảng, JS còn cung cấp một số phương thức dựng sẵn thuộc lớp đối tượng Array để thao tác với các hàm callback.
 

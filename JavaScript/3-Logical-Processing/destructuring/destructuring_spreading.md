@@ -5,23 +5,23 @@
 </div>
 
 - [Destructuring](#destructuring)
-  - [Destructuring arrays](#destructuring-arrays)
-  - [Destructuring array during iteration](#destructuring-array-during-iteration)
-  - [Destructuring objects](#destructuring-objects)
-  - [Object parameter with destructuring](#object-parameter-with-destructuring)
-  - [Destructuring object during iteration](#destructuring-object-during-iteration)
+  - [Destructuring Array](#destructuring-array)
+  - [Destructuring Array during Iteration](#destructuring-array-during-iteration)
+  - [Destructuring Object](#destructuring-object)
+  - [Object Parameter with Destructuring](#object-parameter-with-destructuring)
+  - [Destructuring Object during Iteration](#destructuring-object-during-iteration)
 - [Spread and Rest Operators](#spread-and-rest-operators)
-  - [Get the rest elements of array](#get-the-rest-elements-of-array)
+  - [Rest Elements of array](#rest-elements-of-array)
   - [Copy array](#copy-array)
   - [Copy object](#copy-object)
-  - [Rest operator with arrow function](#rest-operator-with-arrow-function)
+  - [Rest Operator with Arrow function](#rest-operator-with-arrow-function)
 - [Tagged template literals](#tagged-template-literals)
 
 # Destructuring
 
 Destructuring là một cú pháp cho phép "phân rã" array hoặc object để gán cho các biến riêng biệt.
 
-## Destructuring arrays
+## Destructuring Array
 
 Chẳng hạn ta gán bộ ba biến bằng các phần tử có trong mảng:
 
@@ -87,7 +87,7 @@ console.log(others);
 // => [4, 5, 6, 7, 8, 9, 10]
 ```
 
-## Destructuring array during iteration
+## Destructuring Array during Iteration
 
 Có thể sử dụng Destructuring trong vòng lặp:
 
@@ -103,7 +103,7 @@ for (const [country, city] of countries) {
 }
 ```
 
-## Destructuring objects
+## Destructuring Object
 
 Khi dùng Destructuring cho đối tượng, các biến cần được gán nên **có tên đúng chính xác** với key hoặc thuộc tính có trong đối tượng:
 
@@ -172,7 +172,7 @@ console.log(fe); // => "ReactJS"
 console.log(be); // => "NodeJS"
 ```
 
-## Object parameter with destructuring
+## Object Parameter with Destructuring
 
 Do tính chất có thể gán được của các value có trong object, mà ta có thể sử dụng các object như là tham số.
 
@@ -202,7 +202,7 @@ const calculatePerimeter = function ({ width, height }) {
 console.log(calculatePerimeter(rect)); // => 60
 ```
 
-## Destructuring object during iteration
+## Destructuring Object during Iteration
 
 Cũng có thể trích xuất trong vòng lặp:
 
@@ -246,7 +246,7 @@ Thường dùng toán tử spread trong việc destructuring một array hoặc 
 
 Thường dùng toán tử rest làm tham số của hàm (nhằm gom nhóm nhiều đối số lại thành một mảng duy nhất).
 
-## Get the rest elements of array
+## Rest Elements of array
 
 Ta dùng spread operator để lấy các phần tử còn lại của mảng dưới dạng một mảng khác.
 
@@ -337,7 +337,7 @@ console.log(newObject);
 // => {name: 'Quân', age: 20, school: 'HCMUS', year: 2}
 ```
 
-## Rest operator with arrow function
+## Rest Operator with Arrow function
 
 Ở bài functions đã đề cập đến việc hàm có số lượng tham số không biết trước. Ở đó ta sử dụng toán tử `...` kèm thên một mảng tham số bất kỳ:
 
