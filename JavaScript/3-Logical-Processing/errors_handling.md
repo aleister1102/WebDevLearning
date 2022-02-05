@@ -12,6 +12,7 @@
   - [ReferenceError](#referenceerror)
   - [SyntaxError](#syntaxerror)
   - [TypeError](#typeerror)
+- [Optional chaining](#optional-chaining)
 
 # Error Handling
 
@@ -135,3 +136,49 @@ console.log(num.toLowerCase());
 ```
 
 Đoạn code trên là lỗi vì đối tượng number không có hàm `toLowerCase()`.
+
+# Optional chaining
+
+Đôi khi ta dùng API để lấy dữ liệu về, đa số dữ liệu có dạng JSON. Và JSON tổ chức theo object.
+
+Để đảm bảo một thuộc tính hoặc phương thức nào đó của object có tồn tại, hoặc dù cho không tồn tại cũng không bị lỗi, ta dùng toán tử option chaining `?.`.
+
+Chẳng hạn ta có một object:
+
+```js
+const person={
+    name : "Father"
+    child1:{
+        name: "Son"
+        child2:{
+            name:"Grand son"
+        }
+    }
+}
+
+console.log(person.child1.child2.name); // => "Grand son"
+```
+
+Giả sử ta không chắc thuộc tính `child1` có tồn tại, ta đặt toán tử `?.` phía sau tên của thuộc tính này:
+
+```js
+console.log(person.child1?.child2.name);
+```
+
+Khi object không tồn tại thuộc tính `child1` thì câu lệnh `console.log` cũng không sinh ra lỗi.
+
+```js
+const person = {
+  name: "Father",
+  // child1:{
+  //     name: "Son"
+  //     child2:{
+  //         name:"Grand son"
+  //     }
+  // }
+};
+console.log(person.child1.child2.name);
+// => Uncaught TypeError: Cannot read property 'child2' of undefined
+console.log(person.child1?.child2.name);
+// =>
+```
