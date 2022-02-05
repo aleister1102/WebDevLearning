@@ -4,6 +4,13 @@
     <center><h1 class="bigtitle">CSS Backgrounds</h1></center>
 </div>
 
+- [Clip](#clip)
+- [Image](#image)
+- [Size](#size)
+- [Origin](#origin)
+- [Position](#position)
+- [Shorthand](#shorthand)
+
 # Clip
 
 Xét đoạn code:

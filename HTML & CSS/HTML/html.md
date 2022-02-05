@@ -1,8 +1,26 @@
-<link rel='stylesheet' href='../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">HTML</h1></center>
 </div>
+
+- [What is HTML?](#what-is-html)
+  - [Tag - element](#tag---element)
+  - [Attributes](#attributes)
+  - [Nested tags](#nested-tags)
+- [Web page structure](#web-page-structure)
+- [Comments in HTML](#comments-in-html)
+- [Useful tags](#useful-tags)
+  - [Heading](#heading)
+  - [Paragraph](#paragraph)
+  - [Image](#image)
+  - [Anchor](#anchor)
+  - [List](#list)
+  - [Table](#table)
+  - [Input](#input)
+  - [Button](#button)
+  - [Division](#division)
+  - [Break](#break)
 
 # What is HTML?
 

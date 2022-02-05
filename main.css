@@ -67,14 +67,6 @@ a:focus {
   outline-offset: -2px;
 }
 
-/* code {
-  color: #1a8ad4;
-  background-color: #f9f2f4;
-  
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  padding: 2px 4px;
-  font-size: 90%;
-} */
 .bigtitle {
   padding-top: 20%;
   color: rgb(26, 162, 216);
@@ -87,7 +79,7 @@ a:focus {
 
 :not(pre):not(.hljs) > code {
   background-color: #f9f2f4;
-  color: #0c9aec; 
+  color: #0c9aec;
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 90%;

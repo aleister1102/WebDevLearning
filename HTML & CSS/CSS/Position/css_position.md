@@ -4,6 +4,11 @@
     <center><h1 class="bigtitle">CSS Position</h1></center>
 </div>
 
+- [Relative](#relative)
+- [Absolute](#absolute)
+- [Fixed](#fixed)
+- [Sticky](#sticky)
+
 Thuộc tính `position` có các giá trị `relative,absolute, fixed, sticky` để thiết lập vị trí cho element. Tham khảo một cách trực quan tại [đây](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 
 # Relative
