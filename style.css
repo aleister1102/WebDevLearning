@@ -1,10 +1,25 @@
-div {
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  border: 10px solid #000;
+#box1 {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 5px solid #000;
   box-sizing: border-box;
-  background: url(https://wallpaperaccess.com/full/4582655.jpg) no-repeat center;
-  background-color: aquamarine;
+  background-color: rgba(28, 231, 187, 0.2);
   background-size: 200px;
+  position: sticky;
+  top: 10px;
+}
+
+#box-child {
+  width: 50%;
+  height: 50%;
+  border: 2px solid #000;
+  background-color: rgb(238, 60, 223);
+  position: absolute;
+  right: 10px;
+}
+
+ul {
+  height: 2000px;
 }

@@ -80,19 +80,20 @@ Các selector thông dụng là:
 
 1. Id & class
 2. List (Nhiều selector)
-3. Descendant (Con tổng quát)
-4. Child (Con trực tiếp)
-5. Adjacent (Liền kề)
-6. Attribute (Kèm theo attribute)
-7. Pseudo:
+3. Descendant (Con tổng quát) (space)
+4. Child (Con trực tiếp) (`>`)
+5. General siblings (Con tổng quát) (`~`)
+6. Adjacent (Liền kề) (`+`)
+7. Attribute (Kèm theo attribute) (`[]`)
+8. Pseudo:
 
-- First & last child (Tag đầu và cuối trong số các tag con)
-- First & Last of type (Tag đầu và cuối trong số các tag cùng loại)
-- nth child
-- nth of type
+- First & last child (Tag đầu và cuối trong số các tag con) (`:first-child`)
+- First & Last of type (Tag đầu và cuối trong số các tag cùng loại) (`:first-of-type`)
+- nth child (`:nth-child(n)`)
+- nth of type (`:nth-of-type(n)`)
 
-8. Universal
-9. Important
+8. Universal (`*`)
+9. Important (`!`)
 
 Tham khảo ở [đây](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
 
