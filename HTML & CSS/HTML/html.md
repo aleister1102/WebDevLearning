@@ -4,7 +4,7 @@
     <center><h1 class="bigtitle">HTML</h1></center>
 </div>
 
-# What is html?
+# What is HTML?
 
 HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải là ngôn ngữ lập trình mà chỉ là ngôn ngữ đánh dấu.
 
