@@ -2,9 +2,9 @@ div {
   width: 100%;
   height: 100vh;
   padding: 20px;
-  border: 10px solid #fff;
+  border: 10px solid #000;
   box-sizing: border-box;
-  background-image: url(https://wallpaperaccess.com/full/4582655.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url(https://wallpaperaccess.com/full/4582655.jpg) no-repeat center;
+  background-color: aquamarine;
+  background-size: 200px;
 }
