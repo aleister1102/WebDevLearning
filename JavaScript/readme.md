@@ -1,52 +1,44 @@
 <link rel='stylesheet' href='main.css'>
 
-JavaScript knowledges studied since 2022 🔨 .
+💛 JavaScript knowledges studied since 2022 💛.
 
 # Table of Contents
 
-> [Introduction](intro.md)
+[Introduction](intro.md)
 
-| # Index |                         Data Types                         |
-| ------- | :--------------------------------------------------------: |
-| 01      |           [Data Types](Data-Types/data_types.md)           |
-| 02      |              [Numbers](Data-Types/numbers.md)              |
-| 03      | [Booleans and Operators](Data-Types/booleans_operators.md) |
-| 04      |              [Strings](Data-Types/strings.md)              |
-| 05      |     [Scopes and Objects](Data-Types/scopes_objects.md)     |
-| 06      |              [Classes](Data-Types/classes.md)              |
-
-| # Index |                              Logical Processing                              |
-| ------- | :--------------------------------------------------------------------------: |
-| 01      |                  [Loops](Logical-Processing/Loops/loops.md)                  |
-| 02      | [Destructuring and Spreading](Logical-Processing/destructuring_spreading.md) |
-| 03      |           [Errors Handling](Logical-Processing/errors_handling.md)           |
-
-| # Index |                           Built-in Objects                           |
-| ------- | :------------------------------------------------------------------: |
-| 01      |                 [Arrays](Built-in-Objects/arrays.md)                 |
-| 02      |          [Window and Date](Built-in-Objects/window_date.md)          |
-| 03      |              [Functions](Built-in-Objects/functions.md)              |
-| 04      |               [Callback](Built-in-Objects/callback.md)               |
-| 05      |              [Set and Map](Built-in-Objects/set_map.md)              |
-| 06      | [Regular Expressions](Built-in-Objects/Regular-Expressions/regex.md) |
-| 07      |     [Console](Built-in-Objects/Console-Object/console_object.md)     |
-| 08      |                   [JSON](Built-in-Objects/JSON.md)                   |
-
-| # Index |       Web Storage and Communication       |
-| ------- | :---------------------------------------: |
-| 01      | [Web Storage](Web-Storage/web_storage.md) |
-| 02      |     [Promises](Promises/promises.md)      |
-| 03      |    [Fetch API](Fetch-API/fetch_api.md)    |
-
-| # Index |                   DOM                   |
-| ------- | :-------------------------------------: |
-| 01      |            [DOM](DOM/DOM.md)            |
-| 01      | [DOM Properties](DOM/DOM_properties.md) |
-| 01      |     [DOM Events](DOM/DOM_events.md)     |
+| Type               |                                           Content                                           |
+| ------------------ | :-----------------------------------------------------------------------------------------: |
+| Introduction       |                                  [Introduction](intro.md)                                   |
+| Data Types         |                          [Data Types](1-Data-Types/data_types.md)                           |
+| Data Types         |                              [Scopes](1-Data-Types/scopes.md)                               |
+| Data Types         |                         [Objects](1-Data-Types/Objects/objects.md)                          |
+| Data Types         |                             [Classes](1-Data-Types/classes.md)                              |
+| JS Objects         |                       [Numbers and Math](2-JS-Objects/number_math.md)                       |
+| JS Objects         |                [Booleans and Operators](2-JS-Objects/booleans_operators.md)                 |
+| JS Objects         |                             [Strings](2-JS-Objects/strings.md)                              |
+| JS Objects         |                              [Arrays](2-JS-Objects/arrays.md)                               |
+| JS Objects         |                           [Set and Map](2-JS-Objects/set_map.md)                            |
+| JS Objects         |                       [Window and Date](2-JS-Objects/window_date.md)                        |
+| JS Objects         |                  [Console](2-JS-Objects/Console-Object/console_object.md)                   |
+| JS Objects         |              [Regular Expressions](2-JS-Objects/Regular-Expressions/regex.md)               |
+| JS Objects         |                                [JSON](2-JS-Objects/JSON.md)                                 |
+| Logical Processing |                        [Loops](3-Logical-Processing/Loops/loops.md)                         |
+| Logical Processing |                       [Functions](3-Logical-Processing/functions.md)                        |
+| Logical Processing |                        [Callback](3-Logical-Processing/callback.md)                         |
+| Logical Processing |                    [Promises](3-Logical-Processing/Promises/promises.md)                    |
+| Logical Processing |                 [Errors Handling](3-Logical-Processing/errors_handling.md)                  |
+| Logical Processing | [Destruturing and Spreading](3-Logical-Processing/Destructuring/destructuring_spreading.md) |
+| DOM                |                                     [DOM](4-DOM/DOM.md)                                     |
+| DOM                |                          [DOM Properties](4-DOM/DOM_properties.md)                          |
+| DOM                |                              [DOM Events](4-DOM/DOM_events.md)                              |
+| Fetch API          |                            [Fetch API](5-Fetch-API/fetch_api.md)                            |
+| Web Storage        |                         [Web Storage](6-Web-Storage/web_storage.md)                         |
+| Modules            |                               [Modules](7-Modules/modules.md)                               |
 
 # Conventions
 
 ## Convention 1 (from Asabeneh)
+
 - We used camelCase for variables and functions.
 - All variable names start with a letter.
 - We chose to use const for constants, arrays, objects and functions. In stead of double quote, we chose to use single quote or backtick. Single quote is becoming trendy.

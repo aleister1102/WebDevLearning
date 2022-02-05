@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='../main.css'>
 
-💙🧡HTML & CSS knowledges studied from 2021 💙🧡.
+💙🧡 HTML & CSS knowledges studied from 2021 💙🧡.
 
 # Table of Contents
 
