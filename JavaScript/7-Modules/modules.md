@@ -1,8 +1,13 @@
-<link rel='stylesheet' href='../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Modules</h1></center>
 </div>
+
+- [Modules](#modules)
+  - [Import with destructuring](#import-with-destructuring)
+  - [Export from other module](#export-from-other-module)
+- [Module cheatsheet](#module-cheatsheet)
 
 # Modules
 

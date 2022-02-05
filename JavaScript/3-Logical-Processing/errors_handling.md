@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Errors Handling</h1></center>

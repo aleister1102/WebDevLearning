@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../main.css'>
+<link rel='stylesheet' href='../../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Regular Expressions</h1></center>
