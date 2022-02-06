@@ -26,6 +26,7 @@ html {
   left: 0;
   height: 46px;
   background-color: #000;
+  z-index: 1;
 }
 
 #nav {
@@ -38,13 +39,6 @@ html {
   display: inline-block;
 }
 
-#nav .subnav li:hover a,
-#nav > li:hover > a {
-  /*Hover <li> change <a>*/
-  color: #000;
-  background-color: #ccc;
-}
-
 #nav li a {
   line-height: 46px;
   /*using <a> padding*/
@@ -53,6 +47,13 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+  /*Hover <li> change <a>*/
+  color: #000;
+  background-color: #ccc;
 }
 
 #nav .subnav {
@@ -65,10 +66,6 @@ html {
   display: none;
 }
 
-#nav li:hover .subnav {
-  display: block;
-}
-
 #nav .subnav li {
   width: 100%;
 }
@@ -78,6 +75,10 @@ html {
   width: 100%;
   color: #000;
   text-transform: none;
+}
+
+#nav li:hover .subnav {
+  display: block;
 }
 
 .down-arrow-icon {
@@ -103,10 +104,32 @@ html {
 }
 
 #slider {
+  position: relative;
   margin-top: 46px;
-  height: 300px;
-  background-color: violet;
+  /*50% of its width*/
+  padding-top: 50%;
+  background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
 }
+
+#slider .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+#slider .description .des_heading {
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+#slider .description .des_content {
+  margin: 15px;
+  font-size: 15px;
+}
+
 #content {
 }
 #footer {
