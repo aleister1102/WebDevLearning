@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng
+*/
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+}
+
+#header {
+  position: fixed;
+  top:0px;
+  right: 0px;
+  left: 0px;
+  height: 46px;
+  background-color: #000;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav li {
+  position: relative;
+  display: inline-block;
+}
+
+/* CSS for subnav when hover in <li>*/
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav > li > a {
+  color: white;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  line-height: 46px;
+  padding: 0px 24px;
+  text-decoration: none;
+  display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  min-width: 160px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
+  display: none;
+}
+
+#nav .subnav a {
+  line-height: 22px;
+  padding: 8px 12px;
+  color: #000;
+}
+
+#nav .subnav li {
+  width: 100%;
+}
+
+#nav .nav-arrow-down {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#header .search-button {
+  padding: 0px 24px;
+  float: right;
+}
+
+#header .search-button:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header .search-icon {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 46px;
+  color: #fff;
+}
+
+#slider {
+  margin-top:46px;
+}
+
+#content {
+}
+
+#footer {
+}
+
+#main #test {
+  height: 2000px;
+}
