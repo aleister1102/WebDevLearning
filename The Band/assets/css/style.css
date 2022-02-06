@@ -128,9 +128,70 @@ html {
 #slider .description .des_content {
   margin: 15px;
   font-size: 15px;
+  font-weight: bold;
 }
 
-#content {
+#content #about,
+#content #tour,
+#content #contact {
+  width: 800px;
+  height: 672px;
+  padding: 64px 16px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+#content .heading {
+  margin: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+#content .sub-heading {
+  margin: 15px;
+  opacity: 0.6;
+  display: block;
+  text-align: center;
+}
+
+#content #about .about-content {
+  margin: 15px;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 1.4; /*1.6 if Vietnamese*/
+}
+
+#content .member-info {
+  padding: 32px 0px;
+}
+
+#content .member {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+#content .member-name {
+  margin: 15px;
+  display: block;
+  font-size: 15px;
+}
+
+#content .member-image {
+  width: 154px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+.clear {
+  /*Fix float problem*/
+  clear: both;
+}
+
 #footer {
+  height: 1000px;
 }
