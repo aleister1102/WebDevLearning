@@ -16,9 +16,6 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#main {
-}
-
 #header {
   position: fixed;
   top: 0;
@@ -29,14 +26,14 @@ html {
   z-index: 1;
 }
 
-#nav {
-  display: inline-block;
+#nav{
+  list-style-type: none;
 }
 
 #nav li {
   position: relative;
   /*<li> does not have padding*/
-  display: inline-block;
+  float: left;
 }
 
 #nav li a {
@@ -64,6 +61,7 @@ html {
   background-color: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
   display: none;
+  list-style-type: none;
 }
 
 #nav .subnav li {
@@ -132,7 +130,7 @@ html {
 }
 
 #content #about,
-#content #tour,
+#content #tour-content,
 #content #contact {
   width: 800px;
   height: 672px;
@@ -165,7 +163,8 @@ html {
   line-height: 1.4; /*1.6 if Vietnamese*/
 }
 
-#content .member-info {
+#content #tour #cities,
+#content #member-info {
   padding: 32px 0px;
 }
 
@@ -185,6 +184,79 @@ html {
   width: 154px;
   margin-bottom: 16px;
   border-radius: 4px;
+}
+
+#tour {
+  background-color: #000;
+}
+
+#content #tour .heading,
+#content #tour .sub-heading {
+  color: #fff;
+}
+
+#content #tour #months {
+  margin-top: 40px;
+}
+
+#content #tour .month {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#content #tour .city {
+  float: left;
+  overflow: hidden;
+  width: calc(100% / 3);
+  padding: 0px 8px;
+  text-align: center;
+}
+
+#content #tour p {
+  width: 100%;
+  display: block;
+}
+
+#content #tour .city-image {
+  width: 245px;
+  height: 184px;
+}
+
+#content #tour .city_description {
+  background-color: #fff;
+}
+
+#content #tour .sold-out {
+  margin-left: 16px;
+  padding: 3px 4px;
+  color: #fff;
+  background-color: #ff4436;
+  font-size: 15px;
+  line-height: 1.5;
+  display: inline-block;
+}
+#content #tour .quantity {
+  float: right;
+  margin-right: 16px;
+  padding: 0px 8px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.city-name,
+.tour-date,
+.city-content {
+  margin: 15px;
+  font-size: 15px;
+  text-align: left;
+}
+.tour-date {
+  opacity: 0.6;
 }
 
 .clear {

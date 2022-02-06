@@ -61,26 +61,98 @@
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.
           </p>
-          <div class="member-info">
+          <div id="member-info">
             <div class="member">
               <p class="member-name">Name</p>
-              <img src="./assets/img/bandmember.jpg" alt="Member" class="member-image"/>
+              <img
+                src="./assets/img/bandmember.jpg"
+                alt="Member"
+                class="member-image"
+              />
             </div>
             <div class="member">
               <p class="member-name">Name</p>
-              <img src="./assets/img/bandmember.jpg" alt="Member" class="member-image"/>
+              <img
+                src="./assets/img/bandmember.jpg"
+                alt="Member"
+                class="member-image"
+              />
             </div>
             <div class="member">
               <p class="member-name">Name</p>
-              <img src="./assets/img/bandmember.jpg" alt="Member" class="member-image"/>
+              <img
+                src="./assets/img/bandmember.jpg"
+                alt="Member"
+                class="member-image"
+              />
             </div>
             <div class="clear"></div>
           </div>
         </div>
         <!--Tour Section-->
         <div id="tour">
-          <h2 class="heading">Tour Dates</h2>
-          <i class="sub-heading">Remember to book your tickets!</i>
+          <!--Tạo div cha để phủ nền được margin-->
+          <div id="tour-content">
+            <h2 class="heading">Tour Dates</h2>
+            <i class="sub-heading">Remember to book your tickets!</i>
+            <ul id="months">
+              <li class="month">
+                September<span class="sold-out">Sold out</span>
+              </li>
+              <li class="month">
+                October<span class="sold-out">Sold out</span>
+              </li>
+              <li class="month">November<span class="quantity">3</span></li>
+            </ul>
+            <br />
+            <div id="cities">
+              <div class="city">
+                <img
+                  src="assets/img/newyork.jpg"
+                  alt="New York"
+                  class="city-image"
+                />
+                <div class="city_description">
+                  <p class="city-name">New York</p>
+                  <p class="tour-date">Fri 27 Nov 2016</p>
+                  <p class="city-content">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="ticket-button">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="city">
+                <img
+                  src="assets/img/paris.jpg"
+                  alt="Paris"
+                  class="city-image"
+                />
+                <div class="city_description">
+                  <p class="city-name">Paris</p>
+                  <p class="tour-date">Sat 28 Nov 2016</p>
+                  <p class="city-content">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="ticket-button">Buy Tickets</button>
+                </div>
+              </div>
+              <div class="city">
+                <img
+                  src="assets/img/sanfran.jpg"
+                  alt="San Francisco"
+                  class="city-image"
+                />
+                <div class="city_description">
+                  <p class="city-name">San Francisco</p>
+                  <p class="tour-date">Sun 29 Nov 2016</p>
+                  <p class="city-content">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button class="ticket-button">Buy Tickets</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--Contact Section-->
         <div id="contact">
