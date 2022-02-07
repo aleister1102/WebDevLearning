@@ -140,6 +140,14 @@ Ngoài ra còn có **inline element**, các element không chiếm trọn một 
 
 Các block element và inline element tham khảo ở [đây](https://www.w3schools.com/html/html_blocks.asp).
 
+Một số block element thường gặp là:
+
+- `div, p, h1, ul, footer`.
+
+Một số inline element thường gặp là:
+
+- `a, span, img, button`.
+
 Ảnh dưới đây sẽ minh họa cho điều này:
 
 <img src="box2.png">

@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.box {
+  height: 100px;
+  background-color: orange;
+  display: flex;
+}
+
+h2 {
+  margin: auto;
+}
