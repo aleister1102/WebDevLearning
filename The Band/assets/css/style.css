@@ -118,12 +118,18 @@ div > div {
   font-weight: bold;
 }
 
+/*=====  End of Header section  ======*/
+
+/*=============================================
+=            Slider section                   =
+=============================================*/
+
 #slider {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
+  height: 50vw;
   margin-top: 46px;
-  padding: 25%;
   background: url(../img/ny.jpg) no-repeat center;
   background-size: cover;
 }
@@ -131,6 +137,7 @@ div > div {
 #slider__description {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   padding: 32px 16px;
   border: none;
   background-color: transparent;
@@ -139,13 +146,13 @@ div > div {
 }
 
 #slider__heading {
-  flex: 1;
   margin: 10px;
+  font-size: 24px;
   font-weight: 400;
 }
 #slider__sub-heading {
-  flex: 1;
   margin: 15px;
-  line-height: 100%;
   font-weight: bold;
 }
+
+/*=====  End of Slider section  ======*/
