@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../main.css'>
+<link rel='stylesheet' href='../../../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Selectors</h1></center>
@@ -13,6 +13,10 @@
 - [Inheritance](#inheritance)
 
 CSS Selector là cách mà chúng ta dùng để chọn ra các element nhằm format style cho chúng.
+
+Luyện tập CSS thông qua trò chơi [CSS Diner](https://flukeout.github.io/).
+
+<img src="selector1.png">
 
 # Id and class
 
