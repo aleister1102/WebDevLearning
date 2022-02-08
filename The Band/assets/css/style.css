@@ -1,20 +1,21 @@
 /* Reset CSS */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-div > div {
-  height: 200px;
+/* div > div  */
+/* {
   margin: 0px;
-  border: 2px solid aquamarine; /*Remember to turn off*/
+  border: 2px solid aquamarine; 
+  height: 200px;
   background-color: #000;
-}
+} */
 
 /* Order of properties */
 /* Position/Align -> Size -> Box model -> Color -> Decoration */
@@ -27,14 +28,15 @@ div > div {
 
 #header {
   --height: 46px;
-  display: flex;
-  justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
-  height: var(--height);
+  justify-content: space-between;
+  display: flex;
   border: none;
+  height: var(--height);
+  background-color: #000;
 }
 
 #header__nav {
@@ -49,35 +51,35 @@ div > div {
 
 #header__nav li a {
   display: block; /*For setting height*/
-  line-height: var(--height);
   padding: 0px 24px;
-  color: #fff;
+  line-height: var(--height);
   text-transform: uppercase;
   text-decoration: none;
+  color: #fff;
 }
 #header__nav li:hover #header__more-icon,
 #header__sub-nav > li:hover > a,
 #header__nav > li:hover > a {
-  color: #000;
   background-color: #ccc;
+  color: #000;
 }
 
 #header__nav #header__more-icon {
   padding: 0px 6px;
-  color: #fff;
   font-size: 12px;
   font-weight: bold;
+  color: #fff;
 }
 
 /*----------  Sub navigation bar  ----------*/
 
 #header__sub-nav {
-  display: none;
   position: absolute;
   top: 45px;
+  display: none;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
   min-width: 160px;
   list-style-type: none;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
 }
 
 #header__sub-nav li {
@@ -85,10 +87,10 @@ div > div {
 }
 #header__nav #header__sub-nav a {
   display: block;
-  line-height: 22px;
   padding: 8px 16px;
-  color: #000;
+  line-height: 22px;
   text-transform: none;
+  color: #000;
 }
 
 /* Toggle sub nav */
@@ -99,12 +101,11 @@ div > div {
 /*----------  Search button  ----------*/
 
 #header__search-button {
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
   min-width: 60px;
   height: 46px;
-  border: none;
 }
 
 #header__search-button:hover {
@@ -113,9 +114,9 @@ div > div {
 }
 
 #header__search-icon {
-  color: #fff;
   font-size: 15px;
   font-weight: bold;
+  color: #fff;
 }
 
 /*=====  End of Header section  ======*/
@@ -125,34 +126,222 @@ div > div {
 =============================================*/
 
 #slider {
-  display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 50vw;
+  display: flex;
   margin-top: 46px;
+  height: 50vw; /*Hightlight*/
   background: url(../img/ny.jpg) no-repeat center;
   background-size: cover;
 }
 
-#slider__description {
-  display: flex;
+.slider__description {
   flex-direction: column;
   justify-content: flex-end;
+  display: flex;
   padding: 32px 16px;
-  border: none;
   background-color: transparent;
   text-align: center;
   color: #fff;
 }
 
-#slider__heading {
+.slider__heading {
   margin: 10px;
   font-size: 24px;
   font-weight: 400;
 }
-#slider__sub-heading {
+.slider__sub-heading {
   margin: 15px;
   font-weight: bold;
 }
 
 /*=====  End of Slider section  ======*/
+
+/*=============================================
+=            Content section            =
+=============================================*/
+
+#content {
+  flex-direction: column;
+  display: flex;
+}
+
+#content__contact,
+#content__tours,
+#content__about {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 16px;
+  width: 800px;
+  height: 672px;
+}
+
+.content__heading {
+  margin: 10px 0px;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content__sub-heading {
+  opacity: 0.5;
+  margin: 15px 0px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.content__description {
+  margin: 15px 0px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/*----------  About section  ----------*/
+
+#content__about {
+  flex-direction: column;
+  display: flex;
+}
+
+#content__members {
+  justify-content: space-around;
+  display: flex;
+  padding: 32px 0px;
+}
+
+.member {
+  min-width: 256px;
+  text-align: center;
+}
+
+.member__name {
+  margin: 15px 0px;
+}
+
+.member__image {
+  margin-bottom: 16px;
+  border-radius: 4px;
+  width: 154px;
+  height: 154px;
+}
+
+/*----------  Tours section  ----------*/
+
+#content__tours-container {
+  height: 846px;
+  background-color: #000;
+  color: #fff;
+}
+
+/*----------  Tour months  ----------*/
+
+#content__tour-months ul {
+  font-size: 15px;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+#content__tour-months li {
+  padding: 8px 16px;
+}
+
+.tour__month {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.tour__sold-out {
+  margin-left: 16px;
+  padding: 3px 8px;
+  background-color: #f44336;
+  color: #fff;
+}
+
+.tour__quantity {
+  float: right;
+  margin-right: 16px;
+  border-radius: 50%;
+  padding: 0px 8px;
+  background-color: #000;
+  color: #fff;
+}
+
+/*----------  Tour cities  ----------*/
+
+.content__tour-cities {
+  justify-content: space-between;
+  display: flex;
+  padding: 32px 0px;
+}
+
+.tour__city {
+  flex-direction: column;
+  display: flex;
+  width: 245px;
+  height: 390px;
+}
+
+.tour__city-image {
+  width: 100%;
+  height: 184px;
+}
+
+.tour__city-image:hover {
+  opacity: 0.6;
+}
+
+.tour__city-description {
+  padding: 0.15px 16px;
+  height: 204px;
+  background-color: #fff;
+  line-height: 1.4;
+  color: #000;
+}
+
+.tour__city-description p {
+  margin: 15px 0px;
+}
+.tour__city-description p:nth-child(1) {
+  font-weight: bold;
+}
+.tour__city-description p:nth-child(2) {
+  opacity: 0.5;
+}
+
+.tour__city-buy {
+  margin-bottom: 16px;
+  border: none;
+  padding: 8px 16px;
+  background-color: #000;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tour__city-buy:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/*----------  Contact section  ----------*/
+
+#content_contact-form {
+  display: flex;
+}
+
+.contact-info {
+  font-size: 16px;
+}
+
+#content__banner {
+  background: url(../img/map.jpg) no-repeat center;
+  background-size: cover;
+  height: 50vw; /*Hightlight*/
+}
+
+/*=====  End of Content section  ======*/
