@@ -1,0 +1,151 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div > div {
+  height: 200px;
+  margin: 0px;
+  border: 2px solid aquamarine; /*Remember to turn off*/
+  background-color: #000;
+}
+
+/* Order of properties */
+/* Position/Align -> Size -> Box model -> Color -> Decoration */
+
+/*=============================================
+=            Header section                   =
+=============================================*/
+
+/*----------  Navigation bar  ----------*/
+
+#header {
+  --height: 46px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: var(--height);
+  border: none;
+}
+
+#header__nav {
+  display: flex;
+  min-width: 469px;
+  list-style-type: none;
+}
+
+#header__nav li {
+  position: relative;
+}
+
+#header__nav li a {
+  display: block; /*For setting height*/
+  line-height: var(--height);
+  padding: 0px 24px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#header__nav li:hover #header__more-icon,
+#header__sub-nav > li:hover > a,
+#header__nav > li:hover > a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#header__nav #header__more-icon {
+  padding: 0px 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*----------  Sub navigation bar  ----------*/
+
+#header__sub-nav {
+  display: none;
+  position: absolute;
+  top: 45px;
+  min-width: 160px;
+  list-style-type: none;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
+}
+
+#header__sub-nav li {
+  background-color: #fff;
+}
+#header__nav #header__sub-nav a {
+  display: block;
+  line-height: 22px;
+  padding: 8px 16px;
+  color: #000;
+  text-transform: none;
+}
+
+/* Toggle sub nav */
+#header__nav li:hover #header__sub-nav {
+  display: block;
+}
+
+/*----------  Search button  ----------*/
+
+#header__search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 46px;
+  border: none;
+}
+
+#header__search-button:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header__search-icon {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#slider {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 46px;
+  padding: 25%;
+  background: url(../img/ny.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#slider__description {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+#slider__heading {
+  flex: 1;
+  margin: 10px;
+  font-weight: 400;
+}
+#slider__sub-heading {
+  flex: 1;
+  margin: 15px;
+  line-height: 100%;
+  font-weight: bold;
+}
