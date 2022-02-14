@@ -330,12 +330,57 @@ html {
 
 /*----------  Contact section  ----------*/
 
-#content_contact-form {
-  display: flex;
+#content__contact {
+  height: 460px;
 }
 
-.contact-info {
-  font-size: 16px;
+#content__contact-form {
+  display: flex;
+  padding: 32px 0px;
+}
+
+.contact__info {
+  flex: 1;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+/*----------  Input section  ----------*/
+
+.contact__input {
+  flex: 1;
+}
+
+.contact__input input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  height: 40px;
+}
+
+.contact__input-upper {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.contact__input-lower input {
+  width: 100%;
+}
+
+
+.contact__input-button {
+  float: right;
+  margin: 16px 0px;
+  border: none;
+  padding: 8px 16px;
+  background-color: #000;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.contact__input-button:hover {
+  background-color: #ccc;
+  color:#000;
 }
 
 #content__banner {
@@ -345,3 +390,25 @@ html {
 }
 
 /*=====  End of Content section  ======*/
+
+/*=============================================
+=            Footer section            =
+=============================================*/
+
+#footer {
+  padding: 64px 16px;
+  font-size: 24px;
+  text-align: center;
+}
+.footer__icon{
+  opacity: 0.6;
+}
+.footer__icon:hover {
+  opacity: 0.3;
+}
+.footer__author {
+  margin: 15px 0px;
+  font-size: 15px;
+}
+
+/*=====  End of Footer section  ======*/
