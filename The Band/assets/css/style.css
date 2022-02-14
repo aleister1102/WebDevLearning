@@ -383,7 +383,7 @@ html {
   cursor: pointer;
 }
 
-#content__banner {
+#content__map {
   background: url(../img/map.jpg) no-repeat center;
   background-size: cover;
   height: 50vw; /*Hightlight*/
@@ -409,7 +409,12 @@ html {
 .footer__author {
   margin: 15px 0px;
   font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
 }
+.footer__author a{
+  color: rgba(0, 0, 0, 0.5);
+}
+
 
 /*=====  End of Footer section  ======*/
 
