@@ -1,120 +1,162 @@
 /* Reset CSS */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/*=============================================
-=            Comment            =
-=============================================*/
+/* Common */
 
 html {
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
 }
 
-/*=============================================
-=            Main            =
-=============================================*/
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-red {
+  background-color: #f44336;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Margin Vertical */
+.mv15 {
+  margin: 15px 0px;
+}
+
+/* Line Height 1.5 */
+.lh5 {
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  font-weight: bold;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+/* Main */
 
 /*=============================================
 =            Header section                   =
 =============================================*/
 
-/*----------  Navigation bar  ----------*/
+/*----------  Main Navigation  ----------*/
 
-#header {
+.header {
   --height: 46px;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   justify-content: space-between;
-  display: flex;
-  border: none;
   height: var(--height);
-  background-color: #000;
+  z-index: 1; /* Float to the top surface */
 }
 
-#header__nav {
-  display: flex;
+.header__nav {
   min-width: 469px;
-  list-style-type: none;
 }
 
-#header__nav li {
-  position: relative;
-}
-
-#header__nav li a {
-  display: block; /*For setting height*/
+.header__nav-item a {
   padding: 0px 24px;
   line-height: var(--height);
   text-transform: uppercase;
   text-decoration: none;
-  color: #fff;
 }
-#header__nav li:hover #header__more-icon,
-#header__sub-nav > li:hover > a,
-#header__nav > li:hover > a {
+li:hover .header__more-icon,
+.header__sub-nav > li:hover > a,
+.header__nav > li:hover > a {
   background-color: #ccc;
   color: #000;
 }
 
-#header__nav #header__more-icon {
+.header__more-icon {
   padding: 0px 6px;
   font-size: 12px;
-  font-weight: bold;
-  color: #fff;
 }
 
-/*----------  Sub navigation bar  ----------*/
+/*----------  Sub Navigation  ----------*/
 
-#header__sub-nav {
+.header__sub-nav {
   position: absolute;
   top: 45px;
-  display: none;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.64);
   min-width: 160px;
-  list-style-type: none;
 }
 
-#header__sub-nav li {
-  background-color: #fff;
-}
-#header__nav #header__sub-nav a {
-  display: block;
+.header__sub-nav a {
   padding: 8px 16px;
   line-height: 22px;
   text-transform: none;
-  color: #000;
 }
 
 /* Toggle sub nav */
-#header__nav li:hover #header__sub-nav {
+li:hover .header__sub-nav {
   display: block;
 }
 
 /*----------  Search button  ----------*/
 
-#header__search-button {
+.header__search-button {
   align-items: center;
-  justify-content: center;
-  display: flex;
   min-width: 60px;
   height: 46px;
 }
 
-#header__search-button:hover {
+.header__search-button:hover {
   background-color: #f44336;
   cursor: pointer;
-}
-
-#header__search-icon {
-  font-size: 15px;
-  font-weight: bold;
-  color: #fff;
 }
 
 /*=====  End of Header section  ======*/
@@ -123,24 +165,18 @@ html {
 =            Slider section                   =
 =============================================*/
 
-#slider {
-  justify-content: center;
+.slider {
   align-items: flex-end;
-  display: flex;
   margin-top: 46px;
   height: 50vw; /*Hightlight*/
-  background: url(../img/ny.jpg) no-repeat center;
+  background: url(../img/ny.jpg) center no-repeat;
   background-size: cover;
 }
 
 .slider__description {
   flex-direction: column;
   justify-content: flex-end;
-  display: flex;
   padding: 32px 16px;
-  background-color: transparent;
-  text-align: center;
-  color: #fff;
 }
 
 .slider__heading {
@@ -156,21 +192,20 @@ html {
 /*=====  End of Slider section  ======*/
 
 /*=============================================
-=            Content section            =
+=            Content section                  =
 =============================================*/
 
-#content {
+.content {
   flex-direction: column;
-  display: flex;
 }
 
-#content__contact,
-#content__tours,
-#content__about {
+.content__contact,
+.content__tours,
+.content__band {
   margin-left: auto;
   margin-right: auto;
   padding: 64px 16px;
-  width: 801px;
+  width: 800px;
   height: 100%;
 }
 
@@ -190,35 +225,26 @@ html {
   text-align: center;
 }
 
-.content__description {
-  margin: 15px 0px;
-  font-size: 15px;
-  line-height: 1.5;
-}
+/*----------  Band section  ----------*/
 
-/*----------  About section  ----------*/
-
-#content__about {
+.content__band {
   flex-direction: column;
-  display: flex;
 }
 
-#content__members {
+.content__about {
+  text-align: justify;
+}
+
+.content__members {
   justify-content: space-around;
-  display: flex;
   padding: 32px 0px;
 }
 
-.member {
+.content__member {
   min-width: 256px;
-  text-align: center;
 }
 
-.member__name {
-  margin: 15px 0px;
-}
-
-.member__image {
+.content__member-image {
   margin-bottom: 16px;
   border-radius: 4px;
   width: 154px;
@@ -227,113 +253,94 @@ html {
 
 /*----------  Tours section  ----------*/
 
-#content__tours-container {
-  height: 805px;
-  background-color: #000;
-  color: #fff;
+.content__tours-container {
+  height: 800px;
+}
+
+.content__tours {
+  flex-direction: column;
 }
 
 /*----------  Tour months  ----------*/
 
-#content__tour-months ul {
-  font-size: 15px;
-  line-height: 1.5;
-  list-style-type: none;
-}
-
-#content__tour-months li {
+.content__tour-months li {
   padding: 8px 16px;
 }
 
-.tour__month {
+.content__tour-month {
   border-bottom: 1px solid #ddd;
-  background-color: #fff;
-
   color: rgba(0, 0, 0, 0.6);
 }
 
-.tour__sold-out {
+.content__tour-sold-out {
   margin-left: 16px;
   padding: 3px 8px;
-  background-color: #f44336;
-  color: #fff;
 }
 
-.tour__quantity {
-  float: right;
+.content__tour-quantity {
   margin-right: 16px;
   border-radius: 50%;
   padding: 0px 8px;
-  background-color: #000;
-  color: #fff;
 }
 
 /*----------  Tour cities  ----------*/
 
 .content__tour-cities {
   justify-content: space-between;
-  display: flex;
   padding: 32px 0px;
 }
 
-.tour__city {
+.content__tour-city {
   flex-direction: column;
-  display: flex;
   width: 245px;
   height: 390px;
 }
 
-.tour__city-image {
+.content__tour-city-image {
   width: 100%;
   height: 184px;
 }
 
-.tour__city-image:hover {
+.content__tour-city-image:hover {
   opacity: 0.6;
 }
 
-.tour__city-description {
+.content__tour-city-description {
   padding: 0.15px 16px;
   height: 204px;
-  background-color: #fff;
-  line-height: 1.4;
-  color: #000;
 }
 
-.tour__city-description p {
+.content__tour-city-description p {
   margin: 15px 0px;
 }
-.tour__city-description p:nth-child(1) {
+
+.content__tour-city-description p:nth-child(1) {
   font-weight: bold;
 }
-.tour__city-description p:nth-child(2) {
+
+.content__tour-city-description p:nth-child(2) {
   opacity: 0.5;
 }
 
-.tour__city-buy {
+.content__tour-city-buy {
   margin-bottom: 16px;
-  border: none;
   padding: 8px 16px;
-  background-color: #000;
   font-size: 15px;
-  line-height: 1.5;
-  color: #fff;
-  cursor: pointer;
 }
 
-.tour__city-buy:hover {
+.content__tour-city-buy:hover {
   background-color: #ccc;
   color: #000;
+  cursor: pointer;
 }
 
 /*----------  Contact section  ----------*/
 
-#content__contact {
+.content__contact {
   height: 460px;
 }
 
-#content__contact-form {
-  display: flex;
+.content__contact-exchange {
   padding: 32px 0px;
 }
 
@@ -362,7 +369,6 @@ html {
 
 .contact__input-upper {
   justify-content: space-between;
-  display: flex;
   margin-bottom: 10px;
 }
 
@@ -373,12 +379,9 @@ html {
 .contact__input-button {
   float: right;
   margin: 16px 0px;
-  border: none;
   padding: 8px 16px;
-  background-color: #000;
   line-height: 22.5px;
   font-size: 15px;
-  color: #fff;
 }
 .contact__input-button:hover {
   background-color: #ccc;
@@ -386,7 +389,7 @@ html {
   cursor: pointer;
 }
 
-#content__map {
+.content__map {
   background: url(../img/map.jpg) no-repeat center;
   background-size: cover;
   height: 50vw; /*Hightlight*/
@@ -398,22 +401,23 @@ html {
 =            Footer section            =
 =============================================*/
 
-#footer {
+.footer {
   padding: 64px 16px;
-  font-size: 24px;
-  text-align: center;
 }
+
 .footer__icon {
   opacity: 0.6;
 }
+
 .footer__icon:hover {
   opacity: 0.3;
 }
+
 .footer__author {
   margin: 15px 0px;
-  font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
+
 .footer__author a {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -434,7 +438,6 @@ html {
   left: 0px;
   justify-content: center;
   align-items: center;
-  display: none;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -455,11 +458,9 @@ html {
 
 .modal__container {
   flex-direction: column;
-  display: flex;
   width: 900px;
   max-width: calc(100% - 32px);
   height: 472px;
-  background-color: #fff;
   animation: modalFadeIn ease 0.6s;
 }
 
@@ -472,11 +473,9 @@ html {
 
 .modal__header h2 {
   margin: 10px 0px;
-  text-align: center;
   letter-spacing: 4px;
   font-size: 30px;
   font-weight: 400;
-  color: #fff;
 }
 
 .modal__header .ti-bag {
@@ -487,13 +486,11 @@ html {
   position: absolute;
   top: 0px;
   right: 0px;
-  border: none;
   padding: 8px 16px;
   background-color: rgba(0, 0, 0, 0);
   line-height: 36px;
   font-size: 12px;
   font-weight: bolder;
-  color: #fff;
 }
 
 .modal__form-close-button:hover,
@@ -513,7 +510,7 @@ html {
 
 .modal__form p {
   margin: 15px 0px;
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 500;
 }
 

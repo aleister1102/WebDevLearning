@@ -15,31 +15,31 @@
 <body>
   <div id="main">
     <!-- Header section -->
-    <div id="header">
-      <!-- Navigation -->
-      <ul id="header__nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#content__about">Band</a></li>
-        <li><a href="#content__tours">Tour</a></li>
-        <li><a href="#content__contact">Contact</a></li>
-        <li>
-          <a href='#'">More
-            <i id=" header__more-icon" class="ti-angle-down"></i>
-          </a>
-          <ul id="header__sub-nav">
-            <li><a href="#">Merchandise</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">Media</a></li>
+    <div class="header flex bg-black">
+      <!-- Main Navigation -->
+      <ul class="header__nav flex no-bullet">
+        <li class="header__nav-item"><a href="#" class="block white">Home</a></li>
+        <li class="header__nav-item"><a href="#content__about" class="block white">Band</a></li>
+        <li class="header__nav-item"><a href="#content__tours" class="block white">Tour</a></li>
+        <li class="header__nav-item"><a href="#content__contact" class="block white">Contact</a></li>
+        <!-- Sub Navigation -->
+        <li class="header__nav-item">
+          <a href='#' class="block white">More<i class="header__more-icon icon ti-angle-down"></i></a>
+          <ul class="header__sub-nav hidden bg-white no-bullet">
+            <li class="bg-white"><a href="#" class="block black">Merchandise</a></li>
+            <li class="bg-white"><a href="#" class="block black">Extras</a></li>
+            <li class="bg-white"><a href="#" class="block black">Media</a></li>
           </ul>
         </li>
       </ul>
-      <div id="header__search-button">
-        <i id="header__search-icon" class="ti-search"></i>
+      <!-- Search Button -->
+      <div class="header__search-button flex justify-center">
+        <i class="header__search-icon icon white ti-search"></i>
       </div>
     </div>
     <!-- Slider section -->
-    <div id="slider">
-      <div class="slider__description">
+    <div class="slider flex justify-center">
+      <div class="slider__description flex text-center white">
         <h3 class="slider__heading">New York</h3>
         <p class="slider__sub-heading">
           The atmosphere in New York is lorem ipsum.
@@ -47,12 +47,12 @@
       </div>
     </div>
     <!-- Content section -->
-    <div id="content">
-      <!-- About -->
-      <div id="content__about">
+    <div class="content flex">
+      <!-- Band -->
+      <div class="content__band flex">
         <h2 class="content__heading">The Band</h2>
         <p class="content__sub-heading"><i>We love music</i></p>
-        <p class="content__description">
+        <p class="content__about mv15">
           We have created a fictional band website. Lorem ipsum dolor sit
           amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -65,83 +65,84 @@
           veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
           ea commodo consequat.
         </p>
-        <div id="content__members">
-          <div class="member">
-            <p class="member__name">Name</p>
-            <img src="assets/img/bandmember.jpg" alt="" class="member__image" />
+        <div class="content__members flex">
+          <div class="content__member text-center">
+            <p class="content__member-name mv15">Name</p>
+            <img src="assets/img/bandmember.jpg" alt="Member's Image" class="content__member-image" />
           </div>
-          <div class="member">
-            <p class="member__name">Name</p>
-            <img src="assets/img/bandmember.jpg" alt="" class="member__image" />
+          <div class="content__member text-center">
+            <p class="content__member-name mv15">Name</p>
+            <img src="assets/img/bandmember.jpg" alt="Member's Image" class="content__member-image" />
           </div>
-          <div class="member">
-            <p class="member__name">Name</p>
-            <img src="assets/img/bandmember.jpg" alt="" class="member__image" />
+          <div class="content__member text-center">
+            <p class="content__member-name mv15">Name</p>
+            <img src="assets/img/bandmember.jpg" alt="Member's Image" class="content__member-image" />
           </div>
         </div>
       </div>
       <!-- Tours -->
-      <div id="content__tours-container">
-        <div id="content__tours">
+      <div class="content__tours-container bg-black white">
+        <div class="content__tours flex">
           <h2 class="content__heading">Tour Dates</h2>
           <p class="content__sub-heading">
             <i>Remember to book your tickets!</i>
           </p>
-          <div id="content__tour-months">
-            <ul>
-              <li class="tour__month">
-                September<span class="tour__sold-out">Sold out</span>
+          <br>
+          <div>
+            <ul class="content__tour-months no-bullet">
+              <li class="content__tour-month bg-white lh5">
+                September<span class="content__tour-sold-out bg-red white">Sold out</span>
               </li>
-              <li class="tour__month">
-                October<span class="tour__sold-out">Sold out</span>
+              <li class="content__tour-month bg-white lh5">
+                October<span class="content__tour-sold-out bg-red white">Sold out</span>
               </li>
-              <li class="tour__month">
-                November <span class="tour__quantity">3</span>
+              <li class="content__tour-month bg-white lh5">
+                November <span class="content__tour-quantity float-right bg-black white">3</span>
               </li>
             </ul>
           </div>
-          <div class="content__tour-cities">
-            <div class="tour__city">
-              <img src="assets/img/newyork.jpg" alt="New York" class="tour__city-image" />
-              <div class="tour__city-description">
+          <div class="content__tour-cities flex">
+            <div class="content__tour-city flex">
+              <img src="assets/img/newyork.jpg" alt="New York" class="content__tour-city-image" />
+              <div class="content__tour-city-description bg-white black">
                 <p>New York</p>
                 <p>Fri 27 Nov 2016</p>
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
+                <button class="content__tour-city-buy no-border lh5 bg-black white js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
-            <div class="tour__city">
-              <img src="assets/img/paris.jpg" alt="Paris" class="tour__city-image" />
-              <div class="tour__city-description">
+            <div class="content__tour-city flex">
+              <img src="assets/img/paris.jpg" alt="Paris" class="content__tour-city-image" />
+              <div class="content__tour-city-description bg-white black">
                 <p>Paris</p>
                 <p>Sat 28 Nov 2016</p>
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
+                <button class="content__tour-city-buy no-border lh5 bg-black white js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
-            <div class="tour__city">
-              <img src="assets/img/sanfran.jpg" alt="San Francisco" class="tour__city-image" />
-              <div class="tour__city-description">
+            <div class="content__tour-city flex">
+              <img src="assets/img/sanfran.jpg" alt="San Francisco" class="content__tour-city-image" />
+              <div class="content__tour-city-description bg-white black">
                 <p>San Francisco</p>
                 <p>Sun 29 Nov 2016</p>
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
+                <button class="content__tour-city-buy no-border lh5 bg-black white js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- Contact -->
-      <div id="content__contact">
+      <div class="content__contact">
         <h2 class="content__heading">Contact</h2>
         <p class="content__sub-heading"><i>Fan? Drop a note!</i></p>
-        <div id="content__contact-form">
+        <div class="content__contact-exchange flex">
           <div class="contact__info">
             <i class="ti-location-pin"></i>
             Chicago, US
@@ -153,22 +154,22 @@
             Email: mail@mail.com
           </div>
           <form class="contact__input">
-            <div class="contact__input-upper">
+            <div class="contact__input-upper flex">
               <input type="text" placeholder="Name" required />
               <input type="email" placeholder="Email" required />
             </div>
             <div class="contact__input-lower">
               <input type="text" placeholder="Message" required />
             </div>
-            <input type="submit" value="SEND" class="contact__input-button"></input>
+            <button type="submit" class="contact__input-button no-border bg-black white">SEND</button>
           </form>
         </div>
       </div>
       <!-- Banner -->
-      <div id="content__map"></div>
+      <div class="content__map"></div>
     </div>
     <!-- Footer -->
-    <div id="footer">
+    <div class="footer text-center">
       <i class="footer__icon ti-facebook"></i>
       <i class="footer__icon ti-instagram"></i>
       <i class="footer__icon ti-github"></i>
@@ -182,12 +183,12 @@
     </div>
   </div>
   <!-- Modal section -->
-  <div class="modal js-modal">
-    <div class="modal__container js-modal-container">
+  <div class="modal hidden js-modal">
+    <div class="modal__container flex bg-white js-modal-container">
       <!-- Header -->
       <div class="modal__header">
-        <h2><i class="ti-bag"></i>Tickets</h2>
-        <span class="modal__header-close-button js-close-modal">
+        <h2 class="text-center bg-white"><i class="ti-bag"></i>Tickets</h2>
+        <span class="modal__header-close-button no-border bg-white js-close-modal">
           <i class="ti-close"></i>
         </span>
       </div>
@@ -209,7 +210,7 @@
           Pay<i class="ti-check"></i>
         </div>
 
-        <button class="modal__form-close-button js-close-modal">
+        <button class="modal__form-close-button no-border bg-white js-close-modal">
           Close<i class="ti-close"></i>
         </button>
 
