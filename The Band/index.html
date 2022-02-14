@@ -12,9 +12,9 @@
 
 <body>
   <div id="main">
-    <!--Header section-->
+    <!-- Header section -->
     <div id="header">
-      <!--Navigation-->
+      <!-- Navigation -->
       <ul id="header__nav">
         <li><a href="">Home</a></li>
         <li><a href="">Band</a></li>
@@ -33,7 +33,7 @@
         <i id="header__search-icon" class="ti-search"></i>
       </div>
     </div>
-    <!--Slider section-->
+    <!-- Slider section -->
     <div id="slider">
       <div class="slider__description">
         <h3 class="slider__heading">New York</h3>
@@ -42,7 +42,9 @@
         </p>
       </div>
     </div>
+    <!-- Content section -->
     <div id="content">
+      <!-- About -->
       <div id="content__about">
         <h2 class="content__heading">The Band</h2>
         <p class="content__sub-heading"><i>We love music</i></p>
@@ -74,6 +76,7 @@
           </div>
         </div>
       </div>
+      <!-- Tours -->
       <div id="content__tours-container">
         <div id="content__tours">
           <h2 class="content__heading">Tour Dates</h2>
@@ -102,7 +105,7 @@
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy">Buy Tickets</button>
+                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
             <div class="tour__city">
@@ -113,7 +116,7 @@
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy">Buy Tickets</button>
+                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
             <div class="tour__city">
@@ -124,12 +127,13 @@
                 <p>
                   Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                 </p>
-                <button class="tour__city-buy">Buy Tickets</button>
+                <button class="tour__city-buy js-buy-ticket">Buy Tickets</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Contact -->
       <div id="content__contact">
         <h2 class="content__heading">Contact</h2>
         <p class="content__sub-heading"><i>Fan? Drop a note!</i></p>
@@ -156,8 +160,10 @@
           </div>
         </div>
       </div>
+      <!-- Banner -->
       <div id="content__banner"></div>
     </div>
+    <!-- Footer -->
     <div id="footer">
       <i class="footer__icon ti-facebook"></i>
       <i class="footer__icon ti-instagram"></i>
@@ -165,13 +171,50 @@
       <i class="footer__icon ti-pinterest"></i>
       <i class="footer__icon ti-twitter"></i>
       <i class="footer__icon ti-linkedin"></i>
-      <p class="footer__author">Powered by
+      <p class="footer__author">
+        Powered by
         <a href="https://www.w3schools.com/w3css/default.asp" class="footer__author-web">w3.css</a>
       </p>
     </div>
-
-
   </div>
+  <!-- Modal section -->
+  <div class="modal js-modal">
+    <div class="modal__container js-modal-container">
+      <!-- Header -->
+      <div class="modal__header">
+        <h2><i class="ti-bag"></i>Tickets</h2>
+        <span class="modal__header-close-button js-close-modal">
+          <i class="ti-close"></i>
+        </span>
+      </div>
+      <!-- Form -->
+      <div class="modal__form">
+        <p class="modal__form-price">
+          <i class="ti-shopping-cart"></i>
+          <label for="ticket">Tickets, $15 per person</label>
+        </p>
+        <input placeholder="How many?" type="text" />
+
+        <p class="modal__form-email">
+          <i class="ti-user"></i>
+          <label for="email">Send to</label>
+        </p>
+        <input placeholder="Enter email" type="text" />
+
+        <div class="modal__form-pay-button">
+          Pay<i class="ti-check"></i>
+        </div>
+
+        <button class="modal__form-close-button js-close-modal">
+          Close<i class="ti-close"></i>
+        </button>
+
+        <p class="modal__form-help">Need <a href="">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

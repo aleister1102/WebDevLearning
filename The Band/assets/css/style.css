@@ -172,8 +172,8 @@ html {
   margin-left: auto;
   margin-right: auto;
   padding: 64px 16px;
-  width: 800px;
-  height: 672px;
+  width: 801px;
+  height: 100%;
 }
 
 .content__heading {
@@ -230,7 +230,7 @@ html {
 /*----------  Tours section  ----------*/
 
 #content__tours-container {
-  height: 846px;
+  height: 805px;
   background-color: #000;
   color: #fff;
 }
@@ -367,7 +367,6 @@ html {
   width: 100%;
 }
 
-
 .contact__input-button {
   float: right;
   margin: 16px 0px;
@@ -380,7 +379,8 @@ html {
 }
 .contact__input-button:hover {
   background-color: #ccc;
-  color:#000;
+  color: #000;
+  cursor: pointer;
 }
 
 #content__banner {
@@ -400,7 +400,7 @@ html {
   font-size: 24px;
   text-align: center;
 }
-.footer__icon{
+.footer__icon {
   opacity: 0.6;
 }
 .footer__icon:hover {
@@ -412,3 +412,148 @@ html {
 }
 
 /*=====  End of Footer section  ======*/
+
+/*=============================================
+=            Modal                            =
+=============================================*/
+
+/*----------  Modal Header  ----------*/
+
+.modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal--open {
+  display: flex;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.modal__container {
+  flex-direction: column;
+  display: flex;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  height: 472px;
+  background-color: #fff;
+  animation: modalFadeIn ease 0.6s;
+}
+
+.modal__header {
+  flex: 1;
+  position: relative;
+  padding: 32px 16px;
+  background-color: #009688;
+}
+
+.modal__header h2 {
+  margin: 10px 0px;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.modal__header .ti-bag {
+  margin-right: 16px;
+}
+
+.modal__header-close-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border: none;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.modal__form-close-button:hover,
+.modal__form-pay-button:hover,
+.modal__header-close-button:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+/*----------  Modal form  ----------*/
+
+.modal__form {
+  flex: 1;
+  padding: 0px 16px;
+}
+
+.modal__form p {
+  margin: 15px 0px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.modal__form input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.modal__form-pay-button {
+  margin: 16px 0px;
+  padding: 16px;
+  background-color: #009688;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+}
+
+.modal__form .ti-check {
+  margin-left: 4px;
+}
+
+.modal__form-close-button {
+  display: inline-block;
+  margin: 16px 0px;
+  border: none;
+  padding: 8px 16px;
+  background-color: #f44336;
+  font-size: 15px;
+  color: #fff;
+}
+.modal__form-close-button .ti-close {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+.modal__form-help {
+  float: right;
+  margin: 15px 0px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.modal__form-help a {
+  color: #2196f3 !important;
+}
+
+/*=====  End of Modal  ======*/
