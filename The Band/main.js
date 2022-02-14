@@ -22,7 +22,7 @@ for (let element of closeButtonModal) {
 // Close modal without button
 modal.addEventListener('click', closeModal)
 
-// Prevent Propagation
+// Stop Propagation
 modalContainer.addEventListener('click', function (event) {
     event.stopPropagation();
 })

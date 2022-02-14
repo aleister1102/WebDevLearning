@@ -5,9 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>The Band</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css" />
+  <link rel="icon" type="image/x-icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Osu%21_Logo_2016.svg/1024px-Osu%21_Logo_2016.svg.png">
 </head>
 
 <body>
@@ -16,16 +18,18 @@
     <div id="header">
       <!-- Navigation -->
       <ul id="header__nav">
-        <li><a href="">Home</a></li>
-        <li><a href="">Band</a></li>
-        <li><a href="">Tour</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#content__about">Band</a></li>
+        <li><a href="#content__tours">Tour</a></li>
+        <li><a href="#content__contact">Contact</a></li>
         <li>
-          <a href="">More<i id="header__more-icon" class="ti-angle-down"></i></a>
+          <a href='#'">More
+            <i id=" header__more-icon" class="ti-angle-down"></i>
+          </a>
           <ul id="header__sub-nav">
-            <li><a href="">Merchandise</a></li>
-            <li><a href="">Extras</a></li>
-            <li><a href="">Media</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li>
           </ul>
         </li>
       </ul>
@@ -142,22 +146,22 @@
             <i class="ti-location-pin"></i>
             Chicago, US
             <br />
-            <i class="ti-headphone-alt"></i>
+            <i class="ti-mobile"></i>
             Phone: +00 151515
             <br />
             <i class="ti-email"></i>
             Email: mail@mail.com
           </div>
-          <div class="contact__input">
+          <form class="contact__input">
             <div class="contact__input-upper">
-              <input placeholder="Name" label="Name" type="text" />
-              <input placeholder="Email" label="Email" type="text" />
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
             </div>
             <div class="contact__input-lower">
-              <input placeholder="Message" label="Message" type="text" />
+              <input type="text" placeholder="Message" required />
             </div>
-            <button class="contact__input-button">Send</button>
-          </div>
+            <input type="submit" value="SEND" class="contact__input-button"></input>
+          </form>
         </div>
       </div>
       <!-- Banner -->

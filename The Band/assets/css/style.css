@@ -5,20 +5,18 @@
   padding: 0;
 }
 
+/*=============================================
+=            Comment            =
+=============================================*/
+
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* div > div  */
-/* {
-  margin: 0px;
-  border: 2px solid aquamarine; 
-  height: 200px;
-  background-color: #000;
-} */
-
-/* Order of properties */
-/* Position/Align -> Size -> Box model -> Color -> Decoration */
+/*=============================================
+=            Main            =
+=============================================*/
 
 /*=============================================
 =            Header section                   =
@@ -345,6 +343,11 @@ html {
   font-size: 18px;
 }
 
+.contact__info i[class^="ti-"] {
+  width: 30px;
+  display: inline-block;
+}
+
 /*----------  Input section  ----------*/
 
 .contact__input {
@@ -373,8 +376,8 @@ html {
   border: none;
   padding: 8px 16px;
   background-color: #000;
+  line-height: 22.5px;
   font-size: 15px;
-  text-transform: uppercase;
   color: #fff;
 }
 .contact__input-button:hover {
@@ -411,10 +414,9 @@ html {
   font-size: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
-.footer__author a{
+.footer__author a {
   color: rgba(0, 0, 0, 0.5);
 }
-
 
 /*=====  End of Footer section  ======*/
 
