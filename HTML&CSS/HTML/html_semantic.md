@@ -4,6 +4,10 @@
     <center><h1 class="bigtitle">HTML Semantic Tags</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Semantic Tags](#semantic-tags)
 - [Article](#article)
 - [Aside](#aside)
 - [Figure](#figure)
@@ -11,6 +15,9 @@
 - [Header](#header)
 - [Navigation](#navigation)
 - [Section](#section)
+- [HTML Accessibility](#html-accessibility)
+
+# [Semantic Tags](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
 > Trong HTML, chúng ta nên dùng các thẻ đúng mục đích của nó.
 
@@ -18,7 +25,7 @@ Thông thường ta sử dụng thẻ `<div>` cho header, footer hoặc thậm c
 
 Các thẻ Semantic thông dụng là:
 
-# Article
+# [Article](https://www.w3schools.com/tags/tag_article.asp)
 
 `<article>`
 
@@ -30,13 +37,13 @@ Các thẻ Semantic thông dụng là:
 - Product cards
 - Newspaper articles
 
-# Aside
+# [Aside](https://www.w3schools.com/tags/tag_aside.asp)
 
 `<aside>`
 
 Dùng để đánh dấu các thông tin phụ chú (chú thích).
 
-# Figure
+# [Figure](https://www.w3schools.com/tags/tag_figure.asp)
 
 `<figure>`
 
@@ -58,11 +65,11 @@ Thẻ này đánh dấu một hình ảnh bao gồm một thẻ `<img>` và mộ
   <figcaption>Fig1 - HTML5 Logo</figcaption>
 </figure>
 
-# Footer
+# [Footer](https://www.w3schools.com/tags/tag_footer.asp)
 
 `<footer>`
 
-Tương tự header nhưng để đánh dấu phần footer, sử dụng cho:
+Tương tự [header](#header) nhưng để đánh dấu phần footer, sử dụng cho:
 
 - Authorship information
 - Copyright information
@@ -71,13 +78,13 @@ Tương tự header nhưng để đánh dấu phần footer, sử dụng cho:
 - Back to top links
 - Related documents
 
-# Header
+# [Header](https://www.w3schools.com/tags/tag_header.asp)
 
 `<header>`
 
 Để đánh dấu phần header của trang web. Phần header có dạng như sau:
 
-<img src="html3.png">
+<img src="html6.png">
 
 Thông thường header sử dụng cho các phần tử:
 
@@ -85,7 +92,7 @@ Thông thường header sử dụng cho các phần tử:
 - Logo or icon
 - Authorship information
 
-# Navigation
+# [Navigation](https://www.w3schools.com/tags/tag_nav.asp)
 
 `<nav>`
 
@@ -101,7 +108,7 @@ Dùng để đánh dấu các thanh điều hướng (navigation bar). Bên tron
 </nav>
 ```
 
-# Section
+# [Section](https://www.w3schools.com/tags/tag_section.asp)
 
 `<section>`
 
@@ -113,3 +120,6 @@ Thẻ này để đánh dấu một section trong trang web. Sử dụng cho:
 - Contact information
 
 > Đôi khi `<article>` chứa `<section>` hoặc ngược lại.
+
+
+

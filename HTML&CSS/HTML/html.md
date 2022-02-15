@@ -4,73 +4,44 @@
     <center><h1 class="bigtitle">HTML</h1></center>
 </div>
 
+# Table of contents
+- [Table of contents](#table-of-contents)
 - [What is HTML?](#what-is-html)
-  - [Tag - element](#tag---element)
-  - [Attributes](#attributes)
-  - [Nested tags](#nested-tags)
+- [Elements](#elements)
+- [Attributes](#attributes)
 - [Web page structure](#web-page-structure)
-- [Comments in HTML](#comments-in-html)
+- [Comments](#comments)
 
 # What is HTML?
 
 HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải là ngôn ngữ lập trình mà chỉ là ngôn ngữ đánh dấu (siêu văn bản). Nhiệm vụ của nó sẽ đánh dấu từng phần của văn bản, những phần được đánh dấu này sẽ được CSS và JS xử lý.
 
-Đồng thời HTML giúp phân chia các phần trong văn bản nhằm xây dựng nên cấu trúc trang web.
+<img src="html0.png">
 
-## Tag - element
+Đồng thời, HTML giúp phân chia các phần trong văn bản nhằm xây dựng nên cấu trúc trang web.
 
-Chúng ta xây dựng và điều khiển các trang HTML bằng các **tag**, là các thẻ mà mang một một chức năng cụ thể.
+# [Elements](https://www.w3schools.com/html/html_elements.asp)
 
-Tag kết hợp với **content** (nội dung) và **attribute** (thuộc tính) để tạo thành một **element**.
+Cú pháp của một element:
 
-**Ví dụ**:
+<img src="html1.png">
 
-```html
-<h1>heading</h1>
-```
+**Content** và **attribute** không phải là thành phần bắt buộc của một element.
 
-Ở ví dụ trên, có thể thấy một element bao gồm một **opening tag**, content và một **closing tag**. Content và attribute không phải là thành phần bắt buộc của một element.
+Một số tag không có opening tag hoặc closing tag hay thậm chí không có content, chúng được gọi là **single tag** (tag đơn). Chẳng hạn tag `<br>` là một single tag.
 
-```html
-<openingTag>content</closingTag>
-```
+# [Attributes](https://www.w3schools.com/html/html_attributes.asp)
 
-Một số tag không có opening tag hoặc closing tag hay thậm chí không có content, chúng được gọi là **single tag** (tag đơn).
+Cú pháp của attribute trong một tag là:
 
-Chẳng hạn tag `<br>` là một single tag.
-
-## Attributes
-
-Attribute dùng để cung cấp thêm thuộc tính và thông tin cho tag.
+<img src="html2.png">
 
 Một số attribute chỉ tồn tại ở vài tag nhất định, trong khi số khác lại có ở mọi tag (ta gọi chúng là **global attributes**). Chẳng hạn attribute `class` có ở mọi tag.
 
-Attribute nằm trong opening tag, cú pháp của nó là:
+> Có thể sử dụng nhiều attribute trong một tag hoặc một attribute có thể có nhiều giá trị, được phân biệt nhau bởi dấu cách:
 
 ```html
-<tagName attribute="value">content</tagName>
-```
-
-**Ví dụ**:
-
-```html
-<div class="commentBox">This is a box</div>
-```
-
-Có thể sử dụng nhiều attribute hoặc một attribute có thể có nhiều giá trị, chúng đều được phân biệt nhau bởi dấu cách:
-
-```html
-<div class="commentBox commentBox2" title="Box">This is a box</div>
-```
-
-## Nested tags
-
-Các tag có thể lồng nhau:
-
-```html
-<body>
-  <div class="commentBox">This is a box</div>
-</body>
+<div class="class1 class2" title="Box">This is a box</div>
 ```
 
 # Web page structure
@@ -87,7 +58,8 @@ Một dòng code mà mọi file HTML đều có là:
 
 Dòng này có chức năng nói với web browser rằng: “Ê, tao là tài liệu HTML đây, dưới đây tao sẽ trình bày một đống ngôn ngữ siêu văn bản đó! Hãy duyệt tao dưới dạng HTML nha”.
 
-Cấu trúc đơn giản là:
+
+Ví dụ một file HTML đơn giản:
 
 ```html
 <!DOCTYPE html>
@@ -101,14 +73,18 @@ Cấu trúc đơn giản là:
   </body>
 </html>
 ```
+  
+Minh họa:
+<img src="html3.png">
 
 Có thể thấy, một file HTML gồm duy nhất một thẻ `<html>` chứa thẻ `<head>` và thẻ `<body>`.
 
-Thẻ `<head>` dùng để mô tả các thông tin ngoài lề của trang web như tiêu đề, keyword tìm kiếm, ... Những thông tin này sẽ không hiển thị lên trang web.
+1. Thẻ `<head>` dùng để mô tả các thông tin ngoài lề của trang web như tiêu đề, keyword tìm kiếm, ... Những thông tin này sẽ không hiển thị lên trang web.\
+Ngoài ra, trong thẻ `<head>` còn chứa các thẻ liên kết đến các file CSS và JS.
 
-Thẻ `<body>` dùng để hiển thị nội dung chính của trang web.
+2. Thẻ `<body>` dùng để hiển thị nội dung chính của trang web.
 
-# Comments in HTML
+# Comments
 
 Comment trong html có cú pháp:
 
