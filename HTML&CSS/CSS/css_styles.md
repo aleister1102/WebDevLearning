@@ -8,9 +8,10 @@
 - [Text](#text)
 - [Distance](#distance)
 - [Color](#color)
+  - [rgb(a, b, c)](#rgba-b-c)
+  - [rgba(a, b, c, alpha)](#rgbaa-b-c-alpha)
 - [Opacity](#opacity)
 - [Box shadow](#box-shadow)
-
 
 # Font
 
@@ -28,7 +29,7 @@ p {
 }
 ```
 
-**Kết quả**:
+Kết quả:
 
 <p style="font-size: 25px; font-weight: 1px; font-family: arial">
 This is a paragraph
@@ -36,10 +37,10 @@ This is a paragraph
 
 # Text
 
-`text-decoration`: trang trí cho chữ.
-`text-transform`: chuyển đổi giữa in hoa in thường.
+`text-decoration`: trang trí cho chữ.\
+`text-transform`: chuyển đổi giữa in hoa in thường.\
+`text-align`: canh giữa chữ trong một element.\
 `color`: màu chữ.
-`background-color`: màu nền của chữ.
 
 ```css
 p {
@@ -61,20 +62,34 @@ This is a paragraph
 
 # Distance
 
-`letter-spacing`: khoảng cách giữa các ký tự.
-`line-height`: khoảng cách giữa các dòng.
+`letter-spacing`: khoảng cách giữa các ký tự.\
+`line-height`: độ cao của dòng, tạo ra khoảng cách giữa các dòng.
 
 # Color
 
 Về mã màu, thường sẽ có định dạng là `#abcdef`. Với `ab` là thuộc khoảng màu đỏ, `cd` là màu xanh lá và `ef` là màu xanh dương.
 
-Tức chúng là thông số thể hiện cho màu RGB, chẳng hạn #550000 thì là màu đỏ, vì các giá trị ở cdef đều là 0. Lấy một ví dụ khác chẳng hạn như #00ff00, thì là màu xanh lá.
+Số từ 1 đến f (hệ thập lục phân) biểu thị độ sáng của màu đó, càng về f thì càng sáng, càng về 0 thì càng đậm. Chẳng hạn **#fff** (#ffffff) là màu trắng và **#000** (#000000) là màu đen.
 
-Và số từ 1 đến f (hệ thập lục phân) biểu thị độ sáng của màu đó, càng về f thì càng sáng, càng về 0 thì càng đậm. Nếu mọi giá trị là 0 hoặc gần 0 (khoảng 1 đến 2), thì là màu đen. Ngược lại, nếu mọi giá trị là f hoặc gần f (d đến e), thì là màu trắng.
+## rgb(a, b, c)
+
+Giá trị trả về của hàm là một mã màu. Với tham số là bộ ba số a, b, c có giá trị từ 0 đến 255.
+
+```html
+<p style="color:rgba(255,0,0);">Yellow</p>
+```
+
+Kết quả:
+
+<p style="color:rgba(255,255,0);">Yellow</p>
+
+## rgba(a, b, c, alpha)
+
+Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
 
 # Opacity
 
-Thay vì dùng hàm `rgba()` ta có thể dùng thuộc tính `opacity` có giá trị từ 0 đến 1 để điều chỉnh độ đục của màu sắc.
+`opacity` có giá trị từ 0 đến 1 để điều chỉnh độ đục của màu sắc.
 
 # Box shadow
 

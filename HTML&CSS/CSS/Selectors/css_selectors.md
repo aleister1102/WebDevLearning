@@ -4,11 +4,14 @@
     <center><h1 class="bigtitle">CSS Selectors</h1></center>
 </div>
 
-- [Id and class](#id-and-class)
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Id and Class](#id-and-class)
   - [Id](#id)
   - [Class](#class)
 - [Useful selectors](#useful-selectors)
-- [Priority](#priority)
+- [Selector Specificity](#selector-specificity)
 - [Conflicts & Cascade](#conflicts--cascade)
 - [Inheritance](#inheritance)
 
@@ -16,11 +19,9 @@ CSS Selector là cách mà chúng ta dùng để chọn ra các element nhằm f
 
 Luyện tập CSS thông qua trò chơi [CSS Diner](https://flukeout.github.io/).
 
-<img src="selector1.png">
+# Id and Class
 
-# Id and class
-
-Để cung cấp khả năng chọn những element đặc thù, ta đánh dấu cho chúng bằng **id** và **class**.
+Để cung cấp khả năng chọn những element đặc thù, ta đánh dấu cho chúng bằng **Id** và **Class**.
 
 ## Id
 
@@ -43,7 +44,7 @@ Chẳng hạn ta có nhiều thẻ `<h1>`. Và ta chỉ cần tô màu đỏ cho
 }
 ```
 
-**Kết quả**:
+Kết quả:
 
 <h1 id="first-heading" style ="color:red">Heading</h1>
 <h1>Heading</h1>
@@ -71,71 +72,34 @@ Chẳng hạn ta muốn mọi thẻ `<h2>` đều có màu cam, ta sẽ đặt c
 }
 ```
 
-**Kết quả**:
+Kết quả:
 
 <h2 class="heading2" style="color:orange">Heading</h2>
 <h2 class="heading2" style="color:orange">Heading</h2>
 <h2 class="heading2" style="color:orange">Heading</h2>
 <h2 class="heading2" style="color:orange">Heading</h2>
 
-# Useful selectors
+# [Useful selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
 Các selector thông dụng là:
 
-1. Id & class
-2. List (Nhiều selector)
-3. Descendant (Con tổng quát) (space)
-4. Child (Con trực tiếp) (`>`)
-5. General siblings (Con tổng quát) (`~`)
-6. Adjacent (Liền kề) (`+`)
-7. Attribute (Kèm theo attribute) (`[]`)
-8. Pseudo:
+<img src="selector1.png">
+<img src="selector2.png">
 
-- First & last child (Tag đầu và cuối trong số các tag con) (`:first-child`)
-- First & Last of type (Tag đầu và cuối trong số các tag cùng loại) (`:first-of-type`)
-- nth child (`:nth-child(n)`)
-- nth of type (`:nth-of-type(n)`)
+Ngoài ra còn có Pseudo Classes:
 
-8. Universal (`*`)
-9. Important (`!`)
+- `:first-child` và `:last-child` - Tag đầu và cuối trong số các tag con
+- `:first-of-type` và `:last-of-type` - Tag đầu và cuối trong số các tag cùng loại
+- `:nth-child(n)` - tag con thứ n, n có thể là **"even"**, **"odd"** hoặc thậm chí là biểu thức: **"2n + 1"**.
+- `:nth-of-type(n)` - tag con thứ n trong số các tag con cùng loại.
 
-Tham khảo ở [đây](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors).
+# [Selector Specificity](https://www.w3schools.com/css/css_specificity.asp)
 
-# Priority
+Độ ưu tiên của các selector được thể hiện bằng hình ảnh dưới:
 
-Giả sử cả hai CSS Selector đều là external, và một cái gọi đến một tag kèm theo ID và một cái thì không. Bạn nghĩ cái nào sẽ thắng?
+<img src="selector3.png">
 
-Câu trả lời chính là selector có kèm theo ID. Lý do đơn giản thôi, bởi vì nó specific hơn, nó cụ thể hơn.
-
-Một cách dễ phân biệt hơn, ta đánh điểm số cho các loại CSS
-
-1. Important: > 1000 (hạn chế dùng)
-1. Inline: 1000
-1. External & Internal:\
-   a. ID: 100\
-   b. Class: 10\
-   c. Tag: 1\
-   d. `*` - Chọn tất cả các tag: 0
-
-Selector dưới sẽ có tổng điểm là 1.
-
-```css
-div {
-  color: red;
-}
-```
-
-Còn selector này có tổng điểm là 101.
-
-```css
-div .heading2 {
-  color: orange;
-}
-```
-
-Do đó, selector thứ hai sẽ được áp dụng cho thẻ có `class="heading2"` bên trong thẻ div, các thẻ còn lại không có `class="heading2"` thì sẽ có màu đỏ.
-
-# Conflicts & Cascade
+# [Conflicts & Cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade)
 
 Nếu hai selector trùng nhau thì bộ quy luật sau sẽ ghi đè lên bộ quy luật trước.
 
@@ -159,7 +123,9 @@ Thì kết quả sẽ là
 
 <h1 style="color:orange" style = "color:red">Heading 1</h1>
 
-# Inheritance
+Đây cũng chính là cách mà CSS vận hành (các styles và selectors được chồng lên nhau).
+
+# [Inheritance](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#inheritance)
 
 Nếu một element cha mang một quy luật CSS nào đó, thì các element con chứa bên trong nó sẽ được kế thừa.
 
@@ -176,9 +142,28 @@ div {
 }
 ```
 
-**Kết quả**:
+Kết quả:
 
 <div style ="color:red">
     This is a box
     <p>Paragraph</p>
 </div>
+
+**Sự khác biệt giữa Cascade và Inheritance:**
+
+- Inheritance xảy ra khi element con kế thừa một property từ element cha.
+- Cascade xảy ra khi một element được áp dụng một quy luật nào đó hai lần.
+
+Giả sử `<h1>` là element con của `<div>`:
+
+```css
+div {
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+```
+
+Rule của `<h1>` sẽ ưu tiên hơn rule của `<div>`, do tính ưu tiên của selector so với inheritance.

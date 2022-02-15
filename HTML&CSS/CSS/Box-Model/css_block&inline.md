@@ -1,9 +1,8 @@
 <link rel='stylesheet' href='../../../main.css'>
 
 <div class="title"> 
-    <center><h1 class="bigtitle">CSS Block Elements</h1></center>
+    <center><h1 class="bigtitle">CSS Block & Inline Elements</h1></center>
 </div>
-
 
 `<div>` là một **block element**, khi apply style cho nó, kích thước của nó sẽ chiếm trọn một dòng/hàng trên trang Web.
 

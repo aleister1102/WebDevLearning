@@ -33,6 +33,8 @@ Kết quả:
 
 <a href="https://www.google.com/">This is a link to Google</a>
 
+> Thẻ anchor nên hạn chế chứa các thẻ con dạng block hoặc các section lớn, vì có thể gây ra lỗi.
+
 # [Break](https://www.w3schools.com/tags/tag_br.asp)
 
 Thẻ `<br>` dùng để xuống dòng văn bản trong HTML.
@@ -167,8 +169,6 @@ Kết quả:
   <li>List item 3</li>
 </ul>
 
-
-
 # [Paragraph](https://www.w3schools.com/html/html_paragraphs.asp)
 
 Thẻ `<p>` dùng để đánh dấu đoạn văn bản.
@@ -242,5 +242,3 @@ Kết quả:
     </tr>
   </tbody>
 </table>
-
-

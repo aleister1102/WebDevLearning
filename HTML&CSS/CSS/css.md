@@ -4,48 +4,40 @@
     <center><h1 class="bigtitle">CSS</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [What is CSS?](#what-is-css)
 - [CSS in HTML](#css-in-html)
-- [CSS units](#css-units)
+- [CSS Rules](#css-rules)
+- [CSS Comments](#css-comments)
+- [CSS Units](#css-units)
   - [Absolute](#absolute)
   - [Relative](#relative)
-- [CSS pseudo classes](#css-pseudo-classes)
-- [CSS pseudo elements](#css-pseudo-elements)
-- [CSS variables](#css-variables)
-- [CSS functions](#css-functions)
-  - [rgb(a,b,c)](#rgbabc)
-  - [rgba(a,b,c,alpha)](#rgbaabcalpha)
-  - [linear-gradient(direction, startColor, endColor)](#linear-gradientdirection-startcolor-endcolor)
+- [CSS Properties Order](#css-properties-order)
+- [CSS Pseudo Classes](#css-pseudo-classes)
+- [CSS Pseudo Elements](#css-pseudo-elements)
+- [CSS Variables](#css-variables)
+- [CSS Functions](#css-functions)
   - [calc(expression)](#calcexpression)
   - [attr(attributeName)](#attrattributename)
+  - [linear-gradient(direction, startColor, endColor)](#linear-gradientdirection-startcolor-endcolor)
 
 # What is CSS?
 
-CSS là viết tắt của **Cascading Style Sheet**, là các tập tin định kiểu theo tầng. Chúng kiểm soát cách thể hiện HTML trên trang web.
+CSS là viết tắt của **Cascading Style Sheet**, bao gồm **các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
 
-CSS chỉ đơn giản là **tập hợp các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
+<img src="css0.png">
 
-Một quy luật bao gồm một property (thuộc tính) kèm theo một giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
-
-```css
-selector {
-  property: value1 value2;
-}
-```
-
-# CSS in HTML
+# [CSS in HTML](https://www.w3schools.com/css/css_howto.asp)
 
 Để thêm CSS vào tập tin HTML, có ba cách: **inline**, **internal**, **external**.
 
 1. **Inline**: thêm vào thông qua attribute `style`.
 
 ```html
-<h1 style="color:red">Heading</h1>
+<h1 style="color:red;">Heading</h1>
 ```
-
-**Kết quả**:
-
-<h1 style="color:red">Heading</h1>
 
 2. **Internal**: thêm vào thông qua thẻ `<style>`.
 
@@ -71,43 +63,51 @@ h1 {
 }
 ```
 
-# CSS units
+# [CSS Rules](https://www.w3schools.com/css/css_syntax.asp)
 
-CSS có hai đơn vị là **absolute** (tuyệt đối) và **relative** (tương đối)
-
-## Absolute
-
-Các đơn vị tuyệt đối là các đơn vị không bị thay đổi khi mọi thứ xung quanh bị thay đổi (chẳng hạn như kéo dãn cửa sổ trình duyệt).
-
-**Pixel**
-
-- `px`. Độ phân giải càng cao thì một pixel sẽ chiếm nhiều điểm ảnh hơn, tuy nhiên mặc định thì một pixel tương ứng với một điểm ảnh.
-
-## Relative
-
-Các đơn vị tương đối này phụ thuộc vào các phần tử xung quanh nó. Khi cửa sổ trình duyệt kéo dãn thì nó sẽ có kích thước thay đổi theo.
-
-**Percent**
-
-`%`, có kích thước phụ thuộc vào thẻ chứa nó. Chẳng hạn ta có ví dụ:
-
-```html
-<div>
-  <h1></h1>
-</div>
-```
+Một quy luật bao gồm một **property** (thuộc tính) kèm theo một giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
 
 ```css
-h1 {
-  width: 50%;
+selector {
+  property: value1 value2;
 }
 ```
 
-Thẻ `<h1>` sẽ có chiều ngang bằng 50% thẻ chứa nó (thẻ `<div>`).
+Minh họa:
+
+<img src="css1.png">
+
+# CSS Comments
+
+Comment trong CSS có cú pháp:
+
+```css
+/* This is a comment */
+```
+
+# [CSS Units](https://www.w3schools.com/css/css_units.asp)
+
+CSS có hai đơn vị là **absolute** (tuyệt đối) và **relative** (tương đối). [Use cases](https://yurilee.hashnode.dev/css-units-are-confusing-af) của các loại đơn vị.
+
+<img src="css2.png">
+
+## Absolute
+
+Các đơn vị tuyệt đối là các đơn vị không bị thay đổi khi phần tử chứa nó bị thay đổi (chẳng hạn như kéo dãn cửa sổ trình duyệt).
+
+Đơn vị tuyệt đối sử dụng nhiều là `px` (pixel).
+
+## Relative
+
+Các đơn vị tương đối này phụ thuộc vào các phần tử chứa nó. Khi cửa sổ trình duyệt kéo dãn thì nó sẽ có kích thước thay đổi theo.
+
+**Percent**
+
+`%`, có kích thước phụ thuộc theo tỉ lệ % vào thẻ chứa nó.
 
 **Rem**
 
-`rem`, có kích thước phụ thuộc vào thẻ `<html>`. Chẳng hạn:
+`rem`, có kích thước phụ thuộc vào thẻ `<html>`. Ví dụ:
 
 ```css
 html {
@@ -118,9 +118,9 @@ p {
 }
 ```
 
-- Giá trị `font-size` của thẻ `<p>` là 40px, 2rem sẽ là 80px.
+- Giá trị `font-size` của thẻ `<p>` là **40px**, **2rem** sẽ là **80px**.
 
-- Nếu `font-size` của thẻ `<html>` là 20px, thì thẻ `<p>` cũng là 20px.
+- Nếu `font-size` của thẻ `<html>` là **20px**, thì thẻ **1rem** của `<p>` cũng là **20px**.
 
 **Em**
 
@@ -145,17 +145,25 @@ h1 {
 }
 ```
 
-Đoạn code trên, h1 sẽ phụ thuộc vào thẻ `<body>` vì nó có chứa `font-size`, mặc dù `<body>` không phải là thẻ gần `<h1>` nhất.
+Đoạn code trên, `<h1>` sẽ phụ thuộc vào thẻ `<body>` vì nó có chứa `font-size`, mặc dù `<body>` không phải là thẻ cha gần `<h1>` nhất.
 
 **Viewport**
 
-`vw` phụ thuộc vào chiều ngang cửa sổ trình duyệt. Giá trị 1vw tương đương 1% chiều ngang trình duyệt.
+`vw` phụ thuộc vào chiều ngang cửa sổ trình duyệt. Giá trị **1vw** tương đương **1%** chiều ngang trình duyệt.
 
-`vh` phụ thuộc vào chiều dọc cửa sổ trình duyệt. Giá trị 100vh tương đương 100% chiều dọc trình duyệt.
+`vh` phụ thuộc vào chiều dọc cửa sổ trình duyệt. Giá trị **100vh** tương đương **100%** chiều dọc trình duyệt.
 
-# CSS pseudo classes
+# [CSS Properties Order](https://9elements.com/css-rule-order/)
 
-Lớp giả dùng để định nghĩa một trạng thái nào đó của element (hover, visited, ...).
+Thứ tự của các thuộc tính nên được viết theo thứ tự sau:
+
+<img src="css3.png">
+
+# [CSS Pseudo Classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
+
+Lớp giả được sử dụng trong selector
+
+Ngoài ra nó còn dùng để định nghĩa một trạng thái nào đó của element (hover, visited, ...).
 
 1. `:root`: tham chiếu đến thẻ `<html>`, thường dùng để khai báo biến toàn cục.
 
@@ -176,7 +184,7 @@ p:hover {
 3. `:active`: các thuộc tính kích hoạt khi **bấm và giữ chuột**.
 4. `:visited`: kích hoạt khi đường **link đã được bấm vào**.
 
-# CSS pseudo elements
+# [CSS Pseudo Elements](https://www.w3schools.com/css/css_pseudo_elements.asp)
 
 Dùng CSS ta cũng có thể tạo được element, bằng cách sử dụng pseudo elements.
 
@@ -212,9 +220,15 @@ Tương tự đối với phần tử giả `::after`, nó sẽ thêm một elem
 
 3. `::selection`, kích hoạt CSS khi bôi đen đoạn văn bản.
 
-# CSS variables
+[Những thứ hay ho có thể sử dụng pseudo element](https://css-tricks.com/pseudo-element-roundup/#aa-create-full-browser-width-bars).
 
-Có thể đặt biến trong CSS bằng cách sử dụng pseudo class. Để sử dụng thì gọi hàm `var(varName)` và truyền vào tên biến nhằm lấy giá trị của nó.
+# [CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
+
+Có thể đặt biến trong CSS bằng cách sử dụng pseudo class. Gọi hàm `var(varName)` và truyền vào tên biến nhằm lấy giá trị của nó.
+
+<img src="css4.png">
+
+Ví dụ:
 
 ```css
 :root {
@@ -225,7 +239,7 @@ h1 {
 }
 ```
 
-Biến ở `root` là biến **global**, biến định nghĩa bên trong CSS rule là **local**:
+Biến ở `root` là biến **global**, biến định nghĩa bên trong CSS rule là **local**, các biến local có thể truy cập bởi phần tử con của nó:
 
 ```css
 h1 {
@@ -234,39 +248,15 @@ h1 {
 }
 ```
 
-# CSS functions
-
-## rgb(a,b,c)
-
-Giá trị trả về là một giá trị màu sắc. Với tham số là bộ ba số a,b,c có giá trị từ 0 đến 255.
-
-```html
-<p style="color:rgba(255,0,0);">Parameter</p>
-```
-
-**Kết quả**:
-
-<p style="color:rgba(255,255,0)">Parameter</p>
-
-## rgba(a,b,c,alpha)
-
-Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
-
-## linear-gradient(direction, startColor, endColor)
-
-Hàm này dùng để tạo ra một mã màu có dạng gradient.
-
-<img src="css1.png">
-
-Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.
+# [CSS Functions](https://www.w3schools.com/cssref/css_functions.asp)
 
 ## calc(expression)
 
 Hàm `calc()` dùng để tính toán. Chẳng hạn:
 
 ```css
-h1{
-  font-size = calc(50% + 20px);
+h1 {
+  font-size: calc(50% + 20px);
 }
 ```
 
@@ -291,3 +281,11 @@ a:after {
 ```
 
 Trong trường hợp không phải thẻ `<a>`, ta không cần cặp dấu `"()"`.
+
+## linear-gradient(direction, startColor, endColor)
+
+Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
+
+<img src="css5.png">
+
+Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.
