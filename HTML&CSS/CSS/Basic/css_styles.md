@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../main.css'>
+<link rel='stylesheet' href='../../../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Styles</h1></center>
@@ -20,6 +20,10 @@ Có các thuộc tính để định dạng font cho chữ:
 `font-size`: kích thước chữ.\
 `font-weight`: độ dày của nét chữ.\
 `font-family`: kiểu chữ.
+
+> [Font Playground](https://play.typedetail.com/)
+
+Ví dụ:
 
 ```css
 p {
@@ -65,7 +69,7 @@ This is a paragraph
 [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing): khoảng cách giữa các ký tự.\
 [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height): độ cao của dòng, tạo ra khoảng cách giữa các dòng.
 
-# Color Code
+# [Color Code](https://css-tricks.com/your-go-to-hex-code-color/)
 
 Về mã màu, thường sẽ có định dạng là `#abcdef`. Với `ab` là thuộc khoảng màu đỏ, `cd` là màu xanh lá và `ef` là màu xanh dương.
 
@@ -95,6 +99,8 @@ Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả đ
 
 Để tạo bóng cho một element, ta dùng thuộc tính `box-shadow`.
 
+> [Shadow Playground](https://www.cssmatic.com/box-shadow)
+
 Ví dụ:
 
 ```css
@@ -109,5 +115,3 @@ Ví dụ:
 - Giá trị thứ ba là blur radius, giá trị càng lớn thì càng mờ.
 - Giá trị thứ tư là spread radius, cho biết bóng sẽ lan rộng bao xa.
 - Giá trị cuối cùng là màu sắc, thường sử dụng hàm `rgba()`.
-
-> [Công cụ preview shadow](https://www.cssmatic.com/box-shadow).
