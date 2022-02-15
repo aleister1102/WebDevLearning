@@ -10,9 +10,6 @@
   - [Border](#border)
   - [Margin](#margin)
   - [Vertical margin collapse](#vertical-margin-collapse)
-- [Block element](#block-element)
-  - [display: block](#display-block)
-  - [display: inline-block](#display-inline-block)
 - [Box-sizing](#box-sizing)
 - [Rounded corners](#rounded-corners)
   - [Border-radius](#border-radius)
@@ -132,53 +129,6 @@ Ta biết box 1 có margin bottom là 30px, và box 2 có margin top là 30px. T
 
 Nếu một trong hai có margin lớn hơn, khoảng cách giữa chúng vẫn sẽ là kích thước của margin lớn nhất.
 
-# Block element
-
-`<div>` là một **block element**, khi apply style cho nó, kích thước của nó sẽ chiếm trọn một dòng/hàng trên trang Web.
-
-Ngoài ra còn có **inline element**, các element không chiếm trọn một dòng mà chỉ sử dụng phần diện tích vừa đủ để bao quanh content bên trong đó mà thôi.
-
-Các block element và inline element tham khảo ở [đây](https://www.w3schools.com/html/html_blocks.asp).
-
-Một số block element thường gặp là:
-
-- `div, p, h1, ul, footer`.
-
-Một số inline element thường gặp là:
-
-- `a, span, img, button`.
-
-Ảnh dưới đây sẽ minh họa cho điều này:
-
-<img src="box2.png">
-
-## display: block
-
-Nếu muốn một **inline element** trở thành dạng **block element**, ta chỉ cần thêm property `display` và có giá trị là `block`.
-
-```css
-a {
-  margin: 10px;
-  border: 1px solid #000;
-  padding: 30px 20px;
-  display: block;
-}
-```
-
-## display: inline-block
-
-Để biến một **inline element** thành một **block element dạng inline** (không xảy ra chồng lề dọc), chúng ta sử dụng `display: inline-block`:
-
-```css
-a {
-  margin: 50px;
-  border: 1px solid #000;
-  padding: 30px 20px;
-  display: inline-block;
-}
-```
-
-Cách này cũng có thể áp dụng cho block element.
 
 # Box-sizing
 

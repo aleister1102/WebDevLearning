@@ -7,6 +7,8 @@
 | Type |                      Content                       |
 | ---- | :------------------------------------------------: |
 | HTML |                [HTML](HTML/html.md)                |
+| HTML |    [HTML Useful Tags](HTML/html_useful_tags.md)    |
+| HTML |    [HTML Semantic Tags](HTML/html_semantic.md)     |
 | CSS  |                 [CSS](CSS/css.md)                  |
 | CSS  |       [CSS Selectors](CSS/css_selectors.md)        |
 | CSS  |          [CSS Styles](CSS/css_styles.md)           |
@@ -16,4 +18,8 @@
 
 # Convention
 
-Not yet updated.
+## [HTML Accessibility](https://www.w3schools.com/html/html_accessibility.asp)
+ 
+HTML Accessibility là một bộ quy luật để code HTML nhằm tăng khả năng truy cập cho người dùng. 
+
+Quy luật này bao gồm việc sử dụng các thẻ semantic, viết thuộc tính alt cho thẻ img, viết nội dung của liên kết một cách rõ ràng, v.v...
