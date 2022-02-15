@@ -113,7 +113,7 @@ Cũng có thể format cho từng cạnh cụ thể, chẳng hạn cạnh `botto
 
 ## [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
-Phần margin chính là phần để phân biệt các block của các element với nhau, chúng không thuộc một element như padding và border.
+Phần margin chính là phần để phân biệt các block của các element với nhau, chúng *không thuộc* một element như padding và border.
 
 Tương tự padding và border, margin cũng có bốn cạnh và có thể thiết lập style cho một hoặc nhiều cạnh.
 
@@ -138,7 +138,7 @@ Giả sử cho box 1 có margin bottom là **20px**, và box 2 có margin top l�
 
 <img src="box8.png">
 
-Đây gọi là hiện tượng **Vertical Margin Collapse** (chồng lề dọc). Xảy ra khi có hai box giống nhau đứng liền kề, hai viền của hai box ấy sẽ chồng vào nhau, dẫn đến khoảng cách giữa hai box lúc này chỉ có **20px** mà thôi.
+Đây gọi là hiện tượng [**Vertical Margin Collapse**](https://vuilaptrinh.com/2020-12-14-quy-luat-cua-margin-collapse/) (chồng lề dọc). Xảy ra khi có hai box giống nhau đứng liền kề, hai viền của hai box ấy sẽ chồng vào nhau, dẫn đến khoảng cách giữa hai box lúc này chỉ có **20px** mà thôi.
 
 Nếu một trong hai có margin lớn hơn, khoảng cách giữa chúng vẫn sẽ là kích thước của margin lớn nhất. Có thể giải quyết hiện tượng này bằng các sử dụng `display: inline-block`.
 

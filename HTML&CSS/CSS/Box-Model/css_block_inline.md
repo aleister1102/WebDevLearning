@@ -70,7 +70,7 @@ Ví dụ:
 }
 ```
 
-Giải thích một cách dễ hiểu inline, block và inlineblock ở trang của [Samanthaming](https://www.samanthaming.com/pictorials/css-inline-vs-inlineblock-vs-block/#explained-in-non-dev-terms).
+> Giải thích một cách dễ hiểu inline, block và inlineblock ở trang của [Samanthaming](https://www.samanthaming.com/pictorials/css-inline-vs-inlineblock-vs-block/#explained-in-non-dev-terms).
 
 **Minh họa các loại element:**
 
@@ -104,4 +104,4 @@ a {
 }
 ```
 
-Giá trị này cũng có thể áp dụng cho block element.
+> Giá trị này cũng có thể áp dụng cho block element.

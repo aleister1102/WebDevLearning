@@ -4,14 +4,17 @@
     <center><h1 class="bigtitle">CSS Backgrounds</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Clip](#clip)
 - [Image](#image)
 - [Size](#size)
 - [Origin](#origin)
 - [Position](#position)
-- [Shorthand](#shorthand)
+- [Shorthand Form](#shorthand-form)
 
-# Clip
+# [Clip](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
 
 Xét đoạn code:
 
@@ -30,7 +33,11 @@ div {
 
 <img src = "bg1.png">
 
-Thuộc tính `background-clip` quyết định xem màu background sẽ được đổ từ ranh giới nào. Chẳng hạn ta cho ranh giới từ padding:
+Thuộc tính `background-clip` quyết định xem màu background sẽ được đổ từ ranh giới nào.
+
+<img src = "bg1b.png">
+
+Chẳng hạn ta cho ranh giới từ padding:
 
 ```css
 div {
@@ -44,15 +51,15 @@ div {
 }
 ```
 
-Thuộc tính `background-clip` có giá trị mặc định là `border-box`.
-
 **Kết quả**:
 
 <img src = "bg2.png">
 
 Có thể thấy border không được đổ màu background.
 
-# Image
+> Thuộc tính `background-clip` có giá trị mặc định là `border-box`.
+
+# [Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 
 Để có thể đặt hình ảnh làm nền, ta sử dụng thuộc tính `background-image` với giá trị là url của hình ảnh đặt trong hàm `url()`.
 
@@ -71,7 +78,7 @@ div {
 
 <img src = "bg3.png">
 
-Có thể chỉnh nhỏ kích thước ảnh nền bằng thuộc tính `background-size`. Nếu có một giá trị thì mặc định gán cho chiều ngang.
+Có thể chỉnh nhỏ kích thước ảnh nền bằng thuộc tính [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size). Nếu có một giá trị thì mặc định gán cho chiều ngang.
 
 ```css
 div {
@@ -89,11 +96,11 @@ div {
 
 <img src = "bg4.png">
 
-> `background-size` ở đây là kích thước của background so với ranh giới chứa nó, 100% tức là background sẽ fill hết padding.
+> [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) nếu sử dụng đơn vị relative thì sẽ so với ranh giới chứa nó, 100% tức là background sẽ fill hết padding (padding thuộc element).
 
 <img src="bg11.png">
 
-Để hình ảnh không lặp lại, sử dụng thuộc tính `background-repeat`.
+Để hình ảnh không lặp lại, sử dụng thuộc tính [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat).
 
 ```css
 div {
@@ -111,7 +118,7 @@ div {
 **Kết quả**:
 <img src = "bg5.png">
 
-Giá trị của `background-repeat` nếu là `repeat-x` sẽ lặp theo chiều ngang, là `repeat-y` sẽ lặp theo chiều dọc.
+Giá trị của [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) nếu là `repeat-x` sẽ lặp theo chiều ngang, là `repeat-y` sẽ lặp theo chiều dọc.
 
 Nếu có hai url hình ảnh (phân biệt nhau bởi dấu phẩy) thì hình ảnh sau sẽ chồng lên hình ảnh trước.
 
@@ -133,9 +140,11 @@ div {
 
 Đồng thời, các giá trị của thuộc tính khác cũng có thể phân biệt nhau bởi dấu phẩy để áp dụng cho từng hình ảnh riêng biệt.
 
-# Size
+# [Size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 
 Ngoài các giá trị số thì thuộc tính `background-size` còn các giá trị dạng keyword. Chẳng hạn keyword `contain`. Keyword này sẽ chọn chiều ngang hoặc dọc của hình ảnh và gán giá trị là 100% chiều ngang hoặc dọc của ranh giới chứa nó, sao cho hình ảnh không bị che khuất.
+
+<img src="bg5b.png">
 
 Nói một cách dễ hiểu, nếu `width = 100%` mà hình ảnh bị che khuất một phần, thì nó sẽ canh theo chiều dọc. Tức là cho `height = 100%`.
 
@@ -154,7 +163,7 @@ div {
 
 <img src="bg6.png">
 
-> Có thể thấy, nếu phóng to hình ảnh sao cho chiều ngang chạm đến border, thì chiều dọc sẽ bị che khuất, nên nó cho chiều dọc có kích thước 100% của ranh giới chứa nó (padding trở vào).
+> Có thể thấy, nếu phóng to hình ảnh sao cho chiều ngang chạm đến hai border trái phải, thì chiều dọc sẽ bị che khuất, nên nó cho chiều dọc có kích thước 100% của ranh giới chứa nó (padding trở vào).
 
 Còn có từ khóa `cover` tương tự `contain`, tuy nhiên nó sẽ chấp nhận luôn việc hình ảnh bị che khuất.
 
@@ -175,9 +184,13 @@ div {
 
 > Mặc dù chiều ngang là 100% của ranh giới chứa nó, nhưng chiều dọc lại bị mất.
 
-# Origin
+# [Origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
-Tương tự thuộc tính `background-clip` đối với `background-color`, thuộc tính `background-origin` quyết định ranh giới của hình ảnh. Thuộc tính `background-origin` có giá trị mặc định là `padding-box`.
+Tương tự thuộc tính `background-clip` đối với `background-color`, thuộc tính `background-origin` quyết định vị trí bắt đầu của hình ảnh.
+
+<img src="bg7b.png">
+
+Ví dụ:
 
 ```css
 div {
@@ -197,6 +210,8 @@ div {
 
 <img src="bg9.png">
 
+> Thuộc tính `background-origin` có giá trị mặc định là `padding-box`.
+
 ```css
 div {
   width: 100%;
@@ -213,7 +228,7 @@ div {
 
 <img src="bg10.png">
 
-# Position
+# [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
 Để thiết lập ví trí ảnh nền thì dùng thuộc tính `background-position`.
 
@@ -235,7 +250,11 @@ Giá trị số đầu tiên là offset tính từ viền trái, kế tiếp là
 
 <img src="bg12.png">
 
-Cũng có thể sử dụng các keyword, chẳng hạn `center, top left, top right, bottom left và bottom right`.
+Cũng có thể sử dụng các keyword, chẳng hạn `center, left top, right top, left bottom và right bottom`.
+
+<img src="bg12b.png">
+
+Ví dụ:
 
 ```css
 div {
@@ -273,9 +292,11 @@ div {
 
 Đoạn code trên có nghĩa: dịch hình ảnh lên trên 50px, lùi hình ảnh từ viền phải vào 40px.
 
-# Shorthand
+# [Shorthand Form](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
-Các thuộc tính của background có thể gom lại chung một thuộc tính `background`, theo thứ tự là **url**, **reapeat**, **position** và **size**. Nhưng chúng ta nên tách biệt **size** ra để khỏi bị rối. Đồng thời luôn declare color sau background để style này được apply mà ko bị background đè lên. Minh họa cho dạng rút gọn là:
+Các thuộc tính của background có thể gom lại chung một thuộc tính `background`, theo thứ tự là **corlor**, **image**, **position**, **reapeat**, và **size**. Nhưng chúng ta nên tách biệt **size** ra để khỏi bị rối.
+
+Đồng thời nên declare `background-color` sau `background` để style này được apply mà ko bị `background-image` đè lên. Minh họa cho dạng rút gọn là:
 
 ```css
 div {

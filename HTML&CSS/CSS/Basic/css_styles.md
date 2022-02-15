@@ -37,10 +37,10 @@ This is a paragraph
 
 # Text
 
-`text-decoration`: trang trí cho chữ - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration).\
-`text-transform`: chuyển đổi giữa in hoa in thường - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform).\
-`text-align`: canh giữa chữ trong một element - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align).\
-`color`: màu chữ - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
+[`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration): trang trí cho chữ.\
+[`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform): chuyển đổi giữa in hoa in thường.\
+[`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align): canh giữa chữ trong một element.\
+[`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color): màu chữ.
 
 ```css
 p {
@@ -62,8 +62,8 @@ This is a paragraph
 
 # Distance
 
-`letter-spacing`: khoảng cách giữa các ký tự - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing).\
-`line-height`: độ cao của dòng, tạo ra khoảng cách giữa các dòng - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height).
+[`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing): khoảng cách giữa các ký tự.\
+[`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height): độ cao của dòng, tạo ra khoảng cách giữa các dòng.
 
 # Color Code
 
