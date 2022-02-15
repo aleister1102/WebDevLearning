@@ -7,13 +7,13 @@
 - [Font](#font)
 - [Text](#text)
 - [Distance](#distance)
-- [Color](#color)
-  - [rgb(a, b, c)](#rgba-b-c)
-  - [rgba(a, b, c, alpha)](#rgbaa-b-c-alpha)
+- [Color Code](#color-code)
+  - [rgb(a, b, c))](#rgba-b-c)
+  - [rgba(a, b, c, alpha))](#rgbaa-b-c-alpha)
 - [Opacity](#opacity)
 - [Box shadow](#box-shadow)
 
-# Font
+# [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
 Có các thuộc tính để định dạng font cho chữ:
 
@@ -37,10 +37,10 @@ This is a paragraph
 
 # Text
 
-`text-decoration`: trang trí cho chữ.\
-`text-transform`: chuyển đổi giữa in hoa in thường.\
-`text-align`: canh giữa chữ trong một element.\
-`color`: màu chữ.
+`text-decoration`: trang trí cho chữ - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration).\
+`text-transform`: chuyển đổi giữa in hoa in thường - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform).\
+`text-align`: canh giữa chữ trong một element - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align).\
+`color`: màu chữ - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/color).
 
 ```css
 p {
@@ -62,16 +62,16 @@ This is a paragraph
 
 # Distance
 
-`letter-spacing`: khoảng cách giữa các ký tự.\
-`line-height`: độ cao của dòng, tạo ra khoảng cách giữa các dòng.
+`letter-spacing`: khoảng cách giữa các ký tự - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing).\
+`line-height`: độ cao của dòng, tạo ra khoảng cách giữa các dòng - [tham khảo](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height).
 
-# Color
+# Color Code
 
 Về mã màu, thường sẽ có định dạng là `#abcdef`. Với `ab` là thuộc khoảng màu đỏ, `cd` là màu xanh lá và `ef` là màu xanh dương.
 
 Số từ 1 đến f (hệ thập lục phân) biểu thị độ sáng của màu đó, càng về f thì càng sáng, càng về 0 thì càng đậm. Chẳng hạn **#fff** (#ffffff) là màu trắng và **#000** (#000000) là màu đen.
 
-## rgb(a, b, c)
+## [rgb(a, b, c)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb())
 
 Giá trị trả về của hàm là một mã màu. Với tham số là bộ ba số a, b, c có giá trị từ 0 đến 255.
 
@@ -83,15 +83,15 @@ Kết quả:
 
 <p style="color:rgba(255,255,0);">Yellow</p>
 
-## rgba(a, b, c, alpha)
+## [rgba(a, b, c, alpha)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba())
 
 Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
 
-# Opacity
+# [Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
 `opacity` có giá trị từ 0 đến 1 để điều chỉnh độ đục của màu sắc.
 
-# Box shadow
+# [Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
 Để tạo bóng cho một element, ta dùng thuộc tính `box-shadow`.
 
@@ -110,4 +110,4 @@ Ví dụ:
 - Giá trị thứ tư là spread radius, cho biết bóng sẽ lan rộng bao xa.
 - Giá trị cuối cùng là màu sắc, thường sử dụng hàm `rgba()`.
 
-[Công cụ preview shadow](https://www.cssmatic.com/box-shadow).
+> [Công cụ preview shadow](https://www.cssmatic.com/box-shadow).
