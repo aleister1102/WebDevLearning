@@ -65,7 +65,7 @@ h1 {
 
 # [CSS Rules](https://www.w3schools.com/css/css_syntax.asp)
 
-Một quy luật bao gồm một **property** (thuộc tính) kèm theo một giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
+Một quy luật bao gồm một **selector** và các **property** (thuộc tính) kèm theo các giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
 
 ```css
 selector {

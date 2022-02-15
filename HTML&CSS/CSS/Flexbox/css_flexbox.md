@@ -4,6 +4,15 @@
     <center><h1 class="bigtitle">CSS Flexbox</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Flexbox Model](#flexbox-model)
+- [Flexbox Properties](#flexbox-properties)
+- [Flexbox with Auto Margin](#flexbox-with-auto-margin)
+- [Flexbox Tools](#flexbox-tools)
+- [Aside](#aside)
+
 # [Flexbox Model](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 <img src="flex1.png">

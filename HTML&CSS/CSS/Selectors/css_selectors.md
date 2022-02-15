@@ -14,6 +14,7 @@
 - [Selector Specificity](#selector-specificity)
 - [Conflicts & Cascade](#conflicts--cascade)
 - [Inheritance](#inheritance)
+- [OOCSS](#oocss)
 
 CSS Selector là cách mà chúng ta dùng để chọn ra các element nhằm format style cho chúng.
 
@@ -167,3 +168,49 @@ h1 {
 ```
 
 Rule của `<h1>` sẽ ưu tiên hơn rule của `<div>`, do tính ưu tiên của selector so với inheritance.
+
+# [OOCSS](https://palmyran.com/buoc-dau-tim-hieu-ve-oocss/)
+
+> [Detail Document](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
+
+Chẳng hạn ta có thuộc tính `color: #fff;` lặp đi lặp lại nhiều lần trên các thẻ khác nhau, và mỗi selector ta buộc phải viết riêng chứ không gom nhóm lại được:
+
+```css
+.content__heading {
+  margin: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+.content__sub-heading {
+  margin: 15px;
+  font-weight: bold;
+  color: #fff;
+}
+.content__description {
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 16px;
+  color: #fff;
+}
+```
+
+Để giải quyết vấn đề trùng lặp rule, ta tạo ra một CSS rule mới:
+
+```css
+.text-white {
+  color: #fff;
+}
+```
+
+Thẻ nào muốn có text màu trắng thì thêm class `text-white` vào:
+
+```html
+<h1 class="content__heading text-white">Heading</h1>
+<h2 class="content__sub-heading text-white">Sub Heading</h2>
+<p class="content__description text-white">Description</p>
+```
+
+Lưu ý việc này đánh đổi giữa giảm số lượng thuộc tính trong CSS bằng việc tăng class của HTML.
+
+Nếu các selector chọn nhiều phần tử (chẳng hạn selector là thẻ `<h1>`), thì không nên sử dụng. Vì lúc đó ta cần viết rất nhiều class ở HTML trong khi viết ở CSS thì chỉ cần một dòng.
