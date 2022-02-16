@@ -1,0 +1,66 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common */
+html {
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.flex {
+  display: flex;
+}
+
+/* Main */
+.main {
+  justify-content: center;
+  align-items: center;
+  height: 850px;
+}
+
+.toast {
+  border: 0.5px solid #ddd;
+  border-radius: 8px;
+  min-width: 660px;
+}
+
+.toast__margin {
+  margin: 12px 0px 12px 8px;
+  border: 3px solid #21a67a;
+  border-radius: 4px;
+  background-color: #21a67a;
+}
+
+.toast__icon {
+  flex: 1;
+  padding: 0px 16px;
+  text-align: center;
+}
+
+.fa-circle-check {
+  line-height: 118px;
+  font-size: 34px;
+  color: #21a67a;
+}
+
+.toast__description {
+  flex: 10;
+}
+
+.toast__heading {
+  margin: 28px 0px 4px;
+}
+
+.toast__message {
+  margin: 0px 0px 28px;
+}
+
+.toast__close {
+  flex: 0.5;
+  margin-left: 12px;
+  padding: 16px;
+}
