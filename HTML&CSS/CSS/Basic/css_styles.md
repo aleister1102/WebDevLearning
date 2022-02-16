@@ -4,12 +4,15 @@
     <center><h1 class="bigtitle">CSS Styles</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Font](#font)
 - [Text](#text)
 - [Distance](#distance)
 - [Color Code](#color-code)
-  - [rgb(a, b, c))](#rgba-b-c)
-  - [rgba(a, b, c, alpha))](#rgbaa-b-c-alpha)
+  - [rgb(a, b, c)>)](#rgba-b-c)
+  - [rgba(a, b, c, alpha)>)](#rgbaa-b-c-alpha)
 - [Opacity](#opacity)
 - [Box shadow](#box-shadow)
 
@@ -75,7 +78,7 @@ Về mã màu, thường sẽ có định dạng là `#abcdef`. Với `ab` là t
 
 Số từ 1 đến f (hệ thập lục phân) biểu thị độ sáng của màu đó, càng về f thì càng sáng, càng về 0 thì càng đậm. Chẳng hạn **#fff** (#ffffff) là màu trắng và **#000** (#000000) là màu đen.
 
-## [rgb(a, b, c)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb())
+## [rgb(a, b, c)](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb()>)
 
 Giá trị trả về của hàm là một mã màu. Với tham số là bộ ba số a, b, c có giá trị từ 0 đến 255.
 
@@ -87,7 +90,7 @@ Kết quả:
 
 <p style="color:rgba(255,255,0);">Yellow</p>
 
-## [rgba(a, b, c, alpha)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba())
+## [rgba(a, b, c, alpha)](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba()>)
 
 Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
 

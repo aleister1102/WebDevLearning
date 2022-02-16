@@ -4,13 +4,16 @@
     <center><h1 class="bigtitle">CSS Box Model</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Box Model](#box-model)
   - [Content](#content)
   - [Padding](#padding)
   - [Border](#border)
   - [Margin](#margin)
     - [Vertical margin collapse](#vertical-margin-collapse)
-- [Box-sizing](#box-sizing)
+- [Box Sizing](#box-sizing)
 - [Border Radius](#border-radius)
   - [Making circle](#making-circle)
 
@@ -113,15 +116,14 @@ Cũng có thể format cho từng cạnh cụ thể, chẳng hạn cạnh `botto
 
 ## [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
-Phần margin chính là phần để phân biệt các block của các element với nhau, chúng *không thuộc* một element như padding và border.
+Phần margin chính là phần để phân biệt các block của các element với nhau, chúng _không thuộc_ một element như padding và border.
 
 Tương tự padding và border, margin cũng có bốn cạnh và có thể thiết lập style cho một hoặc nhiều cạnh.
 
 ### Vertical margin collapse
 
 ```html
-<div class="box1">Box 1</div>
-<div class="box2">Box 2</div>
+<div class="box1">Box 1</div> <div class="box2">Box 2</div>
 ```
 
 ```css
@@ -142,7 +144,7 @@ Giả sử cho box 1 có margin bottom là **20px**, và box 2 có margin top l�
 
 Nếu một trong hai có margin lớn hơn, khoảng cách giữa chúng vẫn sẽ là kích thước của margin lớn nhất. Có thể giải quyết hiện tượng này bằng các sử dụng `display: inline-block`.
 
-# [Box-sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+# [Box Sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
 Cho đoạn code:
 

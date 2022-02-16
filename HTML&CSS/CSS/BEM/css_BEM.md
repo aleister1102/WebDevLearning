@@ -9,7 +9,6 @@
 - [Table of contents](#table-of-contents)
 - [Meaning](#meaning)
 - [Syntax & Example](#syntax--example)
-- [BEM Cheat Sheet](#bem-cheat-sheet)
 - [Nested Block](#nested-block)
 
 > BEM là cách đặt tên class theo một quy chuẩn, như coding convention. BEM giúp thống nhất các kiểu đặt tên class và tránh trùng selector dẫn đến CSS đè lên nhau.
@@ -76,8 +75,6 @@ Cú pháp của ba phần tử là:
 
 Do đó ta viết thêm hai modifier là `yugioh--bg-blue` và `yugioh__stat--atk-none`.
 
-# [BEM Cheat Sheet](https://9elements.com/bem-cheat-sheet/#page-navigation)
-
 # Nested Block
 
 Nếu các block lồng nhau, ta nên đặt tên class thế nào? Có hai trường hợp xảy ra:
@@ -109,7 +106,7 @@ Do đó, ta đặt thẳng là `description`, xem nó như là một block khác
 </div>
 ```
 
-**Trường hợp thứ hai**, nếu block lồng bên trong chỉ tồn tại trong một block cụ thể và có element của riêng nó, ta chỉ việc thay dấu `__` thành dấu `-` giữa hai tên block.
+**Trường hợp thứ hai**, nếu block lồng bên trong chỉ tồn tại trong một block cụ thể và có element của riêng nó, ta chỉ việc thay dấu `__` thành dấu `-` giữa hai tên block để tạo thành một block mới.
 
 Xét ví dụ sau:
 

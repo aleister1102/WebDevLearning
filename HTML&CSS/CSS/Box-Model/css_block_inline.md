@@ -4,6 +4,16 @@
     <center><h1 class="bigtitle">CSS Block & Inline Elements</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Inline Elements](#inline-elements)
+- [Block Elements](#block-elements)
+- [Inline-block Elements](#inline-block-elements)
+- [Display Property](#display-property)
+  - [display: block](#display-block)
+  - [display: inline-block](#display-inline-block)
+
 Có hai loại hiển thị phần tử phổ biến là **inline element** và **block element**.
 
 <img src="box1.png">
