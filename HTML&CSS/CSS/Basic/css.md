@@ -7,29 +7,29 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [What is CSS?](#what-is-css)
-- [CSS in HTML](#css-in-html)
-- [CSS Rules](#css-rules)
-- [CSS Comments](#css-comments)
-- [CSS Units](#css-units)
+- [💧What is CSS?](#what-is-css)
+- [🎨CSS in HTML](#css-in-html)
+- [💅CSS Rules](#css-rules)
+- [💬CSS Comments](#css-comments)
+- [📐CSS Units](#css-units)
   - [Absolute](#absolute)
   - [Relative](#relative)
-- [CSS Properties Order](#css-properties-order)
-- [CSS Pseudo Classes](#css-pseudo-classes)
-- [CSS Pseudo Elements](#css-pseudo-elements)
-- [CSS Variables](#css-variables)
-- [CSS Functions](#css-functions)
-  - [calc(expression))](#calcexpression)
-  - [attr(attributeName))](#attrattributename)
-  - [linear-gradient(direction, startColor, endColor))](#linear-gradientdirection-startcolor-endcolor)
+- [👨‍👩‍👦‍👦CSS Properties Order](#css-properties-order)
+- [🤔CSS Pseudo Classes](#css-pseudo-classes)
+- [🤨CSS Pseudo Elements](#css-pseudo-elements)
+- [🥱CSS Variables](#css-variables)
+- [😫CSS Functions](#css-functions)
+  - [calc(expression)>)](#calcexpression)
+  - [attr(attributeName)>)](#attrattributename)
+  - [linear-gradient(direction, startColor, endColor)>)](#linear-gradientdirection-startcolor-endcolor)
 
-# What is CSS?
+# 💧What is CSS?
 
 CSS là viết tắt của **Cascading Style Sheet**, bao gồm **các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
 
 <img src="css0.png">
 
-# [CSS in HTML](https://www.w3schools.com/css/css_howto.asp)
+# [🎨CSS in HTML](https://www.w3schools.com/css/css_howto.asp)
 
 Để thêm CSS vào tập tin HTML, có ba cách: **inline**, **internal**, **external**.
 
@@ -63,7 +63,7 @@ h1 {
 }
 ```
 
-# [CSS Rules](https://www.w3schools.com/css/css_syntax.asp)
+# [💅CSS Rules](https://www.w3schools.com/css/css_syntax.asp)
 
 Một quy luật bao gồm một **selector** và các **property** (thuộc tính) kèm theo các giá trị, cách nhau bởi dấu `:`. Các giá trị phân biệt nhau bởi khoảng trắng. Các property phân biệt nhau bởi dấu `;`.
 
@@ -77,7 +77,7 @@ Minh họa:
 
 <img src="css1.png">
 
-# CSS Comments
+# 💬CSS Comments
 
 Comment trong CSS có cú pháp:
 
@@ -85,7 +85,7 @@ Comment trong CSS có cú pháp:
 /* This is a comment */
 ```
 
-# [CSS Units](https://www.w3schools.com/css/css_units.asp)
+# [📐CSS Units](https://www.w3schools.com/css/css_units.asp)
 
 CSS có hai đơn vị là **absolute** (tuyệt đối) và **relative** (tương đối). [Use cases](https://yurilee.hashnode.dev/css-units-are-confusing-af) của các loại đơn vị.
 
@@ -153,13 +153,13 @@ h1 {
 
 `vh` phụ thuộc vào chiều dọc cửa sổ trình duyệt. Giá trị **100vh** tương đương **100%** chiều dọc trình duyệt.
 
-# [CSS Properties Order](https://9elements.com/css-rule-order/)
+# [👨‍👩‍👦‍👦CSS Properties Order](https://9elements.com/css-rule-order/)
 
 Thứ tự của các thuộc tính nên được viết theo thứ tự sau:
 
 <img src="css3.png">
 
-# [CSS Pseudo Classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+# [🤔CSS Pseudo Classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
 Lớp giả được sử dụng trong selector
 
@@ -184,7 +184,7 @@ p:hover {
 3. `:active`: các thuộc tính kích hoạt khi **bấm và giữ chuột**.
 4. `:visited`: kích hoạt khi đường **link đã được bấm vào**.
 
-# [CSS Pseudo Elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+# [🤨CSS Pseudo Elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
 Dùng CSS ta cũng có thể tạo được element, bằng cách sử dụng pseudo elements.
 
@@ -222,7 +222,7 @@ Tương tự đối với phần tử giả `::after`, nó sẽ thêm một elem
 
 > [Những thứ hay ho có thể sử dụng pseudo element](https://css-tricks.com/pseudo-element-roundup/#aa-create-full-browser-width-bars).
 
-# [CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
+# [🥱CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
 
 Có thể đặt biến trong CSS bằng cách sử dụng pseudo class. Gọi hàm `var(varName)` và truyền vào tên biến nhằm lấy giá trị của nó.
 
@@ -248,9 +248,9 @@ h1 {
 }
 ```
 
-# [CSS Functions](https://www.w3schools.com/cssref/css_functions.asp)
+# [😫CSS Functions](https://www.w3schools.com/cssref/css_functions.asp)
 
-## [calc(expression)](https://developer.mozilla.org/en-US/docs/Web/CSS/calc())
+## [calc(expression)](<https://developer.mozilla.org/en-US/docs/Web/CSS/calc()>)
 
 Hàm `calc()` dùng để tính toán. Chẳng hạn:
 
@@ -260,7 +260,7 @@ h1 {
 }
 ```
 
-## [attr(attributeName)](https://developer.mozilla.org/en-US/docs/Web/CSS/attr())
+## [attr(attributeName)](<https://developer.mozilla.org/en-US/docs/Web/CSS/attr()>)
 
 Hàm `attr()` dùng để lấy giá trị của attribute trong một element, thường sử dụng kèm với pseudo class:
 
@@ -282,7 +282,7 @@ a:after {
 
 Trong trường hợp không phải thẻ `<a>`, ta không cần cặp dấu `"()"`.
 
-## [linear-gradient(direction, startColor, endColor)](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient())
+## [linear-gradient(direction, startColor, endColor)](<https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()>)
 
 Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
 

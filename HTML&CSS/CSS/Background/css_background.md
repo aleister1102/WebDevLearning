@@ -7,14 +7,14 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Clip](#clip)
-- [Image](#image)
-- [Size](#size)
-- [Origin](#origin)
-- [Position](#position)
-- [Shorthand Form](#shorthand-form)
+- [📎Clip](#clip)
+- [📸Image](#image)
+- [🤏Size](#size)
+- [🎯Origin](#origin)
+- [📌Position](#position)
+- [👌Shorthand Form](#shorthand-form)
 
-# [Clip](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
+# [📎Clip](https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip)
 
 Xét đoạn code:
 
@@ -59,7 +59,7 @@ Có thể thấy border không được đổ màu background.
 
 > Thuộc tính `background-clip` có giá trị mặc định là `border-box`.
 
-# [Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+# [📸Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 
 Để có thể đặt hình ảnh làm nền, ta sử dụng thuộc tính `background-image` với giá trị là url của hình ảnh đặt trong hàm `url()`.
 
@@ -140,7 +140,7 @@ div {
 
 Đồng thời, các giá trị của thuộc tính khác cũng có thể phân biệt nhau bởi dấu phẩy để áp dụng cho từng hình ảnh riêng biệt.
 
-# [Size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+# [🤏Size](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
 
 Ngoài các giá trị số thì thuộc tính `background-size` còn các giá trị dạng keyword. Chẳng hạn keyword `contain`. Keyword này sẽ chọn chiều ngang hoặc dọc của hình ảnh và gán giá trị là 100% chiều ngang hoặc dọc của ranh giới chứa nó, sao cho hình ảnh không bị che khuất.
 
@@ -184,7 +184,7 @@ div {
 
 > Mặc dù chiều ngang là 100% của ranh giới chứa nó, nhưng chiều dọc lại bị mất.
 
-# [Origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
+# [🎯Origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
 Tương tự thuộc tính `background-clip` đối với `background-color`, thuộc tính `background-origin` quyết định vị trí bắt đầu của hình ảnh.
 
@@ -228,7 +228,7 @@ div {
 
 <img src="bg10.png">
 
-# [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+# [📌Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
 Để thiết lập ví trí ảnh nền thì dùng thuộc tính `background-position`.
 
@@ -292,7 +292,7 @@ div {
 
 Đoạn code trên có nghĩa: dịch hình ảnh lên trên 50px, lùi hình ảnh từ viền phải vào 40px.
 
-# [Shorthand Form](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
+# [👌Shorthand Form](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
 Các thuộc tính của background có thể gom lại chung một thuộc tính `background`, theo thứ tự là **corlor**, **image**, **position**, **reapeat**, và **size**. Nhưng chúng ta nên tách biệt **size** ra để khỏi bị rối.
 

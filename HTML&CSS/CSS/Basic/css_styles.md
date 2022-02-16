@@ -7,16 +7,16 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Font](#font)
-- [Text](#text)
-- [Distance](#distance)
-- [Color Code](#color-code)
+- [🈵Font](#font)
+- [🔠Text](#text)
+- [📏Distance](#distance)
+- [🌈Color Code](#color-code)
   - [rgb(a, b, c)>)](#rgba-b-c)
   - [rgba(a, b, c, alpha)>)](#rgbaa-b-c-alpha)
-- [Opacity](#opacity)
-- [Box shadow](#box-shadow)
+- [💗Opacity](#opacity)
+- [🌒Box shadow](#box-shadow)
 
-# [Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+# [🈵Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
 Có các thuộc tính để định dạng font cho chữ:
 
@@ -42,7 +42,7 @@ Kết quả:
 This is a paragraph
 </p>
 
-# Text
+# 🔠Text
 
 [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration): trang trí cho chữ.\
 [`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform): chuyển đổi giữa in hoa in thường.\
@@ -67,12 +67,12 @@ Kết quả:
 This is a paragraph
 </p>
 
-# Distance
+# 📏Distance
 
 [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing): khoảng cách giữa các ký tự.\
 [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height): độ cao của dòng, tạo ra khoảng cách giữa các dòng.
 
-# [Color Code](https://css-tricks.com/your-go-to-hex-code-color/)
+# [🌈Color Code](https://css-tricks.com/your-go-to-hex-code-color/)
 
 Về mã màu, thường sẽ có định dạng là `#abcdef`. Với `ab` là thuộc khoảng màu đỏ, `cd` là màu xanh lá và `ef` là màu xanh dương.
 
@@ -94,11 +94,11 @@ Kết quả:
 
 Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
 
-# [Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+# [💗Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
 `opacity` có giá trị từ 0 đến 1 để điều chỉnh độ đục của màu sắc.
 
-# [Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+# [🌒Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
 Để tạo bóng cho một element, ta dùng thuộc tính `box-shadow`.
 

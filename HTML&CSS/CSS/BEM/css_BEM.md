@@ -7,9 +7,9 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Meaning](#meaning)
-- [Syntax & Example](#syntax--example)
-- [Nested Block](#nested-block)
+- [❓Meaning](#meaning)
+- [✍Syntax & Example](#syntax--example)
+- [📚Nested Block](#nested-block)
 
 > BEM là cách đặt tên class theo một quy chuẩn, như coding convention. BEM giúp thống nhất các kiểu đặt tên class và tránh trùng selector dẫn đến CSS đè lên nhau.
 
@@ -25,7 +25,7 @@ Nên sử dụng BEM khi:
 - Dự án lớn, số lượng pages nhiều hoặc số lượng components nhiều.
 - Dự án nhiều thành viên.
 
-# Meaning
+# ❓Meaning
 
 BEM là viết tắt của Block Element Modifier, như tên gọi thì nó gồm ba phần tử:
 
@@ -35,7 +35,7 @@ BEM là viết tắt của Block Element Modifier, như tên gọi thì nó gồ
 
 <img src="bem1.png">
 
-# Syntax & Example
+# ✍Syntax & Example
 
 Cú pháp của ba phần tử là:
 
@@ -75,7 +75,7 @@ Cú pháp của ba phần tử là:
 
 Do đó ta viết thêm hai modifier là `yugioh--bg-blue` và `yugioh__stat--atk-none`.
 
-# Nested Block
+# 📚Nested Block
 
 Nếu các block lồng nhau, ta nên đặt tên class thế nào? Có hai trường hợp xảy ra:
 

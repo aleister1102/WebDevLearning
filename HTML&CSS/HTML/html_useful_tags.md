@@ -7,19 +7,19 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Anchor](#anchor)
-- [Break](#break)
-- [Button](#button)
-- [Division](#division)
-- [Form](#form)
-- [Heading](#heading)
-- [Image](#image)
-- [Input](#input)
-- [List](#list)
-- [Paragraph](#paragraph)
-- [Table](#table)
+- [🔗Anchor](#anchor)
+- [💥Break](#break)
+- [🔘Button](#button)
+- [📦Division](#division)
+- [📋Form](#form)
+- [🚩Heading](#heading)
+- [📷Image](#image)
+- [📥Input](#input)
+- [📜List](#list)
+- [📄Paragraph](#paragraph)
+- [🧮Table](#table)
 
-# [Anchor](https://www.w3schools.com/html/html_links.asp)
+# [🔗Anchor](https://www.w3schools.com/html/html_links.asp)
 
 Thẻ `<a>` là một thẻ để đánh dấu link (liên kết), liên kết có thể là một trang web khác hoặc thậm chí là một section trong cùng trang web (bookmark).
 
@@ -35,11 +35,11 @@ Kết quả:
 
 > Thẻ anchor nên hạn chế chứa các thẻ con dạng block hoặc các section lớn, vì có thể gây ra lỗi.
 
-# [Break](https://www.w3schools.com/tags/tag_br.asp)
+# [💥Break](https://www.w3schools.com/tags/tag_br.asp)
 
 Thẻ `<br>` dùng để xuống dòng văn bản trong HTML.
 
-# [Button](https://www.w3schools.com/tags/tag_button.asp)
+# [🔘Button](https://www.w3schools.com/tags/tag_button.asp)
 
 Thẻ `<button>` dùng để đánh dấu nút.
 
@@ -53,11 +53,11 @@ Kết quả:
 
 <button>This is a button</button>
 
-# [Division](https://www.w3schools.com/tags/tag_div.asp)
+# [📦Division](https://www.w3schools.com/tags/tag_div.asp)
 
 Thẻ `<div>` dùng để đánh dấu một khối bao quanh các thẻ khác. Mục đích của nó là để phân chia các thành phần các nhau của trang web.
 
-# [Form](https://www.w3schools.com/html/html_forms.asp)
+# [📋Form](https://www.w3schools.com/html/html_forms.asp)
 
 Thẻ `<form>` dùng để đánh dấu một form nhập dữ liệu, gồm nhiều thẻ [input](#input).
 
@@ -79,7 +79,7 @@ Các thẻ `<input>` nếu có thuộc tính `required` và để trống, khi b
 
 <img src="html5.png">
 
-# [Heading](https://www.w3schools.com/html/html_headings.asp)
+# [🚩Heading](https://www.w3schools.com/html/html_headings.asp)
 
 HTML có các thẻ `<h1>` đến `<h6>` dùng để đánh dấu tiêu đề đoạn văn bản.
 
@@ -103,7 +103,7 @@ Kết quả:
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 
-# [Image](https://www.w3schools.com/html/html_images.asp)
+# [📷Image](https://www.w3schools.com/html/html_images.asp)
 
 Thẻ `<img>` là một thẻ đơn không chứa nội dung dùng để đánh dấu hình ảnh. Nó thường đi kèm với ba thuộc tính:
 
@@ -125,7 +125,7 @@ Kết quả
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5 logo" title="HTML5"/>
 
-# [Input](https://www.w3schools.com/tags/tag_input.asp)
+# [📥Input](https://www.w3schools.com/tags/tag_input.asp)
 
 Thẻ `<input>` dùng để đánh dấu ô nhập dữ liệu.
 
@@ -145,7 +145,7 @@ Kết quả:
 <input type = "radio"></input>
 <input type = "submit" value="Send"></input>
 
-# [List](https://www.w3schools.com/html/html_lists.asp)
+# [📜List](https://www.w3schools.com/html/html_lists.asp)
 
 Thẻ `<ul>` dùng để đánh dấu một danh sách không có thứ tự (unordered list - không đánh số). Bên trong thẻ `<ul>` có thẻ `<li>` dùng để đánh dấu các list item.
 
@@ -169,7 +169,7 @@ Kết quả:
   <li>List item 3</li>
 </ul>
 
-# [Paragraph](https://www.w3schools.com/html/html_paragraphs.asp)
+# [📄Paragraph](https://www.w3schools.com/html/html_paragraphs.asp)
 
 Thẻ `<p>` dùng để đánh dấu đoạn văn bản.
 
@@ -193,7 +193,7 @@ Kết quả:
   specimen book.
 </p>
 
-# [Table](https://www.w3schools.com/html/html_tables.asp)
+# [🧮Table](https://www.w3schools.com/html/html_tables.asp)
 
 Thẻ `<table>` dùng để đánh dấu bảng, bên trong đó chứa thẻ `<thead>` dùng để chứa các tiêu đề và thẻ `<tbody>` để chứa các ô nội dung.
 

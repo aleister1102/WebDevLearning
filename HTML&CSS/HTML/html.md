@@ -5,14 +5,15 @@
 </div>
 
 # Table of contents
-- [Table of contents](#table-of-contents)
-- [What is HTML?](#what-is-html)
-- [Elements](#elements)
-- [Attributes](#attributes)
-- [Web page structure](#web-page-structure)
-- [Comments](#comments)
 
-# What is HTML?
+- [Table of contents](#table-of-contents)
+- [🔥What is HTML?](#what-is-html)
+- [🧱Elements](#elements)
+- [🔎Attributes](#attributes)
+- [🏢Web page structure](#web-page-structure)
+- [💬Comments](#comments)
+
+# 🔥What is HTML?
 
 HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải là ngôn ngữ lập trình mà chỉ là ngôn ngữ đánh dấu (siêu văn bản). Nhiệm vụ của nó sẽ đánh dấu từng phần của văn bản, những phần được đánh dấu này sẽ được CSS và JS xử lý.
 
@@ -20,7 +21,7 @@ HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải l�
 
 Đồng thời, HTML giúp phân chia các phần trong văn bản nhằm xây dựng nên cấu trúc trang web.
 
-# [Elements](https://www.w3schools.com/html/html_elements.asp)
+# [🧱Elements](https://www.w3schools.com/html/html_elements.asp)
 
 Cú pháp của một element:
 
@@ -30,7 +31,7 @@ Cú pháp của một element:
 
 Một số tag không có opening tag hoặc closing tag hay thậm chí không có content, chúng được gọi là **single tag** (tag đơn). Chẳng hạn tag `<br>` là một single tag.
 
-# [Attributes](https://www.w3schools.com/html/html_attributes.asp)
+# [🔎Attributes](https://www.w3schools.com/html/html_attributes.asp)
 
 Cú pháp của attribute trong một tag là:
 
@@ -44,7 +45,7 @@ Một số attribute chỉ tồn tại ở vài tag nhất định, trong khi s�
 <div class="class1 class2" title="Box">This is a box</div>
 ```
 
-# Web page structure
+# 🏢Web page structure
 
 Chúng ta sẽ bắt đầu xây dựng một trang web bằng cách tạo ra một file có tên là **index.html**.
 
@@ -57,7 +58,6 @@ Một dòng code mà mọi file HTML đều có là:
 ```
 
 Dòng này có chức năng nói với web browser rằng: “Ê, tao là tài liệu HTML đây, dưới đây tao sẽ trình bày một đống ngôn ngữ siêu văn bản đó! Hãy duyệt tao dưới dạng HTML nha”.
-
 
 Ví dụ một file HTML đơn giản:
 
@@ -73,22 +73,21 @@ Ví dụ một file HTML đơn giản:
   </body>
 </html>
 ```
-  
+
 Minh họa:
 <img src="html3.png">
 
 Có thể thấy, một file HTML gồm duy nhất một thẻ `<html>` chứa thẻ `<head>` và thẻ `<body>`.
 
 1. Thẻ `<head>` dùng để mô tả các thông tin ngoài lề của trang web như tiêu đề, keyword tìm kiếm, ... Những thông tin này sẽ không hiển thị lên trang web.\
-Ngoài ra, trong thẻ `<head>` còn chứa các thẻ liên kết đến các file CSS và JS.
+   Ngoài ra, trong thẻ `<head>` còn chứa các thẻ liên kết đến các file CSS và JS.
 
 2. Thẻ `<body>` dùng để hiển thị nội dung chính của trang web.
 
-# Comments
+# 💬Comments
 
 Comment trong html có cú pháp:
 
 ```html
 <!-- -->
 ```
-
