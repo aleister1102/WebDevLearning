@@ -9,17 +9,17 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Synchronous & Asynchronous](#synchronous--asynchronous)
-  - [Callback Function](#callback-function)
-  - [Callback Hell](#callback-hell)
-- [Promise](#promise)
-  - [Promise States](#promise-states)
-  - [Creating Promise](#creating-promise)
-  - [Promise Object Methods](#promise-object-methods)
-  - [Returning Values](#returning-values)
-- [Promise Chain](#promise-chain)
-- [Promise Class Methods](#promise-class-methods)
-- [Async & Await](#async--await)
+- [🌸Synchronous & Asynchronous](#synchronous--asynchronous)
+  - [🌹Callback Function](#callback-function)
+  - [🥀Callback Hell](#callback-hell)
+- [🌻Promise](#promise)
+  - [🌼Promise States](#promise-states)
+  - [🌷Creating Promise](#creating-promise)
+  - [💐Promise Object Methods](#promise-object-methods)
+  - [🍁Returning Values](#returning-values)
+- [🍃Promise Chain](#promise-chain)
+- [🍂Promise Class Methods](#promise-class-methods)
+- [🍀Async & Await](#async--await)
 
 # References
 
@@ -31,7 +31,7 @@
 
 > [30secondsofcode](https://www.30secondsofcode.org/articles/s/async-javascript-cheatsheet)
 
-# [Synchronous & Asynchronous](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
+# [🌸Synchronous & Asynchronous](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
 **Synchronous** (đồng bộ) là các câu lệnh viết trước thì thực thi trước, viết sau thì thực thi sau. Nói cách khác, sẽ chỉ có một luồng thực thi các đoạn code từ trên xuống dưới.
 
@@ -43,7 +43,7 @@ Hai phương thức `setTimeout` và `setInteval` là các phương thức bất
 
 Lấy ví dụ phương thức `fetch` dùng để gọi API lấy dữ liệu, tùy tốc độ mạng và nhiều yếu tố mà phương thức này sẽ tốn lượng thời gian khác nhau.
 
-## [Callback Function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+## [🌹Callback Function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
 
 Callback chính là câu trả lời cho vấn đề trên. Xét đoạn code dưới đây:
 
@@ -68,7 +68,7 @@ Khi dùng callback, chúng ta đảm bảo rằng `console.log(data)` chỉ đư
 
 Một cách kỹ thuật hơn, callback đảm bảo hàm sẽ không được thực thi trước khi tác vụ nào đó hoàn thành. Nhưng lại được thực thi ngay lập tức sau khi tác vụ đó hoàn thành.
 
-## [Callback Hell](https://viblo.asia/p/callback-hell-trong-javascript-la-gi-va-cach-phong-trach-NbmvbaYKkYO)
+## [🥀Callback Hell](https://viblo.asia/p/callback-hell-trong-javascript-la-gi-va-cach-phong-trach-NbmvbaYKkYO)
 
 > Đến lúc này, vấn đề tiếp theo nảy sinh là các Callback Hell, nghĩa là có quá nhiều callback lồng vào nhau.
 
@@ -94,13 +94,13 @@ Lý do dẫn đến Callback Hell là khi ta buộc phải viết các đoạn c
 
 Tác vụ b trong hình trên phải chờ đến khi tác vụ a hoàn thành thì mới được thực thi và thực thi ngay sau đó. Tương tự phải chờ kết quả trả về của tác vụ b thì tác vụ c mới được thực thi (phụ thuộc lẫn nhau).
 
-# [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+# [🌻Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 Để thoát khỏi địa ngục callback đó (về cách viết code), chúng ta sẽ sử dụng promise. Tuy nhiên, chỉ khi xảy ra Callback Hell thì mới nên dùng.
 
 Định nghĩa một cách kỹ thuật hơn, promise sinh ra là để xử lý các thao tác bất đồng bộ. Bắt chúng phải "cam kết một lời hứa" nào đó, đảm bảo các hàm callback phải trả về giá trị hoặc ít nhất là thông báo lỗi nếu không thực thi được callback.
 
-## Promise States
+## 🌼Promise States
 
 Một Promise sẽ ở một trong ba trạng thái:
 
@@ -108,7 +108,7 @@ Một Promise sẽ ở một trong ba trạng thái:
 - `fulfilled`: thể hiện rằng operation đã được hoàn thành thành công.
 - `rejected`: operation thực thi thất bại.
 
-## [Creating Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
+## [🌷Creating Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
 
 Các bước khởi tạo:
 
@@ -133,7 +133,7 @@ Executor sẽ được gọi trước cả khi đối tượng `promise` đượ
 
 Đoạn code trên sẽ làm promise có trạng thái pending, trạng thái này nếu không chuyển sang hai trạng thái còn lại thì có thể gây ra rò rỉ bộ nhớ.
 
-## [Promise Object Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#instance_methods)
+## [💐Promise Object Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#instance_methods)
 
 Sau khi khởi tạo thành công, chúng ta sẽ nhận được đối tượng có tên `promise`. Đối tượng này sẽ gọi thực hiện các phương thức thông dụng sau:
 
@@ -152,7 +152,7 @@ Nếu như `reject` được thực thi thì `promise` sẽ gọi phương thứ
 
 Và nếu một trong hai `resolve` hoặc `reject` được thực thi thì phương thức `finally` sẽ được gọi.
 
-## Returning Values
+## 🍁Returning Values
 
 Hai hàm callback `resolve` và `reject` có thể trả về giá trị. Giá trị trả về sẽ truyền vào làm tham số của resolve hoặc reject.
 
@@ -177,7 +177,7 @@ promise
 
 Và giá trị đó cũng truyền vào làm tham số của hàm callback bên trong phương thức `then`, `catch` hoặc `finally`.
 
-# [Promise Chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)
+# [🍃Promise Chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)
 
 Ở ba phương thức mà đối tượng promise trên gọi, chúng được thực hiện tuần tự và liền nhau. Vì vậy ta gọi chúng là **chain**. Tức là sau khi thực hiện `then` hoặc `catch` thì mới đến `finally`.
 
@@ -270,7 +270,7 @@ promise
 
 Xét trường hợp khác, giả sử trong các lời gọi phương thức `then`, promise bị rơi vào trạng thái rejected. Lúc này thì nó sẽ nhảy thẳng xuống `catch` và bỏ qua các lời gọi `then` liền kề.
 
-# [Promise Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#static_methods)
+# [🍂Promise Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#static_methods)
 
 Các phương thức static (gọi từ lớp đối tượng `Promise`) bao gồm:
 
@@ -321,7 +321,7 @@ Chú ý rằng, các promise đối số đều phải chạy xong thì phương
 
 Ngoài ra, nếu như có một trong số các promise reject, `Promise.all` sẽ gọi thực hiện phương thức `catch`. Cụ thể hơn, tất cả các promise khác có thành công hay không thì cũng rơi vào `catch`.
 
-# [Async & Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+# [🍀Async & Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 
 Bản chất của Async và Await là promise, nhưng nó làm đoạn code khi đọc trông như đồng bộ dù là bất đồng bộ. Đồng thời, nó làm đoạn code trông tao nhã hơn và dễ hiểu hơn.
 

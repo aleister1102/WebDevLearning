@@ -10,10 +10,10 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [Defining an Object](#defining-an-object)
-- [Constructor](#constructor)
-- [Deleting](#deleting)
-- [Built-in Object](#built-in-object)
+- [🚕Defining an Object](#defining-an-object)
+- [👷‍♂️Constructor](#️constructor)
+- [💥Deleting](#deleting)
+- [💖Built-in Object](#built-in-object)
 
 # References
 
@@ -25,7 +25,7 @@
 
 > [Codecademy Cheat Sheet](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet)
 
-# [Defining an Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+# [🚕Defining an Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
 
 **Khai báo thuộc tính:**
 
@@ -99,7 +99,7 @@ console.log(person.getAge()); // output: 20
 console.log(person.hair); // output: "curly"
 ```
 
-# [Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function)
+# [👷‍♂️Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function)
 
 > [Programiz Document](https://www.programiz.com/javascript/constructor-function)
 
@@ -128,11 +128,11 @@ console.log(pikachu.constructor);
 
 <img src ="object1.png">
 
-# [Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
+# [💥Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
 
 Sử dụng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức.
 
-# [Built-in Object](https://dev.to/vincenius/javascript-object-functions-cheat-sheet-48nn)
+# [💖Built-in Object](https://dev.to/vincenius/javascript-object-functions-cheat-sheet-48nn)
 
 [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 

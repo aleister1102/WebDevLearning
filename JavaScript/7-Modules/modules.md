@@ -10,10 +10,10 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat sheets](#cheat-sheets)
-- [Modules](#modules)
+- [🍱Modules](#modules)
   - [Import with Destructuring](#import-with-destructuring)
   - [Export from other Module](#export-from-other-module)
-- [Module Cheat Sheet](#module-cheat-sheet)
+- [😎Module Cheat Sheet](#module-cheat-sheet)
 
 # References
 
@@ -27,7 +27,7 @@
 
 > [30secondsofcode](https://www.30secondsofcode.org/articles/s/javascript-module-cheatsheet)
 
-# Modules
+# 🍱Modules
 
 Module là một file JS mà có thể export code. Module export code nhằm giúp cho các file JS khác có thể sử dụng đoạn code đó.
 
@@ -131,6 +131,6 @@ Code ở **main.js** trở thành:
 import { sum2 } from "./js/index.js";
 ```
 
-# Module Cheat Sheet
+# 😎Module Cheat Sheet
 
 <img src="modules4.png">

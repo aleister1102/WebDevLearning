@@ -9,12 +9,12 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Regular Expressions](#regular-expressions)
-- [RegExp Parameters](#regexp-parameters)
-  - [Pattern](#pattern)
-  - [Flag](#flag)
-- [RegExp Initialize](#regexp-initialize)
-- [RegExp Methods](#regexp-methods)
+- [🥝Regular Expressions](#regular-expressions)
+- [🍇RegExp Parameters](#regexp-parameters)
+  - [🍅Pattern](#pattern)
+  - [🍈Flag](#flag)
+- [🍎RegExp Initialize](#regexp-initialize)
+- [🍊RegExp Methods](#regexp-methods)
   - [test](#test)
   - [match](#match)
   - [search](#search)
@@ -34,21 +34,21 @@
 
 > [QuickRef](https://quickref.me/regex)
 
-# [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+# [🥝Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 **Regular Expressions** (biểu thức chính quy) là một ngôn ngữ lập trình nhỏ để so khớp các khuôn mẫu (pattern) với dữ liệu.
 
 RegExp thường được khởi tạo trong JS bằng **Regular Expressions Constructor** hoặc thông qua hai dấu `/` kèm một cái cờ (flag) nào đó. Các flag có thể là `g, i, m, s, u, y`.
 
-# RegExp Parameters
+# 🍇RegExp Parameters
 
 Một biểu thức thức chính quy nhận vào hai tham số. Hai tham số đó là pattern cần tìm kiếm và optional flag.
 
-## Pattern
+## 🍅Pattern
 
 Một pattern có thể là ký tự hay bất kỳ dạng pattern nào có một vài sự tương đồng mà ta cần tìm kiếm.
 
-## Flag
+## 🍈Flag
 
 Flag là một tham số optional để quy định cách tìm kiếm dữ liệu, có một vài flag thông dụng:
 
@@ -56,7 +56,7 @@ Flag là một tham số optional để quy định cách tìm kiếm dữ liệ
 - i: case sensitive flag, nó tìm kiếm cho cả in hoa và in thường.
 - m: multiline.
 
-# RegExp Initialize
+# 🍎RegExp Initialize
 
 Có thể tạo ra các biểu thức chính quy bằng contructor `RegExp`:
 
@@ -84,7 +84,7 @@ let regEx = /love/gi;
 let regEx = new RegExp("love", "gi");
 ```
 
-# RegExp Methods
+# 🍊RegExp Methods
 
 ## [test](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 

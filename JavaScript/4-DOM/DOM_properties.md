@@ -7,17 +7,17 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [DOM Node Properties](#dom-node-properties)
-- [DOM CSS](#dom-css)
-- [classList Property](#classlist-property)
+- [🧩DOM Node Properties](#dom-node-properties)
+- [💄DOM CSS](#dom-css)
+- [🃏classList Property](#classlist-property)
 
-# DOM Node Properties
+# 🧩DOM Node Properties
 
 Ba loại node/đối tượng element, attribute và text đều có thuộc tính `nodeType`. Giá trị của `nodeType` đối với element node là 1, attribute note là 2 và text note là 3.
 
 Có thể tận dụng thuộc tính này để kiểm tra một node có phải element, attribute và text hay không.
 
-# DOM CSS
+# 💄DOM CSS
 
 Trong số các thuộc tính của element node thì có thuộc tính `style`. Thuộc tính này cũng là một object chứa rất nhiều thuộc tính khác thường dùng trong CSS.
 
@@ -27,7 +27,7 @@ Chú ý rằng thuộc tính `style` chỉ tác động đến CSS inline, khôn
 
 Tuy nhiên, tên các thuộc tính của đối tượng `style` này hơi khác so với các thuộc tính CSS thông thường vì nó tuân theo `camelCase` và không có dấu gạch ngang.
 
-# [classList Property](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+# [🃏classList Property](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 
 Lớp đối tượng `Element` có thuộc tính `classList` giúp chúng ta quản lý được các class của element. Thuộc tính này là một đối tượng, có các phương thức thông dụng là: `add`, `contains`, `remove`, `toggle`.
 

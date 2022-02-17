@@ -9,11 +9,11 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Window Object](#window-object)
+- [🔳Window Object](#window-object)
   - [alert](#alert)
   - [prompt](#prompt)
   - [confirm](#confirm)
-- [Date Object](#date-object)
+- [📆Date Object](#date-object)
   - [Creating](#creating)
   - [Date Methods](#date-methods)
 
@@ -23,7 +23,7 @@
 
 > [Devhints.io](https://devhints.io/js-date)
 
-# [Window Object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+# [🔳Window Object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
 ## [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
@@ -53,7 +53,7 @@ let agree = confirm("Are you sure you want to go to this heaven?");
 console.log(agree);
 ```
 
-# [Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+# [📆Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 ## [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#constructor)
 

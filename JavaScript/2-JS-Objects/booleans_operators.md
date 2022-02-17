@@ -7,20 +7,20 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Booleans](#booleans)
-  - [Falsy Values](#falsy-values)
-  - [Truthy Values](#truthy-values)
+- [💁‍♂️Booleans](#️booleans)
+  - [🤦‍♂️Falsy Values](#️falsy-values)
+  - [🙋‍♀️Truthy Values](#️truthy-values)
   - [Casting to Booleans](#casting-to-booleans)
-- [Operators](#operators)
+- [➕➕Operators](#operators)
   - [Assignment and Arithmetic](#assignment-and-arithmetic)
   - [Comparision](#comparision)
   - [Logical](#logical)
   - [Increment and Decrement](#increment-and-decrement)
   - [Ternary Operators](#ternary-operators)
 
-# Booleans
+# 💁‍♂️Booleans
 
-## [Falsy Values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+## [🤦‍♂️Falsy Values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `false` thì ta gọi giá trị đó là `Falsy`.
 
@@ -33,7 +33,7 @@ Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ
 
 Các dữ liệu và đối tượng ở trên được xem là `false`.
 
-## [Truthy Values](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+## [🙋‍♀️Truthy Values](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `true` thì ta gọi giá trị đó là `Truthy`.
 
@@ -56,7 +56,7 @@ console.log(!!undefined); // => false
 console.log(!!" "); // => true
 ```
 
-# [Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+# [➕➕Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
 ## Assignment and Arithmetic
 

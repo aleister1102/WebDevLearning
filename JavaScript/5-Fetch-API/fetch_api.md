@@ -9,9 +9,9 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Fetch API](#fetch-api)
-- [JSON Server](#json-server)
-- [CRUD & Postman](#crud--postman)
+- [🐢Fetch API](#fetch-api)
+- [🦉JSON Server](#json-server)
+- [🦨CRUD & Postman](#crud--postman)
 
 # References
 
@@ -21,7 +21,7 @@
 
 > [Devhints.io](https://devhints.io/js-fetch)
 
-# [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+# [🐢Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 Phương thức `fetch` có đối số là một URL của API. Phương thức này trả về một đối tượng thuộc class `Response` giống `Promise`.
 
@@ -41,14 +41,14 @@ Sau khi có đối tượng trả về thì dùng phương thức `then` để t
 
 Phương thức `json()` cũng trả về một promise, và vì thế ta gọi phương thức `then` thứ hai để lấy giá trị trả về của promise này (là JS object(s)).
 
-# [JSON Server](https://github.com/typicode/json-server)
+# [🦉JSON Server](https://github.com/typicode/json-server)
 
 JSON server là một thư viện để tạo ra một cái fake API (Mock API).
 
 1. Trước tiên cần tạo file json (chẳng hạn db.json), lưu ý là các object phải có key `"id"` mang giá trị số nguyên.
 2. Sau đó dùng lệnh `json-server --watch db.json` để tạo ra fake API.
 
-# CRUD & Postman
+# 🦨CRUD & Postman
 
 Các hành động trên website liên quan đến dữ liệu đều thao tác thông qua API. Có bốn thao tác quan trọng, gọi là [CRUD](https://developer.mozilla.org/en-US/docs/Glossary/CRUD):
 

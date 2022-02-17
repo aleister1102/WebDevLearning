@@ -9,11 +9,11 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [JSON](#json)
-- [JSON to JS Objects](#json-to-js-objects)
-- [Reviver Function with JSON.parse()](#reviver-function-with-jsonparse)
-- [Object to JSON](#object-to-json)
-- [Filter Array with JSON.stringify](#filter-array-with-jsonstringify)
+- [😺JSON](#json)
+- [😸JSON to JS Objects](#json-to-js-objects)
+- [😹Reviver Function with JSON.parse()](#reviver-function-with-jsonparse)
+- [😻Object to JSON](#object-to-json)
+- [😼Filter Array with JSON.stringify](#filter-array-with-jsonstringify)
 
 # References
 
@@ -21,7 +21,7 @@
 
 > [Realpython](https://www.realpythonproject.com/a-cheat-sheet-for-working-with-json-data-in-javascript/)
 
-# [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+# [😺JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
 JSON viết tắt cho **JavaScript Object Notation**.
 
@@ -67,7 +67,7 @@ Trong object này có một thuộc tính là `"user"`. Chú ý rằng key của
 
 Thuộc tính này có giá trị là một mảng các object. Các object con này cũng bắt buộc có key nằm trong dấu ngoặc nhọn.
 
-# [JSON to JS Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+# [😸JSON to JS Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
 Dữ liệu JSON thông thường được fetch về thông qua HTTP và lưu dưới dạng chuỗi (ngoại trừ file JSON).
 
@@ -110,7 +110,7 @@ console.log(usersObj);
 // => {users: Array(3)}
 ```
 
-# [Reviver Function with JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter)
+# [😹Reviver Function with JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter)
 
 Trong số các tham số của `parse` có một tham số gọi là `reviver`. Tham số này là một hàm callback, thường dùng để format dữ liệu.
 
@@ -154,7 +154,7 @@ console.log(usersObj.users[0]);
 // => {firstName: 'ASABENEH', lastName: 'YETAYEH', age: 250, email: 'asab@asb.com'}
 ```
 
-# [Object to JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+# [😻Object to JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
 Để chuyển ngược lại từ một object thành chuỗi JSON, ta sử dụng phương thức `stringify`. Cú pháp như sau:
 
@@ -170,7 +170,7 @@ Giải thích tham số:
 - `replacer`: là hàm callback dùng để format dữ liệu. Hoặc có thể là mảng các chuỗi hay số để selecting/filtering dữ liệu trong quá trình chuyển đổi thành chuỗi. Nếu để `null` hoặc `undefined` thì mọi thuộc tính đều cho vào chuỗi JSON.
 - `space`: là đối tượng chuỗi hoặc số để thể hiện khoảng trắng thụt đầu dòng của chuỗi sau khi chuyển đổi. Nếu là chuỗi thì chuỗi đó được sử dụng như khoảng trắng.
 
-# [Filter Array with JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter)
+# [😼Filter Array with JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter)
 
 Thử sử dụng một mảng để lọc dữ liệu và truyền vào phương thức `stringify`:
 

@@ -9,9 +9,9 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Definition](#definition)
-- [Document Object](#document-object)
-- [DOM Element](#dom-element)
+- [👑Definition](#definition)
+- [💎Document Object](#document-object)
+- [🥇DOM Element](#dom-element)
   - [Get DOM Element](#get-dom-element)
     - [By Id](#by-id)
     - [By Class Name](#by-class-name)
@@ -19,10 +19,10 @@
     - [By CSS Selector](#by-css-selector)
     - [By HTML Selection](#by-html-selection)
   - [Set DOM Element](#set-dom-element)
-- [DOM Attribute](#dom-attribute)
+- [🥈DOM Attribute](#dom-attribute)
   - [Set Attribute](#set-attribute)
   - [Get Attribute](#get-attribute)
-- [DOM Text](#dom-text)
+- [🥉DOM Text](#dom-text)
 
 # References
 
@@ -32,19 +32,19 @@
 
 > [WDI fundamentals](https://fundamentals.generalassemb.ly/11_unit/dom-cheatsheet.html)
 
-# [Definition](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+# [👑Definition](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 JS sử dụng một giao diện lập trình DOM (DOM API) để có thể **truy cập và chỉnh sửa** các element, attribute và text của văn bản HTML một cách linh động. Lưu ý là DOM không thuộc JS.
 
 <img src = "dom1.png">
 
-# [Document Object](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+# [💎Document Object](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 Để truy cập và chỉnh sửa các đối tượng element, attribute và text thì cần thông qua đối tượng có tên là `document`. Đối tượng này đại diện cho toàn bộ website.
 
 Phương thức đầu tiên là `document.write('text')`. Khi gọi phương thức, trang web sẽ hiển thị text.
 
-# [DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+# [🥇DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 
 ## [Get DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element#methods)
 
@@ -123,7 +123,7 @@ console.log(document.forms.formOne);
 
 Sử dụng thuộc tính [`element.innerHTML = "element string"`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) để thêm element vào trong element khác, có thể kèm theo attribute.
 
-# [DOM Attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
+# [🥈DOM Attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
 
 Giả sử có đoạn code HTML:
 
@@ -185,7 +185,7 @@ console.log(headingElement.getAttribute("class"));
 
 Có thể lấy cả những attribute do JS thêm vào.
 
-# DOM Text
+# 🥉DOM Text
 
 Giả sử cho đoạn code HTML:
 

@@ -10,11 +10,11 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [Create Arrays](#create-arrays)
-- [Array Static Methods](#array-static-methods)
+- [🍕Create Arrays](#create-arrays)
+- [🍔Array Static Methods](#array-static-methods)
   - [Array(num).fill(initialValue)](#arraynumfillinitialvalue)
   - [Array.isArray(object)](#arrayisarrayobject)
-- [Array Methods using Callback Functions](#array-methods-using-callback-functions)
+- [🍟Array Methods using Callback Functions](#array-methods-using-callback-functions)
   - [forEach](#foreach)
   - [map](#map)
   - [reduce](#reduce)
@@ -38,7 +38,7 @@
 
 > [rauschma](https://gist.github.com/rauschma/6cdeb4af7586aa03baed2f925e0a084b)
 
-# [Create Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+# [🍕Create Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 
 > Thông thường ta dùng `const` để khai báo mảng, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.
 
@@ -84,7 +84,7 @@ const arr = [
 
 Truy cập và chỉnh sửa giá trị phần tử trong mảng tương tự như C/C++ (thông qua toán tử `[]`).
 
-# [Array Static Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#static_methods)
+# [🍔Array Static Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#static_methods)
 
 ## Array(num).fill(initialValue)
 
@@ -102,7 +102,7 @@ console.log(arr); // [null,null,null,null,null,null]
 
 Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
 
-# Array Methods using Callback Functions
+# 🍟Array Methods using Callback Functions
 
 Ngoài các phương thức đã nêu ở bài mảng, JS còn cung cấp một số phương thức dựng sẵn thuộc lớp đối tượng Array để thao tác với các hàm callback.
 

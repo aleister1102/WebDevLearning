@@ -7,11 +7,11 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Callback](#callback)
-  - [Setting time](#setting-time)
-- [Returning Function](#returning-function)
+- [😨Callback](#callback)
+  - [🕐Setting time](#setting-time)
+- [😥Returning Function](#returning-function)
 
-# [Callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+# [😨Callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
 
 Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.
 
@@ -60,7 +60,7 @@ function sumArray(arr) {
 console.log(sumArray(numbers)); // => 15
 ```
 
-## Setting time
+## 🕐Setting time
 
 Để tự động thực thi hàm theo chu kỳ thời gian `duration`, ta sử dụng `setInterval(callback, duration)`.
 
@@ -78,7 +78,7 @@ setTimeout(callback, 1000);
 
 Hàm `callback` sẽ được gọi sau khoảng thời gian delay 1s.
 
-# Returning Function
+# 😥Returning Function
 
 Giá trị trả về của hàm cũng có thể là một hàm khác.
 

@@ -7,10 +7,10 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Loops](#loops)
-- [Problem](#problem)
+- [🔁Loops](#loops)
+- [🛑Problem](#problem)
 
-# [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+# [🔁Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 Vòng lặp `for`, `while` và `do while` trong JS tương tự C/C++.
 
@@ -35,7 +35,7 @@ for (let value of arr) {
 // => el1, el2, el3
 ```
 
-# Problem
+# 🛑Problem
 
 Có đoạn code cho bài toán xuất tam giác ký tự như sau:
 

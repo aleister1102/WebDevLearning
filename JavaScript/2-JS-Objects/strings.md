@@ -10,11 +10,11 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [String Concatenating](#string-concatenating)
-- [Long Literal Strings](#long-literal-strings)
-- [Escape Sequences](#escape-sequences)
-- [Template String](#template-string)
-- [Checking Data Types and Casting](#checking-data-types-and-casting)
+- [🎉String Concatenating](#string-concatenating)
+- [🧨Long Literal Strings](#long-literal-strings)
+- [🎊Escape Sequences](#escape-sequences)
+- [✨Template String](#template-string)
+- [🎇Checking Data Types and Casting](#checking-data-types-and-casting)
   - [Checking Data Types](#checking-data-types)
   - [Casting](#casting)
 
@@ -32,7 +32,7 @@
 
 > [Another Techs](https://anothertechs.com/programming/javascript/javascript-string-methods-cheat-sheet-2021/)
 
-# String Concatenating
+# 🎉String Concatenating
 
 Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.
 
@@ -44,7 +44,7 @@ Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.
 `var d = '5' - 10; // => -5` (number)\
 Như vậy, toán tử `+` sẽ ép kiểu số thành chuỗi và nối chuỗi, toán tử `-` sẽ ép kiểu chuỗi thành số và thực hiện phép tính trừ.
 
-# [Long Literal Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#long_literal_strings)
+# [🧨Long Literal Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#long_literal_strings)
 
 Một chuỗi có thể là một dòng, nhiều dòng hoặc đoạn văn bản. Để viết giá trị chuỗi trên nhiều dòng, ta sử dụng dấu `\` ở cuối mỗi dòng thể hiện rằng phía sau vẫn còn nội dung của chuỗi.
 
@@ -67,7 +67,7 @@ Làm gần được 3 năm mà nhà xe nó đã mua đủ cả. Nghĩ mà thèm.
 console.log(paragraph);
 ```
 
-# [Escape Sequences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences)
+# [🎊Escape Sequences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences)
 
 Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 
@@ -77,7 +77,7 @@ Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 - `\'`: Single quote (')
 - `\"`: Double quote (")
 
-# [Template String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+# [✨Template String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 Khái niệm Template String hiểu đơn giản là ta thay thế các ký tự trong chuỗi thành một biến nào đó có thể chỉnh sửa. Có các ví dụ sau đây:
 
@@ -127,7 +127,7 @@ console.log(`${a} is greater than ${b}: ${a > b}`);
 > Sử dụng toán tử `[]` để truy cập ký tự trong chuỗi
 > Sử dụng thuộc tính `length` để lấy ra độ dài chuỗi.
 
-# Checking Data Types and Casting
+# 🎇Checking Data Types and Casting
 
 ## Checking Data Types
 

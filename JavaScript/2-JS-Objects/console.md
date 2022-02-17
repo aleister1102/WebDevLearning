@@ -10,7 +10,7 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [Methods](#methods)
+- [📺Methods](#methods)
 
 # References
 
@@ -24,7 +24,7 @@
 
 > [Vincent Will](https://dev.to/vincenius/javascript-object-functions-cheat-sheet-48nn)
 
-# Methods
+# 📺Methods
 
 `console.log()`
 

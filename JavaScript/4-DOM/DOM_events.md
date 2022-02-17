@@ -9,15 +9,15 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [DOM Events](#dom-events)
+- [🎮DOM Events](#dom-events)
   - [Attribute Events](#attribute-events)
   - [Assigning Events using Element Node](#assigning-events-using-element-node)
   - [onchange](#onchange)
   - [onkeyup/onkeydown/onkeypress](#onkeyuponkeydownonkeypress)
-- [Event Methods](#event-methods)
+- [🎸Event Methods](#event-methods)
   - [preventDefault](#preventdefault)
   - [stopPropagation](#stoppropagation)
-- [Event Listeners](#event-listeners)
+- [🎧Event Listeners](#event-listeners)
 
 # References
 
@@ -27,7 +27,7 @@
 
 > [Tyler Caprioli](https://dev.to/tcaprioli/js-cheatsheet-dom-manipulation-event-listeners-3nm2)
 
-# [DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+# [🎮DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 Có hai cách để thao tác với sự kiện, cách đầu tiên là thông qua attribute của element. Tên của sự kiện thêm chữ "on" phía trước là trở thành thuộc tính, ví dụ `onclick` là thuộc tính của sự kiện click chuột.
 
@@ -88,7 +88,7 @@ Thuộc tính `onkeyup` bắt các sự kiện khi thả phím, `onkeydown` bắ
 
 Để lấy giá trị của phím được nhấn thì dùng thuộc tính `key` hoặc `code` thuộc đối tượng `event`.
 
-# [Event Methods](https://developer.mozilla.org/en-US/docs/Web/API/Event#methods)
+# [🎸Event Methods](https://developer.mozilla.org/en-US/docs/Web/API/Event#methods)
 
 ## [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
 
@@ -142,7 +142,7 @@ Kết quả:
 
 Phương thức `preventDefault` thuộc về đối tượng `event` dùng để ngăn chặn sự kiện "nổi bọt" ra các element bên ngoài.
 
-# Event Listeners
+# 🎧Event Listeners
 
 Event Listeners cung cấp một phương thức để đơn giản hóa việc xử lý sự kiện, đặc biệt là các sự kiện có nhiều tác vụ.
 

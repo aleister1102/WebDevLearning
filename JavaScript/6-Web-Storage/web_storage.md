@@ -7,13 +7,13 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Web Storage](#web-storage)
-- [HTML Web Storage Objects](#html-web-storage-objects)
+- [📦Web Storage](#web-storage)
+- [📥HTML Web Storage Objects](#html-web-storage-objects)
   - [setItem](#setitem)
   - [getItem](#getitem)
   - [clear](#clear)
 
-# [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+# [📦Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
 
 **Web Storage** (Lưu trữ web) là một tính năng mới của HTML5 nhằm hỗ trợ cookie trong việc lưu dữ liệu.
 
@@ -55,7 +55,7 @@ Dữ liệu được lưu dưới dạng localStorage hay sessionStorage tùy th
 - Muốn loại bỏ dữ liệu ngay khi đóng tab.
 - Muốn ứng dụng không can thiệp vào chính ứng dụng đó ở bên cửa số khác.
 
-# HTML Web Storage Objects
+# 📥HTML Web Storage Objects
 
 Trang web HTML cung cấp hai đối tượng để lưu trữ thông tin bên phía client.
 

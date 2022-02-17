@@ -9,8 +9,8 @@
 - [Table of contents](#table-of-contents)
 - [References](#references)
   - [Cheat Sheets](#cheat-sheets)
-- [Number Object](#number-object)
-- [Math Object](#math-object)
+- [🔢Number Object](#number-object)
+- [➕Math Object](#math-object)
   - [Random Numbers](#random-numbers)
 
 # References
@@ -19,7 +19,7 @@
 
 > [Michael Sakhniuk](https://dev.to/sakhnyuk/js-math-cheatsheet-33f7)
 
-# [Number Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+# [🔢Number Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
@@ -35,7 +35,7 @@ Hai phương thức dưới gọi từ đối tượng:\
 `Number.prototype.toFixed()` Chuyển đổi **số thập phân** thành **chuỗi**. Tham số truyền vào là số sau dấu phẩy cần giữ.\
 `Number.prototype.toString()` Chuyển đổi **số** thành **chuỗi**.
 
-# [Math Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+# [➕Math Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 Trong JS có lớp đối tượng `Math` hỗ trợ nhiều phương thức để thao tác với kiểu dữ liệu số.
 

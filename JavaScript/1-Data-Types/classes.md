@@ -10,14 +10,14 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [Defining A Class](#defining-a-class)
-  - [Class Instantiation](#class-instantiation)
-  - [Class Constructor](#class-constructor)
-  - [Prototype](#prototype)
-  - [Class Methods](#class-methods)
-- [Getter and Setter](#getter-and-setter)
-- [Inheritance](#inheritance)
-- [Polymorphism](#polymorphism)
+- [🚖Defining a Class](#defining-a-class)
+  - [🎭Class Instantiation](#class-instantiation)
+  - [👷‍♂️Class Constructor](#️class-constructor)
+  - [🎎Prototype](#prototype)
+  - [🤸‍♂️Class Methods](#️class-methods)
+- [🙌Getter and Setter](#getter-and-setter)
+- [👨‍👩‍👦Inheritance](#inheritance)
+- [👧👧🏻👧🏾Polymorphism](#polymorphism)
 
 # References
 
@@ -29,7 +29,7 @@
 
 > [Codecademy Cheat Sheet](https://www.codecademy.com/learn/webdev-intermediate-javascript/modules/learn-javascript-classes/cheatsheet)
 
-# [Defining a Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
+# [🚖Defining a Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
 
 Tên của lớp đối tượng sử dụng **CamelCase**.
 
@@ -56,7 +56,7 @@ class Rectangle {}
 
 Ngoài ra, có thể sử dụng cách khác, gọi là [Class Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) để khai báo lớp đối tượng.
 
-## Class Instantiation
+## 🎭Class Instantiation
 
 Để khởi tạo một đối tượng từ lớp đối tượng, ta sử dụng từ khóa `new`:
 
@@ -72,7 +72,7 @@ class Person {
 const lmq = new Person();
 ```
 
-## [Class Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+## [👷‍♂️Class Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 
 Ta có thể thiết lập một `constructor` để vừa thêm thuộc tính vừa khởi tạo giá trị của chúng.
 
@@ -89,7 +89,7 @@ console.log(lmq); // output: Person {name: 'Quân', age: 20}
 
 Cũng có thể thiết lập default constructor cho lớp đối tượng.
 
-## [Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
+## [🎎Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
 
 > [Programiz Document](https://www.programiz.com/javascript/prototype)
 
@@ -116,7 +116,7 @@ console.log(lmq.getAge()); // output: 20
 
 Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
 
-## [Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#prototype_methods)
+## [🤸‍♂️Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#prototype_methods)
 
 Có thuộc tính thì phải có phương thức, phương thức của lớp đối tượng trong JS cũng có nguyên lý hoạt động tương tự C++:
 
@@ -150,7 +150,7 @@ Tóm lại:
 - Gọi từ đối tượng: toán tử `.` hoặc toán tử `[]` nếu là thuộc tính.
 - Gọi từ lớp đối tượng: có từ khóa `static`, sử dụng tên lớp đối tượng.
 
-# [Getter and Setter](https://www.programiz.com/javascript/getter-setter)
+# [🙌Getter and Setter](https://www.programiz.com/javascript/getter-setter)
 
 Một getter trong lớp đối tượng tương tự như phương thức thông thường nhưng có từ khóa `get` phía trước.
 
@@ -173,7 +173,7 @@ set setFirstName(firstName) {
 // Call setter without (), followed by = operator
 ```
 
-# [Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#sub_classing_with_extends)
+# [👨‍👩‍👦Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#sub_classing_with_extends)
 
 Để kế thừa từ một lớp cơ sở, sử dụng từ khóa `extends`, thay vì dùng `: access modifier` như C++.
 
@@ -190,7 +190,7 @@ lmq.saySomething(); // output: I am a child of the person class
 console.log(lmq.firstName); // output: Quân
 ```
 
-# [Polymorphism](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#super_class_calls_with_super)
+# [👧👧🏻👧🏾Polymorphism](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#super_class_calls_with_super)
 
 Từ khóa `super` dùng để truy cập và gọi phương thức của lớp cơ sở bên trong lớp dẫn xuất.
 

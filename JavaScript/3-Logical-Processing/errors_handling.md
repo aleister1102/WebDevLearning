@@ -7,17 +7,17 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Error Handling](#error-handling)
+- [👏Error Handling](#error-handling)
   - [Try - Catch - Finally](#try---catch---finally)
   - [Parameter err](#parameter-err)
   - [throw](#throw)
-- [Error Types](#error-types)
+- [🖖Error Types](#error-types)
   - [ReferenceError](#referenceerror)
   - [SyntaxError](#syntaxerror)
   - [TypeError](#typeerror)
-- [Optional chaining](#optional-chaining)
+- [🙏Optional chaining](#optional-chaining)
 
-# Error Handling
+# 👏Error Handling
 
 JS là một ngôn ngữ lỏng lẻo, đôi khi chúng ta nhận được những lỗi biên dịch khi cố truy cập giá trị của biến undefined hoặc gọi hàm undefined,...
 
@@ -100,7 +100,7 @@ const throwErroExampleFun = () => {
 throwErroExampleFun();
 ```
 
-# [Error Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
+# [🖖Error Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 
 ## [ReferenceError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
 
@@ -140,7 +140,7 @@ console.log(num.toLowerCase());
 
 Đoạn code trên là lỗi vì đối tượng number không có hàm `toLowerCase()`.
 
-# [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+# [🙏Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 Đôi khi ta dùng API để lấy dữ liệu về, đa số dữ liệu có dạng JSON. Và JSON tổ chức theo object.
 

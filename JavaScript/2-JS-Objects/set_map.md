@@ -7,7 +7,7 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Sets](#sets)
+- [📚Sets](#sets)
   - [Creating](#creating)
   - [Adding](#adding)
   - [Deleting](#deleting)
@@ -17,13 +17,13 @@
     - [Union of Sets](#union-of-sets)
     - [Intersection of Sets](#intersection-of-sets)
     - [Difference of Sets](#difference-of-sets)
-- [Maps](#maps)
+- [🗾Maps](#maps)
   - [Creating](#creating-1)
   - [Setting](#setting)
   - [Getting](#getting)
   - [Checking](#checking-1)
 
-# [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
+# [📚Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).
 
@@ -78,7 +78,7 @@ console.log(setOfCompanies);
 // => Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
 ```
 
-## D[eleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
+## [Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
 
 Dùng phương thức `delete`:
 
@@ -154,7 +154,7 @@ const complement = a.filter(function (num) {
 console.log(complement);
 ```
 
-# [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+# [🗾Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 Map là một tập hợp của nhiều bộ phần tử. Mỗi bộ là một cặp key - value.
 

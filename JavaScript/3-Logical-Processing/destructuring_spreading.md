@@ -10,18 +10,18 @@
 - [References](#references)
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
-- [Destructuring](#destructuring)
+- [🛬Destructuring](#destructuring)
   - [Destructuring Array](#destructuring-array)
   - [Destructuring Array during Iteration](#destructuring-array-during-iteration)
   - [Destructuring Object](#destructuring-object)
   - [Object Parameter with Destructuring](#object-parameter-with-destructuring)
   - [Destructuring Object during Iteration](#destructuring-object-during-iteration)
-- [Spread and Rest Operators](#spread-and-rest-operators)
+- [🚀Spread and Rest Operators](#spread-and-rest-operators)
   - [Rest Elements of array](#rest-elements-of-array)
   - [Copy array](#copy-array)
   - [Copy object](#copy-object)
   - [Rest Operator with Arrow function](#rest-operator-with-arrow-function)
-- [Tagged template Literals](#tagged-template-literals)
+- [🛸Tagged template Literals](#tagged-template-literals)
 
 # References
 
@@ -35,7 +35,7 @@
 
 > [Mihai Serban](https://medium.com/@serbanmihai/javascript-es6-cheatsheet-destructuring-c64df173b30e)
 
-# [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+# [🛬Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 Destructuring là một cú pháp cho phép "phân rã" array hoặc object để gán cho các biến riêng biệt.
 
@@ -252,7 +252,7 @@ for (const { task, time, completed } of todoList) {
 //    Assess Test Result 4/1/2020 1:00 false
 ```
 
-# [Spread and Rest Operators](https://anonystick.com/blog-developer/giai-thich-ve-destructuring-rest-parameters-va-spread-syntax-trong-javascript-2020051980035339)
+# [🚀Spread and Rest Operators](https://anonystick.com/blog-developer/giai-thich-ve-destructuring-rest-parameters-va-spread-syntax-trong-javascript-2020051980035339)
 
 Toán tử spread và rest đều giống nhau về cú pháp (có `...` ở đầu), tuy nhiên chức năng của chúng lại khác nhau.
 
@@ -370,7 +370,7 @@ sumAllNums(1, 2, 3, 4, 5);
 
 Việc dùng toán tử `...` làm tham số như vậy gọi là rest operator. Toán tử này sẽ gom nhóm danh sách đối số truyền vào (1,2,3,4,5) thành một mảng (args).
 
-# [Tagged template Literals](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
+# [🛸Tagged template Literals](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
 
 Xét đoạn code sau:
 

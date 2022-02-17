@@ -7,13 +7,13 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Declaration Function](#declaration-function)
-- [Anonymous Function](#anonymous-function)
-- [Expression Function](#expression-function)
-- [Self Invoking Function](#self-invoking-function)
-- [Arrow Function](#arrow-function)
-- [Function with Default Parametes](#function-with-default-parametes)
-- [Unlimited Number of Parameters](#unlimited-number-of-parameters)
+- [⚽Declaration Function](#declaration-function)
+- [🎳Anonymous Function](#anonymous-function)
+- [⚾Expression Function](#expression-function)
+- [🏀Self Invoking Function](#self-invoking-function)
+- [🏐Arrow Function](#arrow-function)
+- [🏈Function with Default Parametes](#function-with-default-parametes)
+- [🎱Unlimited Number of Parameters](#unlimited-number-of-parameters)
 
 Hàm trong JS bắt đầu bởi từ khóa `function`, theo sau đó là tên hàm và dấu `()` chứa các tham số nếu có. Cũng có thể dùng tham số mặc định với hằng số.
 
@@ -32,7 +32,7 @@ Một hàm có thể có nhiều cách khai báo:
 - Anonymous function
 - Arrow function
 
-# [Declaration Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_declarations)
+# [⚽Declaration Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_declarations)
 
 Đây là cách khai báo đơn giản, tương tự C/C++.
 
@@ -47,7 +47,7 @@ function functionName(param) {
 - Có global scope.
 - Có thể gọi Declaration function trước khai báo hàm
 
-# Anonymous Function
+# 🎳Anonymous Function
 
 **Anonymous Function** (Hàm vô danh() là hàm được khai báo mà không có tên.
 
@@ -61,7 +61,7 @@ console.log(anonymousFunc()); // 1
 
 Giá trị trả về của hàm được lưu trong biến `anonymousFunc`.
 
-# [Expression Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_expressions)
+# [⚾Expression Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_expressions)
 
 **Expression function** (Hàm biểu thức) là hàm có chứa biểu thức, giá trị trả về của hàm sẽ được gán cho một biến nào đó.
 
@@ -81,7 +81,7 @@ console.log(expressionFunc(11)); // 121
 
 - Không thể gọi Expression function trước khai báo hàm.
 
-# Self Invoking Function
+# 🏀Self Invoking Function
 
 **Self Invoking Function** (Các hàm tự thực thi) có bản chất là các hàm vô danh, được tự động thực thi ngay khi chúng được khai báo mà không cần chờ gọi hàm.
 
@@ -106,7 +106,7 @@ console.log(square); // 16
 - Tính đóng gói, các object trong hàm không thể bị truy cập từ bên ngoài.
 - Function factories (OOP).
 
-# [Arrow Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+# [🏐Arrow Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 **Arrow Function** (Hàm mũi tên) là cách viết khác của Declaration function. Giữa chúng không có quá nhiều điểm khác biệt.
 
@@ -141,7 +141,7 @@ console.log(double(8)); // 16
 const sum = (a, b) => ({ a: a, b: b });
 ```
 
-# Function with Default Parametes
+# 🏈Function with Default Parametes
 
 Đôi khi ta gọi hàm mà ta muốn nó có một giá trị mặc định nào đó. Nếu chúng ta không truyền vào đối số thì hàm sẽ lấy giá trị đó để xử lý.
 
@@ -171,7 +171,7 @@ console.log(moodOfDay()); // Today's mood is happy
 console.log(moodOfDay("sad")); // Today's mood is sad
 ```
 
-# Unlimited Number of Parameters
+# 🎱Unlimited Number of Parameters
 
 Hàm có thể không có số lượng tham số cố định. Để xây dựng những hàm này, ta có hai cách là sử dụng Declaration function và Arrow function.
 
