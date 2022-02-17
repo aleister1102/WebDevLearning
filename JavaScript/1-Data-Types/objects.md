@@ -7,19 +7,25 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Document & Cheat Sheet & Tools](#document--cheat-sheet--tools)
-- [Creating](#creating)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat Sheets](#cheat-sheets)
+- [Defining an Object](#defining-an-object)
 - [Constructor](#constructor)
 - [Deleting](#deleting)
 - [Built-in Object](#built-in-object)
 
-# Documents & Cheat Sheets & Tools
+# References
+
+## Documents
 
 > [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
+## Cheat Sheets
+
 > [Codecademy Cheat Sheet](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-objects/cheatsheet)
 
-# [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+# [Defining an Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
 
 **Khai báo thuộc tính:**
 

@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Console Objects</h1></center>
@@ -7,23 +7,26 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
-- [console.log()](#consolelog)
-- [console.warn()](#consolewarn)
-- [console.table()](#consoletable)
-- [console.time()](#consoletime)
-- [console.assert()](#consoleassert)
-- [console.group()](#consolegroup)
-- [console.count()](#consolecount)
-- [console.clear()](#consoleclear)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat Sheets](#cheat-sheets)
+- [Methods](#methods)
 
-# Documents & Cheat Sheets & Tools
+# References
 
-> [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/API/console)
+## Documents
 
-> [Shuaib Sajid Cheat Sheet](https://codepen.io/Shu52/pen/yKeoRg)
+> [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/console)
 
-# console.log()
+## Cheat Sheets
+
+> [Shuaib Sajid](https://codepen.io/Shu52/pen/yKeoRg)
+
+> [Vincent Will](https://dev.to/vincenius/javascript-object-functions-cheat-sheet-48nn)
+
+# Methods
+
+`console.log()`
 
 Có thể format chuỗi đầu ra tương tự như C:
 
@@ -47,22 +50,15 @@ console.log(
 ); // log output green red and yellow text
 ```
 
-Kết quả:
-<img src = "log.png">
-
-# console.warn()
+`console.warn()`
 
 Dùng để cảnh báo, thường cảnh báo khi phiên bản của package đã cũ hoặc các đoạn code nhập vào không clean.
 
-Các cảnh báo có dạng:
-
-<img src ="warning.png">
-
-# [console.table()](https://developer.mozilla.org/en-US/docs/Web/API/console/table)
+[`console.table()`](https://developer.mozilla.org/en-US/docs/Web/API/console/table)
 
 Dùng để xuất dữ liệu dưới dạng bảng. Đối số truyền vào cần phải là một mảng hoặc đối tượng. Ngoài ra còn một đối số optional là số lượng cột.
 
-# console.time()
+`console.time()`
 
 Dùng để tính thời gian thực thi của một thao tác bất kỳ, đơn vị milliseconds.
 
@@ -82,7 +78,7 @@ console.timeEnd("Regular for loop");
 // output: Regular for loop: 0.13818359375 ms
 ```
 
-# console.assert()
+`console.assert()`
 
 Phương thức `assert` xuất ra một thông báo lỗi cho console nếu biểu thức xác nhận truyền vào là sai. Trong trường hợp biểu thức là đúng, sẽ không có gì xảy ra.
 
@@ -95,13 +91,13 @@ console.assert(3 > 4, "3 is not greater than 4");
 // output: Assertion failed: 3 is not greater than 4
 ```
 
-# [console.group()](https://developer.mozilla.org/en-US/docs/Web/API/console/group)
+[`console.group()`](https://developer.mozilla.org/en-US/docs/Web/API/console/group)
 
 Giúp viết các dòng console thành các các heading tương tự Mardown hay HTML.
 
-<img src="group.png">
+<img src="https://developer.mozilla.org/en-US/docs/Web/API/console/group/nesting.png">
 
-# [console.count()](https://developer.mozilla.org/en-US/docs/Web/API/console/count)
+[`console.count()`](https://developer.mozilla.org/en-US/docs/Web/API/console/count)
 
 In ra số lần gọi thực hiện phương thức này.
 
@@ -117,6 +113,6 @@ func();
 // output: Function has been called: 3
 ```
 
-# console.clear()
+`console.clear()`
 
 Dùng để dọn sạch console của browser, tương tự như lệnh `clear` của powershell.

@@ -7,13 +7,13 @@
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
+- [References](#references)
 - [Scope](#scope)
 - [🌀Window Scope](#window-scope)
 - [🌐Global Scope](#global-scope)
 - [🗾Local Scope](#local-scope)
 
-# Documents & Cheat Sheets & Tools
+# References
 
 > [Codecademy Cheat Sheet](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-scope/cheatsheet)
 

@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Introduction</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Dev Tool](#dev-tool)
 - [Console Log](#console-log)
 - [Comment](#comment)
@@ -20,7 +23,7 @@
 
 # Console Log
 
-Câu lệnh `console.log("Hello World!")` cũng giống như `cout<<"Hello World"` bên JS.
+Câu lệnh `console.log("Hello World!")` cũng giống như `cout<<"Hello World"` bên C/C++.
 
 > Dấu `""` có thể thay thế thành `''` hoặc ` `` `.
 

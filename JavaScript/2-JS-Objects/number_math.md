@@ -7,13 +7,21 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
 - [Number Object](#number-object)
 - [Math Object](#math-object)
   - [Random Numbers](#random-numbers)
 
-Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
+# References
+
+## Cheat Sheets
+
+> [Michael Sakhniuk](https://dev.to/sakhnyuk/js-math-cheatsheet-33f7)
 
 # [Number Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+
+Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
 Lớp đối tượng `Number` trong JS cung cấp các phương thức:
 

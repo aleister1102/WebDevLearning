@@ -4,13 +4,16 @@
     <center><h1 class="bigtitle">Web Storage</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Web Storage](#web-storage)
 - [HTML Web Storage Objects](#html-web-storage-objects)
   - [setItem](#setitem)
   - [getItem](#getitem)
   - [clear](#clear)
 
-# Web Storage
+# [Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
 
 **Web Storage** (Lưu trữ web) là một tính năng mới của HTML5 nhằm hỗ trợ cookie trong việc lưu dữ liệu.
 
@@ -56,13 +59,13 @@ Dữ liệu được lưu dưới dạng localStorage hay sessionStorage tùy th
 
 Trang web HTML cung cấp hai đối tượng để lưu trữ thông tin bên phía client.
 
-`window.localStorage` - lưu dữ liệu không có thời hạn (no expiration date).
+[`window.localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) - lưu dữ liệu không có thời hạn (no expiration date).
 
-`window.sessionStorage` - lưu dữ liệu cho một phiên làm việc.
+[`window.sessionStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) - lưu dữ liệu cho một phiên làm việc.
 
 Các phương thức của localStorage và sessionStorage là tương tự nhau. Các phương thức thường dùng là: `setItem(), getItem(), removeItem(), clear(), key()`.
 
-## setItem
+## [setItem](https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem)
 
 **Chức năng**: lưu dữ liệu trong local/sessionStorage. Đối số là một cặp key và value nằm trong dấu ngoặc kép (vì dữ liệu được lưu dưới dạng chuỗi JSON). Lưu dữ liệu cùng key sẽ được ghi đè value của lần thực hiện phương thức cuối cùng.
 
@@ -130,7 +133,7 @@ Kết quả:
 
 <img src ="storage4.png">
 
-## getItem
+## [getItem](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 
 **Chức năng**: lấy dữ liệu từ local/sessionStorage dựa vào key.
 
@@ -160,7 +163,7 @@ Kết quả:
 
 <img src ="storage6.png">
 
-## clear
+## [clear](https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear)
 
 **Chức năng**: dọn sạch dữ liệu lưu trong local/sessionStorage.
 

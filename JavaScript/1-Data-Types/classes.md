@@ -7,7 +7,9 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat Sheets](#cheat-sheets)
 - [Defining A Class](#defining-a-class)
   - [Class Instantiation](#class-instantiation)
   - [Class Constructor](#class-constructor)
@@ -17,13 +19,17 @@
 - [Inheritance](#inheritance)
 - [Polymorphism](#polymorphism)
 
-# Documents & Cheat Sheets & Tools
+# References
+
+## Documents
 
 > [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
+## Cheat Sheets
+
 > [Codecademy Cheat Sheet](https://www.codecademy.com/learn/webdev-intermediate-javascript/modules/learn-javascript-classes/cheatsheet)
 
-# [Defining A Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
+# [Defining a Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
 
 Tên của lớp đối tượng sử dụng **CamelCase**.
 

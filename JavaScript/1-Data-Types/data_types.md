@@ -7,10 +7,11 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Document & Cheat Sheet & Tools](#document--cheat-sheet--tools)
+- [References](#references)
 - [👵Primitive Data Types](#primitive-data-types)
 - [👧Non - Primitive Data Types](#non---primitive-data-types)
-# Documents & Cheat Sheets & Tools
+
+# References
 
 > [Checking Data Types](https://codewithhugo.com/javascript-data-type-check-cheatsheet/)
 

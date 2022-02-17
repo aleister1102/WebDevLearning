@@ -7,6 +7,8 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
 - [Window Object](#window-object)
   - [alert](#alert)
   - [prompt](#prompt)
@@ -14,6 +16,12 @@
 - [Date Object](#date-object)
   - [Creating](#creating)
   - [Date Methods](#date-methods)
+
+# References
+
+## Cheat Sheets
+
+> [Devhints.io](https://devhints.io/js-date)
 
 # [Window Object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 

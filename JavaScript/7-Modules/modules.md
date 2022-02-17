@@ -4,10 +4,28 @@
     <center><h1 class="bigtitle">Modules</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat sheets](#cheat-sheets)
 - [Modules](#modules)
   - [Import with Destructuring](#import-with-destructuring)
   - [Export from other Module](#export-from-other-module)
-- [Module Cheatsheet](#module-cheatsheet)
+- [Module Cheat Sheet](#module-cheat-sheet)
+
+# References
+
+## Documents
+
+> [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+
+## Cheat sheets
+
+> [Dev.to](https://dev.to/samanthaming/javascript-module-cheatsheet-5b4o)
+
+> [30secondsofcode](https://www.30secondsofcode.org/articles/s/javascript-module-cheatsheet)
 
 # Modules
 
@@ -113,6 +131,6 @@ Code ở **main.js** trở thành:
 import { sum2 } from "./js/index.js";
 ```
 
-# Module Cheatsheet
+# Module Cheat Sheet
 
 <img src="modules4.png">

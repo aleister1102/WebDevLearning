@@ -6,14 +6,14 @@
 
 # Table of contents
 
-- [](#)
+- [Table of contents](#table-of-contents)
 - [Declaration Function](#declaration-function)
 - [Anonymous Function](#anonymous-function)
 - [Expression Function](#expression-function)
 - [Self Invoking Function](#self-invoking-function)
 - [Arrow Function](#arrow-function)
 - [Function with Default Parametes](#function-with-default-parametes)
-  - [Unlimited Number of Parameters](#unlimited-number-of-parameters)
+- [Unlimited Number of Parameters](#unlimited-number-of-parameters)
 
 Hàm trong JS bắt đầu bởi từ khóa `function`, theo sau đó là tên hàm và dấu `()` chứa các tham số nếu có. Cũng có thể dùng tham số mặc định với hằng số.
 
@@ -171,7 +171,7 @@ console.log(moodOfDay()); // Today's mood is happy
 console.log(moodOfDay("sad")); // Today's mood is sad
 ```
 
-## Unlimited Number of Parameters
+# Unlimited Number of Parameters
 
 Hàm có thể không có số lượng tham số cố định. Để xây dựng những hàm này, ta có hai cách là sử dụng Declaration function và Arrow function.
 

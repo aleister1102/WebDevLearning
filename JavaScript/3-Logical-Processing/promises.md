@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Promises</h1></center>
@@ -7,6 +7,8 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
 - [Synchronous & Asynchronous](#synchronous--asynchronous)
   - [Callback Function](#callback-function)
   - [Callback Hell](#callback-hell)
@@ -18,6 +20,16 @@
 - [Promise Chain](#promise-chain)
 - [Promise Class Methods](#promise-class-methods)
 - [Async & Await](#async--await)
+
+# References
+
+## Cheat Sheets
+
+> [Codecademy](https://www.codecademy.com/learn/asynchronous-javascript/modules/javascript-promises/cheatsheet)
+
+> [Devhint.io](https://devhints.io/promise)
+
+> [30secondsofcode](https://www.30secondsofcode.org/articles/s/async-javascript-cheatsheet)
 
 # [Synchronous & Asynchronous](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 

@@ -7,23 +7,13 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat Sheets](#cheat-sheets)
 - [Create Arrays](#create-arrays)
 - [Array Static Methods](#array-static-methods)
   - [Array(num).fill(initialValue)](#arraynumfillinitialvalue)
   - [Array.isArray(object)](#arrayisarrayobject)
-- [Array Instance Methods](#array-instance-methods)
-  - [push(items)](#pushitems)
-  - [pop()](#pop)
-  - [unshift(items)](#unshiftitems)
-  - [shift()](#shift)
-  - [indexOf(value)](#indexofvalue)
-  - [includes(value)](#includesvalue)
-  - [concat.(otherArr)](#concatotherarr)
-  - [toString()](#tostring)
-  - [join(delimeter)](#joindelimeter)
-  - [slice(start, end)](#slicestart-end)
-  - [splice(start, nums, items)](#splicestart-nums-items)
-  - [reverse()](#reverse)
 - [Array Methods using Callback Functions](#array-methods-using-callback-functions)
   - [forEach](#foreach)
   - [map](#map)
@@ -33,6 +23,20 @@
   - [every](#every)
   - [some](#some)
   - [sort](#sort)
+
+# References
+
+## Documents
+
+> [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
+
+## Cheat Sheets
+
+> [Vincent Will](https://dev.to/vincenius/javascript-array-functions-cheatsheet-1c15)
+
+> [Devhint.io](https://devhints.io/js-array)
+
+> [rauschma](https://gist.github.com/rauschma/6cdeb4af7586aa03baed2f925e0a084b)
 
 # [Create Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 
@@ -97,108 +101,6 @@ console.log(arr); // [null,null,null,null,null,null]
 ## Array.isArray(object)
 
 Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
-
-# [Array Instance Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
-
-## push(items)
-
-Thêm phần tử vào cuối mảng.
-
-```js
-const arr = [1, 2, 3, 4, 5, 6];
-arr.push(7, 8);
-console.log(arr); // [1,2,3,4,5,6,7,8]
-```
-
-## pop()
-
-Xóa phần tử cuối mảng.
-
-## unshift(items)
-
-Thêm phần tử đầu mảng.
-
-## shift()
-
-Xóa phần tử đầu mảng.
-
-## indexOf(value)
-
-Lấy index của phần tử có giá trị `value` trong mảng. Nếu không tìm thấy thì trả về `-1`.
-
-```js
-const arr = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
-console.log(arr.indexOf(4)); // 5
-console.log(arr.indexOf(11)); // -1
-```
-
-> Có thể áp dụng để kiểm tra một phần tử có tồn tại trong mảng hay không.
-
-## includes(value)
-
-Kiểm tra giá trị `value` có tồn tại trong mảng hay không. Nếu có trả về `true`, không trả về `false`.
-
-## concat.(otherArr)
-
-Dùng để nối mảng, trả về một mảng mới (không làm thay đổi mảng gốc).
-
-```js
-const day_month = [11, 02];
-const year = [2002];
-const birthday = day_month.concat(year);
-console.log(birthday); // [11, 2, 2002]
-```
-
-## toString()
-
-Chuyển mảng gọi method về kiểu chuỗi, các phần tử ngăn cách nhau bởi dấu phẩy.
-
-```js
-const arr = [1, 2, 3, 4, 5];
-console.log(arr.toString()); // '1,2,3,4,5'
-```
-
-## join(delimeter)
-
-Gắn các phần tử trong mảng thành một chuỗi ngăn cách nhau bởi `delimeter`. Mặc định là dấu phẩy.
-
-```js
-const arr = ["Sài Gòn", "Hồ Chí Minh", "Hòn Ngọc Viễn Đông"];
-console.log(arr.join()); // 'Sài Gòn, Hồ Chí Minh, Hòn Ngọc Viễn Đông'
-console.log(arr.join("")); // 'Sài GònHồ Chí MinhHòn Ngọc Viễn Đông'
-console.log(arr.join(", ")); // 'Sài Gòn, Hồ Chí Minh, Hòn Ngọc Viễn Đông'
-```
-
-## slice(start, end)
-
-Cắt ra một mảng con từ mảng gọi method và trả về mảng con đó. Cắt từ vị trí bắt đầu `start` đến `end - 1` (không lấy tại vị trí end).
-
-```js
-const arr = [1, 2, 3, 4, 5];
-console.log(arr.slice()); // [1,2,3,4,5]
-console.log(arr.slice(0)); // [1,2,3,4,5]
-console.log(arr.slice(0, arr.length)); // [1,2,3,4,5]
-console.log(arr.slice(1, 6)); // [2,3,4,5]
-console.log(arr.slice(0, 3)); // [1,2,3]
-```
-
-## splice(start, nums, items)
-
-Xóa `nums` phần tử trong mảng bắt đầu từ vị trí `start` và thay thế bằng các phần tử `items`. Method `splice` trả về phần tử bị xóa, còn **mảng chính sẽ bị thay đổi**.
-
-```js
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(arr.splice()); // []
-console.log(arr); // [1,2,3,4,5,6,7,8]
-console.log(arr.splice(0, 1)); // [1]
-console.log(arr); // [2,3,4,5,6,7,8]
-console.log(arr.splice(0, 2, 9, 10)); // Start at 0, remove 2 items and add 3,4 after 0 -> [1,2]
-console.log(arr); // [9,10,3,4,5,6,7,8]
-```
-
-## reverse()
-
-Đảo ngược mảng.
 
 # Array Methods using Callback Functions
 

@@ -4,6 +4,11 @@
     <center><h1 class="bigtitle">DOM</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
 - [Definition](#definition)
 - [Document Object](#document-object)
 - [DOM Element](#dom-element)
@@ -13,32 +18,35 @@
     - [By Tag Name](#by-tag-name)
     - [By CSS Selector](#by-css-selector)
     - [By HTML Selection](#by-html-selection)
-    - [Element Methods](#element-methods)
   - [Set DOM Element](#set-dom-element)
 - [DOM Attribute](#dom-attribute)
   - [Set Attribute](#set-attribute)
   - [Get Attribute](#get-attribute)
 - [DOM Text](#dom-text)
 
-# Definition
+# References
 
-**DOM** là viết tắt của Document Object Model, là một tiêu chuẩn của W3C đưa ra. DOM biểu diễn văn bản HTML thành dạng cấu trúc cây. Cách biểu diễn này nhằm giúp trình duyệt hiển thị nội dung trang Web cho người dùng.
+## Cheat Sheets
 
-Cấu trúc cây của DOM gồm ba thành phần: element, attribute và text. Mỗi phần tử trong cấu trúc này ta gọi là một node, mỗi node này là một đối tượng.
+> [Codecademy](https://www.codecademy.com/learn/fscp-building-interactive-websites-with-javascript/modules/fecp-javascript-and-the-dom/cheatsheet)
 
-<img src = "dom1.png">
+> [WDI fundamentals](https://fundamentals.generalassemb.ly/11_unit/dom-cheatsheet.html)
+
+# [Definition](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 JS sử dụng một giao diện lập trình DOM (DOM API) để có thể **truy cập và chỉnh sửa** các element, attribute và text của văn bản HTML một cách linh động. Lưu ý là DOM không thuộc JS.
 
-# Document Object
+<img src = "dom1.png">
+
+# [Document Object](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
 Để truy cập và chỉnh sửa các đối tượng element, attribute và text thì cần thông qua đối tượng có tên là `document`. Đối tượng này đại diện cho toàn bộ website.
 
 Phương thức đầu tiên là `document.write('text')`. Khi gọi phương thức, trang web sẽ hiển thị text.
 
-# DOM Element
+# [DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 
-## Get DOM Element
+## [Get DOM Element](https://developer.mozilla.org/en-US/docs/Web/API/Element#methods)
 
 Có thể lấy ra các node là element có trong DOM, chúng ta sẽ lấy thông qua: **ID, class, tag, CSS selector, HTML collection**.
 
@@ -71,41 +79,13 @@ Chú ý rằng, `elementNode` là một đối tượng thuộc lớp đối tư
 
 ### By Class Name
 
-Để lấy theo class thì dùng phương thức `getElementsByClassName(className)` với đối số là class cần lấy.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-
-  <body>
-    <h1 class="heading">HTML Document</h1>
-    <h1 class="heading">HTML Document</h1>
-    <h1 class="heading">HTML Document</h1>
-    <h1 class="heading">HTML Document</h1>
-  </body>
-</html>
-```
-
-```js
-const elementsClass = document.getElementsByClassName("heading");
-console.log(elementsClass);
-// => HTMLCollection(5) [h1.heading, h1.heading, h1.heading, h1.heading, h1.heading] (Array of Objects)
-```
+Để lấy theo class thì dùng phương thức `getElementsByClassName(className)` với đối số là class cần lấy. Phương thức trả về một HTML Collection.
 
 **HTMLCollection** bản chất là một mảng, chỉ là không có các phương thức như `map`, `filter`,...
 
 ### By Tag Name
 
 Cũng theo cách tương tự, để lấy element theo tên tag thì sử dụng phương thức `document.getElementsByTagName("tagName")`:
-
-```js
-const elementsTag = document.getElementsByTagName("h1");
-console.log(elementsTag);
-// => HTMLCollection(5) [h1.heading, h1.heading, h1.heading, h1.heading, h1.heading] (Array of Objects)
-```
 
 ### By CSS Selector
 
@@ -115,33 +95,7 @@ Sử dụng `document.querySelector("selector")` để lấy element theo CSS se
 
 ### By HTML Selection
 
-Giả sử cho đoạn code HTML có các tag `<form>`.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-
-  <body>
-    <form id="form-1">HTML Document</form>
-    <form id="form-2">HTML Document</form>
-    <form id="form-3">HTML Document</form>
-  </body>
-
-  <script src="../main.js"></script>
-</html>
-```
-
-Các tag đặc biệt như `<form>` hoặc `<anchor>` thuộc về HTML Selection, không cần truy cập thông qua id, class hay tag mà có thể truy cập bằng:
-
-`document.forms`
-
-```js
-console.log(document.forms);
-// => HTMLCollection(3) [form#form-1, form#form-2, form#form-3, form-1: form#form-1, form-2: form#form-2, form-3: form#form-3] (Array of Objects)
-```
+Các tag đặc biệt như `<form>` hoặc `<anchor>` thuộc về HTML Selection, không cần truy cập thông qua id, class hay tag mà có thể truy cập bằng `document.forms` hoặc `document.anchor`.
 
 Thuộc tính này sẽ trả về mảng `forms` chứa các tag form có trong HTML. Nếu các tag này có id, có thể xem các id đó là key và truy cập thông qua key:
 
@@ -161,107 +115,15 @@ console.log(document.forms.formOne);
 // => form#formOne
 ```
 
-### Element Methods
-
-Các giá trị trả về của phương thức `getElementById` và `querySelector` là các đối tượng thuộc lớp đối tượng `Element`. Do đó mà ta có thể gọi tiếp các phương thức trên để lấy ra các element bên trong chúng.
-
-Chẳng hạn có đoạn code HTML:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-
-  <body>
-    <ul id="hello">
-      <li>Hello World</li>
-      <li>Hello Human</li>
-    </ul>
-
-    <ul id="goodbye">
-      <li>Goodbye World</li>
-      <li>Goodbye Human</li>
-    </ul>
-  </body>
-
-  <script src="../main.js"></script>
-</html>
-```
-
-Ta lấy ra thẻ ul có id là `"hello"`:
-
-```js
-const listHello = document.getElementById("hello");
-console.log(listHello);
-// => ul#hello
-```
-
-Do bản thân `listHello` là một đối tượng, ta có thể gọi tiếp năm loại phương thức trên để lấy các element bên trong nó:
-
-```js
-const worldHello = listHello.querySelector("li:first-child");
-console.log(worldHello);
-// => li (object)
-console.log(worldHello.textContent);
-// => Hello World (string)
-```
-
-> Chú ý là các phương thức lấy bằng class, tag, selectorAll hay HTML selection không trả về một đối tượng mà trả về danh sách nhiều đối tượng.
+> Các giá trị trả về của phương thức `getElementById` và `querySelector` là các đối tượng thuộc lớp đối tượng `Element`. Do đó mà ta có thể gọi tiếp các phương thức trên để lấy ra các element bên trong chúng.
 
 ## Set DOM Element
 
-Giả sử có đoạn code HTML:
+Để tạo một element thì sử dụng [`document.createElement("tagName")`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement).
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
+Sử dụng thuộc tính [`element.innerHTML = "element string"`](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML) để thêm element vào trong element khác, có thể kèm theo attribute.
 
-  <body>
-    <div id="box" class="box"></div>
-  </body>
-
-  <script src="../main.js"></script>
-</html>
-```
-
-Sử dụng hai thuộc tính `innerHTML` để thêm element vào trong element khác:
-
-```js
-const boxElement = document.querySelector("#box");
-boxElement.innerHTML = "<p>This is a paragraph</p>";
-```
-
-Đoạn code HTML trở thành:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-
-  <body>
-    <div id="box" class="box">
-      <p>This is a paragraph</p>
-    </div>
-  </body>
-
-  <script src="../main.js"></script>
-</html>
-```
-
-Cũng có thể thêm element kèm theo attribute:
-
-```js
-boxElement.innerHTML = "<p title = "firstParagraph">This is a paragraph</p>";
-```
-
-# DOM Attribute
+# [DOM Attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
 
 Giả sử có đoạn code HTML:
 
@@ -290,7 +152,7 @@ Ta đã biết `headingElement` là một đối tượng, và các attributes l
 
 <img src ="dom2.png">
 
-## Set Attribute
+## [Set Attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 
 Để có thể chỉnh sửa/thêm các attributes là thuộc tính của class `Element` (chẳng hạn `title`) thì chúng ta làm đơn giản như khi chỉnh sửa/thêm thuộc tính của một đối tượng:
 
@@ -312,7 +174,7 @@ Cách này có thể set attribute cho các element mà không quan tâm tính h
 
 Ngoài ra ta có thể thông qua thuộc tính `attributes` mà chỉnh sửa.
 
-## Get Attribute
+## [Get Attribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
 
 Tương tự set attribute, ta cũng có thể lấy ra attribute từ đối tượng element dùng phương thức `getAttribute(attributeName)`. Ví dụ:
 
@@ -342,7 +204,7 @@ Giả sử cho đoạn code HTML:
 </html>
 ```
 
-Để lấy ra nội dung của element thì dùng thuộc tính `innerText` và `textContent` thông qua đối tượng element.
+Để lấy ra nội dung của element thì dùng thuộc tính [`innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) và [`textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) thông qua đối tượng element.
 
 ```js
 const headingElement = document.getElementById("heading");
@@ -432,4 +294,3 @@ console.log(headingElement.textContent);
 Ngoài ra, `innerText` là một thuộc tính thuộc về lớp đối tượng `Element`. Còn `textContent` vừa là thuộc tính của lớp đối tượng `Element` vừa là thuộc tính của lớp đối tượng của text node.
 
 Nếu dùng Template String, `innerText` sẽ chuyển những khoảng trắng xuống dòng thành thẻ `<br>`. Còn `textContent` chỉ đơn giản là khoảng trắng.
-

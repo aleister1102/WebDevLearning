@@ -5,11 +5,23 @@
 </div>
 
 # Table of contents
+
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
+- [JSON](#json)
 - [JSON to JS Objects](#json-to-js-objects)
 - [Reviver Function with JSON.parse()](#reviver-function-with-jsonparse)
 - [Object to JSON](#object-to-json)
 - [Filter Array with JSON.stringify](#filter-array-with-jsonstringify)
+
+# References
+
+## Cheat Sheets
+
+> [Realpython](https://www.realpythonproject.com/a-cheat-sheet-for-working-with-json-data-in-javascript/)
+
+# [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 
 JSON viết tắt cho **JavaScript Object Notation**.
 

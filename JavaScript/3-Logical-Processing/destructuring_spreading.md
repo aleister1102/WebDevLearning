@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">Destructuring and Spreading</h1></center>
@@ -7,6 +7,9 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Documents](#documents)
+  - [Cheat Sheets](#cheat-sheets)
 - [Destructuring](#destructuring)
   - [Destructuring Array](#destructuring-array)
   - [Destructuring Array during Iteration](#destructuring-array-during-iteration)
@@ -18,7 +21,19 @@
   - [Copy array](#copy-array)
   - [Copy object](#copy-object)
   - [Rest Operator with Arrow function](#rest-operator-with-arrow-function)
-- [Tagged template literals](#tagged-template-literals)
+- [Tagged template Literals](#tagged-template-literals)
+
+# References
+
+## Documents
+
+> [javascript.info - Destructuring](https://javascript.info/destructuring-assignment)
+
+> [javascript.info - Spreading](https://javascript.info/rest-parameters-spread)
+
+## Cheat Sheets
+
+> [Mihai Serban](https://medium.com/@serbanmihai/javascript-es6-cheatsheet-destructuring-c64df173b30e)
 
 # [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
@@ -355,7 +370,7 @@ sumAllNums(1, 2, 3, 4, 5);
 
 Việc dùng toán tử `...` làm tham số như vậy gọi là rest operator. Toán tử này sẽ gom nhóm danh sách đối số truyền vào (1,2,3,4,5) thành một mảng (args).
 
-# [Tagged template literals](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
+# [Tagged template Literals](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
 
 Xét đoạn code sau:
 

@@ -7,6 +7,8 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Cheat Sheets](#cheat-sheets)
 - [Regular Expressions](#regular-expressions)
 - [RegExp Parameters](#regexp-parameters)
   - [Pattern](#pattern)
@@ -17,7 +19,20 @@
   - [match](#match)
   - [search](#search)
   - [replace](#replace)
-- [RegExp Meta Characters](#regexp-meta-characters)
+
+# References
+
+## Cheat Sheets
+
+> [Keycdn](https://www.keycdn.com/support/regex-cheatsheet)
+
+> [Mozilla Cheat Sheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)
+
+> [Dave Child](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
+
+> [remram44](https://remram44.github.io/regex-cheatsheet/regex.html)
+
+> [QuickRef](https://quickref.me/regex)
 
 # [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
@@ -151,17 +166,3 @@ matches = txt.replace(/%/g, "");
 console.log(matches);
 // => "I am teacher and I love teaching.There is nothing as more rewarding as educating and empowering people.I found teaching more interesting than any other jobs.Does this motivate you to be a teacher."
 ```
-
-# [RegExp Meta Characters]()
-
-Cheat Sheet:
-
-> [Keycdn](https://www.keycdn.com/support/regex-cheatsheet)
-
-> [Mozilla Cheat Sheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)
-
-> [Dave Child](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
-
-> [remram44](https://remram44.github.io/regex-cheatsheet/regex.html)
-
-> [QuickRef](https://quickref.me/regex)
