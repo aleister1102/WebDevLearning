@@ -6,21 +6,21 @@
 
 # Table of contents
 
+- [Table of contents](#table-of-contents)
 - [🚗Object](#object)
   - [🙋‍♂️Creating](#️creating)
     - [this Keyword](#this-keyword)
     - [Object Constructor](#object-constructor)
     - [ES6 Creating](#es6-creating)
   - [🙅‍♀️Deleting](#️deleting)
-  - [🤹‍♂️Methods](#️methods)
-  - [🤦‍♂️Modifying](#️modifying)
+  - [�‍♂️Modifying](#️modifying)
     - [Object Prototype](#object-prototype)
 - [🚌Built-in Object](#built-in-object)
-  - [Object.assign](#objectassign)
-  - [Object.keys](#objectkeys)
-  - [Object.values](#objectvalues)
-  - [Object.entries](#objectentries)
-  - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
+    - [Object.assign](#objectassign)
+    - [Object.keys](#objectkeys)
+    - [Object.values](#objectvalues)
+    - [Object.entries](#objectentries)
+    - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
 
 # [🚗Object](https://www.w3schools.com/js/js_objects.asp)
 
@@ -65,6 +65,21 @@ const obj = {
   "first-name": "Lê Minh",
   "last-name": "Quân",
 };
+```
+
+[Phương thức](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods) trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
+
+Phương thức **không thể là arrow function**. Tồn tại một cách khác ngắn gọn hơn để khai báo phương thức trong object:
+
+```js
+const person = {
+  name: "Quân",
+  age: 20,
+  getName() {
+    return this.name;
+  },
+};
+console.log(person.getName());
 ```
 
 ### [this Keyword](https://www.w3schools.com/js/js_this.asp)
@@ -162,34 +177,11 @@ const person = {
 
 Để xóa thuộc tính hoặc phương thức của object, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
 
-## [🤹‍♂️Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
-
-Phương thức trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
-
-```js
-console.log(person.getFullName()); // "Quân Lê Minh"
-```
-
-Phương thức không thể là arrow function vì keyword `this` sẽ trỏ đến cửa sổ bên trong arrow function thay vì trỏ vào bản thân object.
-
-Ngoài ra, có một cách khác ngắn gọn để khai báo phương thức trong object, ví dụ:
-
-```js
-const person = {
-  name: "Quân",
-  age: 20,
-  getName() {
-    return this.name;
-  },
-};
-console.log(person.getName());
-```
-
 ## 🤦‍♂️Modifying
 
 > Object là một mutable data type, do đó ta có thể thay đổi giá trị của các thuộc tính bằng reassign.
 
-Ngoài ra, ta có thể khai báo một thuộc tính hoặc phương thức chưa có trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được thêm vào object.
+Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào object**.
 
 ```js
 const person = {
@@ -244,7 +236,7 @@ const person = {
 };
 ```
 
-Tồn tại các method của đối tượng `Object` dựng sẵn:
+Tồn tại các method của lớp đối tượng `Object` dựng sẵn:
 
 ### [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
