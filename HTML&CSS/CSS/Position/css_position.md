@@ -7,21 +7,21 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Position](#position)
-- [Relative](#relative)
-- [Absolute](#absolute)
-- [Fixed](#fixed)
-- [Sticky](#sticky)
+- [📌Position](#position)
+- [🍓Relative](#relative)
+- [🍏Absolute](#absolute)
+- [🍋Fixed](#fixed)
+- [🍊Sticky](#sticky)
 
-# [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+# [📌Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 Thuộc tính `position` có các giá trị `relative, absolute, fixed, sticky` để thiết lập vị trí cho element.
 
 <img src="pos0.png">
 
-# Relative
+# 🍓Relative
 
-Một element có `position: relative` sẽ có vị trí không phụ thuộc vào đối tượng nào khác. Tức là nếu chúng ta di chuyển xung quanh, thì nó sẽ lấy vị trí ban đầu của nó làm gốc tọa độ. 
+Một element có `position: relative` sẽ có vị trí không phụ thuộc vào đối tượng nào khác. Tức là nếu chúng ta di chuyển xung quanh, thì nó sẽ lấy vị trí ban đầu của nó làm gốc tọa độ.
 
 <img src="pos0b.png">
 
@@ -47,9 +47,9 @@ div {
 
 <img src="pos2.png">
 
-# Absolute
+# 🍏Absolute
 
-Element có `position: absolute` sẽ phụ thuộc vào thẻ cha gần nhất có thuộc tính `position` (giống cách mà đơn vị `em` hoạt động). 
+Element có `position: absolute` sẽ phụ thuộc vào thẻ cha gần nhất có thuộc tính `position` (giống cách mà đơn vị `em` hoạt động).
 
 <img src="pos2b.png">
 
@@ -120,13 +120,13 @@ Kết quả:
 
 <img src="pos4.png">
 
-# Fixed
+# 🍋Fixed
 
 Dùng để cố định vị trí của element trên cửa sổ trình duyệt, cú pháp là `position: fixed`. Điều hướng dùng `top, right, bottom, left` tương tự `relative` và `absolute`.
 
 <img src="pos4b.png">
 
-# Sticky
+# 🍊Sticky
 
 Đây là một tính năng đang được thử nghiệm, nó khá giống `fixed`. Tuy nhiên, điều kiện kích hoạt là khi trang web được kéo lên đến một vị trí nào đó, thì element mới trở thành `fixed` ở vị trí đó.
 

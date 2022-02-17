@@ -7,17 +7,17 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Box Model](#box-model)
-  - [Content](#content)
-  - [Padding](#padding)
-  - [Border](#border)
-  - [Margin](#margin)
+- [📦Box Model](#box-model)
+  - [🟧Content](#content)
+  - [🔳Padding](#padding)
+  - [🔲Border](#border)
+  - [⏹Margin](#margin)
     - [Vertical margin collapse](#vertical-margin-collapse)
-- [Box Sizing](#box-sizing)
-- [Border Radius](#border-radius)
-  - [Making circle](#making-circle)
+- [🤏Box Sizing](#box-sizing)
+- [⭕Border Radius](#border-radius)
+  - [🟣Making circle](#making-circle)
 
-# [Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
+# [📦Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model)
 
 Box Model là cách mà một element thể hiện chính nó trên trang web theo không gian. Một Box Model điển hình sẽ có dạng như thế này.
 
@@ -25,9 +25,9 @@ Box Model là cách mà một element thể hiện chính nó trên trang web th
 
 Như trên hình, box model gồm bốn phần: _content_, _padding_, _border_, _margins_.
 
-## [Content](https://www.w3schools.com/css/css_dimension.asp)
+## [🟧Content](https://www.w3schools.com/css/css_dimension.asp)
 
-Phần đầu tiên là phần nội dung, nó là phần có màu cam. Kích thước phần content này sẽ được khai báo thông qua `width` và `height`. Chẳng hạn như:
+Phần đầu tiên là phần nội dung, nó là phần có màu cam trong hình trên. Kích thước phần content này sẽ được khai báo thông qua `width` và `height`. Chẳng hạn như:
 
 ```css
 .box {
@@ -40,7 +40,7 @@ Ngoài ra còn một thuộc tính là `max-width` dùng để set chiều ngang
 
 Tương tự cũng có `min-width`, `max-height` và `min-height`.
 
-## [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+## [🔳Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 Tiếp theo là padding (đệm), đây là phần _thuộc_ element. Khi ta thêm vào thì element sẽ to ra.
 
@@ -78,7 +78,7 @@ Còn nếu để đầy đủ bốn giá trị, những giá trị đó sẽ l�
 }
 ```
 
-## [Border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+## [🔲Border](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 
 Border chính là viền của một box nào đó, nó _thuộc_ element. Khác với padding ở chỗ, border còn cần thêm một vài thông tin trong phần khai báo của chúng thì nó mới xác định rõ.
 
@@ -114,7 +114,7 @@ Cũng có thể format cho từng cạnh cụ thể, chẳng hạn cạnh `botto
 }
 ```
 
-## [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+## [⏹Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
 Phần margin chính là phần để phân biệt các block của các element với nhau, chúng _không thuộc_ một element như padding và border.
 
@@ -144,7 +144,7 @@ Giả sử cho box 1 có margin bottom là **20px**, và box 2 có margin top l�
 
 Nếu một trong hai có margin lớn hơn, khoảng cách giữa chúng vẫn sẽ là kích thước của margin lớn nhất. Có thể giải quyết hiện tượng này bằng các sử dụng `display: inline-block`.
 
-# [Box Sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+# [🤏Box Sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
 Cho đoạn code:
 
@@ -175,7 +175,7 @@ div {
 
 Nếu muốn quay trở lại ban đầu thì set `box-sizing: content-box`.
 
-# [Border Radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+# [⭕Border Radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
 
 Để bo tròn góc của một box, ta sử dụng property `border-radius` và có value là một số nào đó kèm theo đơn vị. Giá trị của số càng lớn thì góc của box càng bo tròn. Chẳng hạn như:
 
@@ -207,7 +207,7 @@ Cũng có thể bo tròn từng góc:
 
 <img src="box10.png">
 
-## Making circle
+## 🟣Making circle
 
 Để tạo ra một hình tròn, ta set giá trị của `width` và `height` như nhau, sau đó cho `border-radius` bằng nửa giá trị của `width` và `height`. Lưu ý là ta cần xóa đi các khai báo cho margin và padding.
 

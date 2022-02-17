@@ -7,20 +7,20 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Flexbox Model](#flexbox-model)
-- [Flexbox Properties](#flexbox-properties)
-- [Flexbox with Auto Margin](#flexbox-with-auto-margin)
-- [Flexbox Tools](#flexbox-tools)
-- [Aside](#aside)
+- [✨Flexbox Model](#flexbox-model)
+- [🎇Flexbox Properties](#flexbox-properties)
+- [🎆Flexbox with Auto Margin](#flexbox-with-auto-margin)
+- [🎉Flexbox Tools](#flexbox-tools)
+- [🎊Aside](#aside)
 
-# [Flexbox Model](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+# [✨Flexbox Model](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 <img src="flex1.png">
 
 - Main size và cross size lần lượt song song với main axis và cross axis.
 - Flex items phải là các thẻ con trực tiếp của container.
 
-# [Flexbox Properties](https://www.samanthaming.com/flexbox30/)
+# [🎇Flexbox Properties](https://www.samanthaming.com/flexbox30/)
 
 - [flex-flow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow) là shorthand form của `flex-direction` và `flex-wrap`.
 
@@ -32,11 +32,11 @@
 
 <img src="flex2b.png">
 
-# [Flexbox with Auto Margin](https://www.samanthaming.com/flexbox30/31-flexbox-with-auto-margins/)
+# [🎆Flexbox with Auto Margin](https://www.samanthaming.com/flexbox30/31-flexbox-with-auto-margins/)
 
 <img src="flex2c.png">
 
-# Flexbox Tools
+# 🎉Flexbox Tools
 
 [Flexbox Playground](https://codepen.io/enxaneta/full/adLPwv)
 
@@ -44,7 +44,7 @@
 
 [Flexbox Zombies (Game)](https://mastery.games/flexboxzombies/)
 
-# Aside
+# 🎊Aside
 
 - Chiều của các loại `flex-direction`:
   <img src="flex3.png">

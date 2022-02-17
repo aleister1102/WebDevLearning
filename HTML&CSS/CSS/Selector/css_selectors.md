@@ -7,20 +7,20 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Id and Class](#id-and-class)
+- [🆔Id and Class](#id-and-class)
   - [Id](#id)
   - [Class](#class)
-- [Useful selectors](#useful-selectors)
-- [Selector Specificity](#selector-specificity)
-- [Conflicts & Cascade](#conflicts--cascade)
-- [Inheritance](#inheritance)
-- [OOCSS](#oocss)
+- [💪Useful selectors](#useful-selectors)
+- [🙏Selector Specificity](#selector-specificity)
+- [👊Conflicts & Cascade](#conflicts--cascade)
+- [🤲Inheritance](#inheritance)
+- [👌OOCSS](#oocss)
 
 CSS Selector là cách mà chúng ta dùng để chọn ra các element nhằm format style cho chúng.
 
 Luyện tập CSS thông qua trò chơi [CSS Diner](https://flukeout.github.io/).
 
-# Id and Class
+# 🆔Id and Class
 
 Để cung cấp khả năng chọn những element đặc thù, ta đánh dấu cho chúng bằng **Id** và **Class**.
 
@@ -80,7 +80,7 @@ Kết quả:
 <h2 class="heading2" style="color:orange">Heading</h2>
 <h2 class="heading2" style="color:orange">Heading</h2>
 
-# [Useful selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+# [💪Useful selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
 Các selector thông dụng là:
 
@@ -94,13 +94,13 @@ Ngoài ra còn có Pseudo Classes:
 - `:nth-child(n)` - tag con thứ n, n có thể là **"even"**, **"odd"** hoặc thậm chí là biểu thức: **"2n + 1"**.
 - `:nth-of-type(n)` - tag con thứ n trong số các tag con cùng loại.
 
-# [Selector Specificity](https://www.w3schools.com/css/css_specificity.asp)
+# [🙏Selector Specificity](https://www.w3schools.com/css/css_specificity.asp)
 
 Độ ưu tiên của các selector được thể hiện bằng hình ảnh dưới:
 
 <img src="selector3.png">
 
-# [Conflicts & Cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade)
+# [👊Conflicts & Cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade)
 
 Nếu hai selector trùng nhau thì bộ quy luật sau sẽ ghi đè lên bộ quy luật trước.
 
@@ -126,7 +126,7 @@ Thì kết quả sẽ là
 
 Đây cũng chính là cách mà CSS vận hành (các styles và selectors được chồng lên nhau).
 
-# [Inheritance](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#inheritance)
+# [🤲Inheritance](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#inheritance)
 
 Nếu một element cha mang một quy luật CSS nào đó, thì các element con chứa bên trong nó sẽ được kế thừa.
 
@@ -169,7 +169,7 @@ h1 {
 
 Rule của `<h1>` sẽ ưu tiên hơn rule của `<div>`, do tính ưu tiên của selector so với inheritance.
 
-# [OOCSS](https://palmyran.com/buoc-dau-tim-hieu-ve-oocss/)
+# [👌OOCSS](https://palmyran.com/buoc-dau-tim-hieu-ve-oocss/)
 
 > [Detail Document](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 

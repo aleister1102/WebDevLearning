@@ -7,10 +7,10 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Inline Elements](#inline-elements)
-- [Block Elements](#block-elements)
-- [Inline-block Elements](#inline-block-elements)
-- [Display Property](#display-property)
+- [🚘Inline Elements](#inline-elements)
+- [🚅Block Elements](#block-elements)
+- [🚘🚅Inline-block Elements](#inline-block-elements)
+- [📺Display Property](#display-property)
   - [display: block](#display-block)
   - [display: inline-block](#display-inline-block)
 
@@ -18,7 +18,7 @@ Có hai loại hiển thị phần tử phổ biến là **inline element** và 
 
 <img src="box1.png">
 
-# Inline Elements
+# 🚘Inline Elements
 
 > **Inline element** không chiếm trọn một dòng mà chỉ sử dụng phần diện tích vừa đủ để bao quanh content bên trong đó mà thôi.
 
@@ -50,7 +50,7 @@ Các thẻ format có thuộc tính của inline element:
 - `i`
 - `small`
 
-# Block Elements
+# 🚅Block Elements
 
 > **Block element** là các phần tử luôn bắt đầu ở một dòng mới. Đồng thời chúng có kích thước chiếm trọn một dòng. Block element có thể set được kích thước.
 
@@ -64,7 +64,7 @@ Một số block element phổ biến là:
 - `li`
 - `section`
 
-# Inline-block Elements
+# 🚘🚅Inline-block Elements
 
 > **Inline-block element** là kết hợp giữa inline và block, nó không bắt đầu trên một dòng mới nhưng có thể set được kích thước. Do đó nó có chiều rộng bằng chiều rộng của thẻ chứa nó.
 
@@ -86,7 +86,7 @@ Ví dụ:
 
 <img src="box5.png">
 
-# Display Property
+# 📺Display Property
 
 ## display: block
 
