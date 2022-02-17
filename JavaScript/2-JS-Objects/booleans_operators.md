@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Booleans and Operators</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Booleans](#booleans)
   - [Falsy Values](#falsy-values)
   - [Truthy Values](#truthy-values)
@@ -17,7 +20,7 @@
 
 # Booleans
 
-## Falsy Values
+## [Falsy Values](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `false` thì ta gọi giá trị đó là `Falsy`.
 
@@ -30,9 +33,7 @@ Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ
 
 Các dữ liệu và đối tượng ở trên được xem là `false`.
 
-Tham khảo thêm về các giá trị Falsy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Falsy).
-
-## Truthy Values
+## [Truthy Values](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 
 Bất cứ giá trị nào trong Javascript khi chuyển đổi sang kiểu dữ liệu boolean mà có giá trị `true` thì ta gọi giá trị đó là `Truthy`.
 
@@ -46,10 +47,6 @@ Nói cách khác, ngoại trừ các giá trị được xem là `Falsy` thì c�
 
 Các dữ liệu và đối tượng ở trên được xem là `true`.
 
-Tham khảo thêm về các giá trị Truthy ở [đây](https://developer.mozilla.org/en-US/docs/Glossary/Truthy).
-
-**Lưu ý**:
-
 ## Casting to Booleans
 
 Để chuyển tất cả các loại dữ liệu về boolean, ta sử dụng hai lần toán tử `!`, tức là `!!`:
@@ -59,7 +56,7 @@ console.log(!!undefined); // => false
 console.log(!!" "); // => true
 ```
 
-# Operators
+# [Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
 ## Assignment and Arithmetic
 

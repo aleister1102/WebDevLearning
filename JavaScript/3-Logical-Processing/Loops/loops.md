@@ -4,10 +4,13 @@
     <center><h1 class="bigtitle">Loops</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Loops](#loops)
 - [Problem](#problem)
 
-# Loops
+# [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 Vòng lặp `for`, `while` và `do while` trong JS tương tự C/C++.
 

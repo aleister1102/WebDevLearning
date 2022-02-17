@@ -4,12 +4,14 @@
     <center><h1 class="bigtitle">Regular Expressions</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Regular Expressions](#regular-expressions)
-  - [RegExp Parameters](#regexp-parameters)
-    - [Pattern](#pattern)
-    - [Flag](#flag)
-  - [Creating RegExp using Constructor](#creating-regexp-using-constructor)
-  - [Creating RegExp without using Constructor](#creating-regexp-without-using-constructor)
+- [RegExp Parameters](#regexp-parameters)
+  - [Pattern](#pattern)
+  - [Flag](#flag)
+- [RegExp Initialize](#regexp-initialize)
 - [RegExp Methods](#regexp-methods)
   - [test](#test)
   - [match](#match)
@@ -28,21 +30,21 @@
     - [Negation](#negation)
   - [Summarize](#summarize)
 
-# Regular Expressions
+# [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
 **Regular Expressions** (biểu thức chính quy) là một ngôn ngữ lập trình nhỏ để so khớp các khuôn mẫu (pattern) với dữ liệu.
 
-RegExp thường được khởi tạo trong JS bằng Regular Expressions Constructor hoặc thông qua hai dấu `/` kèm một cái cờ (flag) nào đó. Các flag có thể là `g, i, m, s, u, y`.
+RegExp thường được khởi tạo trong JS bằng **Regular Expressions Constructor** hoặc thông qua hai dấu `/` kèm một cái cờ (flag) nào đó. Các flag có thể là `g, i, m, s, u, y`.
 
-## RegExp Parameters
+# RegExp Parameters
 
 Một biểu thức thức chính quy nhận vào hai tham số. Hai tham số đó là pattern cần tìm kiếm và optional flag.
 
-### Pattern
+## Pattern
 
 Một pattern có thể là ký tự hay bất kỳ dạng pattern nào có một vài sự tương đồng mà ta cần tìm kiếm.
 
-### Flag
+## Flag
 
 Flag là một tham số optional để quy định cách tìm kiếm dữ liệu, có một vài flag thông dụng:
 
@@ -50,7 +52,7 @@ Flag là một tham số optional để quy định cách tìm kiếm dữ liệ
 - i: case sensitive flag, nó tìm kiếm cho cả in hoa và in thường.
 - m: multiline.
 
-## Creating RegExp using Constructor
+# RegExp Initialize
 
 Có thể tạo ra các biểu thức chính quy bằng contructor `RegExp`:
 
@@ -66,8 +68,6 @@ Hoặc ngắn gọn hơn:
 let regEx = new RegExp("love", "gi");
 ```
 
-## Creating RegExp without using Constructor
-
 Hoặc sử dụng hai dấu `/` chứa pattern bên trong và flag ở bên ngoài:
 
 ```js
@@ -82,7 +82,7 @@ let regEx = new RegExp("love", "gi");
 
 # RegExp Methods
 
-## test
+## [test](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)
 
 **Chức năng**: kiểm tra xem có chuỗi con nào giống với pattern hay không. Ta gọi chuỗi con này là **match**.
 
@@ -99,7 +99,7 @@ const result = pattern.test(str);
 console.log(result); // => true
 ```
 
-## match
+## [match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 
 **Chức năng**: tìm kiếm tất cả các matches.
 
@@ -125,7 +125,7 @@ console.log(result);
 // => ["love"]
 ```
 
-## search
+## [search](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)
 
 **Chức năng**: tìm kiếm vị trí của match đầu tiên trong chuỗi.
 
@@ -142,7 +142,7 @@ const result = str.search(pattern);
 console.log(result);
 ```
 
-## replace
+## [replace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 
 **Chức năng**: tìm kiếm match trong chuỗi và thay thế bằng chuỗi mới.
 
@@ -163,7 +163,7 @@ console.log(matches);
 // => "I am teacher and I love teaching.There is nothing as more rewarding as educating and empowering people.I found teaching more interesting than any other jobs.Does this motivate you to be a teacher."
 ```
 
-# RegExp Meta Characters
+# [RegExp Meta Characters](https://www.keycdn.com/support/regex-cheatsheet)
 
 Pattern có thể có nhiều cách viết chứ không đơn thuần là một chuỗi ký tự. Nó có thể bao gồm nhiều ký tự đặc biệt hỗ trợ rất nhiều cho việc tìm kiếm và so khớp.
 

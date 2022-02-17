@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Window & Date Objects</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Window Object](#window-object)
   - [alert](#alert)
   - [prompt](#prompt)
@@ -12,15 +15,15 @@
   - [Creating](#creating)
   - [Date Methods](#date-methods)
 
-# Window Object
+# [Window Object](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 
-## alert
+## [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
 
 Để pop up thông báo trên trang web. Chỉ nên sử dụng khi test.
 
 - `alert(message)`
 
-## prompt
+## [prompt](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
 
 Hiển thị một cái hộp lời nhắc có chỗ để nhập input. Input sẽ được lưu dưới dạng một biến nào đó
 
@@ -31,7 +34,7 @@ let msg = prompt("Điền năm hạ giới", "Điền vô đây");
 console.log(msg);
 ```
 
-## confirm
+## [confirm](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
 
 Hiển thị một hộp thoại xác nhận gồm tin nhắn kèm hai lựa chọn **OK** và **Cancel**.
 
@@ -42,9 +45,9 @@ let agree = confirm("Are you sure you want to go to this heaven?");
 console.log(agree);
 ```
 
-# Date Object
+# [Date Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-## Creating
+## [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#constructor)
 
 Để tạo ra một đối tượng kiểu ngày tháng, ta dùng từ khóa `new` như sau:
 
@@ -53,7 +56,7 @@ const now = new Date();
 console.log(now); // 2022-01-02T13:59:23.050Z
 ```
 
-## Date Methods
+## [Date Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#static_methods)
 
 Để làm việc với đối tượng ngày tháng trong JS, ta được hỗ trợ nhiều phương thức như:
 

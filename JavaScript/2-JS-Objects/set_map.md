@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Sets and Maps</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Sets](#sets)
   - [Creating](#creating)
   - [Adding](#adding)
@@ -11,20 +14,20 @@
   - [Checking](#checking)
   - [Clearing](#clearing)
   - [Application](#application)
-  - [Union of Sets](#union-of-sets)
-  - [Intersection of Sets](#intersection-of-sets)
-  - [Difference of Sets](#difference-of-sets)
+    - [Union of Sets](#union-of-sets)
+    - [Intersection of Sets](#intersection-of-sets)
+    - [Difference of Sets](#difference-of-sets)
 - [Maps](#maps)
   - [Creating](#creating-1)
-  - [Adding](#adding-1)
+  - [Setting](#setting)
   - [Getting](#getting)
   - [Checking](#checking-1)
 
-# Sets
+# [Sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)
 
 Set là một tập hợp nhiều phần tử, set chỉ có thể chứa các phần tử khác nhau (mỗi phần tử là độc nhất).
 
-## Creating
+## [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)
 
 **Tạo set rỗng**:
 
@@ -61,7 +64,7 @@ for (const language of setOfLanguages) {
 // => English, Finnish, French, Spanish
 ```
 
-## Adding
+## [Adding](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add)
 
 Dùng phương thức `add`:
 
@@ -75,7 +78,7 @@ console.log(setOfCompanies);
 // => Set(5) {"Google", "Facebook", "Amazon", "Oracle", "Microsoft"}
 ```
 
-## Deleting
+## D[eleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete)
 
 Dùng phương thức `delete`:
 
@@ -84,7 +87,7 @@ console.log(companies.delete("Google"));
 console.log(companies.size); // => 4 elements left in the set
 ```
 
-## Checking
+## [Checking](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has)
 
 Dùng phương thức `has`:
 
@@ -93,7 +96,7 @@ console.log(companies.has("Apple")); // => false
 console.log(companies.has("Facebook")); // => true
 ```
 
-## Clearing
+## [Clearing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear)
 
 Dùng phương thức `clear`:
 
@@ -113,7 +116,7 @@ console.log(setOfNumbers);
 // => Set(5) {5, 3, 2, 9, 4}
 ```
 
-## Union of Sets
+### Union of Sets
 
 Để tìm hợp của hai set:
 
@@ -129,7 +132,7 @@ let union = new Set(c); // filter unique element
 console.log(union); // => [1,2,3,4,5,6]
 ```
 
-## Intersection of Sets
+### Intersection of Sets
 
 Có thể dùng phương thức `has` để tìm giao của hai sets. Tức là lọc ra các phần tử của a có tồn tại trong b.
 
@@ -140,7 +143,7 @@ const intersection = a.filter(function (num) {
 console.log(intersection); // => [3,4,5]
 ```
 
-## Difference of Sets
+### Difference of Sets
 
 Tìm phần bù của A và B (A / B), ta sử dụng phương thức `has` để loại bỏ những phần tử thuộc cả A và B.
 
@@ -151,11 +154,11 @@ const complement = a.filter(function (num) {
 console.log(complement);
 ```
 
-# Maps
+# [Maps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 Map là một tập hợp của nhiều bộ phần tử. Mỗi bộ là một cặp key - value.
 
-## Creating
+## [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
 
 **Tạo map từ array**:
 
@@ -170,7 +173,7 @@ const map = new Map(countries);
 console.log(map); // => Map(3) {Finland => Helsinki, Sweden => Stockholm, Norway => Oslo}
 ```
 
-## Adding
+## [Setting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/set)
 
 Dùng phương thức `set` và truyền vào cặp key - value:
 
@@ -181,7 +184,7 @@ countriesMap.set("Norway", "Oslo");
 console.log(map); // => Map(3) {Finland => Helsinki, Sweden => Stockholm, Norway => Oslo}
 ```
 
-## Getting
+## [Getting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get)
 
 Dùng phương thức `get` và truyền vào key:
 
@@ -190,7 +193,7 @@ console.log(countriesMap.get("Finland"));
 // => Helsinki
 ```
 
-## Checking
+## [Checking](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/has)
 
 Kiểm tra một key có tồn tại trong map, sử dụng phương thức `has` và truyền vào key cần kiểm tra. Phương thức sẽ trả về `true` hoặc `false`.
 

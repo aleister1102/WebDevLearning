@@ -4,11 +4,14 @@
     <center><h1 class="bigtitle">Arrays</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Create Arrays](#create-arrays)
-  - [With values](#with-values)
-- [Array Methods](#array-methods)
+- [Array Static Methods](#array-static-methods)
   - [Array(num).fill(initialValue)](#arraynumfillinitialvalue)
   - [Array.isArray(object)](#arrayisarrayobject)
+- [Array Instance Methods](#array-instance-methods)
   - [push(items)](#pushitems)
   - [pop()](#pop)
   - [unshift(items)](#unshiftitems)
@@ -31,21 +34,14 @@
   - [some](#some)
   - [sort](#sort)
 
-# Create Arrays
+# [Create Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
 
-> Thông thường ta dùng `const` để khai báo biến, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.
+> Thông thường ta dùng `const` để khai báo mảng, mục đích là để ta chắc chắn rằng tên biến của mảng sẽ không được khai báo lần nào nữa.
 
 **Sử dụng contructor**
 
 ```js
 const arr = new Array();
-console.log(arr); // []
-```
-
-Hoặc
-
-```js
-let arr = new Array();
 console.log(arr); // []
 ```
 
@@ -56,9 +52,7 @@ const arr = [];
 console.log(arr); // []
 ```
 
-## With values
-
-Khởi tạo mảng như list của Python, không cần cung cấp số lượng phần tử cho trước.
+Khởi tạo mảng chứa giá trị như list của Python, không cần cung cấp số lượng phần tử cho trước.
 
 Có thể gọi thuộc tính `length` để kiểm tra số lượng phần tử của mảng.
 
@@ -84,11 +78,9 @@ const arr = [
 ];
 ```
 
-> Ngoài ra ta cũng có thể tạo ra một mảng bằng cách dùng method `split` đã học ở bài string.
-
 Truy cập và chỉnh sửa giá trị phần tử trong mảng tương tự như C/C++ (thông qua toán tử `[]`).
 
-# Array Methods
+# [Array Static Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#static_methods)
 
 ## Array(num).fill(initialValue)
 
@@ -105,6 +97,8 @@ console.log(arr); // [null,null,null,null,null,null]
 ## Array.isArray(object)
 
 Kiểm tra đối tượng `object` có phải là kiểu dữ liệu **Array** hay không. Nếu có trả về `true`, không trả về `false`.
+
+# [Array Instance Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)
 
 ## push(items)
 

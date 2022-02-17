@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Destructuring and Spreading</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Destructuring](#destructuring)
   - [Destructuring Array](#destructuring-array)
   - [Destructuring Array during Iteration](#destructuring-array-during-iteration)
@@ -17,11 +20,11 @@
   - [Rest Operator with Arrow function](#rest-operator-with-arrow-function)
 - [Tagged template literals](#tagged-template-literals)
 
-# Destructuring
+# [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 Destructuring là một cú pháp cho phép "phân rã" array hoặc object để gán cho các biến riêng biệt.
 
-## Destructuring Array
+## [Destructuring Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
 
 Chẳng hạn ta gán bộ ba biến bằng các phần tử có trong mảng:
 
@@ -103,7 +106,7 @@ for (const [country, city] of countries) {
 }
 ```
 
-## Destructuring Object
+## [Destructuring Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)
 
 Khi dùng Destructuring cho đối tượng, các biến cần được gán nên **có tên đúng chính xác** với key hoặc thuộc tính có trong đối tượng:
 
@@ -234,7 +237,7 @@ for (const { task, time, completed } of todoList) {
 //    Assess Test Result 4/1/2020 1:00 false
 ```
 
-# Spread and Rest Operators
+# [Spread and Rest Operators](https://anonystick.com/blog-developer/giai-thich-ve-destructuring-rest-parameters-va-spread-syntax-trong-javascript-2020051980035339)
 
 Toán tử spread và rest đều giống nhau về cú pháp (có `...` ở đầu), tuy nhiên chức năng của chúng lại khác nhau.
 
@@ -246,7 +249,7 @@ Thường dùng toán tử spread trong việc destructuring một array hoặc 
 
 Thường dùng toán tử rest làm tham số của hàm (nhằm gom nhóm nhiều đối số lại thành một mảng duy nhất).
 
-## Rest Elements of array
+## [Rest Elements of array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 Ta dùng spread operator để lấy các phần tử còn lại của mảng dưới dạng một mảng khác.
 
@@ -352,7 +355,7 @@ sumAllNums(1, 2, 3, 4, 5);
 
 Việc dùng toán tử `...` làm tham số như vậy gọi là rest operator. Toán tử này sẽ gom nhóm danh sách đối số truyền vào (1,2,3,4,5) thành một mảng (args).
 
-# Tagged template literals
+# [Tagged template literals](https://www.freecodecamp.org/news/a-quick-introduction-to-tagged-template-literals-2a07fd54bc1d/)
 
 Xét đoạn code sau:
 

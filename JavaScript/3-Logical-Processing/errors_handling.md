@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Errors Handling</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Error Handling](#error-handling)
   - [Try - Catch - Finally](#try---catch---finally)
   - [Parameter err](#parameter-err)
@@ -30,7 +33,7 @@ try {
 }
 ```
 
-## Try - Catch - Finally
+## [Try - Catch - Finally](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
 
 Đặt đoạn code có khả năng xảy ra lỗi vào bên trong khối lệnh của `try`.
 
@@ -74,7 +77,7 @@ try {
 
 Tham số `err` là một object có vài thuộc tính như `name` hoặc `message`. Ở trên, name là **"ReferenceError"** và message là **"fistName is not defined"**.
 
-## throw
+## [throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 
 Câu lệnh `throw` dùng để custom error message. Có thể truyền vào chuỗi, số, boolean hoặc thậm chí object. Sử dụng `throw` sẽ quăng ra một ngoại lệ (**exception**).
 
@@ -97,9 +100,9 @@ const throwErroExampleFun = () => {
 throwErroExampleFun();
 ```
 
-# Error Types
+# [Error Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 
-## ReferenceError
+## [ReferenceError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)
 
 Tham chiếu trái phép, được quăng ra khi chúng ta cố truy cập biến chưa được khai báo.
 
@@ -112,7 +115,7 @@ console.log(fullName);
 //    at <anonymous>:2:35
 ```
 
-## SyntaxError
+## [SyntaxError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
 
 Lỗi cú pháp.
 
@@ -124,7 +127,7 @@ console.log('Hello, world");
 // => Uncaught SyntaxError: Unexpected identifier
 ```
 
-## TypeError
+## [TypeError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
 
 Lỗi typo (kiểu nhập `consol.lo`g thay vì `console.log`).
 
@@ -137,7 +140,7 @@ console.log(num.toLowerCase());
 
 Đoạn code trên là lỗi vì đối tượng number không có hàm `toLowerCase()`.
 
-# Optional chaining
+# [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 Đôi khi ta dùng API để lấy dữ liệu về, đa số dữ liệu có dạng JSON. Và JSON tổ chức theo object.
 

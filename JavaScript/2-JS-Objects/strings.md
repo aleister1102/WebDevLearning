@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">Strings</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [String Concatenating](#string-concatenating)
 - [Long Literal Strings](#long-literal-strings)
 - [Escape Sequences](#escape-sequences)
@@ -42,7 +45,7 @@ Có thể nối chuỗi trong JS bằng toán tử `+` tương tự C++.
 `var d = '5' - 10; // => -5` (number)\
 Như vậy, toán tử `+` sẽ ép kiểu số thành chuỗi và nối chuỗi, toán tử `-` sẽ ép kiểu chuỗi thành số và thực hiện phép tính trừ.
 
-# Long Literal Strings
+# [Long Literal Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#long_literal_strings)
 
 Một chuỗi có thể là một dòng, nhiều dòng hoặc đoạn văn bản. Để viết giá trị chuỗi trên nhiều dòng, ta sử dụng dấu `\` ở cuối mỗi dòng thể hiện rằng phía sau vẫn còn nội dung của chuỗi.
 
@@ -65,7 +68,7 @@ Làm gần được 3 năm mà nhà xe nó đã mua đủ cả. Nghĩ mà thèm.
 console.log(paragraph);
 ```
 
-# Escape Sequences
+# [Escape Sequences](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences)
 
 Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 
@@ -75,7 +78,7 @@ Cũng giống như C/C++, JS cũng có một số Escape Sequences như sau:
 - `\'`: Single quote (')
 - `\"`: Double quote (")
 
-# Template String
+# [Template String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
 Khái niệm Template String hiểu đơn giản là ta thay thế các ký tự trong chuỗi thành một biến nào đó có thể chỉnh sửa. Có các ví dụ sau đây:
 
@@ -125,7 +128,7 @@ console.log(`${a} is greater than ${b}: ${a > b}`);
 > Sử dụng toán tử `[]` để truy cập ký tự trong chuỗi
 > Sử dụng thuộc tính `length` để lấy ra độ dài chuỗi.
 
-# String Methods
+# [String Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#instance_methods)
 
 Do mọi thứ của JS đều là Object, nên đối với kiểu dữ liệu chuỗi, chúng ta có một số phương thức sau đây để thao tác:
 

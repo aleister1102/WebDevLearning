@@ -95,7 +95,7 @@ let numbers = [1, 2, 3];
 console.log(nums == numbers); // false
 ```
 
-Các kiểu dữ liệu không nguyên thủy thường được xem là các kiểu tham chiếu. Bởi vì chúng được so sánh dựa trên tham chiếu thay vì giá trị. Hai đối tượng là bằng nhau một cách nghiêm ngặt nếu như chúng cùng tham chiếu đến một giá trị.
+Các kiểu dữ liệu không nguyên thủy thường được xem là các kiểu tham chiếu. Bởi vì chúng được so sánh dựa trên tham chiếu thay vì giá trị. Hai đối tượng là bằng nhau nếu như chúng cùng tham chiếu đến một giá trị.
 
 ```js
 let nums = [1, 2, 3];

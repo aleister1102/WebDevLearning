@@ -4,6 +4,9 @@
     <center><h1 class="bigtitle">DOM Events</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [DOM Events](#dom-events)
   - [Attribute Events](#attribute-events)
   - [Assigning Events using Element Node](#assigning-events-using-element-node)
@@ -14,9 +17,9 @@
   - [stopPropagation](#stoppropagation)
 - [Event Listeners](#event-listeners)
 
-# DOM Events
+# [DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
-Khi người dùng tương tác với trang web bằng cách click chuột, tăng giảm kích thước cửa sổ, hover hay là cuộn chuột, đều xảy ra các sự kiện. Tên của các sự kiện này tham khảo ở [đây](https://www.w3schools.com/jsref/dom_obj_event.asp).
+Khi người dùng tương tác với trang web bằng cách click chuột, tăng giảm kích thước cửa sổ, hover hay là cuộn chuột, đều xảy ra các sự kiện.
 
 Những sự kiện thông dụng là **click** (khi click vào một element), **change** (khi nhập dữ liệu, chẳng hạn nhập password), **copy** (khi user thực hiện copy), ...
 
@@ -61,7 +64,7 @@ Thuộc tính sự kiện (`onclick`) có thể dùng từ khóa `this`. Từ kh
   <script src="../main.js"></script>
 </html>
 
-// console => Click me
+<!--console => Click me-->
 ```
 
 Xét đoạn code:
@@ -115,9 +118,12 @@ Cách thứ hai sử dụng JS, chúng ta lấy ra đối tượng cần bắt s
 ```js
 const divElement = document.querySelector("#box");
 divElement.onclick = function (event) {
-  console.log(event);
+  console.log(event.target);
 };
 ```
+
+Kết quả
+<img src="dom5b.png">
 
 Hàm được gán chính là một callback, khi sự kiện click chuột được thực thi thì JS sẽ gọi lại hàm này và truyền vào đối số `event`. Đối số này là một đối tượng của sự kiện đã thực thi.
 

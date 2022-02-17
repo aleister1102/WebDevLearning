@@ -252,6 +252,7 @@ class Student extends Person {
   }
 }
 
+// Using parent class constructor
 const lmq = new Student("Quân", "Lê Minh", 20);
 lmq.saySomething(); // output: I am a child of the person class
 console.log(lmq.firstName); // output: Quân

@@ -4,13 +4,16 @@
     <center><h1 class="bigtitle">Number and Math Objects</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Number Object](#number-object)
 - [Math Object](#math-object)
   - [Random Numbers](#random-numbers)
 
 Kiểu dữ liệu số có thể là số nguyên hoặc số thập phân, chúng có thể tương tác với mọi phép toán căn bản.
 
-# Number Object
+# [Number Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
 Lớp đối tượng `Number` trong JS cung cấp các phương thức:
 
@@ -24,7 +27,7 @@ Hai phương thức dưới gọi từ đối tượng:\
 `Number.prototype.toFixed()` Chuyển đổi **số thập phân** thành **chuỗi**. Tham số truyền vào là số sau dấu phẩy cần giữ.\
 `Number.prototype.toString()` Chuyển đổi **số** thành **chuỗi**.
 
-# Math Object
+# [Math Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 Trong JS có lớp đối tượng `Math` hỗ trợ nhiều phương thức để thao tác với kiểu dữ liệu số.
 

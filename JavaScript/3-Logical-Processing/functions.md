@@ -4,11 +4,14 @@
     <center><h1 class="bigtitle">Functions</h1></center>
 </div>
 
+# Table of contents
+
+- [](#)
 - [Declaration Function](#declaration-function)
 - [Anonymous Function](#anonymous-function)
 - [Expression Function](#expression-function)
 - [Self Invoking Function](#self-invoking-function)
-  - [Arrow Function](#arrow-function)
+- [Arrow Function](#arrow-function)
 - [Function with Default Parametes](#function-with-default-parametes)
   - [Unlimited Number of Parameters](#unlimited-number-of-parameters)
 
@@ -29,7 +32,7 @@ Một hàm có thể có nhiều cách khai báo:
 - Anonymous function
 - Arrow function
 
-# Declaration Function
+# [Declaration Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_declarations)
 
 Đây là cách khai báo đơn giản, tương tự C/C++.
 
@@ -58,7 +61,7 @@ console.log(anonymousFunc()); // 1
 
 Giá trị trả về của hàm được lưu trong biến `anonymousFunc`.
 
-# Expression Function
+# [Expression Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_expressions)
 
 **Expression function** (Hàm biểu thức) là hàm có chứa biểu thức, giá trị trả về của hàm sẽ được gán cho một biến nào đó.
 
@@ -103,7 +106,7 @@ console.log(square); // 16
 - Tính đóng gói, các object trong hàm không thể bị truy cập từ bên ngoài.
 - Function factories (OOP).
 
-## Arrow Function
+# [Arrow Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 
 **Arrow Function** (Hàm mũi tên) là cách viết khác của Declaration function. Giữa chúng không có quá nhiều điểm khác biệt.
 

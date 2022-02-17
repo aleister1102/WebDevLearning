@@ -6,16 +6,8 @@
 
 .box {
   height: 100px;
+  width: 100px;
   background-color: orange;
   display: flex;
   padding: 12px;
-}
-
-h2 {
-  margin: auto;
-}
-
-form{
-  margin-top: 16px;
-  margin-left: 16px;
 }

@@ -4,11 +4,14 @@
     <center><h1 class="bigtitle">Callback</h1></center>
 </div>
 
+# Table of contents
+
+- [Table of contents](#table-of-contents)
 - [Callback](#callback)
   - [Setting time](#setting-time)
-- [Returning function](#returning-function)
+- [Returning Function](#returning-function)
 
-# Callback
+# [Callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
 
 Một hàm mà truyền vào làm tham số của hàm khác gọi là hàm `Callback`.
 
