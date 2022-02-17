@@ -12,6 +12,7 @@
   - [🎭Class Instantiation](#class-instantiation)
   - [🚧Class Constructor](#class-constructor)
   - [🤸‍♂️Class Methods](#️class-methods)
+    - [Prototype](#prototype)
 - [🙌Getter and Setter](#getter-and-setter)
   - [🤲getter](#getter)
   - [✍setter](#setter)
@@ -118,6 +119,22 @@ console.log(person1.getFullName());
 ```
 
 Chú ý rằng phương thức không sử dụng từ khóa `function` hay mũi tên `=>`.
+
+### [Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
+
+> [Programiz Document](https://www.programiz.com/javascript/prototype)
+
+Để thêm một thuộc tính hoặc phương thức vào **LỚP ĐỐI TƯỢNG** sau khi lớp đối tượng được tạo ra thì ta sử dụng thêm từ khóa `prototype`.
+
+```js
+// (defaultValue)
+Pokemon.prototype.catchRate = 10;
+Pokemon.prototype.getType() = function{
+  return this.type;
+}
+```
+
+Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
 
 [**Static Method**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static phương thức, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một đối tượng nào đó cụ thể.
 

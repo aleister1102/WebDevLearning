@@ -7,94 +7,102 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [🚗Object](#object)
-  - [🙋‍♂️Creating](#️creating)
+  - [Creating](#creating)
     - [Object Constructor](#object-constructor)
     - [ES6 Creating](#es6-creating)
-  - [🙅‍♀️Deleting](#️deleting)
-  - [🤦‍♂️Modifying](#️modifying)
-    - [Object Prototype](#object-prototype)
-- [🚌Built-in Object](#built-in-object)
-  - [Object.assign](#objectassign)
-  - [Object.keys](#objectkeys)
-  - [Object.values](#objectvalues)
-  - [Object.entries](#objectentries)
-  - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
+  - [Deleting](#deleting)
+  - [Comparing](#comparing)
+- [Built-in Object](#built-in-object)
+    - [Object.assign](#objectassign)
+    - [Object.keys](#objectkeys)
+    - [Object.values](#objectvalues)
+    - [Object.entries](#objectentries)
+    - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
 
-# [🚗Object](https://www.w3schools.com/js/js_objects.asp)
+> [W3School Document](https://www.w3schools.com/js/js_objects.asp)
 
 > [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 
 > [Programiz Document](https://www.programiz.com/javascript/object)
 
-Mọi thứ có thể là đối tượng, và đối tượng có nhiều thuộc tính hoặc phương thức. Các thuộc tính không được bảo toàn thứ tự.
+## [Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
 
-## [🙋‍♂️Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+Cách khởi tạo đối tượng trong JS tương tự các ngôn ngữ OOP khác.
 
-> [Programiz Document](https://www.programiz.com/javascript/constructor-function)
-
-Để tạo ra một đối tượng rỗng:
-
-```js
-const person = {};
-```
-
-Không cần dùng `var`, `let` hay `const` để khai báo thuộc tính. Giá trị của một thuộc tính theo sau dấu `:`.
+**Khai báo thuộc tính:**
 
 ```js
 const person = {
+  // string
   name: "Quân",
+  // number
   age: 20,
+  // array
   skills: ["HTML", "CSS", "JavaScript"],
+  // boolean
   isMarried: false,
-
-  getFullName: function () {
-    return `${this.firstName}${this.lastName}`;
+  // nested object
+  techs: {
+    fe: "ReactJS",
+    be: "NodeJS",
   },
-};
-```
 
-Kiểu dữ liệu của thuộc tính có thể là chuỗi, số, mảng, boolean, đối tượng, thậm chí là một cặp key - value như map hoặc dictionary.
+  // This will replace the first "isMarried" variable.
+  isMarried: true,
 
-Hai thuộc tính **trùng key** thì sẽ giá trị sẽ bị **ghi đè** (cái sau đè lên cái trước).
-
-Tên thuộc tính có thể có dấu `-` nếu là dạng chuỗi.
-
-```js
-const obj = {
+  // Key can put in the quotes like this.
   "full-name": "Lê Minh Quân",
-  "first-name": "Lê Minh",
-  "last-name": "Quân",
 };
+
+console.log(person.name); // "Quân"
+console.log(person["full-name"]); // "Lê Minh Quân" (only use [] for property).
 ```
 
-[Phương thức](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods) trong đối tượng cũng sử dụng dấu `:`, theo sau đó là từ khóa `function`.
-
-Phương thức **không thể là arrow function**. Tồn tại một cách khác ngắn gọn hơn để khai báo phương thức trong đối tượng:
+**Khai báo** [**phương thức:**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 
 ```js
 const person = {
   name: "Quân",
   age: 20,
+
+  getName: function () {
+    return this.name;
+  },
+
+  // Shortform
   getName() {
     return this.name;
   },
+
+  // Wrong, method can not be an arrow function!
+  getName: () => {
+    return this.name;
+  },
 };
-console.log(person.getName());
+
+console.log(person.getName()); // "Quân"
 ```
 
 [`this`](https://www.w3schools.com/js/js_this.asp) là một từ khóa dùng để chỉ **chính bản thân đối tượng** (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
 
-Để truy cập vào các thuộc tính hoặc phương thức của đối tượng, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
+Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong đối tượng và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào đối tượng**.
 
 ```js
-console.log(person.firstName); // "Quân"
-console.log(person["firstName"]); // "Quân
+const person = new Oject();
+person.hair = "curly";
+person.getAge = function () {
+  return this.age;
+};
+
+console.log(person.getAge()); // output: 20
+console.log(person.hair); // output: "curly"
 ```
 
 ### [Object Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function)
 
-Do tính chất **trùng tên** của LỚP ĐỐI TƯỢNG và constructor, ta có thể triển khai một constructor và đặt tên là lớp đối tượng bất kỳ.
+> [Programiz Document](https://www.programiz.com/javascript/constructor-function)
+
+> Do tính chất **trùng tên** của LỚP ĐỐI TƯỢNG và constructor, ta có thể triển khai một constructor và đặt tên là lớp đối tượng bất kỳ.
 
 ```js
 function Pokemon(name, type, pokedex) {
@@ -105,16 +113,13 @@ function Pokemon(name, type, pokedex) {
     return `${name}`;
   };
 }
-```
 
-Với `this` là đối tượng được tạo ra bằng constructor. Sử dụng tương tự constructor thông thường.
-
-```js
+// Pokemon plays as a class
 const pikachu = new Pokemon("pikachu", "electric", 25);
-console.log(pikachu.getName()); // => "pikachu"
+console.log(pikachu.getName()); // output: "pikachu"
 ```
 
-Phương thức `constructor` gọi từ đối tượng sẽ trả về constructor của lớp đối tượng:
+Phương thức `constructor` gọi từ đối tượng sẽ trả về code của constructor:
 
 ```js
 console.log(pikachu.constructor);
@@ -135,7 +140,7 @@ const person = {
 };
 ```
 
-Nếu key - value trùng tên, có thể viết:
+Do key - value trùng tên, có thể viết:
 
 ```js
 var name = "Quân";
@@ -168,47 +173,51 @@ const person = {
 };
 ```
 
-## [🙅‍♀️Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
+## [Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
 
-Để xóa thuộc tính hoặc phương thức của đối tượng, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
-
-## 🤦‍♂️Modifying
-
-> Object là một mutable data type, do đó ta có thể thay đổi giá trị của các thuộc tính bằng reassign.
-
-Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong đối tượng và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào đối tượng**.
+Sử dụng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức.
 
 ```js
 const person = {
   name: "Quân",
   age: 20,
-};
-person.hair = "curly";
-person.getAge = function () {
-  return this.age;
+  getName() {
+    return this.name;
+  },
 };
 
-console.log(person.getAge()); // 20
-console.log(person.hair); // "curly"
+delete person.getName;
+console.log(person.getName()); // output: Uncaught TypeError: person.getName is not a function
+delete person.name;
+console.log(person.name); // output: undefined
 ```
 
-### [Object Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
+## [Comparing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#comparing_objects)
 
-> [Programiz Document](https://www.programiz.com/javascript/prototype)
-
-Để thêm một thuộc tính hoặc phương thức vào LỚP ĐỐI TƯỢNG thì ta sử dụng thêm từ khóa `prototype`.
+Trong JS, các đối tượng là kiểu dữ liệu tham chiếu, hai đối tượng khác nhau không bao giờ bằng nhau, kể cả chúng có cùng giá trị.
 
 ```js
-Pokemon.prototype.catchRate = 10;
-// (defaultValue)
-Pokemon.prototype.getType() = function{
-  return this.type;
-}
+// Two variables, two distinct objects with the same properties
+const fruit = { name: "apple" };
+const fruitbear = { name: "apple" };
+
+fruit == fruitbear; // return false
+fruit === fruitbear; // return false
 ```
 
-Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
+Chỉ khi nào so sánh hai object cùng tham chiếu đến một vùng nhớ/giá trị thì chúng mới bằng nhau.
 
-# [🚌Built-in Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+```js
+// Two variables, a single object
+const fruit = { name: "apple" };
+const fruitbear = fruit; // Assign fruit object reference to fruitbear
+
+// Here fruit and fruitbear are pointing to same object
+fruit == fruitbear; // return true
+fruit === fruitbear; // return true
+```
+
+# [Built-in Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 Cho đối tượng dưới đây
 
@@ -238,24 +247,35 @@ Tồn tại các phương thức của lớp đối tượng `Object` dựng s�
 Sao chép đối tượng mà không thay đổi đối tượng gốc
 
 ```js
-const copyPerson = Object.assign({}, person);
-//{firstName: 'Quân', age: 250, country: 'Viet Nam', city: 'HCM', skills: Array(3), …}
+console.log(Object.assign({}, person));
+// output: {firstName: 'Quân', age: 250, country: 'Viet Nam', city: 'HCM', skills: Array(3), …}
 ```
 
 ### [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
-Lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
+Lấy mọi key của thuộc tính/phương thức có trong đối tượng.
 
 ```js
-const keys = Object.keys(copyPerson);
-// ['firstName', 'age', 'country', 'city', 'skills', 'title', 'address', 'getPersonInfo']
-const address = Object.address(copyPerson.address);
-// ['street', 'ward', 'city']
+console.log(Object.keys(person));
+// output: ['firstName', 'age', 'country', 'city', 'skills', 'title', 'address', 'getPersonInfo']
+console.log(Object.keys(person.address));
+// output: ['street', 'ward', 'city']
 ```
 
 ### [Object.values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 
 Lấy giá trị của đối tượng và cho vào mảng.
+
+```js
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.values(object1));
+// output: Array ["somestring", 42, false]
+```
 
 ### [Object.entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 
