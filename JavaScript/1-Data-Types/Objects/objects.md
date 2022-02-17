@@ -13,11 +13,11 @@
   - [Deleting](#deleting)
   - [Comparing](#comparing)
 - [Built-in Object](#built-in-object)
-    - [Object.assign](#objectassign)
-    - [Object.keys](#objectkeys)
-    - [Object.values](#objectvalues)
-    - [Object.entries](#objectentries)
-    - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
+  - [Object.assign](#objectassign)
+  - [Object.keys](#objectkeys)
+  - [Object.values](#objectvalues)
+  - [Object.entries](#objectentries)
+  - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
 
 > [W3School Document](https://www.w3schools.com/js/js_objects.asp)
 
@@ -88,7 +88,10 @@ console.log(person.getName()); // "Quân"
 Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong đối tượng và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào đối tượng**.
 
 ```js
-const person = new Oject();
+const person = {
+  name: "Quân",
+  age: 20,
+};
 person.hair = "curly";
 person.getAge = function () {
   return this.age;
@@ -125,7 +128,7 @@ Phương thức `constructor` gọi từ đối tượng sẽ trả về code c�
 console.log(pikachu.constructor);
 ```
 
-<img src ="objects1.png">
+<img src ="object1.png">
 
 ### ES6 Creating
 

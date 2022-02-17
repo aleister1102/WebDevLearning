@@ -12,7 +12,7 @@
 - [🌐Global Scope](#global-scope)
 - [🗾Local Scope](#local-scope)
 
-# [🔭Scope](https://viblo.asia/p/tim-hieu-sau-hon-ve-scope-javascript-Qbq5QrRwKD8)
+# [Scope](https://viblo.asia/p/tim-hieu-sau-hon-ve-scope-javascript-Qbq5QrRwKD8)
 
 Có ba loại scope (phạm vi) của biến trong Javascript, là **Window**, **Global** và **Local**. Tương tự như C/C++ ở lập trình hàm. Ta thường không sử dụng các biến toàn cục mà đóng gói tất cả vào các khối lệnh và sử dụng biến cục bộ.
 

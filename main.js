@@ -1,23 +1,29 @@
-const person = {
-  firstName: "Quân",
-  age: 250,
-  country: "Viet Nam",
-  city: "HCM",
-  skills: ["HTML", "CSS", "JS"],
-  title: "student",
-  address: {
-    street: "22",
-    ward: "Linh Đông",
-    city: "HCM",
-  },
-  getPersonInfo: function () {
-    return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`;
-  },
+class Person {
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  // Only set one property
+  set setFirstName(firstName) {
+    this.firstName = firstName;
+  }
+  set setAge(age) {
+    this.age = age;
+  }
 
-  
-};
+  get getAge(){
+    return this.age;
+  }
+}
+class Student extends Person {
+  constructor(firstName, lastName, age, gender) {
+    super(firstName, lastName, age);
+    this.gender = gender;
+  }
+}
 
-console.log(Object.keys(person));
-// output: ['firstName', 'age', 'country', 'city', 'skills', 'title', 'address', 'getPersonInfo']
-console.log(Object.keys(person.address));
-// output: ['street', 'ward', 'city']
+const lmq = new Student("Quân", "Lê Minh", 20, "male");
+console.log(lmq);
+console.log(lmq.getAge);
+console.log(lmq.age); // output: 21
