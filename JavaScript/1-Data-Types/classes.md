@@ -20,15 +20,15 @@
 
 # [🚖Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-Ta đã biết cách tạo một Object đơn thuần mà không cần tạo lớp đối tượng như C++. Một Object như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện duy nhất.
+Ta đã biết cách tạo một đối tượng đơn thuần mà không cần tạo lớp đối tượng như C++. Một đối tượng như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện (instance) duy nhất.
 
-Tuy nhiên, nhiều khi ta cần tạo lớp đối tượng để có thể tạo ra nhiều đối tượng cùng loại lặp đi lặp lại một số các thuộc tính dùng chung.
+Tuy nhiên, nhiều khi ta cần thiết lập lớp đối tượng để có thể tạo ra nhiều đối tượng có các thuộc tính dùng chung.
 
 JS là một ngôn ngữ OOP, mọi thứ trong JS đều là đối tượng, vì thế nó cũng hỗ trợ tạo ra các lớp đối tượng.
 
 ## [📝Defining A Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
 
-Định nghĩa một class trong JS tương tự C++, đều sử dụng từ khóa `keyword`. Tên của class sử dụng **CamelCase**.
+Định nghĩa một class trong JS tương tự C++, đều sử dụng từ khóa `class`. Tên của class sử dụng **CamelCase**.
 
 ```js
 class Person {
@@ -38,7 +38,7 @@ class Person {
 
 Để tạo ra các thuộc tính private thì sử dụng dấu `#` trước tên thuộc tính.
 
-Một sự khác biệt của function và class là tính Hoisting (đưa lên đầu). Trong khi hàm có thể gọi trước khi được định nghĩa thì class cần phải định nghĩa trước khi được gọi.
+Một sự khác biệt của function và class là tính **Hoisting** (đưa lên đầu). Trong khi hàm có thể gọi trước khi được định nghĩa thì class cần phải định nghĩa trước khi được gọi.
 
 ```js
 const p = new Rectangle(); // ReferenceError
@@ -76,30 +76,23 @@ console.log(lmq);
 // => Person {firstName: 'Quân', lastName: 'Lê Minh'}
 ```
 
-Chú ý rằng `this` xem như là bản thân đối tượng được khởi tạo. Khác với C++ khi `*this` mới được xem là bản thân đối tượng.
+Chú ý rằng `this` xem như là bản thân đối tượng được khởi tạo. Khác với C++ vì `*this` mới được xem là bản thân đối tượng.
 
 Tương tự C++, cũng có thể thiết lập default constructor cho lớp đối tượng.
 
 ```js
 class Person {
-  constructor(
-    firstName = "Asabeneh",
-    lastName = "Yetayeh",
-    age = 250,
-    country = "Finland",
-    city = "Helsinki"
-  ) {
+  constructor(firstName = "Quân", lastName = "Lê Minh", age = 20) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.country = country;
-    this.city = city;
   }
 }
 
-const person1 = new Person();
 // it will take the default values
-const person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
+const person1 = new Person();
+// it will take the given values
+const person2 = new Person("Lidiya", "Tekle", 28);
 ```
 
 ## [🤸‍♂️Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#prototype_methods)
@@ -112,8 +105,6 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.country = country;
-    this.city = city;
   }
   getFullName() {
     const fullName = this.firstName + " " + this.lastName;
@@ -121,18 +112,14 @@ class Person {
   }
 }
 
-const person1 = new Person("Asabeneh", "Yetayeh", 250, "Finland", "Helsinki");
-const person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
-
+const person1 = new Person("Quân", "Lê Minh", 25);
 console.log(person1.getFullName());
-// => Asabeneh Yetayeh
-console.log(person2.getFullName());
-// => test.js:19 Lidiya Tekle
+// => Quân Lê Minh
 ```
 
-Chú ý rằng method không sử dụng từ khóa `function` hay mũi tên `=>`.
+Chú ý rằng phương thức không sử dụng từ khóa `function` hay mũi tên `=>`.
 
-**Static Method** (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static method, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một object nào đó cụ thể.
+[**Static Method**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static phương thức, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một đối tượng nào đó cụ thể.
 
 ```js
 class Person {
@@ -140,8 +127,6 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.country = country;
-    this.city = city;
     this.score = 0;
     this.skills = [];
   }
@@ -156,13 +141,13 @@ console.log(Person.favoriteSkill());
 // => React
 ```
 
-Muốn khai báo phương thức tĩnh ([Static Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties)) thì sử dụng từ khóa `static` trước tên method.
+Muốn khai báo phương thức tĩnh thì sử dụng từ khóa `static` trước tên phương thức.
 
 # [🙌Getter and Setter](https://www.programiz.com/javascript/getter-setter)
 
 ## 🤲getter
 
-Một getter trong lớp đối tượng tương tự như method thông thường nhưng có từ khóa `get` phía trước.
+Một getter trong lớp đối tượng tương tự như phương thức thông thường nhưng có từ khóa `get` phía trước.
 
 ```js
 class Person {
@@ -170,8 +155,6 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.country = country;
-    this.city = city;
     this.score = 0;
     this.skills = [];
   }
@@ -187,7 +170,7 @@ class Person {
   }
 }
 
-const person1 = new Person("Asabeneh", "Yetayeh", 250, "Finland", "Helsinki");
+const person1 = new Person("Quân", "Lê Minh", 250);
 console.log(person1.getScore);
 // We do not need parenthesis to call a getter method
 console.log(person1.getSkills);
@@ -205,20 +188,12 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.country = country;
-    this.city = city;
     this.score = 0;
     this.skills = [];
   }
   getFullName() {
     const fullName = this.firstName + " " + this.lastName;
     return fullName;
-  }
-  get getScore() {
-    return this.score;
-  }
-  get getSkills() {
-    return this.skills;
   }
   set setScore(score) {
     this.score += score;
@@ -232,8 +207,8 @@ class Person {
 Sử dụng setter:
 
 ```js
-const person1 = new Person("Asabeneh", "Yetayeh", 250, "Finland", "Helsinki");
-person1.setScore = 1;`
+const person1 = new Person("Quân", "Lê Minh", 250, "Finland", "Helsinki");
+person1.setScore = 1;
 person1.setSkill = "HTML";
 person1.setSkill = "CSS";
 person1.setSkill = "JavaScript";
@@ -250,19 +225,19 @@ class Student extends Person {
   }
 }
 
-const s1 = new Student("Asabeneh", "Yetayeh", "Finland", 250, "Helsinki");
+const s1 = new Student("Quân", "Lê Minh", "Finland", 250, "Helsinki");
 
 console.log(s1.saySomething());
 // => I am a child of the person class
 console.log(s1.getFullName());
-// => Asabeneh Yetayeh
+// => Quân Lê Minh
 ```
 
-Có thể sử dụng và truy cập các thuộc tính cũng như phương thức của lớp cơ sở từ đối tượng của lớp dẫn xuất.
+Có thể sử dụng và truy cập các thuộc tính (nếu không private) cũng như phương thức của lớp cơ sở từ đối tượng của lớp dẫn xuất.
 
 # [🧒🧒🏻🧒🏾Polymorphism](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#super_class_calls_with_super)
 
-Từ khóa `super` dùng để truy cập và gọi hàm của lớp cơ sở bên trong lớp dẫn xuất.
+Từ khóa `super` dùng để truy cập và gọi phương thức của lớp cơ sở bên trong lớp dẫn xuất.
 
 Nếu `super` được sử dụng trong constructor của lớp dẫn xuất, nó cần phải đi một mình và đứng trước các câu lệnh sử dụng `this`.
 

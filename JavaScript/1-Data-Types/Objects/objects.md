@@ -1,7 +1,7 @@
 <link rel='stylesheet' href='../../../main.css'>
 
 <div class="title">
-    <center><h1 class="bigtitle">Scopes and Objects</h1></center>
+    <center><h1 class="bigtitle">Objects</h1></center>
 </div>
 
 # Table of contents
@@ -9,18 +9,17 @@
 - [Table of contents](#table-of-contents)
 - [🚗Object](#object)
   - [🙋‍♂️Creating](#️creating)
-    - [this Keyword](#this-keyword)
     - [Object Constructor](#object-constructor)
     - [ES6 Creating](#es6-creating)
   - [🙅‍♀️Deleting](#️deleting)
-  - [�‍♂️Modifying](#️modifying)
+  - [🤦‍♂️Modifying](#️modifying)
     - [Object Prototype](#object-prototype)
 - [🚌Built-in Object](#built-in-object)
-    - [Object.assign](#objectassign)
-    - [Object.keys](#objectkeys)
-    - [Object.values](#objectvalues)
-    - [Object.entries](#objectentries)
-    - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
+  - [Object.assign](#objectassign)
+  - [Object.keys](#objectkeys)
+  - [Object.values](#objectvalues)
+  - [Object.entries](#objectentries)
+  - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
 
 # [🚗Object](https://www.w3schools.com/js/js_objects.asp)
 
@@ -34,13 +33,13 @@ Mọi thứ có thể là đối tượng, và đối tượng có nhiều thu�
 
 > [Programiz Document](https://www.programiz.com/javascript/constructor-function)
 
-Để tạo ra một object rỗng:
+Để tạo ra một đối tượng rỗng:
 
 ```js
 const person = {};
 ```
 
-Thuộc tính trong object xem như một biến, và ta không cần dùng `var`, `let` hay `const` để khai báo chúng. Giá trị của một thuộc tính theo sau dấu `:`.
+Không cần dùng `var`, `let` hay `const` để khai báo thuộc tính. Giá trị của một thuộc tính theo sau dấu `:`.
 
 ```js
 const person = {
@@ -55,7 +54,9 @@ const person = {
 };
 ```
 
-Kiểu dữ liệu của thuộc tính có thể là chuỗi, số, mảng, boolean, object, thậm chí là một cặp key - value như map hoặc dictionary.
+Kiểu dữ liệu của thuộc tính có thể là chuỗi, số, mảng, boolean, đối tượng, thậm chí là một cặp key - value như map hoặc dictionary.
+
+Hai thuộc tính **trùng key** thì sẽ giá trị sẽ bị **ghi đè** (cái sau đè lên cái trước).
 
 Tên thuộc tính có thể có dấu `-` nếu là dạng chuỗi.
 
@@ -67,9 +68,9 @@ const obj = {
 };
 ```
 
-[Phương thức](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods) trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
+[Phương thức](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods) trong đối tượng cũng sử dụng dấu `:`, theo sau đó là từ khóa `function`.
 
-Phương thức **không thể là arrow function**. Tồn tại một cách khác ngắn gọn hơn để khai báo phương thức trong object:
+Phương thức **không thể là arrow function**. Tồn tại một cách khác ngắn gọn hơn để khai báo phương thức trong đối tượng:
 
 ```js
 const person = {
@@ -82,13 +83,9 @@ const person = {
 console.log(person.getName());
 ```
 
-### [this Keyword](https://www.w3schools.com/js/js_this.asp)
+[`this`](https://www.w3schools.com/js/js_this.asp) là một từ khóa dùng để chỉ **chính bản thân đối tượng** (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
 
-`this` là một từ khóa dùng để chỉ **chính bản thân object** (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
-
-Hai thuộc tính **trùng key** thì sẽ giá trị sẽ bị **ghi đè** (cái sau đè lên cái trước).
-
-Để truy cập vào các thuộc tính của object, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
+Để truy cập vào các thuộc tính hoặc phương thức của đối tượng, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
 
 ```js
 console.log(person.firstName); // "Quân"
@@ -125,11 +122,9 @@ console.log(pikachu.constructor);
 
 <img src ="objects1.png">
 
-> Vì không có `this` nên arrow function không được dùng làm constructor.
-
 ### ES6 Creating
 
-ES6 hỗ trợ cách tạo object khác, ví dụ ta cần tạo một object theo cách bên dưới:
+ES6 hỗ trợ cách tạo đối tượng khác, ví dụ ta cần tạo một đối tượng theo cách bên dưới:
 
 ```js
 var name = "Quân";
@@ -151,7 +146,7 @@ const person = {
 };
 ```
 
-Thậm chí, **key của object có thể là giá trị của biến**:
+Thậm chí, **key của đối tượng có thể là giá trị của biến**:
 
 ```js
 var fieldName = "name";
@@ -175,13 +170,13 @@ const person = {
 
 ## [🙅‍♀️Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
 
-Để xóa thuộc tính hoặc phương thức của object, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
+Để xóa thuộc tính hoặc phương thức của đối tượng, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
 
 ## 🤦‍♂️Modifying
 
 > Object là một mutable data type, do đó ta có thể thay đổi giá trị của các thuộc tính bằng reassign.
 
-Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào object**.
+Ta cũng có thể khai báo một thuộc tính hoặc phương thức **chưa có** trong đối tượng và gán giá trị cho nó. Thuộc tính mới này sẽ được **thêm vào đối tượng**.
 
 ```js
 const person = {
@@ -236,7 +231,7 @@ const person = {
 };
 ```
 
-Tồn tại các method của lớp đối tượng `Object` dựng sẵn:
+Tồn tại các phương thức của lớp đối tượng `Object` dựng sẵn:
 
 ### [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
