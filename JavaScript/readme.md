@@ -49,3 +49,8 @@
 - No trailing comma in the last value of an object
 - We prefer this +=, -=, \*= /=, \*\*= instead of the longer version
 - When we use console.log() it is good to print with a tag string to identify from where the console is coming
+
+> [Codecademy Ref](https://www.codecademy.com/article/glossary-javascript)
+
+> [mbeauru Cheat Sheet](https://github.com/mbeaudru/modern-js-cheatsheet#class)
+> [JS Python Cheat Sheet](https://javascript.pythoncheatsheet.org/#es6-classes)

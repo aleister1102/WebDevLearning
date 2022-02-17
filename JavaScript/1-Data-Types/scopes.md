@@ -7,10 +7,15 @@
 # Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
 - [Scope](#scope)
 - [🌀Window Scope](#window-scope)
 - [🌐Global Scope](#global-scope)
 - [🗾Local Scope](#local-scope)
+
+# Documents & Cheat Sheets & Tools
+
+> [Codecademy Cheat Sheet](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-scope/cheatsheet)
 
 # [Scope](https://viblo.asia/p/tim-hieu-sau-hon-ve-scope-javascript-Qbq5QrRwKD8)
 

@@ -7,7 +7,7 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Console Object](#console-object)
+- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
 - [console.log()](#consolelog)
 - [console.warn()](#consolewarn)
 - [console.table()](#consoletable)
@@ -17,9 +17,11 @@
 - [console.count()](#consolecount)
 - [console.clear()](#consoleclear)
 
-# [Console Object](https://developer.mozilla.org/en-US/docs/Web/API/console)
+# Documents & Cheat Sheets & Tools
 
-Đối tượng console cung cấp nhiều phương thức, một trong số đó rất nổi tiếng là `console.log`.
+> [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/API/console)
+
+> [Shuaib Sajid Cheat Sheet](https://codepen.io/Shu52/pen/yKeoRg)
 
 # console.log()
 

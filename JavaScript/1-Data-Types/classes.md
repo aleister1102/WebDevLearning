@@ -7,29 +7,25 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Classes](#classes)
-  - [Defining A Class](#defining-a-class)
+- [Documents & Cheat Sheets & Tools](#documents--cheat-sheets--tools)
+- [Defining A Class](#defining-a-class)
   - [Class Instantiation](#class-instantiation)
   - [Class Constructor](#class-constructor)
   - [Prototype](#prototype)
   - [Class Methods](#class-methods)
 - [Getter and Setter](#getter-and-setter)
-  - [getter](#getter)
-  - [setter](#setter)
 - [Inheritance](#inheritance)
 - [Polymorphism](#polymorphism)
 
-# [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+# Documents & Cheat Sheets & Tools
 
-Ta đã biết cách tạo một đối tượng đơn thuần mà không cần tạo lớp đối tượng như C++. Một đối tượng như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện (instance) duy nhất.
+> [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
-Tuy nhiên, nhiều khi ta cần thiết lập lớp đối tượng để có thể tạo ra nhiều đối tượng có các thuộc tính dùng chung.
+> [Codecademy Cheat Sheet](https://www.codecademy.com/learn/webdev-intermediate-javascript/modules/learn-javascript-classes/cheatsheet)
 
-JS là một ngôn ngữ OOP, mọi thứ trong JS đều là đối tượng, vì thế nó cũng hỗ trợ tạo ra các lớp đối tượng.
+# [Defining A Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
 
-## [Defining A Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
-
-Định nghĩa một lớp đối tượng trong JS tương tự C++, đều sử dụng từ khóa `class`. Tên của lớp đối tượng sử dụng **CamelCase**.
+Tên của lớp đối tượng sử dụng **CamelCase**.
 
 ```js
 class Person {
@@ -72,7 +68,7 @@ const lmq = new Person();
 
 ## [Class Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 
-Một lớp đối tượng trong JS không nhất thiết phải khai báo các thuộc tính đơn lẻ. Ta có thể thiết lập một `constructor` để vừa thêm thuộc tính vừa khởi tạo giá trị của chúng.
+Ta có thể thiết lập một `constructor` để vừa thêm thuộc tính vừa khởi tạo giá trị của chúng.
 
 ```js
 class Person {
@@ -85,24 +81,7 @@ const lmq = new Person("Quân", 20);
 console.log(lmq); // output: Person {name: 'Quân', age: 20}
 ```
 
-Chú ý rằng `this` xem như là bản thân đối tượng được khởi tạo. Khác với C++ vì `*this` mới được xem là bản thân đối tượng.
-
-Tương tự C++, cũng có thể thiết lập default constructor cho lớp đối tượng.
-
-```js
-class Person {
-  constructor(firstName = "Quân", lastName = "Lê Minh", age = 20) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
-}
-
-// It will take the default values
-const person1 = new Person();
-// It will take the given values
-const person2 = new Person("Lidiya", "Tekle", 28);
-```
+Cũng có thể thiết lập default constructor cho lớp đối tượng.
 
 ## [Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
 
@@ -154,25 +133,7 @@ const person1 = new Person("Quân", "Lê Minh", 25);
 console.log(person1.getFullName()); // output: Quân Lê Minh
 ```
 
-[**Static Method**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static phương thức, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một đối tượng nào đó cụ thể.
-
-```js
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.skills = [];
-  }
-  static favoriteSkill() {
-    const skills = ["HTML", "CSS", "JS", "React", "Python", "Node"];
-    const index = Math.floor(Math.random() * skills.length);
-    return skills[index];
-  }
-}
-
-console.log(Person.favoriteSkill()); // output: React
-```
+[**Static Method**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một phương thức tĩnh, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một đối tượng nào đó cụ thể.
 
 Muốn khai báo phương thức tĩnh thì sử dụng từ khóa `static` trước tên phương thức.
 
@@ -185,60 +146,25 @@ Tóm lại:
 
 # [Getter and Setter](https://www.programiz.com/javascript/getter-setter)
 
-## getter
-
 Một getter trong lớp đối tượng tương tự như phương thức thông thường nhưng có từ khóa `get` phía trước.
 
 ```js
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
-  getFullName() {
-    const fullName = this.firstName + " " + this.lastName;
-    return fullName;
-  }
-  get getName() {
-    return `${this.firstName}` + ` ${this.lastName}`;
-  }
-  get getAge() {
-    return this.age;
-  }
+get getName() {
+  return `${this.firstName}` + ` ${this.lastName}`;
 }
 
-const lmq = new Person("Quân", "Lê Minh", 20);
-console.log(lmq.getName); // output: Quân Lê Minh
-
-// We do not need parenthesis to call a getter method
-console.log(lmq.getAge); // output: 20
+// Do not use () when call getter
 ```
 
-## setter
-
-Có getter thì phải có setter, cũng tương tự, nó là phương thức đi kèm với từ khóa `set`.
+Setter thì có từ khóa `set`.
 
 ```js
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
-  // Only set one property
-  set setFirstName(firstName) {
-    this.firstName = firstName;
-  }
-  set setAge(age) {
-    this.age = age;
-  }
+// Only set one property
+set setFirstName(firstName) {
+  this.firstName = firstName;
 }
 
-const lmq = new Person("Quân", 20);
-lmq.setName = "Kwan";
-lmq.setAge = 19;
-console.log(lmq.firstName); // output: "Kwan"
+// Call setter without (), followed by = operator
 ```
 
 # [Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#sub_classing_with_extends)

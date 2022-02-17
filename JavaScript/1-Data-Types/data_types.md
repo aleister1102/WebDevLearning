@@ -7,15 +7,16 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [Document & Cheat Sheet & Tools](#document--cheat-sheet--tools)
 - [👵Primitive Data Types](#primitive-data-types)
 - [👧Non - Primitive Data Types](#non---primitive-data-types)
+# Documents & Cheat Sheets & Tools
+
+> [Checking Data Types](https://codewithhugo.com/javascript-data-type-check-cheatsheet/)
 
 # [👵Primitive Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)
 
-Các kiểu dữ liệu nguyên thủy bao gồm:
-Number, String, Boolean, Null, Undefined.
-
-> Chúng là các kiểu dữ liệu bất biến (immutable), tức là không thể thay đổi được.
+Các kiểu dữ liệu nguyên thủy bao gồm: **Number, String, Boolean, Null, Undefined**. Chúng là các kiểu dữ liệu bất biến (immutable), tức là không thể thay đổi được.
 
 Chẳng hạn:
 
@@ -73,9 +74,7 @@ console.log(a, b); // => 9, 10
 
 # [👧Non - Primitive Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)
 
-Các kiểu dữ liệu không nguyên thủy bao gồm: Objects, Functions và Array.
-
-> Chúng là các dữ liệu có thể thay đổi giá trị (mutable).
+Các kiểu dữ liệu không nguyên thủy bao gồm: **Objects, Functions và Array**. Chúng là các dữ liệu có thể thay đổi giá trị (mutable).
 
 Nói cách khác, chúng ta có thể thay đổi giá trị của chúng sau khi chúng được tạo ra.
 
