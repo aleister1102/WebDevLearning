@@ -4,28 +4,29 @@
     <center><h1 class="bigtitle">Classes</h1></center>
 </div>
 
-- [Classes](#classes)
-  - [Defining A Class](#defining-a-class)
-  - [Class Instantiation](#class-instantiation)
-  - [Class Constructor](#class-constructor)
-  - [Default Constructor](#default-constructor)
-  - [Class Methods](#class-methods)
-- [Getter and Setter](#getter-and-setter)
-  - [getter](#getter)
-  - [setter](#setter)
-- [Static Method](#static-method)
-- [Inheritance](#inheritance)
-- [Overriding Methods](#overriding-methods)
+# Table of contents
 
-# Classes
+- [Table of contents](#table-of-contents)
+- [🚖Classes](#classes)
+  - [📝Defining A Class](#defining-a-class)
+  - [🎭Class Instantiation](#class-instantiation)
+  - [🚧Class Constructor](#class-constructor)
+  - [🤸‍♂️Class Methods](#️class-methods)
+- [🙌Getter and Setter](#getter-and-setter)
+  - [🤲getter](#getter)
+  - [✍setter](#setter)
+- [👨‍👩‍👦Inheritance](#inheritance)
+- [🧒🧒🏻🧒🏾Polymorphism](#polymorphism)
+
+# [🚖Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
 Ta đã biết cách tạo một Object đơn thuần mà không cần tạo lớp đối tượng như C++. Một Object như vậy được gọi là **Singleton Pattern** (Sẽ học trong Design Pattern). Nói một cách dễ hiểu, đó là các lớp đối tượng mà chỉ có một sự thể hiện duy nhất.
 
-Tuy nhiên, nhiều khi ta cần tạo lớp đối tượng để có thể tạo ra nhiều đối tượng cùng loại lặp đi lặp lại.
+Tuy nhiên, nhiều khi ta cần tạo lớp đối tượng để có thể tạo ra nhiều đối tượng cùng loại lặp đi lặp lại một số các thuộc tính dùng chung.
 
 JS là một ngôn ngữ OOP, mọi thứ trong JS đều là đối tượng, vì thế nó cũng hỗ trợ tạo ra các lớp đối tượng.
 
-## Defining A Class
+## [📝Defining A Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#defining_classes)
 
 Định nghĩa một class trong JS tương tự C++, đều sử dụng từ khóa `keyword`. Tên của class sử dụng **CamelCase**.
 
@@ -35,7 +36,18 @@ class Person {
 }
 ```
 
-## Class Instantiation
+Để tạo ra các thuộc tính private thì sử dụng dấu `#` trước tên thuộc tính.
+
+Một sự khác biệt của function và class là tính Hoisting (đưa lên đầu). Trong khi hàm có thể gọi trước khi được định nghĩa thì class cần phải định nghĩa trước khi được gọi.
+
+```js
+const p = new Rectangle(); // ReferenceError
+class Rectangle {}
+```
+
+Ngoài ra, có thể sử dụng cách khác, gọi là [Class Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) để khai báo lớp đối tượng.
+
+## 🎭Class Instantiation
 
 Để khởi tạo một đối tượng, hay biểu diễn một lớp đối tượng dưới dạng một đối tượng bất kỳ, ta sử dụng từ khóa `new`:
 
@@ -47,9 +59,9 @@ class Person {
 const lmq = new Person();
 ```
 
-## Class Constructor
+## [🚧Class Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 
-Một lớp đối tượng trong JS không nhất thiết phải khai báo các thuộc tính ở dạng private. Ta có thể thiết lập một constructor để vừa thêm thuộc tính vừa khởi tạo giá trị của chúng.
+Một lớp đối tượng trong JS không nhất thiết phải khai báo các thuộc tính đơn lẻ. Ta có thể thiết lập một constructor để vừa thêm thuộc tính vừa khởi tạo giá trị của chúng.
 
 ```js
 class Person {
@@ -65,8 +77,6 @@ console.log(lmq);
 ```
 
 Chú ý rằng `this` xem như là bản thân đối tượng được khởi tạo. Khác với C++ khi `*this` mới được xem là bản thân đối tượng.
-
-## Default Constructor
 
 Tương tự C++, cũng có thể thiết lập default constructor cho lớp đối tượng.
 
@@ -92,7 +102,7 @@ const person1 = new Person();
 const person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
 ```
 
-## Class Methods
+## [🤸‍♂️Class Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#prototype_methods)
 
 Có thuộc tính thì phải có phương thức, phương thức của lớp đối tượng trong JS cũng có nguyên lý hoạt động tương tự C++:
 
@@ -122,9 +132,35 @@ console.log(person2.getFullName());
 
 Chú ý rằng method không sử dụng từ khóa `function` hay mũi tên `=>`.
 
-# Getter and Setter
+**Static Method** (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static method, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một object nào đó cụ thể.
 
-## getter
+```js
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+    this.score = 0;
+    this.skills = [];
+  }
+  static favoriteSkill() {
+    const skills = ["HTML", "CSS", "JS", "React", "Python", "Node"];
+    const index = Math.floor(Math.random() * skills.length);
+    return skills[index];
+  }
+}
+
+console.log(Person.favoriteSkill());
+// => React
+```
+
+Muốn khai báo phương thức tĩnh ([Static Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties)) thì sử dụng từ khóa `static` trước tên method.
+
+# [🙌Getter and Setter](https://www.programiz.com/javascript/getter-setter)
+
+## 🤲getter
 
 Một getter trong lớp đối tượng tương tự như method thông thường nhưng có từ khóa `get` phía trước.
 
@@ -159,7 +195,7 @@ console.log(person1.getSkills);
 
 Lưu ý là ta không cần sử dụng dấu ngoặc `()` để sử dụng getter, và cả setter.
 
-## setter
+## ✍setter
 
 Có getter thì phải có setter, cũng tương tự, nó là method đi kèm với từ khóa `set`.
 
@@ -203,33 +239,7 @@ person1.setSkill = "CSS";
 person1.setSkill = "JavaScript";
 ```
 
-# Static Method
-
-**Static Method** (phương thức tĩnh) là các phương thức chỉ có thể gọi thông qua lớp đối tượng chứ không phải đối tượng. Chẳng hạn `Date.now()` là một static method, vì nó được gọi trực tiếp thông qua lớp đối tượng `Date` thay vì một object nào đó cụ thể.
-
-```js
-class Person {
-  constructor(firstName, lastName, age, country, city) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.country = country;
-    this.city = city;
-    this.score = 0;
-    this.skills = [];
-  }
-  static favoriteSkill() {
-    const skills = ["HTML", "CSS", "JS", "React", "Python", "Node"];
-    const index = Math.floor(Math.random() * skills.length);
-    return skills[index];
-  }
-}
-
-console.log(Person.favoriteSkill());
-// => React
-```
-
-# Inheritance
+# [👨‍👩‍👦Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#sub_classing_with_extends)
 
 Để kế thừa từ một lớp cơ sở, sử dụng từ khóa `extends`, thay vì dùng `: access modifier` như C++.
 
@@ -250,7 +260,7 @@ console.log(s1.getFullName());
 
 Có thể sử dụng và truy cập các thuộc tính cũng như phương thức của lớp cơ sở từ đối tượng của lớp dẫn xuất.
 
-# Overriding Methods
+# [🧒🧒🏻🧒🏾Polymorphism](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#super_class_calls_with_super)
 
 Từ khóa `super` dùng để truy cập và gọi hàm của lớp cơ sở bên trong lớp dẫn xuất.
 

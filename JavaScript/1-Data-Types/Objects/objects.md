@@ -4,25 +4,35 @@
     <center><h1 class="bigtitle">Scopes and Objects</h1></center>
 </div>
 
-- [Object](#object)
-  - [Creating](#creating)
-  - [Deleting](#deleting)
-  - [Methods](#methods)
-  - [Modifying](#modifying)
-- [Built-in Object Methods](#built-in-object-methods)
-    - [Object.assign](#objectassign)
-    - [Object.keys](#objectkeys)
-    - [Object.values](#objectvalues)
-    - [Object.entries](#objectentries)
-    - [hasOwnProperty(key)](#hasownpropertykey)
-- [Object Constructor](#object-constructor)
-- [Object Prototype](#object-prototype)
+# Table of contents
 
-# Object
+- [🚗Object](#object)
+  - [🙋‍♂️Creating](#️creating)
+    - [this Keyword](#this-keyword)
+    - [Object Constructor](#object-constructor)
+    - [ES6 Creating](#es6-creating)
+  - [🙅‍♀️Deleting](#️deleting)
+  - [🤹‍♂️Methods](#️methods)
+  - [🤦‍♂️Modifying](#️modifying)
+    - [Object Prototype](#object-prototype)
+- [🚌Built-in Object](#built-in-object)
+  - [Object.assign](#objectassign)
+  - [Object.keys](#objectkeys)
+  - [Object.values](#objectvalues)
+  - [Object.entries](#objectentries)
+  - [Object.prototype.hasOwnProperty(key)](#objectprototypehasownpropertykey)
+
+# [🚗Object](https://www.w3schools.com/js/js_objects.asp)
+
+> [Mozilla Document](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+
+> [Programiz Document](https://www.programiz.com/javascript/object)
 
 Mọi thứ có thể là đối tượng, và đối tượng có nhiều thuộc tính hoặc phương thức. Các thuộc tính không được bảo toàn thứ tự.
 
-## Creating
+## [🙋‍♂️Creating](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
+
+> [Programiz Document](https://www.programiz.com/javascript/constructor-function)
 
 Để tạo ra một object rỗng:
 
@@ -34,21 +44,9 @@ Thuộc tính trong object xem như một biến, và ta không cần dùng `var
 
 ```js
 const person = {
-  firstName: "Quân",
-  lastName: "Lê Minh",
+  name: "Quân",
   age: 20,
-  country: "Viet Nam",
-  city: "HCM",
-  skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js",
-  ],
+  skills: ["HTML", "CSS", "JavaScript"],
   isMarried: false,
 
   getFullName: function () {
@@ -69,9 +67,11 @@ const obj = {
 };
 ```
 
-`this` là một từ khóa dùng để chỉ chính bản thân object (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
+### [this Keyword](https://www.w3schools.com/js/js_this.asp)
 
-Hai thuộc tính trùng key thì sẽ giá trị sẽ bị ghi đè (cái sau đè lên cái trước).
+`this` là một từ khóa dùng để chỉ **chính bản thân object** (tương tự như C++, con trỏ `this` dùng để trỏ đến đối tượng gọi phương thức).
+
+Hai thuộc tính **trùng key** thì sẽ giá trị sẽ bị **ghi đè** (cái sau đè lên cái trước).
 
 Để truy cập vào các thuộc tính của object, ta sử dụng toán tử dấu chấm `.` hoặc dùng dấu `[]` kèm theo tên của thuộc tính tương tự như map hoặc dictionary.
 
@@ -79,6 +79,40 @@ Hai thuộc tính trùng key thì sẽ giá trị sẽ bị ghi đè (cái sau �
 console.log(person.firstName); // "Quân"
 console.log(person["firstName"]); // "Quân
 ```
+
+### [Object Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#using_a_constructor_function)
+
+Do tính chất **trùng tên** của LỚP ĐỐI TƯỢNG và constructor, ta có thể triển khai một constructor và đặt tên là lớp đối tượng bất kỳ.
+
+```js
+function Pokemon(name, type, pokedex) {
+  this.name = name;
+  this.type = type;
+  this.pokedex = pokedex;
+  this.getName = function () {
+    return `${name}`;
+  };
+}
+```
+
+Với `this` là đối tượng được tạo ra bằng constructor. Sử dụng tương tự constructor thông thường.
+
+```js
+const pikachu = new Pokemon("pikachu", "electric", 25);
+console.log(pikachu.getName()); // => "pikachu"
+```
+
+Phương thức `constructor` gọi từ đối tượng sẽ trả về constructor của lớp đối tượng:
+
+```js
+console.log(pikachu.constructor);
+```
+
+<img src ="objects1.png">
+
+> Vì không có `this` nên arrow function không được dùng làm constructor.
+
+### ES6 Creating
 
 ES6 hỗ trợ cách tạo object khác, ví dụ ta cần tạo một object theo cách bên dưới:
 
@@ -124,11 +158,11 @@ const person = {
 };
 ```
 
-## Deleting
+## [🙅‍♀️Deleting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#deleting_properties)
 
 Để xóa thuộc tính hoặc phương thức của object, ta dùng từ khóa `delete` kèm theo tên thuộc tính hoặc phương thức cần xóa.
 
-## Methods
+## [🤹‍♂️Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
 
 Phương thức trong object cũng có một tên và dấu `:`, theo sau đó là từ khóa `function`.
 
@@ -151,16 +185,15 @@ const person = {
 console.log(person.getName());
 ```
 
-## Modifying
+## 🤦‍♂️Modifying
 
 > Object là một mutable data type, do đó ta có thể thay đổi giá trị của các thuộc tính bằng reassign.
 
-Ngoài ra, ta có thể khai báo một thuộc tính hoặc phương thức chưa có trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được thêm vào hàm.
+Ngoài ra, ta có thể khai báo một thuộc tính hoặc phương thức chưa có trong object và gán giá trị cho nó. Thuộc tính mới này sẽ được thêm vào object.
 
 ```js
 const person = {
-  firstName: "Quân",
-  lastName: "Lê Minh",
+  name: "Quân",
   age: 20,
 };
 person.hair = "curly";
@@ -169,10 +202,26 @@ person.getAge = function () {
 };
 
 console.log(person.getAge()); // 20
-console.log(person.hair); // curly
+console.log(person.hair); // "curly"
 ```
 
-# Built-in Object Methods
+### [Object Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#defining_properties_for_an_object_type)
+
+> [Programiz Document](https://www.programiz.com/javascript/prototype)
+
+Để thêm một thuộc tính hoặc phương thức vào LỚP ĐỐI TƯỢNG thì ta sử dụng thêm từ khóa `prototype`.
+
+```js
+Pokemon.prototype.catchRate = 10;
+// (defaultValue)
+Pokemon.prototype.getType() = function{
+  return this.type;
+}
+```
+
+Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
+
+# [🚌Built-in Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 Cho đối tượng dưới đây
 
@@ -197,7 +246,7 @@ const person = {
 
 Tồn tại các method của đối tượng `Object` dựng sẵn:
 
-### Object.assign
+### [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 Sao chép đối tượng mà không thay đổi đối tượng gốc
 
@@ -206,7 +255,7 @@ const copyPerson = Object.assign({}, person);
 //{firstName: 'Quân', age: 250, country: 'Viet Nam', city: 'HCM', skills: Array(3), …}
 ```
 
-### Object.keys
+### [Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
 Lấy mọi tên thuộc tính hoặc khóa có trong đối tượng.
 
@@ -217,60 +266,16 @@ const address = Object.address(copyPerson.address);
 // ['street', 'ward', 'city']
 ```
 
-### Object.values
+### [Object.values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 
 Lấy giá trị của đối tượng và cho vào mảng.
 
-### Object.entries
+### [Object.entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 
 Lấy các cặp key - value và cho vào mảng.
 
-### hasOwnProperty(key)
+### [Object.prototype.hasOwnProperty(key)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 
 Kiểm tra thuộc tính `key` có tồn tại trong đối tượng hay không.
 
-# Object Constructor
-
-Do tính chất trùng tên của lớp đối tượng và constructor, ta có thể triển khai một constructor và đặt tên là lớp đối tượng bất kỳ.
-
-```js
-function Pokemon(name, type, pokedex) {
-  this.name = name;
-  this.type = type;
-  this.pokedex = pokedex;
-  this.getName = function () {
-    return `${name}`;
-  };
-}
-```
-
-Với `this` là đối tượng được tạo ra bằng constructor. Sử dụng tương tự constructor thông thường.
-
-```js
-const pikachu = new Pokemon("pikachu", "electric", 25);
-console.log(pikachu.getName()); // => "pikachu"
-```
-
-Phương thức `constructor` gọi từ đối tượng sẽ trả về constructor của lớp đối tượng:
-
-```js
-console.log(pikachu.constructor);
-```
-
-<img src ="objects1.png">
-
-> Do không có `this` nên arrow function không được dùng làm constructor.
-
-# Object Prototype
-
-Để thêm một thuộc tính hoặc phương thức vào LỚP ĐỐI TƯỢNG thì ta sử dụng thêm từ khóa `prototype`.
-
-```js
-Pokemon.prototype.catchRate = 10;
-// (defaultValue)
-Pokemon.prototype.getType() = function{
-  return this.type;
-}
-```
-
-Cần phân biệt với việc thêm thuộc tính hoặc phương thức vào ĐỐI TƯỢNG, khi đó chúng ta chỉ cần sử dụng toán tử `.`.
+Phương thức này gọi từ đối tượng (có chữ prototype) thay vì gọi từ lớp đối tượng (dùng `Object`) như các phương thức static ở trên.

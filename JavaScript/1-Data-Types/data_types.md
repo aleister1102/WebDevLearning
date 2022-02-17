@@ -4,15 +4,18 @@
     <center><h1 class="bigtitle">Primitive and Non-Primitive Data Types</h1></center>
 </div>
 
-- [Primitive Data Types](#primitive-data-types)
-- [Non - Primitive Data Types](#non---primitive-data-types)
+# Table of contents
 
-# Primitive Data Types
+- [Table of contents](#table-of-contents)
+- [👵Primitive Data Types](#primitive-data-types)
+- [👧Non - Primitive Data Types](#non---primitive-data-types)
+
+# [👵Primitive Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values)
 
 Các kiểu dữ liệu nguyên thủy bao gồm:
 Number, String, Boolean, Null, Undefined.
 
-> Chúng là các kiểu dữ liệu bất biến (immutable). Tức là không thể thay đổi được.
+> Chúng là các kiểu dữ liệu bất biến (immutable), tức là không thể thay đổi được.
 
 Chẳng hạn:
 
@@ -68,7 +71,7 @@ b = 10;
 console.log(a, b); // => 9, 10
 ```
 
-# Non - Primitive Data Types
+# [👧Non - Primitive Data Types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)
 
 Các kiểu dữ liệu không nguyên thủy bao gồm: Objects, Functions và Array.
 

@@ -53,8 +53,7 @@ Thẻ này đánh dấu một hình ảnh bao gồm một thẻ `<img>` và mộ
 ```html
 <figure>
   <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
-    alt="HTML Logo"
+    src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
   />
   <figcaption>Fig1 - HTML5 Logo</figcaption>
 </figure>
@@ -63,7 +62,7 @@ Thẻ này đánh dấu một hình ảnh bao gồm một thẻ `<img>` và mộ
 **Kết quả**:
 
 <figure>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" />
+  <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="HTML Logo" />
   <figcaption>Fig1 - HTML5 Logo</figcaption>
 </figure>
 
