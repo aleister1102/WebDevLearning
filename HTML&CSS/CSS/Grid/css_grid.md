@@ -11,17 +11,17 @@
   - [Documents](#documents)
   - [Cheat Sheets](#cheat-sheets)
   - [Games](#games)
-- [Grid Properties](#grid-properties)
-- [Grid Container](#grid-container)
+- [🎨Grid Properties](#grid-properties)
+- [🚛Grid Container](#grid-container)
   - [Columns/Rows](#columnsrows)
   - [Gap](#gap)
   - [Fraction (fr) unit](#fraction-fr-unit)
-- [Grid Items](#grid-items)
+- [📦Grid Items](#grid-items)
   - [Column/Row](#columnrow)
-- [Grid Areas/Area](#grid-areasarea)
+- [🗾Grid Areas/Area](#grid-areasarea)
   - [Areas](#areas)
   - [Area](#area)
-- [Auto Fit & Auto Fill](#auto-fit--auto-fill)
+- [🥿Auto Fit & Auto Fill](#auto-fit--auto-fill)
 
 # References
 
@@ -39,11 +39,11 @@
 
 > [Grid Garden](https://cssgridgarden.com/#vi)
 
-# [Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)
+# [🎨Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)
 
 <img src="grid1.png">
 
-# [Grid Container](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-properties-for-the-parentgrid-container)
+# [🚛Grid Container](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-properties-for-the-parentgrid-container)
 
 `display: grid` để áp dụng Grid.
 
@@ -88,7 +88,7 @@ Có thể kết hợp đơn vị fr với các loại đơn vị khác. Chẳng 
 }
 ```
 
-# [Grid Items](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-properties-for-the-childrengrid-items)
+# [📦Grid Items](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-properties-for-the-childrengrid-items)
 
 ## Column/Row
 
@@ -116,7 +116,7 @@ Thay vì viết cụ thể số grid-line, có thể sử dụng `span`. Một s
 }
 ```
 
-# [Grid Areas/Area](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template-areas)
+# [🗾Grid Areas/Area](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template-areas)
 
 ## Areas
 
@@ -146,7 +146,7 @@ Thay vì viết cụ thể số grid-line, có thể sử dụng `span`. Một s
 }
 ```
 
-# [Auto Fit & Auto Fill](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-the-repeat-function-and-keywords)
+# [🥿Auto Fit & Auto Fill](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-the-repeat-function-and-keywords)
 
 <img src="https://ishadeed.com/assets/grid-minmax/auto-fit-fill.png">
 

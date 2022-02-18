@@ -6,6 +6,13 @@
 
 # Table of contents
 
+- [Table of contents](#table-of-contents)
+- [👗Sass](#sass)
+- [👠Variable](#variable)
+- [💄Nested Code](#nested-code)
+- [💍Mixin](#mixin)
+- [👛Import](#import)
+
 # [👗Sass](https://sass-lang.com/)
 
 SASS là một ngôn ngữ mở rộng của CSS, đồng thời là một tiền xử lý CSS. Sass là một thư viện dùng để biên dịch SASS thành CSS.

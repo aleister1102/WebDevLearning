@@ -1,37 +1,54 @@
-$textColor: orange;
-
+@mixin marginAll($value) {
+  margin: $value;
+}
+@mixin paddingAll($value) {
+  padding: $value;
+}
 @mixin bgColor($color) {
   background-color: $color;
 }
-
-@mixin size($width, $height: $width) {
-  width: $width;
-  // If $height is not provided, it will equal to $width
-  height: $height;
+@mixin fontSize($value) {
+  font-size: $value;
+}
+@mixin txtColor($color) {
+  color: $color;
 }
 
-@mixin minWidth($value) {
-  @media screen and (min-width: $value) {
-    display: none;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.rounded-corner {
+  border-radius: 12px;
 }
 
 .box {
-  margin: 16px;
-  padding: 8px;
+  flex: 3;
+  @include marginAll(16px);
+  @include paddingAll(8px);
   @include bgColor(aquamarine);
-
-  // ` & ` plays as ".box"
   &__item {
-    padding: 4px;
-    background-color: black;
-    font-size: 16px;
-    color: #fff;
+    border-radius: inherit;
+    @include paddingAll(8px);
+    @include bgColor(#000);
+    @include txtColor(#fff);
     &-header {
-      font-size: 30px;
-      font-weight: bold;
+      @include fontSize(30px);
     }
   }
+}
 
-  @include minWidth(1024px);
+.input {
+  flex: 1;
 }

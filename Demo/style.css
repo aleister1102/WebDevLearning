@@ -1,22 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.rounded-corner {
+  border-radius: 12px;
+}
+
 .box {
+  flex: 3;
   margin: 16px;
   padding: 8px;
   background-color: aquamarine;
 }
 .box__item {
-  padding: 4px;
-  background-color: black;
-  font-size: 16px;
+  border-radius: inherit;
+  padding: 8px;
+  background-color: #000;
   color: #fff;
 }
 .box__item-header {
   font-size: 30px;
-  font-weight: bold;
 }
-@media screen and (min-width: 1024px) {
-  .box {
-    display: none;
-  }
+
+.input {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
