@@ -1,6 +1,6 @@
 <link rel="stylesheet" href='./main.css'>
 
-# 💖HTML, CSS and JavaScript💖
+# 💖HTML, CSS and JavaScript Projects💖
 
 Trang web này chứa các projects nhỏ nhằm thực hành các kiến thức về lập trình web, bắt đầu từ cuối năm 2021 ✨
 
