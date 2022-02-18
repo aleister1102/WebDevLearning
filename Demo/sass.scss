@@ -1,8 +1,14 @@
+// Mixins
 @mixin marginAll($value) {
   margin: $value;
 }
 @mixin paddingAll($value) {
   padding: $value;
+}
+@mixin size($width, $height: $width) {
+  width: $width;
+  // If $height is not provided, it will equal to $width
+  height: $height;
 }
 @mixin bgColor($color) {
   background-color: $color;
@@ -14,6 +20,18 @@
   color: $color;
 }
 
+// Common
+.flex {
+  display: flex;
+}
+.txt-center {
+  text-align: center;
+}
+.rounded-corner {
+  border-radius: 12px;
+}
+
+// Reset CSS
 * {
   padding: 0;
   margin: 0;
@@ -21,34 +39,58 @@
   font-size: 16px;
 }
 
-.flex {
-  display: flex;
+// Main
+.loading div {
+  position: absolute;
+  @include marginAll(20px);
+  border-radius: 50%;
+  @include size(80px);
 }
 
-.txt-center {
-  text-align: center;
+.loading div:nth-child(1) {
+  background-color: #ff1479;
+  animation: spin1 1s linear infinite;
+  animation-delay: -0.5s;
+}
+.loading div:nth-child(2) {
+  background-color: #39fffe;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+  animation: spin1 1s linear infinite;
+}
+.loading div:nth-child(3) {
+  background-color: #ff1479;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+  animation: spin2 1s linear infinite;
+  animation-delay: -0.5s;
 }
 
-.rounded-corner {
-  border-radius: 12px;
-}
-
-.box {
-  flex: 3;
-  @include marginAll(16px);
-  @include paddingAll(8px);
-  @include bgColor(aquamarine);
-  &__item {
-    border-radius: inherit;
-    @include paddingAll(8px);
-    @include bgColor(#000);
-    @include txtColor(#fff);
-    &-header {
-      @include fontSize(30px);
-    }
+@keyframes spin1 {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 
-.input {
-  flex: 1;
+@keyframes spin2 {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  49.99% {
+    opacity: 1;
+    transform: translateX(80px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
 }

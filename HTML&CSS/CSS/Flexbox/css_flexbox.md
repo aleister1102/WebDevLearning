@@ -22,11 +22,26 @@
 
 # [🎇Flexbox Properties](https://www.samanthaming.com/flexbox30/)
 
-- [flex-flow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow) là shorthand form của `flex-direction` và `flex-wrap`.
-
-- [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) là shorthand form của `flex-grow`, `flex-shrink` và `flex-basis`.
-
 <img src="flex2.png">
+<hr>
+
+- [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow) là shorthand form của `flex-direction` và `flex-wrap`.
+
+- [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) là shorthand form của `flex-grow`, `flex-shrink` và `flex-basis`.
+
+- Minh họa [`flex-basis`](https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg).
+
+- `align-content` khác `align-items` ở chỗ nó áp dụng cho nhiều dòng.
+
+- `flex: 1` tương đương với:
+
+```css
+.container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+```
 
 > Phân loại theo mục đích sử dụng
 
@@ -46,20 +61,8 @@
 
 # 🎊Aside
 
-- Chiều của các loại `flex-direction`:
-  <img src="flex3.png">
-  <br>
-- Độ ưu tiên giữa `flex-basis` và `width`:
-  <img src="flex4.png">
-  <br>
-- `align-content` khác `align-items` ở chỗ nó áp dụng cho nhiều dòng.
+<img src="flex3.png">
 
-- `flex: 1` tương đương với:
+<hr>
 
-```css
-.container {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0%;
-}
-```
+<img src="flex4.png">
