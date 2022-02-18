@@ -1,0 +1,22 @@
+.box {
+  margin: 16px;
+  padding: 8px;
+  background-color: aquamarine;
+}
+.box__item {
+  padding: 4px;
+  background-color: black;
+  font-size: 16px;
+  color: #fff;
+}
+.box__item-header {
+  font-size: 30px;
+  font-weight: bold;
+}
+@media screen and (min-width: 1024px) {
+  .box {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

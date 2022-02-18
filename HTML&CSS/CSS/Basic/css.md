@@ -250,7 +250,7 @@ h1 {
 
 # [😫CSS Functions](https://www.w3schools.com/cssref/css_functions.asp)
 
-## [calc(expression)](https://developer.mozilla.org/en-US/docs/Web/CSS/calc())
+## [calc(expression)](<https://developer.mozilla.org/en-US/docs/Web/CSS/calc()>)
 
 Hàm `calc()` dùng để tính toán. Chẳng hạn:
 
@@ -260,7 +260,7 @@ h1 {
 }
 ```
 
-## [attr(attributeName)](https://developer.mozilla.org/en-US/docs/Web/CSS/attr())
+## [attr(attributeName)](<https://developer.mozilla.org/en-US/docs/Web/CSS/attr()>)
 
 Hàm `attr()` dùng để lấy giá trị của attribute trong một element, thường sử dụng kèm với pseudo class:
 
@@ -282,7 +282,7 @@ a:after {
 
 Trong trường hợp không phải thẻ `<a>`, ta không cần cặp dấu `"()"`.
 
-## [linear-gradient(direction, startColor, endColor)](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient())
+## [linear-gradient(direction, startColor, endColor)](<https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()>)
 
 Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
 

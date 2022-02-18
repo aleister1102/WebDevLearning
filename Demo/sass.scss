@@ -1,0 +1,37 @@
+$textColor: orange;
+
+@mixin bgColor($color) {
+  background-color: $color;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  // If $height is not provided, it will equal to $width
+  height: $height;
+}
+
+@mixin minWidth($value) {
+  @media screen and (min-width: $value) {
+    display: none;
+  }
+}
+
+.box {
+  margin: 16px;
+  padding: 8px;
+  @include bgColor(aquamarine);
+
+  // ` & ` plays as ".box"
+  &__item {
+    padding: 4px;
+    background-color: black;
+    font-size: 16px;
+    color: #fff;
+    &-header {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  @include minWidth(1024px);
+}
