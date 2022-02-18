@@ -7,7 +7,6 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Dev Tool](#dev-tool)
 - [Console Log](#console-log)
 - [Comment](#comment)
 - [Adding JS to Web Page](#adding-js-to-web-page)
@@ -16,10 +15,6 @@
   - [External](#external)
 - [Data types](#data-types)
 - [Variables](#variables)
-
-# Dev Tool
-
-**Phím tắt mở Dev Tool**: `ctrl + shift + I`
 
 # Console Log
 

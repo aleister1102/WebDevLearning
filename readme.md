@@ -10,3 +10,11 @@ Các tài liệu và projects tham khảo từ internet ⛲.
 | ---------- | :---------------------------------------: |
 | HTML&CSS   |   [HTML&CSS Basics](HTML&CSS/readme.md)   |
 | JavaScript | [JavaScript Basics](JavaScript/readme.md) |
+
+# Tools
+
+## Edge
+
+- **Phím tắt mở Dev Tool**: `ctrl + shift + I`.
+- Extension để đo kích thước các phần tử trên trang web: **My Ruler**.
+- Extension để inspect element: **visBug**

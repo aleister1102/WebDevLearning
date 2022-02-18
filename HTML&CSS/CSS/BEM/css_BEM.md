@@ -80,7 +80,7 @@ Do đó ta viết thêm hai modifier là `yugioh--bg-blue` và `yugioh__stat--at
 Nếu các block lồng nhau, ta nên đặt tên class thế nào? Có hai trường hợp xảy ra:
 
 - Block đó có tên class được tái sử dụng nhiều nơi.
-- Block đó có tên class không tái sử dụng ở nhiều nơi.
+- Block đó có tên class không được tái sử dụng ở nhiều nơi.
 
 **Trường hợp đầu tiên**, xét ví dụ sau:
 

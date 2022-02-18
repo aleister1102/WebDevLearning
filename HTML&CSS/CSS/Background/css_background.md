@@ -184,6 +184,8 @@ div {
 
 > Mặc dù chiều ngang là 100% của ranh giới chứa nó, nhưng chiều dọc lại bị mất.
 
+Nếu muốn sử dụng thẻ `<img>` thay vì thẻ `<div>`, có thể sử dụng thuộc tính [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) để CSS, hiệu quả tương tự như đoạn code trên.
+
 # [🎯Origin](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin)
 
 Tương tự thuộc tính `background-clip` đối với `background-color`, thuộc tính `background-origin` quyết định vị trí bắt đầu của hình ảnh.
