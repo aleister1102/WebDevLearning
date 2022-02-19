@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Grid</h1></center>
@@ -41,7 +41,7 @@
 
 # [🎨Grid Properties](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-properties)
 
-<img src="grid1.png">
+<img src="./img/grid1.png">
 
 # [🚛Grid Container](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-properties-for-the-parentgrid-container)
 

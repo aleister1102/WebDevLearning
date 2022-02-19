@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title">
     <center><h1 class="bigtitle">CSS</h1></center>
@@ -7,6 +7,7 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
 - [💧What is CSS?](#what-is-css)
 - [🎨CSS in HTML](#css-in-html)
 - [💅CSS Rules](#css-rules)
@@ -21,13 +22,16 @@
 - [😫CSS Functions](#css-functions)
   - [calc(expression))](#calcexpression)
   - [attr(attributeName))](#attrattributename)
-  - [linear-gradient(direction, startColor, endColor))](#linear-gradientdirection-startcolor-endcolor)
+
+# References
+
+> [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 
 # 💧What is CSS?
 
 CSS là viết tắt của **Cascading Style Sheet**, bao gồm **các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
 
-<img src="css0.png">
+<img src="./img/css0.png">
 
 # [🎨CSS in HTML](https://www.w3schools.com/css/css_howto.asp)
 
@@ -75,7 +79,7 @@ selector {
 
 Minh họa:
 
-<img src="css1.png">
+<img src="./img/css1.png">
 
 # 💬CSS Comments
 
@@ -89,7 +93,7 @@ Comment trong CSS có cú pháp:
 
 CSS có hai đơn vị là **absolute** (tuyệt đối) và **relative** (tương đối). [Use cases](https://yurilee.hashnode.dev/css-units-are-confusing-af) của các loại đơn vị.
 
-<img src="css2.png">
+<img src="./img/css2.png">
 
 ## Absolute
 
@@ -103,11 +107,15 @@ Các đơn vị tương đối này phụ thuộc vào các phần tử chứa n
 
 **Percent**
 
-`%`, có kích thước phụ thuộc theo tỉ lệ % vào thẻ chứa nó.
+`%`, có kích thước phụ thuộc theo tỉ lệ % của thẻ chứa nó.
 
 **Rem**
 
-`rem`, có kích thước phụ thuộc vào thẻ `<html>`. Ví dụ:
+`rem`, có kích thước phụ thuộc vào thuộc tính `font-size` của thẻ `<html>`.
+
+Mặc định của trình duyệt thì `font-size` = **100% = 1rem = 1em = 16px**.
+
+Ví dụ:
 
 ```css
 html {
@@ -124,7 +132,7 @@ p {
 
 **Em**
 
-`em`, có kích thuộc phụ thuộc vào thẻ gần nhất chứa nó mà có thuộc tính được liệt kê.
+`em`, có kích thuộc phụ thuộc vào thuộc tính `font-size` của chính nó hoặc của thẻ gần nhất chứa nó;
 
 ```html
 <body>
@@ -157,7 +165,7 @@ h1 {
 
 Thứ tự của các thuộc tính nên được viết theo thứ tự sau:
 
-<img src="css3.png">
+<img src="./img/css3.png">
 
 # [🤔CSS Pseudo Classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
@@ -226,7 +234,7 @@ Tương tự đối với phần tử giả `::after`, nó sẽ thêm một elem
 
 Có thể đặt biến trong CSS bằng cách sử dụng pseudo class. Gọi hàm `var(varName)` và truyền vào tên biến nhằm lấy giá trị của nó.
 
-<img src="css4.png">
+<img src="./img/css4.png">
 
 Ví dụ:
 
@@ -250,7 +258,7 @@ h1 {
 
 # [😫CSS Functions](https://www.w3schools.com/cssref/css_functions.asp)
 
-## [calc(expression)](<https://developer.mozilla.org/en-US/docs/Web/CSS/calc()>)
+## [calc(expression)](https://developer.mozilla.org/en-US/docs/Web/CSS/calc())
 
 Hàm `calc()` dùng để tính toán. Chẳng hạn:
 
@@ -260,7 +268,7 @@ h1 {
 }
 ```
 
-## [attr(attributeName)](<https://developer.mozilla.org/en-US/docs/Web/CSS/attr()>)
+## [attr(attributeName)](https://developer.mozilla.org/en-US/docs/Web/CSS/attr())
 
 Hàm `attr()` dùng để lấy giá trị của attribute trong một element, thường sử dụng kèm với pseudo class:
 
@@ -282,10 +290,4 @@ a:after {
 
 Trong trường hợp không phải thẻ `<a>`, ta không cần cặp dấu `"()"`.
 
-## [linear-gradient(direction, startColor, endColor)](<https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()>)
 
-Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
-
-<img src="css5.png">
-
-Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.

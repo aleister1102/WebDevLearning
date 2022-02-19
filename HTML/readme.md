@@ -17,3 +17,7 @@
 HTML Accessibility là một bộ quy luật để code HTML nhằm tăng khả năng truy cập cho người dùng.
 
 Quy luật này bao gồm việc sử dụng các thẻ semantic, viết thuộc tính alt cho thẻ img, viết nội dung của liên kết một cách rõ ràng, v.v...
+
+## [Emmet](https://docs.emmet.io/cheat-sheet/)
+
+Emmet là một cách viết ngắn gọn để tạo nhanh các thẻ HTML (và cả thuộc tính của CSS).

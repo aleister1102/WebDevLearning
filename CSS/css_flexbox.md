@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Flexbox</h1></center>
@@ -15,14 +15,14 @@
 
 # [✨Flexbox Model](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-<img src="flex1.png">
+<img src="./img/flex1.png">
 
 - Main size và cross size lần lượt song song với main axis và cross axis.
 - Flex items phải là các thẻ con trực tiếp của container.
 
 # [🎇Flexbox Properties](https://www.samanthaming.com/flexbox30/)
 
-<img src="flex2.png">
+<img src="./img/flex2.png">
 <hr>
 
 - [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow) là shorthand form của `flex-direction` và `flex-wrap`.
@@ -45,11 +45,11 @@
 
 > Phân loại theo mục đích sử dụng
 
-<img src="flex2b.png">
+<img src="./img/flex2b.png">
 
 # [🎆Flexbox with Auto Margin](https://www.samanthaming.com/flexbox30/31-flexbox-with-auto-margins/)
 
-<img src="flex2c.png">
+<img src="./img/flex2c.png">
 
 # 🎉Flexbox Tools
 
@@ -61,8 +61,8 @@
 
 # 🎊Aside
 
-<img src="flex3.png">
+<img src="./img/flex3.png">
 
 <hr>
 
-<img src="flex4.png">
+<img src="./img/flex4.png">

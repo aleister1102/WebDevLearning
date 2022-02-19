@@ -1,7 +1,7 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
-    <center><h1 class="bigtitle">CSS Selectors</h1></center>
+    <center><h1 class="bigtitle">CSS Selector</h1></center>
 </div>
 
 # Table of contents
@@ -86,8 +86,8 @@ Kết quả:
 
 Các selector thông dụng là:
 
-<img src="selector1.png">
-<img src="selector2.png">
+<img src="./img/selector1.png">
+<img src="./img/selector2.png">
 
 Ngoài ra còn có Pseudo Classes:
 
@@ -100,7 +100,7 @@ Ngoài ra còn có Pseudo Classes:
 
 Độ ưu tiên của các selector được thể hiện bằng hình ảnh dưới:
 
-<img src="selector3.png">
+<img src="./img/selector3.png">
 
 # [👊Conflicts & Cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade)
 
@@ -151,6 +151,8 @@ Kết quả:
     This is a box
     <p>Paragraph</p>
 </div>
+
+<img src="./img/selector4.png">
 
 **Sự khác biệt giữa Cascade và Inheritance:**
 

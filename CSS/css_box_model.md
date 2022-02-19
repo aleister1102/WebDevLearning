@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Box Model</h1></center>
@@ -21,7 +21,7 @@
 
 Box Model là cách mà một element thể hiện chính nó trên trang web theo không gian. Một Box Model điển hình sẽ có dạng như thế này.
 
-<img src="box6.png">
+<img src="./img/box6.png">
 
 Như trên hình, box model gồm bốn phần: _content_, _padding_, _border_, _margins_.
 
@@ -102,7 +102,7 @@ Ví dụ như ta muốn viền có độ dày 2px, kiểu liền nét và màu �
 
 Các kiểu border:
 
-<img src="box7.png">
+<img src="./img/box7.png">
 
 Cũng có thể format cho từng cạnh cụ thể, chẳng hạn cạnh `bottom`.
 
@@ -138,7 +138,7 @@ Tương tự padding và border, margin cũng có bốn cạnh và có thể thi
 
 Giả sử cho box 1 có margin bottom là **20px**, và box 2 có margin top là **10px**. Theo lẽ thường thì cả hai box này cách nhau **30px**. Nhưng không phải, giá trị của nó là **20px**.
 
-<img src="box8.png">
+<img src="./img/box8.png">
 
 Đây gọi là hiện tượng [**Vertical Margin Collapse**](https://vuilaptrinh.com/2020-12-14-quy-luat-cua-margin-collapse/) (chồng lề dọc). Xảy ra khi có hai box giống nhau đứng liền kề, hai viền của hai box ấy sẽ chồng vào nhau, dẫn đến khoảng cách giữa hai box lúc này chỉ có **20px** mà thôi.
 
@@ -190,7 +190,7 @@ Nếu muốn quay trở lại ban đầu thì set `box-sizing: content-box`.
 }
 ```
 
-<img src="box9.png">
+<img src="./img/box9.png">
 
 Cũng có thể bo tròn từng góc:
 
@@ -205,7 +205,7 @@ Cũng có thể bo tròn từng góc:
 }
 ```
 
-<img src="box10.png">
+<img src="./img/box10.png">
 
 ## 🟣Making circle
 
@@ -222,7 +222,7 @@ Cũng có thể bo tròn từng góc:
 
 **Kết quả**:
 
-<img src="box11.png">
+<img src="./img/box11.png">
 
 Đoạn code sau cũng cho kết quả tương tự:
 

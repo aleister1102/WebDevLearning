@@ -1,7 +1,7 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
-    <center><h1 class="bigtitle">CSS Block & Inline Elements</h1></center>
+    <center><h1 class="bigtitle">CSS Block & Inline Element</h1></center>
 </div>
 
 # Table of contents
@@ -16,13 +16,13 @@
 
 Có hai loại hiển thị phần tử phổ biến là **inline element** và **block element**.
 
-<img src="box1.png">
+<img src="./img/box1.png">
 
 # 🚘Inline Elements
 
 > **Inline element** không chiếm trọn một dòng mà chỉ sử dụng phần diện tích vừa đủ để bao quanh content bên trong đó mà thôi.
 
-<img src="box2.png">
+<img src="./img/box2.png">
 
 Ví dụ:
 
@@ -54,7 +54,7 @@ Các thẻ format có thuộc tính của inline element:
 
 > **Block element** là các phần tử luôn bắt đầu ở một dòng mới. Đồng thời chúng có kích thước chiếm trọn một dòng. Block element có thể set được kích thước.
 
-<img src="box3.png">
+<img src="./img/box3.png">
 
 Một số block element phổ biến là:
 
@@ -68,7 +68,7 @@ Một số block element phổ biến là:
 
 > **Inline-block element** là kết hợp giữa inline và block, nó không bắt đầu trên một dòng mới nhưng có thể set được kích thước. Do đó nó có chiều rộng bằng chiều rộng của thẻ chứa nó.
 
-<img src="box4.png">
+<img src="./img/box4.png">
 
 Ví dụ:
 
@@ -84,7 +84,7 @@ Ví dụ:
 
 **Minh họa các loại element:**
 
-<img src="box5.png">
+<img src="./img/box5.png">
 
 # 📺Display Property
 

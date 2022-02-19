@@ -1,20 +1,26 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
-    <center><h1 class="bigtitle">CSS Styles</h1></center>
+    <center><h1 class="bigtitle">CSS Style</h1></center>
 </div>
 
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
 - [🈵Font](#font)
 - [🔠Text](#text)
 - [📏Distance](#distance)
 - [🌈Color Code](#color-code)
   - [rgb(a, b, c)>)](#rgba-b-c)
   - [rgba(a, b, c, alpha)>)](#rgbaa-b-c-alpha)
+  - [linear-gradient(direction, startColor, endColor)>)](#linear-gradientdirection-startcolor-endcolor)
 - [💗Opacity](#opacity)
 - [🌒Box shadow](#box-shadow)
+
+# References
+
+> [CSS Gradient](https://cssgradient.io/)
 
 # [🈵Font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
@@ -93,6 +99,14 @@ Kết quả:
 ## [rgba(a, b, c, alpha)](<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgba()>)
 
 Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả độ đục của màu sắc.
+
+## [linear-gradient(direction, startColor, endColor)](<https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient()>)
+
+Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
+
+<img src="./img/css5.png">
+
+Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.
 
 # [💗Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 

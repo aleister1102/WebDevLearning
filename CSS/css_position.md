@@ -1,4 +1,4 @@
-<link rel='stylesheet' href='../../../main.css'>
+<link rel='stylesheet' href='../main.css'>
 
 <div class="title"> 
     <center><h1 class="bigtitle">CSS Position</h1></center>
@@ -17,19 +17,19 @@
 
 Thuộc tính `position` có các giá trị `relative, absolute, fixed, sticky` để thiết lập vị trí cho element.
 
-<img src="pos0.png">
+<img src="./img/pos0.png">
 
 # 🍓Relative
 
 Một element có `position: relative` sẽ có vị trí không phụ thuộc vào đối tượng nào khác. Tức là nếu chúng ta di chuyển xung quanh, thì nó sẽ lấy vị trí ban đầu của nó làm gốc tọa độ.
 
-<img src="pos0b.png">
+<img src="./img/pos0b.png">
 
 Chúng ta dùng các thuộc tính `top, right, bottom, left` để di chuyển element, và chúng chỉ hoạt động khi có `position`.
 
 Ban đầu:
 
-<img src="pos1.png">
+<img src="./img/pos1.png">
 
 ```css
 div {
@@ -45,13 +45,13 @@ div {
 
 **Kết quả**:
 
-<img src="pos2.png">
+<img src="./img/pos2.png">
 
 # 🍏Absolute
 
 Element có `position: absolute` sẽ phụ thuộc vào thẻ cha gần nhất có thuộc tính `position` (giống cách mà đơn vị `em` hoạt động).
 
-<img src="pos2b.png">
+<img src="./img/pos2b.png">
 
 > Dùng khi có một đối tượng phụ thuộc vào đối tượng khác.
 
@@ -73,7 +73,7 @@ Giả sử cho đoạn code:
     </div>
   </body>
 
-  <script src="main.js"></script>
+  <script src="./img/main.js"></script>
 </html>
 ```
 
@@ -103,7 +103,7 @@ Giả sử cho đoạn code:
 
 Ban đầu:
 
-<img src="pos3.png">
+<img src="./img/pos3.png">
 
 ```css
 #box-child {
@@ -118,13 +118,13 @@ Ban đầu:
 
 Kết quả:
 
-<img src="pos4.png">
+<img src="./img/pos4.png">
 
 # 🍋Fixed
 
 Dùng để cố định vị trí của element trên cửa sổ trình duyệt, cú pháp là `position: fixed`. Điều hướng dùng `top, right, bottom, left` tương tự `relative` và `absolute`.
 
-<img src="pos4b.png">
+<img src="./img/pos4b.png">
 
 # 🍊Sticky
 
