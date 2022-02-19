@@ -80,6 +80,8 @@ Kết quả:
 <h2 class="heading2" style="color:orange">Heading</h2>
 <h2 class="heading2" style="color:orange">Heading</h2>
 
+> Trong thực tế thì chúng ta sử dụng class nhiều hơn id vì tính đa dụng của nó.
+
 # [💪Useful selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
 Các selector thông dụng là:

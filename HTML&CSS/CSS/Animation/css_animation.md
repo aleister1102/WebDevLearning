@@ -76,7 +76,7 @@ Nếu animation có nhiều giai đoạn, chúng ta sử dụng như sau:
   0% {
     // Changing styles
   }
-  40% {
+  99% {
     // Changing styles
   }
   80% {

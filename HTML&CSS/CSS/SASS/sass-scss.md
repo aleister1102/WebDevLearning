@@ -11,6 +11,7 @@
 - [👠Variable](#variable)
 - [💄Nested Code](#nested-code)
 - [💍Mixin](#mixin)
+- [💋For](#for)
 - [👛Import](#import)
 
 # [👗Sass](https://sass-lang.com/)
@@ -121,6 +122,18 @@ Sử dụng với Responsive:
 @mixin minWidth($value) {
   @media screen and (min-width: $value) {
     display: none;
+  }
+}
+```
+
+# [💋For](https://sass-lang.com/documentation/at-rules/control/for)
+
+Cú pháp vòng lặp như sau:
+
+```scss
+@for $i from 1 through 4 {
+  .dot-loading div:nth-child(#{$i}) {
+    @include animationDelay(-0.12s * $i);
   }
 }
 ```
