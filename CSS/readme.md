@@ -1,6 +1,6 @@
 <link rel='stylesheet' href='../main.css'>
 
-🧡 HTML & CSS knowledges studied from 2021 🧡.
+🧡 CSS knowledges studied from 2021 🧡.
 
 # Table of Contents
 
@@ -16,8 +16,7 @@
 | CSS   | [CSS Flexbox](./css_flexbox.md)                     | Model, Properties, Auto Margin, Tools, Aside                                                           |
 | CSS   | [CSS BEM](./css_BEM.md)                             | Meaning, Syntax & Example, Nest Block                                                                  |
 | CSS   | [CSS Grid](./css_grid.md)                           | Properties, Container properties, Items properties, Areas/area, Auto Fit & Auto Fill                   |
-| SASS  | [CSS Animation](./css_animation.md)                 | Animation Syntax & Properties, Animation Stages                                                        |
-| SASS  | [CSS Transition](./css_transition.md)               | Transition Syntax, Transition Properties                                                               |
+| CSS   | [CSS Animation](./css_animation.md)                 | Transform / Animation / Transition                                                                     |
 | SASS  | [SASS - SCSS](./sass-scss.md)                       | Sass, Variables, Nested Code, Mixin, Import                                                            |
 
 # Convention

@@ -31,7 +31,7 @@
 
 CSS là viết tắt của **Cascading Style Sheet**, bao gồm **các quy luật** dùng để áp dụng style cho các element của HTML. Mỗi quy luật sẽ chọn một hoặc nhiều element để định dạng style cho nó.
 
-<img src="./img/css0.png">
+<img src="https://www.codespot.org/assets/css.jpg">
 
 # [🎨CSS in HTML](https://www.w3schools.com/css/css_howto.asp)
 
@@ -79,7 +79,7 @@ selector {
 
 Minh họa:
 
-<img src="./img/css1.png">
+<img src="https://www.w3schools.com/css/img_selector.gif">
 
 # 💬CSS Comments
 

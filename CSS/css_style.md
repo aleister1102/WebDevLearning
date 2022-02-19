@@ -104,7 +104,7 @@ Hàm `rgba()` giống `rgb()` nhưng có thêm tham số alpha để mô tả đ
 
 Hàm này dùng để tạo ra một hình ảnh có dạng gradient.
 
-<img src="./img/css5.png">
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--F7w_snYb--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vda3askm2sbfjl717q9q.png">
 
 Tham số đầu tiên là direction của gradient, có thể là `to left` (từ phải qua trái), `to right` (trái qua phải), `to bottom` (trên xuống dưới), ... Thậm chí direction có thể là `45deg` (nghiêng 45 độ). Hai tham số sau là **màu bắt đầu** và **màu kết thúc** theo direction.
 
@@ -132,3 +132,11 @@ Ví dụ:
 - Giá trị thứ ba là blur radius, giá trị càng lớn thì càng mờ.
 - Giá trị thứ tư là spread radius, cho biết bóng sẽ lan rộng bao xa.
 - Giá trị cuối cùng là màu sắc, thường sử dụng hàm `rgba()`.
+
+Box Shadow có thể có nhiều hiệu ứng, ngăn cách nhau bởi dấu phẩy:
+
+```css
+element {
+  box-shadow: inset 0 2px 0px #dcffa6, 0 2px 5px #000;
+}
+```

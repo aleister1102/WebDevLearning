@@ -35,7 +35,7 @@ div {
 
 Thuộc tính `background-clip` quyết định xem màu background sẽ được đổ từ ranh giới nào.
 
-<img src="./img/bg1b.png">
+<img src="https://freefrontend.com/assets/img/css-background-clip-examples/visualizing-background-clip.png">
 
 Chẳng hạn ta cho ranh giới từ padding:
 
@@ -212,7 +212,7 @@ Nếu muốn sử dụng thẻ `<img>` thay vì thẻ `<div>`, có thể sử d�
 
 Tương tự thuộc tính `background-clip` đối với `background-color`, thuộc tính `background-origin` quyết định vị trí bắt đầu của hình ảnh.
 
-<img src="./img/bg7b.png">
+<img src="https://images.viblo.asia/094c2981-51f5-40dc-9926-3ef43ed0ef50.png">
 
 Ví dụ:
 
@@ -276,7 +276,7 @@ Giá trị số đầu tiên là offset tính từ viền trái, kế tiếp là
 
 Cũng có thể sử dụng các keyword, chẳng hạn `center, left top, right top, left bottom và right bottom`.
 
-<img src="./img/bg12b.png">
+<img src="https://cutewallpaper.org/21/background-position/Hi-friends-in-this-post-I-am-sharing-about-css-background-.gif">
 
 Ví dụ:
 

@@ -15,7 +15,7 @@
 
 # [✨Flexbox Model](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-<img src="./img/flex1.png">
+<img style="background-color: #fff;" src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg">
 
 - Main size và cross size lần lượt song song với main axis và cross axis.
 - Flex items phải là các thẻ con trực tiếp của container.

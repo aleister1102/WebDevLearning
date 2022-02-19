@@ -33,7 +33,7 @@ BEM là viết tắt của Block Element Modifier, như tên gọi thì nó gồ
 - **Element**: các thẻ con chứa trong một container.
 - **Modifier**: mô tả trạng thái của một block hoặc element để bổ sung ý nghĩa cho chúng.
 
-<img src="./img/BEM1.png">
+<img src="https://scalablecss.com/static/e1a5b9380a8917650ea95c4c8a0af2a4/21b4d/visual-example-of-bem.png">
 
 # ✍Syntax & Example
 
@@ -59,7 +59,7 @@ Cú pháp của ba phần tử là:
 3. **Modifier**: cũng bắt đầu bởi tên block hoặc element, theo sau là `--` và tên của modifier. \
    Thông thường thì modifier có hai dạng, dạng đầu là kiểu boolean, chẳng hạn `block--large`. Dạng thứ hai là cặp key-value, chẳng hạn `block--text-red`.
 
-<img src="./img/BEM2.png">
+<img src="https://scalablecss.com/static/04158e912667d940eeb914f724379072/2e367/nesting-elements-within-block.png">
 
 - Chẳng hạn một card Yugioh có thể là dạng [Link](https://yugioh.fandom.com/wiki/Link_Monster) và có màu nền là màu xanh, và ta cần CSS khác với quái thú thông thường. \
 - Quái thú dạng Link này cũng sẽ không có chỉ số phòng thủ.

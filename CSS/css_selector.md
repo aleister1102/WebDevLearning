@@ -152,7 +152,7 @@ Kết quả:
     <p>Paragraph</p>
 </div>
 
-<img src="./img/selector4.png">
+<img src="https://miro.medium.com/max/1400/1*5efIV8jMkuEUcLs4vx_WBQ.jpeg">
 
 **Sự khác biệt giữa Cascade và Inheritance:**
 
