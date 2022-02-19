@@ -6,7 +6,8 @@
 Các tài liệu và projects tham khảo từ internet ⛲.
 | Type | Content |
 | ---------- | :---------------------------------------: |
-| HTML&CSS | [HTML&CSS Basics](HTML/readme.md) |
+| HTML| [HTML Basics](HTML/readme.md) |
+| CSS | [CSS Basics](HTML/readme.md) |
 | JavaScript | [JavaScript Basics](JavaScript/readme.md) |
 
 # Tools
