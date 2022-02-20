@@ -32,3 +32,35 @@ OOCSS là một cách ứng dụng OOP vào CSS để gom nhóm các thuộc tí
 ## [Emmet](https://docs.emmet.io/cheat-sheet/)
 
 Emmet là một cách viết ngắn gọn để tạo nhanh các thuộc tính của CSS (và cả các thẻ HTML).
+
+## [Tailwind CSS](https://tailwindcss.com/docs/installation)
+
+**Chức năng:** Một thư viện cung cấp sẵn một bộ CSS xịn xò, chúng ta chỉ cần dúng đúng tên class mà nó quy định là sẽ áp dụng được các CSS rules. Dùng thư viện này làm hạn chế code CSS nhưng khiến cho lượng class trong HTML tăng lên khá nhiều.
+
+**Use case:** Chỉ dùng khi code trong dự án lớn, đi kèm với các frameworks như React, Vue, Angular, ...
+
+Lý do là vì chúng ta sử dụng code tĩnh trong HTML, để sửa chữa hoặc nâng cấp cho nhiều element cùng thuộc tính thì lại phải lặp đi lặp lại các class. Lúc này, các thư viện sẽ nhập cuộc và quản lý các elements sao cho giảm thiểu code HTML.
+
+**Yêu cầu: NodeJS.**
+
+**Cài đặt:**
+
+```bat
+npm init -y
+npm install -D tailwindcss postcss autoprefixer vite
+npx tailwindcss init -p
+```
+
+Sửa key `"test"` trong `package.json` thành key `"dev"`, thay toàn bộ chuỗi giá trị thành `"vite"`. Sau đó tạo một thư mục css, trong đó có file `tailwind.css`. Rồi chạy đoạn lệnh:
+
+```bat
+npx tailwindcss-cli build css/tailwind.css -o build build/tailwind.css
+```
+
+Để rebuild:
+
+```bat
+npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch
+```
+
+Đối với những giá trị không có sẵn, hãy [**customize Tailwind**](https://tailwindcss.com/docs/configuration).
