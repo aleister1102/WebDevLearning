@@ -51,16 +51,18 @@ npm install -D tailwindcss postcss autoprefixer vite
 npx tailwindcss init -p
 ```
 
-Sửa key `"test"` trong `package.json` thành key `"dev"`, thay toàn bộ chuỗi giá trị thành `"vite"`. Sau đó tạo một thư mục css, trong đó có file `tailwind.css`. Rồi chạy đoạn lệnh:
+Sửa key `"test"` trong `package.json` thành key `"dev"`, thay toàn bộ chuỗi giá trị thành `"vite"`. Chạy lệnh:
 
 ```bat
-npx tailwindcss-cli build css/tailwind.css -o build build/tailwind.css
+npm run dev
 ```
 
-Để rebuild:
+Sau đó tạo một thư mục css, trong đó có file `tailwind.css`. Rồi chạy đoạn lệnh:
 
 ```bat
-npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch
+npx tailwindcss-cli -i css/tailwind.css -o build/tailwind.css --watch
 ```
+
+Để rebuild cũng dùng lệnh trên.
 
 Đối với những giá trị không có sẵn, hãy [**customize Tailwind**](https://tailwindcss.com/docs/configuration).
