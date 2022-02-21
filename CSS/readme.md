@@ -33,21 +33,23 @@ OOCSS là một cách ứng dụng OOP vào CSS để gom nhóm các thuộc tí
 
 Emmet là một cách viết ngắn gọn để tạo nhanh các thuộc tính của CSS (và cả các thẻ HTML).
 
+# Library/Framework
+
 ## [Tailwind CSS](https://tailwindcss.com/docs/installation)
 
-**Chức năng:** Một thư viện cung cấp sẵn một bộ CSS xịn xò, chúng ta chỉ cần dúng đúng tên class mà nó quy định là sẽ áp dụng được các CSS rules. Dùng thư viện này làm hạn chế code CSS nhưng khiến cho lượng class trong HTML tăng lên khá nhiều.
+**Feature:** Một thư viện cung cấp sẵn một bộ CSS xịn xò, chúng ta chỉ cần dúng đúng tên class mà nó quy định là sẽ áp dụng được các CSS rules. Dùng thư viện này làm hạn chế code CSS nhưng khiến cho lượng class trong HTML tăng lên khá nhiều.
 
 **Use case:** Chỉ dùng khi code trong dự án lớn, đi kèm với các frameworks như React, Vue, Angular, ...
 
 Lý do là vì chúng ta sử dụng code tĩnh trong HTML, để sửa chữa hoặc nâng cấp cho nhiều element cùng thuộc tính thì lại phải lặp đi lặp lại các class. Lúc này, các thư viện sẽ nhập cuộc và quản lý các elements sao cho giảm thiểu code HTML.
 
-**Yêu cầu: NodeJS.**
+**Requirement**: NodeJS.
 
-**Cài đặt:**
+**Setup**
 
 ```bat
 npm init -y
-npm install -D tailwindcss postcss autoprefixer vite
+npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
@@ -59,4 +61,56 @@ npx tailwindcss-cli -i css/tailwind.css -o build/tailwind.css --watch
 
 Với `css/tailwind.css` là file input, `build/tailwind.css` là file output.
 
-Đối với những giá trị không có sẵn, hãy [**customize Tailwind**](https://tailwindcss.com/docs/configuration). Sau khi customize nếu không được áp dụng thì rebuild, để rebuild cũng dùng lệnh trên.
+**Config**
+
+Đối với những giá trị không có sẵn, hãy [**config Tailwind**](https://tailwindcss.com/docs/configuration). Sau khi config chúng ta cần rebuild, để rebuild có thể dùng:
+
+```bat
+npx tailwindcss-cli -o build/tailwind.css --watch
+```
+
+**JIT**
+
+Nếu các giá trị trong file config trở nên quá nhiều, hãy sử dụng [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode). Chế độ này cho phép chúng ta ghi thẳng giá trị tùy ý vào HTML mà không cần thêm vào config và build lại.
+
+Ngoài ra, JIT chỉ compile những gì chúng ta viết thành CSS chứ không phải tất cả. Tính năng này làm cho file CSS trở nên nhẹ hơn, tăng performance.
+
+Để setup JIT, thêm đường dẫn file muốn sử dụng vào mảng content, chú ý là [cần cụ thể](https://tailwindcss.com/docs/content-configuration#pattern-recommendations):
+
+```js
+module.exports = {
+  mode: "jit",
+  purge: ["./index.html"],
+};
+```
+
+Ví dụ ta thêm vào config là:
+
+```js
+module.exports = {
+  spacing: {
+    35: "35px",
+  },
+};
+```
+
+Và sử dụng nó :
+
+```html
+<div class="mt-35"></div>
+```
+
+Thay vì vậy, ta có thể sử dụng trực tiếp với [giá trị tùy ý](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values), bằng cách thêm dấu `[]`:
+
+```html
+<div class="mt-[35px]"></div>
+```
+
+[**Responsive**](https://tailwindcss.com/docs/responsive-design)
+
+Tailwind sử dụng Mobile First nên chỉ có các giá trị `min-width`, do đó nên code giá trị mặc định là mobile, sau đó dùng các chuẩn kích thước để thêm vào responsive. Các chuẩn kích thước màn hình thông dụng là:
+
+- sm: 640px
+- md: 768px
+- lg: 1024px
+- xl: 1280px
