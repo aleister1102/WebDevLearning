@@ -48,6 +48,10 @@ Thông thường thì `@media screen` là được sử dụng nhiều nhất, n
 
 ## Break Points
 
+PC: >= 1024px.\
+Tablet: >= 740px & < 1023px.\
+Mobile: < 739px.
+
 Một số break points thông dụng (chiều ngang):
 
 1. Mobile
