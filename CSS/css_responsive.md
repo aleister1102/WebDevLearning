@@ -50,15 +50,18 @@ Thông thường thì `@media screen` là được sử dụng nhiều nhất, n
 
 Một số break points thông dụng (chiều ngang):
 
-- 320
-- 480
-- 768
-- 1024
-- 1280
-- 1366
-- 1448
-- 1600
-- 1920
+1. Mobile
+    - 320
+    - 480
+2. Tablet
+    - 768
+3. PC
+    - 1024
+    - 1280
+    - 1366
+    - 1448
+    - 1600
+    - 1920
 
 ## Mobile first & Desktop first
 
