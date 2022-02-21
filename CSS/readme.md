@@ -69,6 +69,8 @@ Với `css/tailwind.css` là file input, `build/tailwind.css` là file output.
 npx tailwindcss-cli -o build/tailwind.css --watch
 ```
 
+Hoặc để bỏ những giá trị mặc định, của browser chẳng hạn, sử dụng class `apperance-none`.
+
 **JIT**
 
 Nếu các giá trị trong file config trở nên quá nhiều, hãy sử dụng [JIT mode](https://v2.tailwindcss.com/docs/just-in-time-mode). Chế độ này cho phép chúng ta ghi thẳng giá trị tùy ý vào HTML mà không cần thêm vào config và build lại.
