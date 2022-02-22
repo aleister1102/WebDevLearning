@@ -31,7 +31,7 @@ div {
 
 **Kết quả**:
 
-<img src="./img/bg1.png">
+<img src="./images/bg1.png">
 
 Thuộc tính `background-clip` quyết định xem màu background sẽ được đổ từ ranh giới nào.
 
@@ -53,7 +53,7 @@ div {
 
 **Kết quả**:
 
-<img src="./img/bg2.png">
+<img src="./images/bg2.png">
 
 Có thể thấy border không được đổ màu background.
 
@@ -98,7 +98,7 @@ div {
 
 **Kết quả**:
 
-<img src="./img/bg3.png">
+<img src="./images/bg3.png">
 
 Có thể chỉnh nhỏ kích thước ảnh nền bằng thuộc tính [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size). Nếu có một giá trị thì mặc định gán cho chiều ngang.
 
@@ -116,11 +116,11 @@ div {
 
 **Kết quả**:
 
-<img src="./img/bg4.png">
+<img src="./images/bg4.png">
 
 > [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) nếu sử dụng đơn vị relative thì sẽ so với ranh giới chứa nó, 100% tức là background sẽ fill hết padding (padding thuộc element).
 
-<img src="./img/bg11.png">
+<img src="./images/bg11.png">
 
 Để hình ảnh không lặp lại, sử dụng thuộc tính [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat).
 
@@ -138,7 +138,7 @@ div {
 ```
 
 **Kết quả**:
-<img src="./img/bg5.png">
+<img src="./images/bg5.png">
 
 Giá trị của [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) nếu là `repeat-x` sẽ lặp theo chiều ngang, là `repeat-y` sẽ lặp theo chiều dọc.
 
@@ -158,7 +158,7 @@ div {
 }
 ```
 
-<img src="./img/bg8.png">
+<img src="./images/bg8.png">
 
 Đồng thời, các giá trị của thuộc tính khác cũng có thể phân biệt nhau bởi dấu phẩy để áp dụng cho từng hình ảnh riêng biệt.
 
@@ -166,7 +166,7 @@ div {
 
 Ngoài các giá trị số thì thuộc tính `background-size` còn các giá trị dạng keyword. Chẳng hạn keyword `contain`. Keyword này sẽ chọn chiều ngang hoặc dọc của hình ảnh và gán giá trị là 100% chiều ngang hoặc dọc của ranh giới chứa nó, sao cho hình ảnh không bị che khuất.
 
-<img src="./img/bg5b.png">
+<img src="./images/bg5b.png">
 
 Nói một cách dễ hiểu, nếu `width = 100%` mà hình ảnh bị che khuất một phần, thì nó sẽ canh theo chiều dọc. Tức là cho `height = 100%`.
 
@@ -183,7 +183,7 @@ div {
 }
 ```
 
-<img src="./img/bg6.png">
+<img src="./images/bg6.png">
 
 > Có thể thấy, nếu phóng to hình ảnh sao cho chiều ngang chạm đến hai border trái phải, thì chiều dọc sẽ bị che khuất, nên nó cho chiều dọc có kích thước 100% của ranh giới chứa nó (padding trở vào).
 
@@ -202,7 +202,7 @@ div {
 }
 ```
 
-<img src="./img/bg7.png">
+<img src="./images/bg7.png">
 
 > Mặc dù chiều ngang là 100% của ranh giới chứa nó, nhưng chiều dọc lại bị mất.
 
@@ -232,7 +232,7 @@ div {
 
 **Kết quả**:
 
-<img src="./img/bg9.png">
+<img src="./images/bg9.png">
 
 > Thuộc tính `background-origin` có giá trị mặc định là `padding-box`.
 
@@ -250,7 +250,7 @@ div {
 }
 ```
 
-<img src="./img/bg10.png">
+<img src="./images/bg10.png">
 
 # [📌Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
@@ -272,7 +272,7 @@ div {
 
 Giá trị số đầu tiên là offset tính từ viền trái, kế tiếp là offest tính từ viền phải.
 
-<img src="./img/bg12.png">
+<img src="./images/bg12.png">
 
 Cũng có thể sử dụng các keyword, chẳng hạn `center, left top, right top, left bottom và right bottom`.
 
@@ -294,7 +294,7 @@ div {
 }
 ```
 
-<img src="./img/bg13.png">
+<img src="./images/bg13.png">
 
 Thậm chí còn có thể custom offset kết hợp với keyword, giá trị offset có thể là số âm.
 
@@ -312,7 +312,7 @@ div {
 }
 ```
 
-<img src="./img/bg14.png">
+<img src="./images/bg14.png">
 
 Đoạn code trên có nghĩa: dịch hình ảnh lên trên 50px, lùi hình ảnh từ viền phải vào 40px.
 
@@ -335,4 +335,4 @@ div {
 }
 ```
 
-<img src="./img/bg15.png">
+<img src="./images/bg15.png">

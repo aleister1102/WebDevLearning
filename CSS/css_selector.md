@@ -86,8 +86,8 @@ Kết quả:
 
 Các selector thông dụng là:
 
-<img src="./img/selector1.png">
-<img src="./img/selector2.png">
+<img src="./images/selector1.png">
+<img src="./images/selector2.png">
 
 Ngoài ra còn có Pseudo Classes:
 
@@ -100,7 +100,7 @@ Ngoài ra còn có Pseudo Classes:
 
 Độ ưu tiên của các selector được thể hiện bằng hình ảnh dưới:
 
-<img src="./img/selector3.png">
+<img src="./images/selector3.png">
 
 # [👊Conflicts & Cascade](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#the_cascade)
 

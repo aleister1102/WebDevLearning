@@ -93,7 +93,7 @@ Comment trong CSS có cú pháp:
 
 CSS có hai đơn vị là **absolute** (tuyệt đối) và **relative** (tương đối). [Use cases](https://yurilee.hashnode.dev/css-units-are-confusing-af) của các loại đơn vị.
 
-<img src="./img/css2.png">
+<img src="./images/css2.png">
 
 ## Absolute
 
@@ -165,7 +165,7 @@ h1 {
 
 Thứ tự của các thuộc tính nên được viết theo thứ tự sau:
 
-<img src="./img/css3.png">
+<img src="./images/css3.png">
 
 # [🤔CSS Pseudo Classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
@@ -234,7 +234,7 @@ Tương tự đối với phần tử giả `::after`, nó sẽ thêm một elem
 
 Có thể đặt biến trong CSS bằng cách sử dụng pseudo class. Gọi hàm `var(varName)` và truyền vào tên biến nhằm lấy giá trị của nó.
 
-<img src="./img/css4.png">
+<img src="./images/css4.png">
 
 Ví dụ:
 

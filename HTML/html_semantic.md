@@ -86,7 +86,7 @@ Tương tự [header](#header) nhưng để đánh dấu phần footer, sử d�
 
 Để đánh dấu phần header của trang web. Phần header có dạng như sau:
 
-<img src="./img/html6.png">
+<img src="./images/html6.png">
 
 Thông thường header sử dụng cho các phần tử:
 

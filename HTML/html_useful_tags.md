@@ -77,7 +77,7 @@ Ví dụ
 
 Các thẻ `<input>` nếu có thuộc tính `required` và để trống, khi bấm nút submit sẽ có thông báo:
 
-<img src="./img/html5.png">
+<img src="./images/html5.png">
 
 # [🚩Heading](https://www.w3schools.com/html/html_headings.asp)
 

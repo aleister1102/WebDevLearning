@@ -22,7 +22,7 @@
 
 # [🎇Flexbox Properties](https://www.samanthaming.com/flexbox30/)
 
-<img src="./img/flex2.png">
+<img src="./images/flex2.png">
 <hr>
 
 - [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow) là shorthand form của `flex-direction` và `flex-wrap`.
@@ -45,11 +45,11 @@
 
 > Phân loại theo mục đích sử dụng
 
-<img src="./img/flex2b.png">
+<img src="./images/flex2b.png">
 
 # [🎆Flexbox with Auto Margin](https://www.samanthaming.com/flexbox30/31-flexbox-with-auto-margins/)
 
-<img src="./img/flex2c.png">
+<img src="./images/flex2c.png">
 
 # 🎉Flexbox Tools
 
@@ -61,8 +61,8 @@
 
 # 🎊Aside
 
-<img src="./img/flex3.png">
+<img src="./images/flex3.png">
 
 <hr>
 
-<img src="./img/flex4.png">
+<img src="./images/flex4.png">

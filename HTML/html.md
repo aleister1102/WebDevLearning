@@ -17,7 +17,7 @@
 
 HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải là ngôn ngữ lập trình mà chỉ là ngôn ngữ đánh dấu (siêu văn bản). Nhiệm vụ của nó sẽ đánh dấu từng phần của văn bản, những phần được đánh dấu này sẽ được CSS và JS xử lý.
 
-<img src="./img/html0.png">
+<img src="./images/html0.png">
 
 Đồng thời, HTML giúp phân chia các phần trong văn bản nhằm xây dựng nên cấu trúc trang web.
 
@@ -25,7 +25,7 @@ HTML là viết tắt của **Hyper Text Markup Language**. Nó không phải l�
 
 Cú pháp của một element:
 
-<img src="./img/html1.png">
+<img src="./images/html1.png">
 
 **Content** và **attribute** không phải là thành phần bắt buộc của một element.
 
@@ -35,7 +35,7 @@ Một số tag không có opening tag hoặc closing tag hay thậm chí không 
 
 Cú pháp của attribute trong một tag là:
 
-<img src="./img/html2.png">
+<img src="./images/html2.png">
 
 Một số attribute chỉ tồn tại ở vài tag nhất định, trong khi số khác lại có ở mọi tag (ta gọi chúng là **global attributes**). Chẳng hạn attribute `class` có ở mọi tag.
 
@@ -75,7 +75,7 @@ Ví dụ một file HTML đơn giản:
 ```
 
 Minh họa:
-<img src="./img/html3.png">
+<img src="./images/html3.png">
 
 Có thể thấy, một file HTML gồm duy nhất một thẻ `<html>` chứa thẻ `<head>` và thẻ `<body>`.
 

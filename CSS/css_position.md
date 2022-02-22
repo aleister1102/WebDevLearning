@@ -29,7 +29,7 @@ Chúng ta dùng các thuộc tính `top, right, bottom, left` để di chuyển 
 
 Ban đầu:
 
-<img src="./img/pos1.png">
+<img src="./images/pos1.png">
 
 ```css
 div {
@@ -45,7 +45,7 @@ div {
 
 **Kết quả**:
 
-<img src="./img/pos2.png">
+<img src="./images/pos2.png">
 
 # 🍏Absolute
 
@@ -73,7 +73,7 @@ Giả sử cho đoạn code:
     </div>
   </body>
 
-  <script src="./img/main.js"></script>
+  <script src="./images/main.js"></script>
 </html>
 ```
 
@@ -103,7 +103,7 @@ Giả sử cho đoạn code:
 
 Ban đầu:
 
-<img src="./img/pos3.png">
+<img src="./images/pos3.png">
 
 ```css
 #box-child {
@@ -118,7 +118,7 @@ Ban đầu:
 
 Kết quả:
 
-<img src="./img/pos4.png">
+<img src="./images/pos4.png">
 
 # 🍋Fixed
 
