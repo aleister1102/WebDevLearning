@@ -2,7 +2,7 @@
 
 # HTML, CSS and JavaScript Basics
 
-Đây là repo để lưu các note kiến thức và code trong quá trình học lập trình Front End bắt đầu từ 2021 🥇 🥈 🥉.
+Đây là repo để lưu các note kiến thức và code trong quá trình học lập trình Fullstack bắt đầu từ 2021 🥇 🥈 🥉.
 Các tài liệu và projects tham khảo từ internet ⛲.
 | Type | Content |
 | ---------- | :---------------------------------------: |
