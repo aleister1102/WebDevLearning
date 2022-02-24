@@ -34,10 +34,10 @@ Cú pháp của [Media Queries](https://www.w3schools.com/cssref/css3_pr_mediaqu
 - mediatypes: `print`, `screen`, `speech`, `all` (default).
 - mediafeature: `min-width`, `max-width`,...
 
-Thông thường thì `@media screen` là được sử dụng nhiều nhất, ngầm hiểu sử dụng keyword `only`.
+Thông thường thì `@media` là được sử dụng nhiều nhất, ngầm hiểu sử dụng keyword `only` và media types là `all`.
 
 ```css
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .box {
     display: none;
   }
