@@ -15,7 +15,7 @@
 
 # [📌Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
-Thuộc tính `position` có các giá trị `relative, absolute, fixed, sticky` để thiết lập vị trí cho element.
+Thuộc tính `position` có các giá trị `relative, absolute, fixed, sticky` để thiết lập vị trí cho element. Ngoài ra, nếu muốn hủy thiết lập position thì sử dụng giá trị `initial`.
 
 <img style="background-color: #fff;" src="https://topdev.vn/blog/wp-content/uploads/2020/09/position-trong-css.png">
 
