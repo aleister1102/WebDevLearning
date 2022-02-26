@@ -53,6 +53,7 @@ This is a paragraph
 [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration): trang trí cho chữ.\
 [`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform): chuyển đổi giữa in hoa in thường.\
 [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align): canh giữa chữ trong một element.\
+[`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow): tạo bóng cho chữ.\
 [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color): màu chữ.
 
 ```css
