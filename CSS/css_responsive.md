@@ -7,6 +7,8 @@
 # Table of contents
 
 - [Table of contents](#table-of-contents)
+- [References](#references)
+  - [Tools](#tools)
 - [🌞Responsive](#responsive)
   - [Break Points](#break-points)
   - [Mobile first & Desktop first](#mobile-first--desktop-first)
@@ -14,11 +16,25 @@
     - [Desktop first `<`](#desktop-first-)
   - [IE Browser](#ie-browser)
 
+# References
+
+## Tools
+
+[F8 Grid System Library](https://codepen.io/le-minh-quan/pen/podxzYO)
+
+[Convert from `px` to `em`](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
+
 # [🌞Responsive](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 
-Lập trình **responsive** nhằm thay đổi giao diện trang web sao cho phù hợp với mọi kích thước màn hình.
+Lập trình **responsive** nhằm thay đổi giao diện trang web sao cho phù hợp với mọi kích thước màn hình của thiết bị khác nhau.
 
-Để thiết lập responsive cho trang web, ta sử dụng **Media Queries**.
+Để sử dụng **Media Queries** nhằm lập trình responsive, HTML bắt buộc phải có thẻ [meta](https://responsivedesign.is/develop/responsive-html/viewport-meta-element/) với `name="viewport"`:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+Các thuộc tính khác của content (minumim-scale, maximum-scale, etc.) không được khuyến khích sử dụng.
 
 Cú pháp của [Media Queries](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp) là:
 
@@ -34,10 +50,10 @@ Cú pháp của [Media Queries](https://www.w3schools.com/cssref/css3_pr_mediaqu
 - mediatypes: `print`, `screen`, `speech`, `all` (default).
 - mediafeature: `min-width`, `max-width`,...
 
-Thông thường thì `@media` là được sử dụng nhiều nhất, ngầm hiểu sử dụng keyword `only` và media types là `all`.
+Thông thường thì `@media screen` là được sử dụng nhiều nhất, ngầm hiểu sử dụng keyword `only`.
 
 ```css
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .box {
     display: none;
   }
@@ -46,26 +62,32 @@ Thông thường thì `@media` là được sử dụng nhiều nhất, ngầm h
 
 Đoạn code trên có ý nghĩa, nếu chiều ngang màn hình đạt tối thiểu **768px** thì element có class là `box` sẽ bị ẩn đi. Con số **768px** gọi là **break point**.
 
+Về đơn vị sử dụng cho mediafeature, `em` là được ưu tiên. Lý do ở [đây](https://zellwk.com/blog/media-query-units/).
+
 ## Break Points
 
-PC: >= 1024px.\
-Tablet: >= 740px & < 1023px.\
 Mobile: < 739px.
 
-Một số break points thông dụng (chiều ngang):
+```css
+@media screen (max-width: 739px) {
+}
+```
 
-1. Mobile
-    - 320
-    - 480
-2. Tablet
-    - 768
-3. PC
-    - 1024
-    - 1280
-    - 1366
-    - 1448
-    - 1600
-    - 1920
+Tablet: >= 740px & < 1023px.
+
+```css
+@media screen and(min-width: 740px) and (max-width: 1023px) {
+}
+```
+
+PC: >= 1024px.
+
+```css
+@media screen and(min-width: 1024px) {
+}
+```
+
+Một số break points [thông dụng](https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/) (chiều ngang).
 
 ## Mobile first & Desktop first
 

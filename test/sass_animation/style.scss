@@ -174,7 +174,7 @@ h2 {
 $dots: 4;
 @for $i from 1 through $dots {
   .dot-loading div:nth-child(#{$i}) {
-    @include animationDelay((-0.5s / $dots) * $i);
+    @include animationDelay(calc((-0.5s / $dots) * $i));
   }
 }
 

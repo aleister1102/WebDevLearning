@@ -38,10 +38,6 @@
 
 h1 {
   font-size: 40px;
-  background-image: linear-gradient(30deg, aquamarine, aqua);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 h2 {
@@ -149,8 +145,7 @@ h2 {
   width: 10px;
   height: 10px;
   background-color: #604fff;
-  animation: stagger 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-    alternate;
+  animation: stagger 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
 }
 
 .dot-loading div:nth-child(1) {
@@ -173,8 +168,7 @@ h2 {
   0% {
     transform: translateY(0px);
   }
-  50%,
-  100% {
+  50%, 100% {
     transform: translateY(20px);
   }
 }
@@ -341,4 +335,4 @@ h2 {
   width: 100%;
 }
 
-/*# sourceMappingURL=animation_transition.css.map */
+/*# sourceMappingURL=style.css.map */

@@ -120,6 +120,8 @@ Phần margin chính là phần để phân biệt các block của các element
 
 Tương tự padding và border, margin cũng có bốn cạnh và có thể thiết lập style cho một hoặc nhiều cạnh.
 
+Đồng thời, margin có thể có giá trị âm. Set giá trị âm sẽ làm box kéo dãn ra khỏi kích thước vốn có của nó.
+
 ### Vertical margin collapse
 
 ```html
