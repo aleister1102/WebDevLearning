@@ -107,7 +107,7 @@ Xét đoạn code:
 
   <body>
     <div id="box" class="box" onclick="console.log(this.textContent)">
-      <span onclick="console.log(this.textContent)"> Click me </span>
+      <span> Click me </span>
     </div>
   </body>
 
