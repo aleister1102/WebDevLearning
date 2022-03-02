@@ -140,7 +140,7 @@ Kết quả:
 
 <img src = "dom5.png">
 
-Phương thức `preventDefault` thuộc về đối tượng `event` dùng để ngăn chặn sự kiện "nổi bọt" ra các element bên ngoài.
+Phương thức `stopPropagation` thuộc về đối tượng `event` dùng để ngăn chặn sự kiện "nổi bọt" ra các element bên ngoài.
 
 # 🎧Event Listeners
 
