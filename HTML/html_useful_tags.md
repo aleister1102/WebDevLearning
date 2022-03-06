@@ -6,18 +6,18 @@
 
 # Table of contents
 
-- [Table of contents](#table-of-contents)
-- [🔗Anchor](#anchor)
-- [💥Break](#break)
-- [🔘Button](#button)
-- [📦Division](#division)
-- [📋Form](#form)
-- [🚩Heading](#heading)
-- [📷Image](#image)
-- [📥Input](#input)
-- [📜List](#list)
-- [📄Paragraph](#paragraph)
-- [🧮Table](#table)
+-   [Table of contents](#table-of-contents)
+-   [🔗Anchor](#anchor)
+-   [💥Break](#break)
+-   [🔘Button](#button)
+-   [📦Division](#division)
+-   [📋Form](#form)
+-   [🚩Heading](#heading)
+-   [📷Image](#image)
+-   [📥Input](#input)
+-   [📜List](#list)
+-   [📄Paragraph](#paragraph)
+-   [🧮Table](#table)
 
 # [🔗Anchor](https://www.w3schools.com/html/html_links.asp)
 
@@ -107,23 +107,43 @@ Kết quả:
 
 Thẻ `<img>` là một thẻ đơn không chứa nội dung dùng để đánh dấu hình ảnh. Nó thường đi kèm với ba thuộc tính:
 
-- `src="imageLink/imageFileLink"`: dùng để khai báo đường dẫn hình ảnh.
-- `alt="description"`: dùng để mô tả nội dung hình ảnh khi hình ảnh bị hỏng.
-- `title`: dùng để hiển thị caption cho hình ảnh khi hover chuột vào.
+-   `src="imageLink/imageFileLink"`: dùng để khai báo đường dẫn hình ảnh.
+-   `alt="description"`: dùng để mô tả nội dung hình ảnh khi hình ảnh bị hỏng.
+-   `title`: dùng để hiển thị caption cho hình ảnh khi hover chuột vào.
 
 Ví dụ:
 
 ```html
 <img
-  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
-  alt="HTML5 logo"
-  title="HTML5"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+    alt="HTML5 logo"
+    title="HTML5"
 />
 ```
 
 Kết quả
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5 logo" title="HTML5"/>
+
+Ngoài ra, ta có thể dùng thuộc tính `onerror` với cú pháp sau:
+
+```html
+<img onerror="this.src='backup url'" src="url" alt="HTML5 logo" title="HTML5" />
+```
+
+Giá trị `backup url` là đường dẫn đến ảnh dự phòng nếu ảnh chính bị hỏng link hoặc không hiển thị được.
+
+Ảnh backup thường có dạng:
+
+![](https://phocode.com/wp-content/uploads/2020/10/placeholder-1-1.png)
+
+Đối với thẻ `div` có dùng ảnh nền, nên khai báo nhiều url làm giá trị của thuộc tính `background-image`. Mục đích là để thay thế ảnh dự phòng nếu ảnh chính bị lỗi, đối với thẻ `div`.
+
+```css
+.div {
+    background-image: url("url1"), url("url2"), url("url3");
+}
+```
 
 # [📥Input](https://www.w3schools.com/tags/tag_input.asp)
 
@@ -155,9 +175,9 @@ Ví dụ:
 
 ```html
 <ul>
-  <li>List item 1</li>
-  <li>List item 2</li>
-  <li>List item 3</li>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
 </ul>
 ```
 
@@ -177,10 +197,10 @@ Ví dụ:
 
 ```html
 <p>
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type
-  specimen book.
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book.
 </p>
 ```
 
@@ -201,23 +221,23 @@ Cấu trúc của bảng như sau:
 
 ```html
 <table>
-  <thead>
-    <th>Name</th>
-    <th>Type</th>
-    <th>Pokedex</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Pikachu</td>
-      <td>Electric</td>
-      <td>025</td>
-    </tr>
-    <tr>
-      <td>Charmander</td>
-      <td>Fire</td>
-      <td>004</td>
-    </tr>
-  </tbody>
+    <thead>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Pokedex</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pikachu</td>
+            <td>Electric</td>
+            <td>025</td>
+        </tr>
+        <tr>
+            <td>Charmander</td>
+            <td>Fire</td>
+            <td>004</td>
+        </tr>
+    </tbody>
 </table>
 ```
 
