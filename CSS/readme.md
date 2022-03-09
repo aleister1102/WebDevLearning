@@ -104,13 +104,13 @@ module.exports = {
 Và sử dụng nó :
 
 ```html
-<div class="mt-35"></div>
+<div class="mb-35"></div>
 ```
 
 Thay vì vậy, ta có thể sử dụng trực tiếp với [giá trị tùy ý](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values), bằng cách thêm dấu `[]`:
 
 ```html
-<div class="mt-[35px]"></div>
+<div class="mb-[35px]"></div>
 ```
 
 [**Responsive**](https://tailwindcss.com/docs/responsive-design)
