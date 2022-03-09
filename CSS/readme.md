@@ -50,7 +50,7 @@ Lý do là vì chúng ta sử dụng code tĩnh trong HTML, để sửa chữa h
 
 ```bat
 npm init -y
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss postcss autoprefixer vite
 npx tailwindcss init -p
 ```
 
