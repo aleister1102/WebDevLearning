@@ -91,10 +91,14 @@ Ví dụ ta thêm vào config là:
 
 ```js
 module.exports = {
-  spacing: {
-    35: "35px",
+  theme: {
+    extend: {
+      spacing: {
+        '35': 35px,
+      }
+    }
   },
-};
+}
 ```
 
 Và sử dụng nó :
