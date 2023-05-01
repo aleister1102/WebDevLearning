@@ -4,11 +4,10 @@
 
 Đây là repo để lưu các note kiến thức và code trong quá trình học lập trình Fullstack bắt đầu từ 2021 🥇 🥈 🥉.
 Các tài liệu và projects tham khảo từ internet ⛲.
-| Type | Content |
-| ---------- | :---------------------------------------: |
-| HTML| [HTML Basics](HTML/readme.md) |
-| CSS | [CSS Basics](CSS/readme.md) |
-| JavaScript | [JavaScript Basics](JavaScript/readme.md) |
+- [HTML Basics](HTML/readme.md)
+- [CSS Basics](CSS/readme.md)
+- [JavaScript Basics](JavaScript/readme.md)
+
 
 # Tools
 
